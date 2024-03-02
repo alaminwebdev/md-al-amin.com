@@ -1,0 +1,104 @@
+.half-circle:before,
+.md-btn::before,
+.md-btn::after,
+nav a:hover,
+.nav-tabs .nav-item.show .nav-link,
+.nav-tabs .nav-link.active,
+.progress .progress-bar,
+.resume-item,
+.resume-point,
+.right,
+.resume-item.experience:before,
+.resume-item.education:before,
+#style-switcher .bottom a.settings,
+.service-main,
+.service-item:before,
+.md-socials ul li:hover,
+.container-filter li a.active,
+.music-player.playing .music-player__bar,
+.banner-overlay{
+    background: linear-gradient(to right, #243949 0%, #517fa4 100%);
+    background: -webkit- linear-gradient(to right, #243949 0%, #517fa4 100%);
+    background: -moz- linear-gradient(to right, #243949 0%, #517fa4 100%);
+    background: -o- linear-gradient(to right, #243949 0%, #517fa4 100%);
+    
+    
+   
+}
+
+
+
+nav a.active,
+.blog-icon ul li i:hover,
+.err,
+.service-item ul li i{
+    color:#517fa4;
+}
+
+.resume-point:before,
+.right:before,
+.blog-icon ul li i:hover {
+    border: 2px solid #517fa4;
+}
+
+.header,
+.header-part h3:before{
+    background:  #517fa4;
+}
+
+
+.header-part h3:after{
+    background:  #243949;
+}
+
+
+
+#home .md-title .header-text span,
+.about-text h3 span,
+[class^="flaticon-"]:before,
+[class*=" flaticon-"]:before,
+[class^="flaticon-"]:after,
+[class*=" flaticon-"]:after,
+.q-right,
+.q-left,
+.testi-text .review i,
+.contact-info h4 i{
+    background:  linear-gradient(to right, #243949 0%, #517fa4 100%);
+    background: -webkit- linear-gradient(to right, #243949 0%, #517fa4 100%);
+    background: -moz- linear-gradient(to right, #243949 0%, #517fa4 100%);
+    background: -o- linear-gradient(to right, #243949 0%, #517fa4 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+::selection {
+    background: rgba(81, 127, 164, 0.5);
+    color: #fff;
+}
+
+::-moz-selection {
+    background: rgba(81, 127, 164, 0.5);
+    color: #fff;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

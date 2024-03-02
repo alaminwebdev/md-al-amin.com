@@ -1,0 +1,96 @@
+.half-circle:before,
+.md-btn::before,
+.md-btn::after,
+nav a:hover,
+.nav-tabs .nav-item.show .nav-link,
+.nav-tabs .nav-link.active,
+.progress .progress-bar,
+.resume-item,
+.resume-point,
+.right,
+.resume-item.experience:before,
+.resume-item.education:before,
+#style-switcher .bottom a.settings,
+.service-main,
+.service-item:before,
+.md-socials ul li:hover,
+.container-filter li a.active,
+.music-player.playing .music-player__bar,
+.banner-overlay{
+    background: linear-gradient(-60deg, #16a085 0%, #f4d03f 100%);
+    background: -webkit-linear-gradient(-60deg, #16a085 0%, #f4d03f 100%);
+    background: -moz- linear-gradient(-60deg, #16a085 0%, #f4d03f 100%);
+    background: -o- linear-gradient(-60deg, #16a085 0%, #f4d03f 100%);
+}
+
+
+
+nav a.active,
+.blog-icon ul li i:hover,
+.err,
+.service-item ul li i {
+    color:#f4d03f;
+}
+
+.resume-point:before,
+.right:before,
+.blog-icon ul li i:hover  {
+    border: 2px solid #f4d03f;
+}
+
+.header,
+.header-part h3:before{
+    background:  #f4d03f;
+}
+
+
+.header-part h3:after{
+    background:  #16a085;
+}
+
+
+#home .md-title .header-text span,
+.about-text h3 span,
+[class^="flaticon-"]:before,
+[class*=" flaticon-"]:before,
+[class^="flaticon-"]:after,
+[class*=" flaticon-"]:after,
+.q-right,
+.q-left,
+.testi-text .review i,
+.contact-info h4 i{
+    background: linear-gradient(-60deg, #16a085 0%, #f4d03f 100%);
+    background:-webkit- linear-gradient(-60deg, #16a085 0%, #f4d03f 100%);
+    background: -moz- linear-gradient(-60deg, #16a085 0%, #f4d03f 100%);
+    background: -o- linear-gradient(-60deg, #16a085 0%, #f4d03f 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+::selection {
+    background: rgba(244, 208, 63, 0.5);
+    color: #fff;
+}
+
+::-moz-selection {
+    background: rgba(244, 208, 63, 0.5);
+    color: #fff;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

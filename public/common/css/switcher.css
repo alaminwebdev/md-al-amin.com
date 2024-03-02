@@ -1,0 +1,164 @@
+/*
+  Author: alamin-items
+  Template: Jahanaffrin
+  Version: 1.0
+  URL:https://themeforest.net/user/alamin-items
+*/
+
+
+
+#style-switcher {
+    box-shadow: 0 0 20px rgba(221, 221, 221, 0.5);
+    right: -189px;
+    position: fixed;
+    width: 189px;
+    z-index: 9999;
+    padding: 15px;
+    text-align: center;
+    background: #fff;
+}
+
+#style-switcher div h3 {
+    font-size: 14px;
+    padding-bottom: 7px;
+
+}
+
+
+#style-switcher .bottom {
+    color: #252525;
+    padding: 0;
+}
+
+#style-switcher .bottom a.settings {
+    box-shadow: 0 0 20px rgba(221, 221, 221, 0.5);
+    display: block;
+    height: 40px;
+    position: absolute;
+    left: -40px;
+    top: 0;
+    width: 40px;
+    border-bottom-left-radius: 50px;
+    border-top-left-radius: 50px;
+}
+
+#style-switcher .bottom a {
+    text-decoration: none;
+}
+
+#style-switcher .bottom a.settings i {
+    color: #ffffff;
+    font-size: 20px;
+    position: relative;
+    top: 20%;
+    left: 6%;
+    animation: setting 5s infinite linear;
+}
+
+@keyframes setting {
+    0% {
+        transform: rotate(0deg);
+    }
+
+
+    100% {
+        transform: rotate(180deg);
+    }
+}
+
+ul.pattern {
+    list-style: none outside none;
+    margin: 0 0 0px;
+    overflow: hidden;
+    padding: 0;
+    border-radius: 0px;
+}
+
+ul.pattern li {
+    float: left;
+    margin: 2px;
+}
+
+ul.pattern li a {
+    cursor: pointer;
+    display: block;
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    margin: 5px;
+}
+
+ul.pattern .color1 {
+    background: linear-gradient(180deg, #2af598 0%, #009efd 100%);
+}
+
+ul.pattern .color2 {
+    background-image: linear-gradient(to right, #243949 0%, #517fa4 100%);
+}
+
+ul.pattern .color3 {
+    background-image: linear-gradient(-60deg, #16a085 0%, #f4d03f 100%);
+}
+
+ul.pattern .color4 {
+    background-image: linear-gradient(to right, #ed6ea0 0%, #ec8c69 100%);
+}
+
+ul.pattern .color5 {
+    background-image: linear-gradient(-225deg, #FF057C 0%, #7C64D5 48%, #4CC3FF 100%);
+}
+
+ul.pattern .color6 {
+    background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
+}
+
+@media (max-width: 575.98px) {
+
+    #style-switcher .bottom a.settings {
+        box-shadow: 0 0 20px rgba(221, 221, 221, 0.5);
+        display: block;
+        height: 30px;
+        position: absolute;
+        left: -30px;
+        top: 0;
+        width: 30px;
+        border-bottom-left-radius: 30px;
+        border-top-left-radius: 30px;
+    }
+
+    #style-switcher .bottom a.settings i {
+        font-size: 16px;
+        top: 8%;
+        left: 5%;
+    }
+
+    #style-switcher {
+        top: 5%;
+        height: 85px;
+    }
+
+    #style-switcher div h3 {
+        font-size: 12px;
+        padding-bottom: 7px;
+    }
+
+    ul.pattern li a {
+        height: 15px;
+        width: 15px;
+        border-radius: 50%;
+        margin: 3px;
+    }
+
+
+
+
+}
+
+@media (min-width:576px) and (max-width: 991px) {
+
+    #style-switcher {
+        top: 10%;
+    }
+
+
+}
