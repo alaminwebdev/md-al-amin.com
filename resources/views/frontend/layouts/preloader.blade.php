@@ -1,6 +1,6 @@
     <!-- PRELOADER -->
-    <div class="md-preloader">
-        <div class="preloader">
+    <div class="md-preloader" id="md-preloader">
+        <div class="preloader" id="preloader">
             <div class="wholesquare">
                 <div class="square first"></div>
                 <div class="square second"></div>
@@ -12,14 +12,12 @@
     <!-- /PRELOADER -->
 
     <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            var preloader = document.getElementById("preloader");
-            preloader.style.display = "flex"; // Show the preloader
-        });
-    
         window.addEventListener("load", function() {
-            var preloader = document.getElementById("preloader");
-            preloader.style.display = "none"; // Hide the loader
+            const preloaderContainer    = document.getElementById("md-preloader");
+            const preloader             = document.getElementById("preloader");
+
+            preloader.style.display             = "none";
+            preloaderContainer.style.height     = 0;
     
             // setTimeout(function() {
             //     var preloader = document.getElementById("preloader");

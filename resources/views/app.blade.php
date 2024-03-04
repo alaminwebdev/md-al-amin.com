@@ -445,20 +445,11 @@
     <link rel="canonical" href="https://wpriverthemes.com/gridx/">
     <link rel="shortlink" href="https://wpriverthemes.com/gridx/">
     <style>
-        :root {
-            --default-color: #5B78F6;
-        }
-
-        :root {
-            --primary_color: var(--default-color) !important;
-        }
-
         .about-area .about-me-box .img-box {
-            background: linear-gradient(90deg, var(--default-color) -15%, #C2EBFF 58%, var(--default-color) 97%) !important;
+            background: linear-gradient(90deg, var(--primary_color) -15%, #C2EBFF 58%, var(--primary_color) 97%) !important;
         }
     </style>
 
-    <meta name="generator" content="Elementor 3.17.3; features: e_dom_optimization, e_optimized_assets_loading, e_optimized_css_loading, additional_custom_breakpoints; settings: css_print_method-external, google_font-enabled, font_display-swap">
     <style id="wp-custom-css">
         .contact-details,
         .social-links {
@@ -496,15 +487,12 @@
         <header class="header-area">
             <div class="container">
                 <div class="gx-row d-flex align-items-center justify-content-between">
-                    <a href="https://wpriverthemes.com/gridx/" class="logo">
-
-                        <img src="./Gridx – WordPress Theme – Personal Portfolio Website_files/logo.svg" alt="Logo">
-
+                    <a href="#" class="logo">
+                        <img src="{{ asset('img/logo.png') }}" alt="Logo">
+                        {{-- <span class="fs-5 fw-bold text-white ">Mohammad Alamin</span> --}}
                     </a>
 
                     <!-- Collect the nav links, forms, and other content for toggling -->
-
-
                     <nav class="navbar">
                         <ul data-in="#" data-out="#" class="menu" id="menu-main-menu">
                             <li id="menu-item-1850" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-13 current_page_item menu-item-1850 active">
@@ -540,28 +528,19 @@
                                     <div class="elementor-element elementor-element-c4f5752 elementor-widget elementor-widget-gridxdaaboutme" data-id="c4f5752" data-element_type="widget" data-widget_type="gridxdaaboutme.default">
                                         <div class="elementor-widget-container">
 
-                                            <!-- Star AboutMe
-    ============================================= -->
-
-
+                                            {{-- Star AboutMe --}}
                                             <div data-aos="zoom-in" class="about-me-box-wrap aos-init aos-animate">
                                                 <div class="about-me-box shadow-box">
-                                                    <a class="overlay-link" href="https://wpriverthemes.com/gridx/about-page/"></a>
-
-                                                    <img decoding="async" src="./Gridx – WordPress Theme – Personal Portfolio Website_files/bg1.png" alt="BG" class="bg-img">
-
-
+                                                    <a class="overlay-link" href="#"></a>
+                                                    <img decoding="async" src="{{ asset('img/bg1.png') }}" alt="BG" class="bg-img">
                                                     <div class="img-box">
-                                                        <img decoding="async" src="./Gridx – WordPress Theme – Personal Portfolio Website_files/me.png" alt="">
+                                                        <img decoding="async" src="{{ asset('img/me.jpg') }}" alt="">
                                                     </div>
                                                     <div class="infos">
-                                                        <h5>A WEB DESIGNER</h5>
-                                                        <h1>David Henderson.</h1>
-                                                        <p>I am a Web Designer based in san francisco.</p> <a href="https://wpriverthemes.com/gridx/#" class="about-btn">
-
-                                                            <img decoding="async" src="./Gridx – WordPress Theme – Personal Portfolio Website_files/icon.svg" alt="Star">
-
-
+                                                        <h5>FULL STACK WEB DEVELOPER</h5>
+                                                        <h1>Mohammad Al Amin</h1>
+                                                        <p>I am a Full Stack Web Developer based in Dhaka.</p> <a href="#" class="about-btn">
+                                                            <img decoding="async" src="{{ asset('img/icon.svg') }}" alt="Star">
                                                         </a>
                                                     </div>
                                                 </div>
@@ -571,7 +550,6 @@
                                                 AOS.init({
                                                     duration: 1500,
                                                     once: true,
-
                                                 });
                                             </script>
 
@@ -583,11 +561,7 @@
                                 <div class="elementor-widget-wrap elementor-element-populated">
                                     <div class="elementor-element elementor-element-79a19dc elementor-widget elementor-widget-gridxdafeaturedbox" data-id="79a19dc" data-element_type="widget" data-widget_type="gridxdafeaturedbox.default">
                                         <div class="elementor-widget-container">
-
-                                            <!-- Start Featured Box
-    ============================================= -->
-
-
+                                            {{-- Start Featured Box --}}
                                             <div class="about-credentials-wrap">
                                                 <div data-aos="zoom-in" class="aos-init aos-animate">
                                                     <div class="banner shadow-box">
@@ -617,30 +591,20 @@
                                                 <div class="elementor-widget-wrap elementor-element-populated">
                                                     <div class="elementor-element elementor-element-bdc73c3 elementor-widget elementor-widget-gridxdacredentialbox" data-id="bdc73c3" data-element_type="widget" data-widget_type="gridxdacredentialbox.default">
                                                         <div class="elementor-widget-container">
-
-                                                            <!-- Start Credentials Box
-    ============================================= -->
+                                                            {{-- Start Credentials Box --}}
                                                             <div data-aos="zoom-in" class="about-crenditials-box aos-init aos-animate">
                                                                 <div class="info-box shadow-box h-full">
                                                                     <a class="overlay-link" href="https://wpriverthemes.com/gridx/credential/"></a>
-
-
-                                                                    <img decoding="async" src="./Gridx – WordPress Theme – Personal Portfolio Website_files/bg1.png" alt="BG" class="bg-img">
-
-
-                                                                    <img decoding="async" src="./Gridx – WordPress Theme – Personal Portfolio Website_files/sign.png" alt="">
+                                                                    <img decoding="async" src="{{ asset('img/bg1.png') }}" alt="BG" class="bg-img">
+                                                                    <img decoding="async" src="{{ asset('img/sign.png') }}" alt="">
                                                                     <div class="d-flex align-items-center justify-content-between">
                                                                         <div class="infos">
                                                                             <h5>MORE ABOUT ME</h5>
                                                                             <h2>Credentials</h2>
                                                                         </div>
 
-                                                                        <a href="https://wpriverthemes.com/gridx/credential/" class="about-btn">
-
-
-                                                                            <img decoding="async" src="./Gridx – WordPress Theme – Personal Portfolio Website_files/icon.svg" alt="Star">
-
-
+                                                                        <a href="#" class="about-btn">
+                                                                            <img decoding="async" src="{{ asset('img/icon.svg') }}" alt="Star">
                                                                         </a>
                                                                     </div>
                                                                 </div>
@@ -664,28 +628,19 @@
                                                     <div class="elementor-element elementor-element-505fe86 elementor-widget elementor-widget-gridxdaprojectbox" data-id="505fe86" data-element_type="widget" data-widget_type="gridxdaprojectbox.default">
                                                         <div class="elementor-widget-container">
 
-                                                            <!-- Start Project Box
-    ============================================= -->
-
-
+                                                            {{-- Start Project Box --}}
                                                             <div data-aos="zoom-in" class="about-project-box aos-init aos-animate">
                                                                 <div class="info-box shadow-box h-full">
                                                                     <a class="overlay-link" href="https://wpriverthemes.com/gridx/work/"></a>
-
-                                                                    <img decoding="async" src="./Gridx – WordPress Theme – Personal Portfolio Website_files/bg1.png" alt="BG" class="bg-img">
-
-
-                                                                    <img decoding="async" src="./Gridx – WordPress Theme – Personal Portfolio Website_files/my-works.png" alt="">
+                                                                    <img decoding="async" src="{{ asset('img/bg1.png') }}" alt="BG" class="bg-img">
+                                                                    <img decoding="async" src="{{ asset('img/my-works.png') }}" alt="">
                                                                     <div class="d-flex align-items-center justify-content-between">
                                                                         <div class="infos">
                                                                             <h5>SHOWCASE</h5>
                                                                             <h2>Projects</h2>
                                                                         </div>
-
                                                                         <a href="https://wpriverthemes.com/gridx/work/" class="about-btn">
-
-                                                                            <img decoding="async" src="./Gridx – WordPress Theme – Personal Portfolio Website_files/icon.svg" alt="Star">
-
+                                                                            <img decoding="async" src="{{ asset('img/icon.svg') }}" alt="Star">
                                                                         </a>
 
                                                                     </div>
@@ -696,7 +651,6 @@
                                                                 AOS.init({
                                                                     duration: 1500,
                                                                     once: true,
-
                                                                 });
                                                             </script>
 
@@ -717,8 +671,7 @@
                                     <div class="elementor-element elementor-element-6ab9773 elementor-widget elementor-widget-gridxdablogbox" data-id="6ab9773" data-element_type="widget" data-widget_type="gridxdablogbox.default">
                                         <div class="elementor-widget-container">
 
-                                            <!-- Start Blog Box
-    ============================================= -->
+                                            {{-- Start Blog Box --}}
 
                                             <div class="col-md-12">
                                                 <div class="blog-service-profile-wrap d-flex gap-24">
@@ -726,19 +679,17 @@
                                                         <div class="info-box shadow-box h-full">
                                                             <a href="https://wpriverthemes.com/gridx/consulted-admitting-is-power-acuteness/" class="overlay-link"></a>
 
-                                                            <img decoding="async" src="./Gridx – WordPress Theme – Personal Portfolio Website_files/bg1.png" alt="BG" class="bg-img">
+                                                            <img decoding="async" src="{{ asset('img/bg1.png') }}" alt="BG" class="bg-img">
 
-                                                            <img decoding="async" src="./Gridx – WordPress Theme – Personal Portfolio Website_files/gfonts.png" alt="">
+                                                            <img decoding="async" src="{{ asset('img/gfonts.png') }}" alt="">
                                                             <div class="d-flex align-items-center justify-content-between">
                                                                 <div class="infos">
                                                                     <h5>BLOG</h5>
                                                                     <h2>GFonts</h2>
                                                                 </div>
 
-                                                                <a href="https://wpriverthemes.com/gridx/consulted-admitting-is-power-acuteness/" class="about-btn">
-
-                                                                    <img decoding="async" src="./Gridx – WordPress Theme – Personal Portfolio Website_files/icon.svg" alt="Star">
-
+                                                                <a href="#" class="about-btn">
+                                                                    <img decoding="async" src="{{ asset('img/icon.svg') }}" alt="Star">
                                                                 </a>
 
                                                             </div>
@@ -764,27 +715,18 @@
                                     <div class="elementor-element elementor-element-39b9567 elementor-widget elementor-widget-gridxdaservicesbox" data-id="39b9567" data-element_type="widget" data-widget_type="gridxdaservicesbox.default">
                                         <div class="elementor-widget-container">
 
-                                            <!-- Start Services Box
-    ============================================= -->
+                                            {{-- Start Services Box --}}
                                             <div class="col-md-12">
                                                 <div class="blog-service-profile-wrap d-flex gap-24">
-
                                                     <div data-aos="zoom-in" class="flex-1 about-services-box-wrap aos-init aos-animate">
                                                         <div class="about-services-box info-box shadow-box h-full">
-                                                            <a href="https://wpriverthemes.com/gridx/service-offerings/" class="overlay-link"></a>
-
-                                                            <img decoding="async" src="./Gridx – WordPress Theme – Personal Portfolio Website_files/bg1.png" alt="BG" class="bg-img">
-
+                                                            <a href="#" class="overlay-link"></a>
+                                                            <img decoding="async" src="{{ asset('img/bg1.png') }}" alt="BG" class="bg-img">
                                                             <div class="icon-boxes">
-
                                                                 <i class="iconoir-camera"></i>
-
                                                                 <i class="iconoir-design-pencil"></i>
-
                                                                 <i class="iconoir-color-filter"></i>
-
                                                                 <i class="iconoir-dev-mode-phone"></i>
-
                                                             </div>
                                                             <div class="d-flex align-items-center justify-content-between">
                                                                 <div class="infos">
@@ -792,10 +734,8 @@
                                                                     <h2>Services Offering</h2>
                                                                 </div>
 
-                                                                <a href="https://wpriverthemes.com/gridx/service-offerings/" class="about-btn">
-
-                                                                    <img decoding="async" src="./Gridx – WordPress Theme – Personal Portfolio Website_files/icon.svg" alt="Star">
-
+                                                                <a href="#" class="about-btn">
+                                                                    <img decoding="async" src="{{ asset('img/icon.svg') }}" alt="Star">
                                                                 </a>
 
                                                             </div>
@@ -808,7 +748,6 @@
                                                 AOS.init({
                                                     duration: 1500,
                                                     once: true,
-
                                                 });
                                             </script>
 
@@ -821,39 +760,28 @@
                                     <div class="elementor-element elementor-element-d02c9cb elementor-widget elementor-widget-gridxdaprofilesbox" data-id="d02c9cb" data-element_type="widget" data-widget_type="gridxdaprofilesbox.default">
                                         <div class="elementor-widget-container">
 
-                                            <!-- Start Profiles Box
-    ============================================= -->
-
+                                            {{-- Start Profiles Box --}}
                                             <div class="col-md-12">
                                                 <div class="blog-service-profile-wrap">
 
                                                     <div data-aos="zoom-in" class="about-profile-box-wrap aos-init aos-animate">
                                                         <div class="about-profile-box info-box shadow-box h-full">
-
-                                                            <img decoding="async" src="./Gridx – WordPress Theme – Personal Portfolio Website_files/bg1.png" alt="BG" class="bg-img">
-
-
+                                                            <img decoding="async" src="{{ asset('img/bg1.png') }}" alt="BG" class="bg-img">
                                                             <div class="inner-profile-icons shadow-box">
-
                                                                 <a href="https://wpriverthemes.com/gridx/#">
                                                                     <i class="iconoir-dribbble"></i>
                                                                 </a>
-
                                                                 <a href="https://wpriverthemes.com/gridx/#">
                                                                     <i class="iconoir-twitter"></i>
                                                                 </a>
-
                                                             </div>
                                                             <div class="d-flex align-items-center justify-content-between">
                                                                 <div class="infos">
                                                                     <h5>STAY WITH ME</h5>
                                                                     <h2>Profiles</h2>
                                                                 </div>
-
-                                                                <a href="https://wpriverthemes.com/gridx/contact-info/" class="about-btn">
-
-                                                                    <img decoding="async" src="./Gridx – WordPress Theme – Personal Portfolio Website_files/icon.svg" alt="Star">
-
+                                                                <a href="#" class="about-btn">
+                                                                    <img decoding="async" src="{{ asset('img/icon.svg') }}" alt="Star">
                                                                 </a>
 
                                                             </div>
@@ -884,14 +812,12 @@
                                     <div class="elementor-element elementor-element-b27321e elementor-widget elementor-widget-gridxdaclientbox" data-id="b27321e" data-element_type="widget" data-widget_type="gridxdaclientbox.default">
                                         <div class="elementor-widget-container">
 
-                                            <!-- Start Client Box
-    ============================================= -->
-
+                                            {{-- Start Client Box --}}
 
                                             <div data-aos="zoom-in" class="about-client-box-wrap aos-init aos-animate">
                                                 <div class="about-client-box info-box shadow-box">
 
-                                                    <img decoding="async" src="./Gridx – WordPress Theme – Personal Portfolio Website_files/bg1.png" alt="BG" class="bg-img">
+                                                    <img decoding="async" src="{{ asset('img/bg1.png') }}" alt="BG" class="bg-img">
 
 
                                                     <div class="clients d-flex align-items-start gap-24 justify-content-center">
@@ -930,32 +856,19 @@
                                     <div class="elementor-element elementor-element-b0e85ec elementor-widget elementor-widget-gridxdacontactbox" data-id="b0e85ec" data-element_type="widget" data-widget_type="gridxdacontactbox.default">
                                         <div class="elementor-widget-container">
 
-                                            <!-- Start Contact Box
-    ============================================= -->
+                                            {{-- Start Contact Box --}}
 
 
                                             <div data-aos="zoom-in" class="about-contact-box-wrap aos-init aos-animate">
-
                                                 <div class="about-contact-box info-box shadow-box">
-                                                    <a class="overlay-link" href="https://wpriverthemes.com/gridx/contact-info/"></a>
-
-                                                    <img decoding="async" src="./Gridx – WordPress Theme – Personal Portfolio Website_files/bg1.png" alt="BG" class="bg-img">
-
-
-
-                                                    <img decoding="async" src="./Gridx – WordPress Theme – Personal Portfolio Website_files/icon2.png" alt="Star" class="star-icon">
-
-
-
-
+                                                    <a class="overlay-link" href="#"></a>
+                                                    <img decoding="async" src="{{ asset('img/bg1.png') }}" alt="BG" class="bg-img">
+                                                    <img decoding="async" src="{{ asset('img/icon2.png') }}" alt="Star" class="star-icon">
                                                     <h2>Let's <br>work <span>together.</span></h2>
-                                                    <a href="https://wpriverthemes.com/gridx/contact-info/" class="about-btn">
-
-                                                        <img decoding="async" src="./Gridx – WordPress Theme – Personal Portfolio Website_files/icon.svg" alt="Star">
-
+                                                    <a href="#" class="about-btn">
+                                                        <img decoding="async" src="{{ asset('img/icon.svg') }}" alt="Star">
                                                     </a>
                                                 </div>
-
                                             </div>
 
                                             <script>
@@ -980,10 +893,9 @@
         <footer class="footer-area">
             <div class="container">
                 <div class="footer-content text-center">
-                    <a href="https://wpriverthemes.com/gridx/" class="logo">
-
-                        <img src="./Gridx – WordPress Theme – Personal Portfolio Website_files/logo.svg" alt="Logo">
-
+                    <a href="#" class="logo">
+                        <img src="{{ asset('img/logo.png') }}" alt="Logo">
+                        {{-- <span class="fs-5 fw-bold text-white ">Mohammad Alamin</span> --}}
                     </a>
 
                     <ul data-in="#" data-out="#" class="footer-menu" id="menu-footer-menu">
@@ -996,8 +908,7 @@
                     </ul>
                     <p class="copyright">
                         © All rights reserved by <span>
-                            <a target="_blank" href="https://themeforest.net/user/wordpressriver/portfolio">WordPressRiver</a>
-
+                            <a target="_blank" href="#">Mohammad Alamin</a>
                         </span>
                     </p>
                 </div>
