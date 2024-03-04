@@ -10,3 +10,20 @@
         </div>
     </div>
     <!-- /PRELOADER -->
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var preloader = document.getElementById("preloader");
+            preloader.style.display = "flex"; // Show the preloader
+        });
+    
+        window.addEventListener("load", function() {
+            var preloader = document.getElementById("preloader");
+            preloader.style.display = "none"; // Hide the loader
+    
+            // setTimeout(function() {
+            //     var preloader = document.getElementById("preloader");
+            //     preloader.style.display = "none"; 
+            // });
+        });
+    </script>
