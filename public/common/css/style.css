@@ -311,7 +311,7 @@ nav {
     width: 50px;
     height: 100vh;
     z-index: 5;
-    background: #444;
+    background: rgb(15, 23, 42);
     text-align: left;
     overflow: hidden;
 }
