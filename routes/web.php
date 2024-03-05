@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\FrontController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,6 +14,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('app');
-});
+Route::get('/', [FrontController::class, 'index'])->name('dashboard');
+Route::get('/about', [FrontController::class, 'about'])->name('about');
+Route::get('/works', [FrontController::class, 'works'])->name('works');
+Route::get('/contact', [FrontController::class, 'contact'])->name('contact');

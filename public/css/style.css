@@ -278,18 +278,19 @@ ol {
     flex: 1;
 }
 .theme-btn {
-    background: var(--primary_color);
+    /* background: var(--primary_color); */
+    background: linear-gradient(120deg, rgba(255,255,255,0.3), rgba(25,135,84,0.4));
     color: #fff;
     display: inline-block;
     transition: .3s;
-    border-radius: 16px;
+    border-radius: 10px;
     font-size: 16px;
     font-weight: 500;
-    padding: 12px 30px;
+    padding: 10px 15px;
 }
 .theme-btn:hover {
-    background: #fff;
-    color: var(--dark);
+    background: linear-gradient(-120deg, rgba(255,255,255,0.3), rgba(25,135,84,0.4));
+    color: #fff;
 }
 .shadow-box {
     position: relative;
@@ -572,7 +573,7 @@ ol {
 }
 .header-area .logo img {
     display: block;
-    width: 200px;;
+    width: 190px;;
 }
 .header-area .navbar {
     margin: 0;
