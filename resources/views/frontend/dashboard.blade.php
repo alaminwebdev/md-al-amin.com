@@ -1,6 +1,5 @@
  @extends('app')
  @section('content')
-     <!-- Dashboard About -->
      <section class="about-area">
          <div class="container">
              <div data-elementor-type="wp-page" data-elementor-id="13" class="elementor elementor-13">
@@ -59,7 +58,7 @@
                                                          {{-- Start Credentials Box --}}
                                                          <div data-aos="zoom-in" class="about-crenditials-box aos-init">
                                                              <div class="info-box shadow-box h-full">
-                                                                 <a class="overlay-link" href="https://wpriverthemes.com/gridx/credential/"></a>
+                                                                 <a class="overlay-link" href="#"></a>
                                                                  <img decoding="async" src="{{ asset('img/bg1.png') }}" alt="BG" class="bg-img">
                                                                  <img decoding="async" src="{{ asset('img/sign.png') }}" alt="">
                                                                  <div class="d-flex align-items-center justify-content-between">

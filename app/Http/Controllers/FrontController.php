@@ -10,7 +10,7 @@ class FrontController extends Controller
         return view('frontend.dashboard');
     }
     public function about(){
-        return view('frontend.dashboard');
+        return view('frontend.about');
     }
     public function works(){
         return view('frontend.dashboard');

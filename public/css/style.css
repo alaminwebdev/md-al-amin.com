@@ -333,7 +333,7 @@ ol {
 }
 .section-heading {
     color: #ffffff;
-    font-size: 74px;
+    font-size: 50px;
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: -01px;
@@ -341,7 +341,7 @@ ol {
     align-items: center;
     gap: 5px;
     margin-top: 2px;
-    justify-content: center;
+    justify-content: space-between;
 }
 .section-heading img {
     display: block;
@@ -726,7 +726,7 @@ ol {
 }
 
 .about-area .about-image-box {
-    width: 370px;
+    /* width: 370px; */
     flex: none;
     padding: 24px;
     border-radius: 30px;
@@ -744,7 +744,7 @@ ol {
     flex: 1;
 }
 .about-area .about-details .about-details-inner {
-    padding: 115px 60px 30px 30px;
+    padding: 90px 30px 30px 30px;
     position: relative;
 }
 .about-area .about-details .about-details-inner img {
