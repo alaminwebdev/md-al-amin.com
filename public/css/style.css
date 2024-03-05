@@ -1665,7 +1665,7 @@ ol {
 @keyframes marquee {
     
     from { transform: translateX(0); }
-    to { transform: translateX(-65.3%); }
+    to { transform: translateX(-100.3%); }
 }
 
 @keyframes loader_running {

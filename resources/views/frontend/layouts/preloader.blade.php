@@ -10,18 +10,3 @@
         </div>
     </div>
     <!-- /PRELOADER -->
-
-    <script>
-        window.addEventListener("load", function() {
-            const preloaderContainer    = document.getElementById("md-preloader");
-            const preloader             = document.getElementById("preloader");
-
-            preloader.style.display             = "none";
-            preloaderContainer.style.height     = 0;
-    
-            // setTimeout(function() {
-            //     var preloader = document.getElementById("preloader");
-            //     preloader.style.display = "none"; 
-            // });
-        });
-    </script>

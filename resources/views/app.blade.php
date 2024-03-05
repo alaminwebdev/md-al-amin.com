@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en-US">
+
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -21,7 +22,7 @@
             padding: 0 !important;
         }
     </style>
-    <link rel="stylesheet" id="wp-block-library-css" href="{{ asset('css/style.min.css')}}" media="all">
+    <link rel="stylesheet" id="wp-block-library-css" href="{{ asset('css/style.min.css') }}" media="all">
     <style id="safe-svg-svg-icon-style-inline-css">
         .safe-svg-cover {
             text-align: center
@@ -423,25 +424,25 @@
             line-height: 1.6;
         }
     </style>
-    <link rel="stylesheet" id="redux-extendify-styles-css" href="{{ asset('css/extendify-utilities.css')}}" media="all">
-    <link rel="stylesheet" id="contact-form-7-css" href="{{ asset('css/styles.css')}}" media="all">
-    <link rel="stylesheet" id="icon-css" href="{{asset('css/iconoir.css')}}" media="all">
-    <link rel="stylesheet" id="bootstrap-css" href="{{ asset('css/bootstrap.min.css')}}" media="all">
+    <link rel="stylesheet" id="redux-extendify-styles-css" href="{{ asset('css/extendify-utilities.css') }}" media="all">
+    <link rel="stylesheet" id="contact-form-7-css" href="{{ asset('css/styles.css') }}" media="all">
+    <link rel="stylesheet" id="icon-css" href="{{ asset('css/iconoir.css') }}" media="all">
+    <link rel="stylesheet" id="bootstrap-css" href="{{ asset('css/bootstrap.min.css') }}" media="all">
     {{-- <link rel="stylesheet" id="aos-css" href="{{asset('css/aos.css')}}" media="all"> --}}
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link rel="stylesheet" id="gridx-style-css" href="{{asset('css/style.css')}}" media="all">
-    <link rel="stylesheet" id="gridx-unit-test-css" href="{{ asset('css/gridx-unit-test.css')}}" media="all">
-    <link rel="stylesheet" id="gridx-fonts-css" href="{{ asset('css/gridx-font.css')}}" media="all">
-    <link rel="stylesheet" id="elementor-icons-css" href="{{asset('css/elementor-icons.min.css')}}" media="all">
-    <link rel="stylesheet" id="elementor-frontend-css" href="{{asset('css/frontend-lite.min.css')}}" media="all">
-    <link rel="stylesheet" id="swiper-css" href="{{asset('css/swiper.min.css')}}" media="all">
-    <link rel="stylesheet" id="elementor-post-16-css" href="{{asset('css/post-16.css')}}" media="all">
-    <link rel="stylesheet" id="elementor-global-css" href="{{asset('css/global.css')}} " media="all">
-    <link rel="stylesheet" id="elementor-post-13-css" href="{{asset('css/post-13.css')}}" media="all">
-    <link rel="stylesheet" id="google-fonts-1-css" href="{{asset('css/google-fonts.css')}}" media="all">
+    <link rel="stylesheet" id="gridx-style-css" href="{{ asset('css/style.css') }}" media="all">
+    <link rel="stylesheet" id="gridx-unit-test-css" href="{{ asset('css/gridx-unit-test.css') }}" media="all">
+    <link rel="stylesheet" id="gridx-fonts-css" href="{{ asset('css/gridx-font.css') }}" media="all">
+    <link rel="stylesheet" id="elementor-icons-css" href="{{ asset('css/elementor-icons.min.css') }}" media="all">
+    <link rel="stylesheet" id="elementor-frontend-css" href="{{ asset('css/frontend-lite.min.css') }}" media="all">
+    <link rel="stylesheet" id="swiper-css" href="{{ asset('css/swiper.min.css') }}" media="all">
+    <link rel="stylesheet" id="elementor-post-16-css" href="{{ asset('css/post-16.css') }}" media="all">
+    <link rel="stylesheet" id="elementor-global-css" href="{{ asset('css/global.css') }} " media="all">
+    <link rel="stylesheet" id="elementor-post-13-css" href="{{ asset('css/post-13.css') }}" media="all">
+    <link rel="stylesheet" id="google-fonts-1-css" href="{{ asset('css/google-fonts.css') }}" media="all">
     <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
-    <script src="{{asset('js/jquery.min.js')}}" id="jquery-core-js"></script>
-    <script src="{{asset('js/jquery-migrate.min.js')}}" id="jquery-migrate-js"></script>
+    <script src="{{ asset('js/jquery-3.7.1.min.js') }}" id="jquery-core-js"></script>
+    {{-- <script src="{{asset('js/jquery-migrate.min.js')}}" id="jquery-migrate-js"></script> --}}
     <link rel="canonical" href="https://wpriverthemes.com/gridx/">
     <link rel="shortlink" href="https://wpriverthemes.com/gridx/">
     <style>
@@ -477,7 +478,7 @@
             margin: 0 !important;
         }
     </style>
-    <script src="{{asset('js/wp-emoji-release.min.js')}}" defer=""></script>
+    <script src="{{ asset('js/wp-emoji-release.min.js') }}" defer=""></script>
 </head>
 
 <body class="home page-template page-template-page-templates page-template-main-home page-template-page-templatesmain-home-php page page-id-13 elementor-default elementor-kit-16 elementor-page elementor-page-13 e--ua-blink e--ua-chrome e--ua-webkit" data-aos-easing="ease" data-aos-duration="1500" data-aos-delay="0" data-elementor-device-mode="desktop" data-new-gr-c-s-check-loaded="14.1157.0" data-gr-ext-installed="">
@@ -529,7 +530,7 @@
                                         <div class="elementor-widget-container">
 
                                             {{-- Star AboutMe --}}
-                                            <div data-aos="zoom-in" class="about-me-box-wrap aos-init aos-animate">
+                                            <div data-aos="zoom-in" class="about-me-box-wrap aos-init">
                                                 <div class="about-me-box shadow-box">
                                                     <a class="overlay-link" href="#"></a>
                                                     <img decoding="async" src="{{ asset('img/bg1.png') }}" alt="BG" class="bg-img">
@@ -545,14 +546,6 @@
                                                     </div>
                                                 </div>
                                             </div>
-
-                                            <script>
-                                                AOS.init({
-                                                    duration: 1500,
-                                                    once: true,
-                                                });
-                                            </script>
-
                                         </div>
                                     </div>
                                 </div>
@@ -563,26 +556,17 @@
                                         <div class="elementor-widget-container">
                                             {{-- Start Featured Box --}}
                                             <div class="about-credentials-wrap">
-                                                <div data-aos="zoom-in" class="aos-init aos-animate">
+                                                <div data-aos="zoom-in" class="aos-init">
                                                     <div class="banner shadow-box">
                                                         <div class="marquee">
-                                                            <div style="animation: marquee 8s linear infinite;">
-                                                                <span>LATEST WORK AND <b>FEATURED</b><img decoding="async" src="./Gridx – WordPress Theme – Personal Portfolio Website_files/star1.svg" alt=""></span>
-                                                                <span>LATEST WORK AND <b>FEATURED</b><img decoding="async" src="./Gridx – WordPress Theme – Personal Portfolio Website_files/star1.svg" alt=""></span>
-                                                                <span>LATEST WORK AND <b>FEATURED</b><img decoding="async" src="./Gridx – WordPress Theme – Personal Portfolio Website_files/star1.svg" alt=""></span>
-                                                                <span>LATEST WORK AND <b>FEATURED</b><img decoding="async" src="./Gridx – WordPress Theme – Personal Portfolio Website_files/star1.svg" alt=""></span>
+                                                            <div style="animation: marquee 50s linear infinite;">
+                                                                <span>Hello, I'm Md. Al Amin, a full-stack developer with 1 year+ of experience. I have a strong passion for crafting seamless web experiences that users love. My toolkit comprises Laravel for robust back-end development, JavaScript for dynamic front-end interfaces with React, and modern tools like Inertia.js and Vite. With expertise in MySQL for optimizing databases, Git for version control, and CSS for elegant styling. From
+                                                                    mastering AJAX for dynamic web interactions to ensuring smooth user experiences, I'm dedicated to delivering applications that shine.</span>
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
-                                            <script>
-                                                AOS.init({
-                                                    duration: 1500,
-                                                    once: true,
-
-                                                });
-                                            </script>
                                         </div>
                                     </div>
                                     <section class="elementor-section elementor-inner-section elementor-element elementor-element-1130d0e elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="1130d0e" data-element_type="section">
@@ -592,7 +576,7 @@
                                                     <div class="elementor-element elementor-element-bdc73c3 elementor-widget elementor-widget-gridxdacredentialbox" data-id="bdc73c3" data-element_type="widget" data-widget_type="gridxdacredentialbox.default">
                                                         <div class="elementor-widget-container">
                                                             {{-- Start Credentials Box --}}
-                                                            <div data-aos="zoom-in" class="about-crenditials-box aos-init aos-animate">
+                                                            <div data-aos="zoom-in" class="about-crenditials-box aos-init">
                                                                 <div class="info-box shadow-box h-full">
                                                                     <a class="overlay-link" href="https://wpriverthemes.com/gridx/credential/"></a>
                                                                     <img decoding="async" src="{{ asset('img/bg1.png') }}" alt="BG" class="bg-img">
@@ -609,16 +593,6 @@
                                                                     </div>
                                                                 </div>
                                                             </div>
-
-
-                                                            <script>
-                                                                AOS.init({
-                                                                    duration: 1500,
-                                                                    once: true,
-
-                                                                });
-                                                            </script>
-
                                                         </div>
                                                     </div>
                                                 </div>
@@ -629,7 +603,7 @@
                                                         <div class="elementor-widget-container">
 
                                                             {{-- Start Project Box --}}
-                                                            <div data-aos="zoom-in" class="about-project-box aos-init aos-animate">
+                                                            <div data-aos="zoom-in" class="about-project-box aos-init">
                                                                 <div class="info-box shadow-box h-full">
                                                                     <a class="overlay-link" href="https://wpriverthemes.com/gridx/work/"></a>
                                                                     <img decoding="async" src="{{ asset('img/bg1.png') }}" alt="BG" class="bg-img">
@@ -646,14 +620,6 @@
                                                                     </div>
                                                                 </div>
                                                             </div>
-
-                                                            <script>
-                                                                AOS.init({
-                                                                    duration: 1500,
-                                                                    once: true,
-                                                                });
-                                                            </script>
-
                                                         </div>
                                                     </div>
                                                 </div>
@@ -675,7 +641,7 @@
 
                                             <div class="col-md-12">
                                                 <div class="blog-service-profile-wrap d-flex gap-24">
-                                                    <div data-aos="zoom-in" class="about-blog-box aos-init aos-animate">
+                                                    <div data-aos="zoom-in" class="about-blog-box aos-init">
                                                         <div class="info-box shadow-box h-full">
                                                             <a href="https://wpriverthemes.com/gridx/consulted-admitting-is-power-acuteness/" class="overlay-link"></a>
 
@@ -697,15 +663,6 @@
                                                     </div>
                                                 </div>
                                             </div>
-
-                                            <script>
-                                                AOS.init({
-                                                    duration: 1500,
-                                                    once: true,
-
-                                                });
-                                            </script>
-
                                         </div>
                                     </div>
                                 </div>
@@ -718,7 +675,7 @@
                                             {{-- Start Services Box --}}
                                             <div class="col-md-12">
                                                 <div class="blog-service-profile-wrap d-flex gap-24">
-                                                    <div data-aos="zoom-in" class="flex-1 about-services-box-wrap aos-init aos-animate">
+                                                    <div data-aos="zoom-in" class="flex-1 about-services-box-wrap aos-init">
                                                         <div class="about-services-box info-box shadow-box h-full">
                                                             <a href="#" class="overlay-link"></a>
                                                             <img decoding="async" src="{{ asset('img/bg1.png') }}" alt="BG" class="bg-img">
@@ -743,14 +700,6 @@
                                                     </div>
                                                 </div>
                                             </div>
-
-                                            <script>
-                                                AOS.init({
-                                                    duration: 1500,
-                                                    once: true,
-                                                });
-                                            </script>
-
                                         </div>
                                     </div>
                                 </div>
@@ -764,7 +713,7 @@
                                             <div class="col-md-12">
                                                 <div class="blog-service-profile-wrap">
 
-                                                    <div data-aos="zoom-in" class="about-profile-box-wrap aos-init aos-animate">
+                                                    <div data-aos="zoom-in" class="about-profile-box-wrap aos-init">
                                                         <div class="about-profile-box info-box shadow-box h-full">
                                                             <img decoding="async" src="{{ asset('img/bg1.png') }}" alt="BG" class="bg-img">
                                                             <div class="inner-profile-icons shadow-box">
@@ -789,16 +738,6 @@
                                                     </div>
                                                 </div>
                                             </div>
-
-
-                                            <script>
-                                                AOS.init({
-                                                    duration: 1500,
-                                                    once: true,
-
-                                                });
-                                            </script>
-
                                         </div>
                                     </div>
                                 </div>
@@ -814,7 +753,7 @@
 
                                             {{-- Start Client Box --}}
 
-                                            <div data-aos="zoom-in" class="about-client-box-wrap aos-init aos-animate">
+                                            <div data-aos="zoom-in" class="about-client-box-wrap aos-init">
                                                 <div class="about-client-box info-box shadow-box">
 
                                                     <img decoding="async" src="{{ asset('img/bg1.png') }}" alt="BG" class="bg-img">
@@ -822,31 +761,20 @@
 
                                                     <div class="clients d-flex align-items-start gap-24 justify-content-center">
                                                         <div class="client-item">
-                                                            <h2>07</h2>
+                                                            <h2>02</h2>
                                                             <p>Years <br>Experience</p>
                                                         </div>
                                                         <div class="client-item">
-                                                            <h2>+125</h2>
+                                                            <h2>+12</h2>
                                                             <p>CLIENTS <br>WORLDWIDE</p>
                                                         </div>
                                                         <div class="client-item">
-                                                            <h2>+210</h2>
+                                                            <h2>+10</h2>
                                                             <p>Total <br>Projects</p>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
-
-
-                                            <script>
-                                                AOS.init({
-                                                    duration: 1500,
-                                                    once: true,
-
-                                                });
-                                            </script>
-
-
                                         </div>
                                     </div>
                                 </div>
@@ -858,8 +786,7 @@
 
                                             {{-- Start Contact Box --}}
 
-
-                                            <div data-aos="zoom-in" class="about-contact-box-wrap aos-init aos-animate">
+                                            <div data-aos="zoom-in" class="about-contact-box-wrap aos-init ">
                                                 <div class="about-contact-box info-box shadow-box">
                                                     <a class="overlay-link" href="#"></a>
                                                     <img decoding="async" src="{{ asset('img/bg1.png') }}" alt="BG" class="bg-img">
@@ -870,14 +797,6 @@
                                                     </a>
                                                 </div>
                                             </div>
-
-                                            <script>
-                                                AOS.init({
-                                                    duration: 1500,
-                                                    once: true,
-
-                                                });
-                                            </script>
                                         </div>
                                     </div>
                                 </div>
@@ -916,20 +835,44 @@
         </footer>
 
     </main>
-    
-    <script src="{{asset('js/index.js')}}" id="swv-js"></script>
-    <script src="{{asset('js/index(1).js')}}" id="contact-form-7-js"></script>
-    <script src="{{asset('js/bootstrap.bundle.min.js')}}" id="bootstrap-js"></script>
+
+    <script src="{{ asset('js/index.js') }}" id="swv-js"></script>
+    {{-- <script src="{{asset('js/index(1).js')}}" id="contact-form-7-js"></script> --}}
+    <script src="{{ asset('js/bootstrap.bundle.min.js') }}" id="bootstrap-js"></script>
     {{-- <script src="{{asset('js/aos.js')}}" id="aos-js"></script> --}}
-    <script src="{{asset('js/main.js')}}" id="gridx-main-js"></script>
-    <script src="{{asset('js/webpack.runtime.min.js')}} " id="elementor-webpack-runtime-js"></script>
-    <script src="{{asset('js/frontend-modules.min.js')}} " id="elementor-frontend-modules-js"></script>
-    <script src="{{asset('js/waypoints.min.js')}} " id="elementor-waypoints-js"></script>
-    <script src="{{asset('js/core.min.js')}}" id="jquery-ui-core-js"></script>
-    <script src="{{asset('js/frontend.min.js')}} "></script>
+    <script src="{{ asset('js/main.js') }}" id="gridx-main-js"></script>
+    {{-- <script src="{{asset('js/webpack.runtime.min.js')}} " id="elementor-webpack-runtime-js"></script> --}}
+    {{-- <script src="{{asset('js/frontend-modules.min.js')}} " id="elementor-frontend-modules-js"></script> --}}
+    <script src="{{ asset('js/waypoints.min.js') }} " id="elementor-waypoints-js"></script>
+    <script src="{{ asset('js/core.min.js') }}" id="jquery-ui-core-js"></script>
+    {{-- <script src="{{asset('js/frontend.min.js')}} "></script> --}}
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
     <script>
-        AOS.init();
+        $(document).ready(function() {
+            $(document).on('click', '.header-area .show-menu', function() {
+                $(this).toggleClass('active');
+                $(".header-area .navbar").toggleClass('active');
+            });
+        })
+    </script>
+    <script>
+        window.addEventListener("load", function() {
+            const preloaderContainer = document.getElementById("md-preloader");
+            const preloader = document.getElementById("preloader");
+
+            preloader.style.display = "none";
+            preloaderContainer.style.height = 0;
+
+            setTimeout(function() {
+                AOS.init({
+                    // offset: 100,
+                    delay: 200,
+                    once: true
+                });
+            }, 500);
+        });
     </script>
 </body>
+
 </html>
