@@ -333,7 +333,7 @@ ol {
 }
 .section-heading {
     color: #ffffff;
-    font-size: 50px;
+    font-size: 40px;
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: -01px;
@@ -391,7 +391,6 @@ ol {
 }
 .info-box > img {
     display: block;
-    margin: auto auto 78px auto;
 }
 .info-box .infos h5 {
     color: #BCBCBC;
@@ -645,8 +644,8 @@ ol {
     gap: 30px;
 }
 .about-area .about-me-box .img-box {
-    width: 224px;
-    height: 224px;
+    width: 200px;
+    height: 200px;
     position: relative;
     overflow: hidden;
     background: linear-gradient(90deg, #3C58E3 -15%, #C2EBFF 58%, #5AB5E2 97%);
@@ -660,7 +659,6 @@ ol {
     width: 100%;
 }
 .about-area .about-me-box .infos {
-    padding-top: 30px;
     position: initial;
 }
 .about-area .about-me-box .infos h5 {
@@ -684,8 +682,8 @@ ol {
 .about-area .about-me-box .infos .about-btn {
     display: block;
     position: absolute;
-    right: 30px;
-    bottom: 30px;
+    right: 20px;
+    bottom: 20px;
     opacity: 0.2;
     transition: .3s;
 }
@@ -694,7 +692,6 @@ ol {
 }
 .about-area .about-credentials-wrap .banner {
     padding: 17px 25px;
-    margin-bottom: 24px;
 }
 .marquee {
     position: relative;

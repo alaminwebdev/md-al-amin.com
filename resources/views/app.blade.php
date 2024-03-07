@@ -424,21 +424,21 @@
             line-height: 1.6;
         }
     </style>
-    <link rel="stylesheet" id="redux-extendify-styles-css" href="{{ asset('css/extendify-utilities.css') }}" media="all">
-    <link rel="stylesheet" id="contact-form-7-css" href="{{ asset('css/styles.css') }}" media="all">
+    {{-- <link rel="stylesheet" id="redux-extendify-styles-css" href="{{ asset('css/extendify-utilities.css') }}" media="all"> --}}
+    {{-- <link rel="stylesheet" id="contact-form-7-css" href="{{ asset('css/styles.css') }}" media="all"> --}}
     <link rel="stylesheet" id="icon-css" href="{{ asset('css/iconoir.css') }}" media="all">
     <link rel="stylesheet" id="bootstrap-css" href="{{ asset('css/bootstrap.min.css') }}" media="all">
     {{-- <link rel="stylesheet" id="aos-css" href="{{asset('css/aos.css')}}" media="all"> --}}
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" id="gridx-style-css" href="{{ asset('css/style.css') }}" media="all">
-    <link rel="stylesheet" id="gridx-unit-test-css" href="{{ asset('css/gridx-unit-test.css') }}" media="all">
+    {{-- <link rel="stylesheet" id="gridx-unit-test-css" href="{{ asset('css/gridx-unit-test.css') }}" media="all"> --}}
     <link rel="stylesheet" id="gridx-fonts-css" href="{{ asset('css/gridx-font.css') }}" media="all">
     <link rel="stylesheet" id="elementor-icons-css" href="{{ asset('css/elementor-icons.min.css') }}" media="all">
-    <link rel="stylesheet" id="elementor-frontend-css" href="{{ asset('css/frontend-lite.min.css') }}" media="all">
-    <link rel="stylesheet" id="swiper-css" href="{{ asset('css/swiper.min.css') }}" media="all">
-    <link rel="stylesheet" id="elementor-post-16-css" href="{{ asset('css/post-16.css') }}" media="all">
+    {{-- <link rel="stylesheet" id="elementor-frontend-css" href="{{ asset('css/frontend-lite.min.css') }}" media="all"> --}}
+    {{-- <link rel="stylesheet" id="swiper-css" href="{{ asset('css/swiper.min.css') }}" media="all"> --}}
+    {{-- <link rel="stylesheet" id="elementor-post-16-css" href="{{ asset('css/post-16.css') }}" media="all"> --}}
     <link rel="stylesheet" id="elementor-global-css" href="{{ asset('css/global.css') }} " media="all">
-    <link rel="stylesheet" id="elementor-post-13-css" href="{{ asset('css/post-13.css') }}" media="all">
+    {{-- <link rel="stylesheet" id="elementor-post-13-css" href="{{ asset('css/post-13.css') }}" media="all"> --}}
     <link rel="stylesheet" id="google-fonts-1-css" href="{{ asset('css/google-fonts.css') }}" media="all">
     <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
     <script src="{{ asset('js/jquery-3.7.1.min.js') }}" id="jquery-core-js"></script>
@@ -500,12 +500,19 @@
     <script src="{{ asset('js/core.min.js') }}" id="jquery-ui-core-js"></script>
     {{-- <script src="{{asset('js/frontend.min.js')}} "></script> --}}
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
 
     <script>
         $(document).ready(function() {
             $(document).on('click', '.header-area .show-menu', function() {
                 $(this).toggleClass('active');
                 $(".header-area .navbar").toggleClass('active');
+            });
+            // Masonary
+            $('.grid').masonry({
+                // options
+                itemSelector: '.grid-item',
+                //columnWidth: 200
             });
         })
     </script>
