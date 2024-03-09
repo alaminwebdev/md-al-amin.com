@@ -1,18 +1,18 @@
  @extends('app')
  @section('content')
      <section class="about-area">
-         <div class="container-fluid p-4">
+         <div class="container">
              <div class="row grid">
                  <div class="col-lg-4 grid-item mb-4">
                      {{-- Star AboutImage --}}
                      <div data-aos="zoom-in" class="about-image-box-wrap aos-init">
-                        <div class="about-image-box shadow-box">
-                            <img decoding="async" src="{{ asset('img/bg1.png') }}" alt="BG" class="bg-img">
-                            <div class="image-inner">
-                                <img decoding="async" src="{{ asset('img/me.jpg') }}" alt="">
-                            </div>
-                        </div>
-                    </div>
+                         <div class="about-image-box shadow-box">
+                             <img decoding="async" src="{{ asset('img/bg1.png') }}" alt="BG" class="bg-img">
+                             <div class="image-inner">
+                                 <img decoding="async" src="{{ asset('img/me.jpg') }}" alt="">
+                             </div>
+                         </div>
+                     </div>
                  </div>
                  <div class="col-lg-4 grid-item mb-4">
                      {{-- Start Featured Box --}}
@@ -21,8 +21,7 @@
                              <div class="banner shadow-box">
                                  <div class="marquee">
                                      <div style="animation: marquee 50s linear infinite;">
-                                         <span>Hello, I'm Md. Al Amin, a full-stack developer with 1 year+ of experience. I have a strong passion for crafting seamless web experiences that users love. My toolkit comprises Laravel for robust back-end development, JavaScript for dynamic front-end interfaces with React, and modern tools like Inertia.js and Vite. With expertise in MySQL for optimizing databases, Git for version control, and CSS for elegant styling. From
-                                             mastering AJAX for dynamic web interactions to ensuring smooth user experiences, I'm dedicated to delivering applications that shine.</span>
+                                         <span>{{ $bio['long_bio'] }}</span>
                                      </div>
                                  </div>
                              </div>
@@ -55,12 +54,11 @@
                              <div class="about-profile-box info-box shadow-box h-full">
                                  <img decoding="async" src="{{ asset('img/bg1.png') }}" alt="BG" class="bg-img">
                                  <div class="inner-profile-icons shadow-box">
-                                     <a href="https://wpriverthemes.com/gridx/#">
-                                         <i class="iconoir-dribbble"></i>
-                                     </a>
-                                     <a href="https://wpriverthemes.com/gridx/#">
-                                         <i class="iconoir-twitter"></i>
-                                     </a>
+                                     @foreach ($socials as $social)
+                                         <a href="{{ $social['link'] }}">
+                                             <i class="{{ $social['icon'] }}"></i>
+                                         </a>
+                                     @endforeach
                                  </div>
                                  <div class="d-flex align-items-center justify-content-between">
                                      <div class="infos">
@@ -96,62 +94,58 @@
                      </div>
                  </div>
                  <div class="col-lg-4 grid-item mb-4">
-                    {{-- Start Education --}}
-                    <div data-aos="zoom-in" class="aos-init">
-                        <div class="about-edc-exp about-education shadow-box">
-                            <img decoding="async" src="{{ asset('img/bg1.png') }}" alt="BG" class="bg-img">
-                            <h4>EDUCATION</h4>
-                            <ul>
-                                <li>
-                                    <p class="date">2004 - 2007</p>
-                                    <h3>Bachelor Degree in Psychology</h3>
-                                    <p class="type">University of California</p>
-                                </li>
-                                <li>
-                                    <p class="date">2007 - 2009</p>
-                                    <h3>Master Degree in Designing</h3>
-                                    <p class="type">University of Texas</p>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
+                     {{-- Start Education --}}
+                     <div data-aos="zoom-in" class="aos-init">
+                         <div class="about-edc-exp about-education shadow-box">
+                             <img decoding="async" src="{{ asset('img/bg1.png') }}" alt="BG" class="bg-img">
+                             <h4>EDUCATION & TRAINING</h4>
+                             <ul>
+                                 @foreach ($educations as $education)
+                                     <li>
+                                         <p class="date">{{ $education['session'] }}</p>
+                                         <h3>{{ $education['degree'] }}</h3>
+                                         <p class="type">{{ $education['institute'] }}</p>
+                                     </li>
+                                 @endforeach
+                             </ul>
+                         </div>
+                     </div>
                  </div>
                  <div class="col-lg-4 grid-item mb-4">
                      {{-- Start Experience --}}
                      <div data-aos="zoom-in" class="aos-init">
-                        <div class="about-edc-exp about-experience shadow-box">
-                            <img decoding="async" src="{{ asset('img/bg1.png') }}" alt="BG" class="bg-img">
-                            <h4>EXPERIENCE</h4>
-                            <ul>
-                                <li>
-                                    <p class="date">2007 - 2017</p>
-                                    <h3>Framer Designer &amp; Developer</h3>
-                                    <p class="type">Bluebase Designs</p>
-                                </li>
-                                <li>
-                                    <p class="date">2017 - 2023</p>
-                                    <h3>Front-End Developer</h3>
-                                    <p class="type">Larsen &amp; Toubro</p>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
+                         <div class="about-edc-exp about-experience shadow-box">
+                             <img decoding="async" src="{{ asset('img/bg1.png') }}" alt="BG" class="bg-img">
+                             <h4>EXPERIENCE</h4>
+                             <ul>
+                                 <li>
+                                     <p class="date">2007 - 2017</p>
+                                     <h3>Framer Designer &amp; Developer</h3>
+                                     <p class="type">Bluebase Designs</p>
+                                 </li>
+                                 <li>
+                                     <p class="date">2017 - 2023</p>
+                                     <h3>Front-End Developer</h3>
+                                     <p class="type">Larsen &amp; Toubro</p>
+                                 </li>
+                             </ul>
+                         </div>
+                     </div>
                  </div>
                  <div class="col-lg-4 grid-item mb-4">
-                    {{-- Start AboutDetail --}}
-                    <div class="about-details aos-init" data-aos="zoom-in">
-                        <h2 class="section-heading aos-init" data-aos="">
-                            <img decoding="async" src="{{ asset('img/star-2.png') }}" alt="Star">
-                            Self-summary
-                            <img decoding="async" src="{{ asset('img/star-2.png') }}" alt="Star">
-                        </h2>
-                        <div class="about-details-inner shadow-box">
-                            <img decoding="async" src="{{ asset('img/icon2.png') }}" alt="Star" class="star-icon">
-                            <h2>Mohammad Al Amin</h2>
-                            <p>Hello, I'm Md. Al Amin, a full-stack developer with 1 year+ of experience. I have a strong passion for crafting seamless web experiences that users love. My toolkit comprises Laravel for robust back-end development, JavaScript for dynamic front-end interfaces with React, and modern tools like Inertia.js and Vite. With expertise in MySQL for optimizing databases, Git for version control, and CSS for elegant styling. From
-                                mastering AJAX for dynamic web interactions to ensuring smooth user experiences, I'm dedicated to delivering applications that shine.</p>
-                        </div>
-                    </div>
+                     {{-- Start AboutDetail --}}
+                     <div class="about-details aos-init" data-aos="zoom-in">
+                         <h3 class="section-heading aos-init" data-aos="">
+                             <img decoding="async" src="{{ asset('img/star-2.png') }}" alt="Star">
+                             Self-summary
+                             <img decoding="async" src="{{ asset('img/star-2.png') }}" alt="Star">
+                         </h3>
+                         <div class="about-details-inner shadow-box">
+                             <img decoding="async" src="{{ asset('img/icon2.png') }}" alt="Star" class="star-icon">
+                             <h4>Mohammad Al Amin</h4>
+                             <p>{{ $bio['long_bio'] }}</p>
+                         </div>
+                     </div>
                  </div>
              </div>
          </div>
