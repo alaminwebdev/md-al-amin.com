@@ -24,6 +24,20 @@ class AboutMe
             'institute' => 'Creative IT Institute , Dhaka',
         ]
     ];
+    const EXPERIENCE = [
+        [
+            'designation' => 'Full-Stack Web Developer',
+            'start_date' => '01-03-2023',
+            'end_date' => null,
+            'company' => 'Nano Information Technology (Nanosoft)',
+        ],
+        [
+            'designation' => 'Executive - Support Engineer',
+            'start_date' => '01-09-2022',
+            'end_date' => '28-02-2023',
+            'company' => 'One Sky Communications Limited',
+        ]
+    ];
 
     const BIO = [
         'short_bio' => "Hello, I'm Md. Al Amin, a full-stack web developer with 2 year+ of experience.",

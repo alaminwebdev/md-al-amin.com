@@ -1,6 +1,6 @@
  @extends('app')
  @section('content')
-     <section class="about-area">
+     <section class="about-area pt-5">
          <div class="container">
              <div class="row grid">
                  <div class="col-lg-4 grid-item mb-4">
@@ -118,16 +118,13 @@
                              <img decoding="async" src="{{ asset('img/bg1.png') }}" alt="BG" class="bg-img">
                              <h4>EXPERIENCE</h4>
                              <ul>
-                                 <li>
-                                     <p class="date">2007 - 2017</p>
-                                     <h3>Framer Designer &amp; Developer</h3>
-                                     <p class="type">Bluebase Designs</p>
-                                 </li>
-                                 <li>
-                                     <p class="date">2017 - 2023</p>
-                                     <h3>Front-End Developer</h3>
-                                     <p class="type">Larsen &amp; Toubro</p>
-                                 </li>
+                                @foreach ($experiences as $experience)
+                                     <li>
+                                         <p class="date">{{ $experience['designation'] }}</p>
+                                         <h3>{{ $experience['start_date'] }} - {{ $experience['end_date'] == null ?  'Current' : $experience['end_date'] }}</h3>
+                                         <p class="type">{{ $experience['company'] }}</p>
+                                     </li>
+                                 @endforeach
                              </ul>
                          </div>
                      </div>

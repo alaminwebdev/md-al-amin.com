@@ -9,6 +9,7 @@ class FrontController extends Controller
 {
     public function index(){
         $data['educations'] = AboutMe::EDUCATION;
+        $data['experiences'] = AboutMe::EXPERIENCE;
         $data['bio'] = AboutMe::BIO;
         $data['socials'] = AboutMe::SOCIAL;
         return view('frontend.dashboard', $data);

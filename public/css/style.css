@@ -632,9 +632,6 @@ ol {
 
 
 /* # About */
-.about-area {
-    padding-top: 80px;
-}
 .about-area .about-me-box {
     position: relative;
     padding: 50px 46px;
@@ -1613,10 +1610,6 @@ ol {
 
 
 /* # Footer */
-.footer-area {
-    padding-top: 128px;
-    padding-bottom: 78px;
-}
 .main-workspage .footer-area {
     padding-top: 104px;
 }

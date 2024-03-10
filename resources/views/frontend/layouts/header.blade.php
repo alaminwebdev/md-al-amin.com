@@ -12,7 +12,7 @@
                     <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1852 {{ Route::currentRouteName() == 'contact' ? 'active' : ''}}"><a title="Contact" href="{{ route('contact') }}">Contact</a> </li>
                 </ul>
             </nav>
-            <a href="#" class="theme-btn">Let's Talk</a>
+            <a href="#" class="theme-btn">Download Resume</a>
 
             <!-- End Navigation -->
             <div class="show-menu">

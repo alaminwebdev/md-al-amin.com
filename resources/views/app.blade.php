@@ -26,9 +26,6 @@
     <link rel="stylesheet" id="bootstrap-css" href="{{ asset('css/bootstrap.min.css') }}" media="all">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" id="gridx-style-css" href="{{ asset('css/style.css') }}" media="all">
-    <link rel="stylesheet" id="gridx-fonts-css" href="{{ asset('css/gridx-font.css') }}" media="all">
-    <link rel="stylesheet" id="elementor-icons-css" href="{{ asset('css/elementor-icons.min.css') }}" media="all">
-    <link rel="stylesheet" id="elementor-global-css" href="{{ asset('css/global.css') }} " media="all">
     <link rel="stylesheet" id="google-fonts-1-css" href="{{ asset('css/google-fonts.css') }}" media="all">
     <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
     <link rel="canonical" href="">
@@ -49,9 +46,7 @@
         @include('frontend.layouts.footer')
     </main>
 
-    <script src="{{ asset('js/index.js') }}" id="swv-js"></script>
     <script src="{{ asset('js/bootstrap.bundle.min.js') }}" id="bootstrap-js"></script>
-    <script src="{{ asset('js/main.js') }}" id="gridx-main-js"></script>
     <script src="{{ asset('js/waypoints.min.js') }} " id="elementor-waypoints-js"></script>
     <script src="{{ asset('js/core.min.js') }}" id="jquery-ui-core-js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
