@@ -51,6 +51,7 @@
     <script src="{{ asset('js/core.min.js') }}" id="jquery-ui-core-js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+    <script src="{{ asset('js/jquery.hover3d.min.js') }}"></script>
 
     <script>
         $(document).ready(function() {
@@ -64,6 +65,12 @@
                 itemSelector: '.grid-item',
                 //columnWidth: 200
             });
+
+            $(".about-pic-container").hover3d({
+                selector: ".about-image",
+                shine: true,
+            });
+
         })
     </script>
     <script>

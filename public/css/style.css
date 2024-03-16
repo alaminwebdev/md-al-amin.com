@@ -278,15 +278,13 @@ ol {
     flex: 1;
 }
 .theme-btn {
-    /* background: var(--primary_color); */
     background: linear-gradient(120deg, rgba(255,255,255,0.3), rgba(25,135,84,0.4));
     color: #fff;
     display: inline-block;
     transition: .3s;
-    border-radius: 10px;
-    font-size: 16px;
+    border-radius: 120px;
     font-weight: 500;
-    padding: 10px 15px;
+    box-shadow: rgba(0, 195, 255, 0.2) 2px 0px 18px 0px !important;
 }
 .theme-btn:hover {
     background: linear-gradient(-120deg, rgba(255,255,255,0.3), rgba(25,135,84,0.4));
@@ -543,149 +541,51 @@ ol {
 
 
 
-/* # Breadcrumb */
-.breadcrumb-area  {
-    padding-top: 77px;
-}
-.breadcrumb-area .breadcrumb-content p {
-    color: #BCBCBC;
-    opacity: 0.7;
-    margin-bottom: 24px;
-}
-.breadcrumb-area .breadcrumb-content .section-heading {
-    font-size: 56px;
-    position: relative;
-    display: block;
-    margin-bottom: 30px;
-}
-.breadcrumb-area .breadcrumb-content .section-heading img {
-    display: initial;
-}
-
 
 
 /* # Header */
-.header-area .logo {
-    display: inline-block;
-    z-index: 16;
+.navbar{
+    border-bottom: 1px solid #212529 !important;
+    background: rgb(15 23 42 / 60%);
+    backdrop-filter: blur(6.6px);
+    transition: all 2s linear(0 0%, 0 1.8%, 0.01 3.6%, 0.03 6.35%, 0.07 9.1%, 0.13 11.4%, 0.19 13.4%, 0.27 15%, 0.34 16.1%, 0.54 18.35%, 0.66 20.6%, 0.72 22.4%, 0.77 24.6%, 0.81 27.3%, 0.85 30.4%, 0.88 35.1%, 0.92 40.6%, 0.94 47.2%, 0.96 55%, 0.98 64%, 0.99 74.4%, 1 86.4%, 1 100%);
 }
-.header-area .logo img {
-    display: block;
-    width: 190px;;
+.nav-item .active{
+   color: #fff !important;
 }
-.header-area .navbar {
-    margin: 0;
-    padding: 0;
-}
-.header-area .navbar .theme-btn {
-    display: none;
-}
-.header-area .navbar .menu {
-    display: flex;
-    align-items: center;
-    gap: 49px;
-    margin: 0;
-    padding: 0;
-}
-.header-area .navbar .menu li a {
-    font-size: 16px;
-    color: #676767;
-    transition: .3s;
-    display: block;
-    padding: 26px 0px;
-}
-.header-area .navbar .menu li.active a,
-.header-area .navbar .menu li a:hover {
-    color: #ffffff;
-}
-.header-area .show-menu {
-    display: none;
-    color: #fff;
-    font-size: 25px;
-    cursor: pointer;
-    width: 25px;
-    height: 18px;
-    flex-direction: column;
-    justify-content: space-between;
-    z-index: 16;
-}
-.header-area .show-menu span {
-    width: 100%;
-    height: 1px;
-    background: #fff;
-    display: block;
-    transition: .4s;
-}
-.header-area .show-menu.active span:first-child {
-    transform: translate3d(0px, 6px, 0px) scale(1, 1) rotate(45deg) scale(1, 1);
-}
-.header-area .show-menu span:last-child {
-    transform-origin: left;
-}
-.header-area .show-menu.active span:last-child {
-    transform: translate3d(4px, -2px, 0px) scale(1, 1) rotate(-45deg) scale(1, 1);
-}
-.header-area .show-menu.active span:nth-child(2) {
-    transform: scale(0);
-}
-
-
 
 /* # About */
-.about-area .about-me-box {
-    position: relative;
-    padding: 50px 46px;
-    display: flex;
-    align-items: flex-start;
-    gap: 30px;
+
+.about-pic-container {
+	position: relative;
+	z-index: 9;
+	will-change: transform;
+	transition: box-shadow .3s linear;
+    border-radius: 20px; 
 }
-.about-area .about-me-box .img-box {
-    width: 200px;
-    height: 200px;
-    position: relative;
-    overflow: hidden;
-    background: linear-gradient(90deg, #3C58E3 -15%, #C2EBFF 58%, #5AB5E2 97%);
-    border-radius: 30px 0 30px 0;
-    flex: none;
+
+.about-pic-container.hover-in {
+	transition: -webkit-transform .2s linear;
+	transition: -moz-transform .2s linear;
+	transition: -0-transform .2s linear;
+	transition: transform .2s linear;
+
 }
-.about-area .about-me-box .img-box img {
-    display: block;
-    height: 100%;
-    object-fit: cover;
-    width: 100%;
+
+.about-pic-container.hover-out {
+	transition: -webkit-transform .2s linear;
+	transition: -moz-transform .2s linear;
+	transition: -0-transform .2s linear;
+	transition: transform .2s linear;
 }
-.about-area .about-me-box .infos {
-    position: initial;
+
+.about-image {
+	width: 100%;
+	height: auto;
+    box-shadow: rgba(0, 195, 255, 0.2) 2px 0px 18px 0px !important;
+    border-radius: 20px; 
 }
-.about-area .about-me-box .infos h5 {
-    color: #BCBCBC;
-    opacity: 0.7;
-    font-size: 14px;
-    letter-spacing: 0.3px;
-    margin-bottom: 3px;
-}
-.about-area .about-me-box .infos h1 {
-    font-size: 36px;
-    line-height: 40px;
-    color: #fff;
-    font-weight: 500;
-    margin-bottom: 12px;
-}
-.about-area .about-me-box .infos p {
-    letter-spacing: 0.3px;
-    margin: 0;
-}
-.about-area .about-me-box .infos .about-btn {
-    display: block;
-    position: absolute;
-    right: 20px;
-    bottom: 20px;
-    opacity: 0.2;
-    transition: .3s;
-}
-.about-area .about-me-box:hover .infos .about-btn {
-    opacity: 1;
-}
+
 .about-area .about-credentials-wrap .banner {
     padding: 17px 25px;
 }

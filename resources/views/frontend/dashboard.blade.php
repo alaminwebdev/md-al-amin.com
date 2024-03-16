@@ -5,13 +5,10 @@
              <div class="row grid">
                  <div class="col-lg-4 grid-item mb-4">
                      {{-- Star AboutImage --}}
-                     <div data-aos="zoom-in" class="about-image-box-wrap aos-init">
-                         <div class="about-image-box shadow-box">
-                             <img decoding="async" src="{{ asset('img/bg1.png') }}" alt="BG" class="bg-img">
-                             <div class="image-inner">
-                                 <img decoding="async" src="{{ asset('img/me.jpg') }}" alt="">
-                             </div>
-                         </div>
+                     <div data-aos="zoom-in" class=" aos-init">
+                        <div class="about-pic-container">
+							<img class="about-image" src="{{ asset('img/me.jpg') }}" alt="">
+						</div>
                      </div>
                  </div>
                  <div class="col-lg-4 grid-item mb-4">

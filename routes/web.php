@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\FrontController;
+use App\Http\Controllers\ResumeController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -15,6 +16,10 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', [FrontController::class, 'index'])->name('dashboard');
-Route::get('/about', [FrontController::class, 'about'])->name('about');
+Route::get('/resume', [FrontController::class, 'resume'])->name('resume');
 Route::get('/works', [FrontController::class, 'works'])->name('works');
 Route::get('/contact', [FrontController::class, 'contact'])->name('contact');
+
+Route::get('/resume/download', [ResumeController::class, 'download'])->name('resume.download');
+Route::match(['get', 'post'], '/resume/upload', [ResumeController::class, 'upload'])->name('resume.upload');
+

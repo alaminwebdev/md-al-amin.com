@@ -14,7 +14,7 @@ class FrontController extends Controller
         $data['socials'] = AboutMe::SOCIAL;
         return view('frontend.dashboard', $data);
     }
-    public function about(){
+    public function resume(){
         return view('frontend.about');
     }
     public function works(){
