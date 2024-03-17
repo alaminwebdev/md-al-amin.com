@@ -42,6 +42,7 @@ class FrontController extends Controller
         $data['experiences']    = AboutMe::EXPERIENCE;
         $data['bio']            = AboutMe::BIO;
         $data['socials']        = AboutMe::SOCIAL;
-        return view('frontend.dashboard', $data);
+        $data['contacts']       = AboutMe::CONTACT;
+        return view('frontend.contact', $data);
     }
 }

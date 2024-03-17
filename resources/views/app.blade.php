@@ -25,7 +25,8 @@
     <link rel="stylesheet" id="icon-css" href="{{ asset('css/iconoir.css') }}" media="all">
     <link rel="stylesheet" id="bootstrap-css" href="{{ asset('css/bootstrap.min.css') }}" media="all">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link rel="stylesheet" id="gridx-style-css" href="{{ asset('css/style.css') }}" media="all">
+    <link rel="stylesheet" id="" href="{{ asset('css/style.css') }}" media="all">
+    <link rel="stylesheet" id="" href="{{ asset('css/responsive.css') }}" media="all">
     <link rel="stylesheet" id="google-fonts-1-css" href="{{ asset('css/google-fonts.css') }}" media="all">
     <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
     <link rel="canonical" href="">

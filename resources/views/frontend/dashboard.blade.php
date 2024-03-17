@@ -28,7 +28,7 @@
                  <div class="col-lg-4 grid-item mb-4">
                      {{-- Start Project Box --}}
                      <div data-aos="zoom-in" class="about-project-box aos-init">
-                         <div class="info-box shadow-box h-full">
+                         <div class="info-box shadow-box text-center">
                              <a class="overlay-link" href="https://wpriverthemes.com/gridx/work/"></a>
                              <img decoding="async" src="{{ asset('img/bg1.png') }}" alt="BG" class="bg-img">
                              <img decoding="async" src="{{ asset('img/my-works.png') }}" alt="">

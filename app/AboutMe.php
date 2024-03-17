@@ -66,4 +66,22 @@ class AboutMe
             'icon' => 'iconoir-mail'
         ]
     ];
+
+    const CONTACT = [
+        [
+            'name'  => 'Email',
+            'icon'  => 'iconoir-mail',
+            'infos' => ['mohammadalamin.dev@gmail.com', 'alamin80336034@gmail.com']
+        ],
+        [
+            'name'  => 'contact',
+            'icon'  => 'iconoir-phone',
+            'infos' => ['+8801718695350', '+8801580336034']
+        ],
+        [
+            'name'  => 'location',
+            'icon'  => 'iconoir-pin-alt',
+            'infos' => ['22 Baker Street, Texas', 'United States', 'W1U 3BW']
+        ]
+    ];
 }
