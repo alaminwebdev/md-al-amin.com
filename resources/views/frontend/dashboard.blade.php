@@ -74,7 +74,7 @@
                      {{-- Start Credentials Box --}}
                      <div data-aos="zoom-in" class="about-crenditials-box aos-init">
                          <div class="info-box shadow-box h-full">
-                             <a class="overlay-link" href="#"></a>
+                             <a class="overlay-link" href="{{ route('resume') }}"></a>
                              <img decoding="async" src="{{ asset('img/bg1.png') }}" alt="BG" class="bg-img">
                              <img decoding="async" src="{{ asset('img/logo.png') }}" alt="">
                              <div class="d-flex align-items-center justify-content-between">

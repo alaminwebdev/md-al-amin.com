@@ -16,10 +16,10 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', [FrontController::class, 'index'])->name('dashboard');
-Route::get('/resume', [FrontController::class, 'resume'])->name('resume');
-Route::get('/works', [FrontController::class, 'works'])->name('works');
-Route::get('/contact', [FrontController::class, 'contact'])->name('contact');
+Route::get('resume-view', [FrontController::class, 'resume'])->name('resume');
+Route::get('works', [FrontController::class, 'works'])->name('works');
+Route::get('contact', [FrontController::class, 'contact'])->name('contact');
 
-Route::get('/resume/download', [ResumeController::class, 'download'])->name('resume.download');
-Route::match(['get', 'post'], '/resume/upload', [ResumeController::class, 'upload'])->name('resume.upload');
+Route::get('resume-download', [ResumeController::class, 'download'])->name('resume.download');
+Route::match(['get', 'post'], 'resume-upload', [ResumeController::class, 'upload'])->name('resume.upload');
 
