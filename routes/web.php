@@ -20,6 +20,11 @@ Route::get('resume-view', [FrontController::class, 'resume'])->name('resume');
 Route::get('works', [FrontController::class, 'works'])->name('works');
 Route::get('contact', [FrontController::class, 'contact'])->name('contact');
 
+
+
+// Backend
 Route::get('resume-download', [ResumeController::class, 'download'])->name('resume.download');
 Route::match(['get', 'post'], 'resume-upload', [ResumeController::class, 'upload'])->name('resume.upload');
+
+Route::post('contact-store', [FrontController::class, 'store'])->name('contact.store');
 

@@ -5,6 +5,8 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="robots" content="max-image-preview:large">
     <meta name="description" content="Md. Al Amin – A Full Stack Web Developer">
@@ -39,8 +41,9 @@
     <script src="{{ asset('js/jquery-3.7.1.min.js') }}" id="jquery-core-js"></script>
 </head>
 
-<body class="home" data-aos-easing="ease" data-aos-duration="1500" data-aos-delay="0" >
+<body class="home" data-aos-easing="ease" data-aos-duration="1500" data-aos-delay="0">
     @include('frontend.layouts.preloader')
+    @include('frontend.layouts.status-message')
     <main class="main-homepage">
         @include('frontend.layouts.header')
         @yield('content')
@@ -52,6 +55,7 @@
     <script src="{{ asset('js/core.min.js') }}" id="jquery-ui-core-js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+    <script src="{{ asset('js/sweetalert2.min.js') }}"></script>
     <script src="{{ asset('js/jquery.hover3d.min.js') }}"></script>
 
     <script>
