@@ -61,20 +61,24 @@
             showAlert('warning', "{{ session()->get('warning') }}");
         }
 
+
         function showAlert(type, message) {
-            Swal.fire({
-                toast: true,
-                customClass: {
-                    popup: 'colored-toast'
-                },
-                iconColor: 'white',
-                icon: type,
-                title: message,
-                position: 'top-end',
-                showConfirmButton: false,
-                timer: 3000,
-                timerProgressBar: true
-            });
+            setTimeout(function() {
+                Swal.fire({
+                    toast: true,
+                    customClass: {
+                        popup: 'colored-toast'
+                    },
+                    iconColor: 'white',
+                    icon: type,
+                    title: message,
+                    position: 'top-end',
+                    showConfirmButton: false,
+                    timer: 3000,
+                    timerProgressBar: true
+                });
+            }, 2500);
+
         }
     });
 </script>

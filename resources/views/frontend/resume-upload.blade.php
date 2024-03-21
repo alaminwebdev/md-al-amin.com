@@ -4,12 +4,12 @@
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-md-8">
-                    <div class="card">
+                    <div class="card border-0 rounded p-4" style="background: #1c3150;">
                         <div class="card-body">
-                            <h5 class="card-title">Upload Your Resume</h5>
-                            @if (session('success'))
+                            <h5 class="card-title mb-3">Upload Your Resume</h5>
+                            {{-- @if (session('success'))
                                 <div class="alert alert-success">{{ session('success') }}</div>
-                            @endif
+                            @endif --}}
                             <form method="POST" action="{{ route('resume.upload') }}" enctype="multipart/form-data">
                                 @csrf
                                 <div class="mb-3">
@@ -20,7 +20,7 @@
                                         </div>
                                     @enderror
                                 </div>
-                                <button type="submit" class="btn btn-primary">Upload Resume</button>
+                                <button type="submit" class="btn btn-sm theme-btn">Upload Resume</button>
                             </form>
                         </div>
                     </div>

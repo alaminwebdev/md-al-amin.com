@@ -70,9 +70,6 @@
 
     <script>
         function validateForm() {
-            // Reset any previous validation error messages
-            $('.is-invalid').removeClass('is-invalid');
-
             // Flag to track whether validation passes
             var isValid = true;
 
@@ -82,35 +79,36 @@
             var subject = $('#subject').val();
             var comments = $('#comments').val();
 
+            // Reset any previous validation error styles
+            $('#name, #email, #subject, #comments').css('border', '');
+
             if (name === '') {
-                $('#name').addClass('is-invalid');
+                $('#name').css('border', '1px solid #dc3545');
                 isValid = false;
             }
 
             if (email === '') {
-                $('#email').addClass('is-invalid');
+                $('#email').css('border', '1px solid #dc3545');
                 isValid = false;
             }
 
             if (subject === '') {
-                $('#subject').addClass('is-invalid');
+                $('#subject').css('border', '1px solid #dc3545');
                 isValid = false;
             }
             if (comments === '') {
-                $('#comments').addClass('is-invalid');
+                $('#comments').css('border', '1px solid #dc3545');
                 isValid = false;
             }
             return isValid;
         }
     </script>
+
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             const contactForm = document.getElementById('contactForm');
             const preloaderContainer = document.getElementById("md-preloader");
             const preloader = document.getElementById("preloader");
-
-            preloader.style.display = "none";
-            preloaderContainer.style.height = 0;
 
             contactForm.addEventListener('submit', function(e) {
                 e.preventDefault();

@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ContactController;
 use App\Http\Controllers\FrontController;
 use App\Http\Controllers\ResumeController;
 use Illuminate\Support\Facades\Route;
@@ -26,5 +27,5 @@ Route::get('contact', [FrontController::class, 'contact'])->name('contact');
 Route::get('resume-download', [ResumeController::class, 'download'])->name('resume.download');
 Route::match(['get', 'post'], 'resume-upload', [ResumeController::class, 'upload'])->name('resume.upload');
 
-Route::post('contact-store', [FrontController::class, 'store'])->name('contact.store');
+Route::post('contact-store', [ContactController::class, 'store'])->name('contact.store');
 
