@@ -28,7 +28,7 @@
 }
 
 body {
-    font-family: 'Inter', sans-serif;
+    font-family: system-ui;
     font-size: 14px;
     scroll-behavior: smooth;
     color: #9f9f9f;
