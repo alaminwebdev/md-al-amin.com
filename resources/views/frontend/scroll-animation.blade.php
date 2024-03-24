@@ -37,6 +37,9 @@
     .scroller[data-speed="slow"] {
         --_animation-duration: 60s;
     }
+    .scroller[data-speed="medium"] {
+        --_animation-duration: 50s;
+    }
 
     @keyframes scroll {
         to {
@@ -61,33 +64,18 @@
         <div class="row">
             <div class="col-sm-12">
                 <div class="scroller" data-speed="fast">
-                    <ul class="tag-list scroller__inner">
-                        <li>HTML</li>
-                        <li>CSS</li>
-                        <li>JS</li>
-                        <li>SSG</li>
-                        <li>webdev</li>
-                        <li>animation</li>
-                        <li>UI/UX</li>
-                        <li>HTML</li>
-                        <li>CSS</li>
-                        <li>JS</li>
-                        <li>SSG</li>
+                    <ul class="tag-list scroller__inner pt-0">
+                        @foreach ($skills as $skill)
+                            <li>{{ $skill }}</li>    
+                        @endforeach
                     </ul>
                 </div>
     
-                <div class="scroller" data-direction="right" data-speed="slow">
+                <div class="scroller" data-direction="right" data-speed="medium">
                     <div class="scroller__inner">
-                        <img src="https://i.pravatar.cc/150?img=1" alt="" />
-                        <img src="https://i.pravatar.cc/150?img=2" alt="" />
-                        <img src="https://i.pravatar.cc/150?img=3" alt="" />
-                        <img src="https://i.pravatar.cc/150?img=4" alt="" />
-                        <img src="https://i.pravatar.cc/150?img=5" alt="" />
-                        <img src="https://i.pravatar.cc/150?img=6" alt="" />
-                        <img src="https://i.pravatar.cc/150?img=1" alt="" />
-                        <img src="https://i.pravatar.cc/150?img=2" alt="" />
-                        <img src="https://i.pravatar.cc/150?img=3" alt="" />
-                        <img src="https://i.pravatar.cc/150?img=4" alt="" />
+                        @foreach ($skill_icons as $skill_icon)
+                            <img src="{{ asset('img/icons/' . $skill_icon) }}" width="100px;" class="img-fluid" />
+                        @endforeach
                     </div>
                 </div>
             </div>

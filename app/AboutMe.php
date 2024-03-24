@@ -84,4 +84,28 @@ class AboutMe
             'infos' => ['22 Baker Street, Texas', 'United States', 'W1U 3BW']
         ]
     ];
+
+    const SKILL = ['PHP Framework Laravel', 'Javascript', 'React', 'PHP','AJAX', 'jQuery','MySQL' ,'CSS', 'Bootstrap', 'SQL', 'JSON', 'Version Control System (Git)', 'Postman', 'MS Word', 'MS Excel', 'MS  Power Point'];
+
+    const SKILL_ICON = [
+        'Laravel-Dark.svg', 
+        'PHP-Dark.svg',
+        'JavaScript.svg',
+        'React-Dark.svg', 
+        'JQuery.svg',
+        'MySQL-Dark.svg' ,
+        'Bootstrap.svg', 
+        'CSS.svg', 
+        'HTML.svg', 
+        'Htmx-Dark.svg', 
+        'Photoshop.svg', 
+        'Git.svg', 
+        'Github-Dark.svg',
+        'GitLab-Dark.svg',
+        'BitBucket-Light.svg', 
+        'Postman.svg', 
+        'TailwindCSS-Dark.svg', 
+        'Vite-Dark.svg',
+        'VSCode-Dark.svg'
+    ];
 }

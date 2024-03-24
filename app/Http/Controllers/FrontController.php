@@ -14,16 +14,20 @@ class FrontController extends Controller
         $data['experiences']    = AboutMe::EXPERIENCE;
         $data['bio']            = AboutMe::BIO;
         $data['socials']        = AboutMe::SOCIAL;
+        $data['skills']         = AboutMe::SKILL;
+        $data['skill_icons']    = AboutMe::SKILL_ICON;
         return view('frontend.dashboard', $data);
     }
     public function resume()
     {
-        $fileName = 'resume_of_md_al_amin.pdf';
-        $filePath = public_path('resume');
+        $fileName       = 'resume_of_md_al_amin.pdf';
+        $filePath       = public_path('resume');
+        $skills         = AboutMe::SKILL;
+        $skill_icons    = AboutMe::SKILL_ICON;
 
         // Check if file already exists, if so, delete it
         if (File::exists($filePath . '/' . $fileName)) {
-            return view('frontend.resume', compact('fileName'));
+            return view('frontend.resume', compact('fileName','skills','skill_icons'));
         }
         return redirect()->back()->with('warning', 'Resume not Found!');
 
@@ -34,6 +38,8 @@ class FrontController extends Controller
         $data['experiences']    = AboutMe::EXPERIENCE;
         $data['bio']            = AboutMe::BIO;
         $data['socials']        = AboutMe::SOCIAL;
+        $data['skills']         = AboutMe::SKILL;
+        $data['skill_icons']    = AboutMe::SKILL_ICON;
         return view('frontend.dashboard', $data);
     }
     public function contact()
@@ -43,6 +49,8 @@ class FrontController extends Controller
         $data['bio']            = AboutMe::BIO;
         $data['socials']        = AboutMe::SOCIAL;
         $data['contacts']       = AboutMe::CONTACT;
+        $data['skills']         = AboutMe::SKILL;
+        $data['skill_icons']    = AboutMe::SKILL_ICON;
         return view('frontend.contact', $data);
     }
 }

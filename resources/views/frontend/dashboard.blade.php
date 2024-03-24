@@ -12,18 +12,15 @@
                      </div>
                  </div>
                  <div class="col-lg-4 grid-item mb-4">
-                     {{-- Start Featured Box --}}
-                     <div class="about-credentials-wrap">
-                         <div data-aos="zoom-in" class="aos-init">
-                             <div class="banner shadow-box">
-                                 <div class="marquee">
-                                     <div style="animation: marquee 50s linear infinite;">
-                                         <span>{{ $bio['long_bio'] }}</span>
-                                     </div>
-                                 </div>
-                             </div>
-                         </div>
-                     </div>
+                    <div data-aos="zoom-in" class="aos-init">
+                        <div class="scroller" data-direction="right" data-speed="fast">
+                            <div class="scroller__inner pb-0">
+                                @foreach ($skill_icons as $skill_icon)
+                                    <img src="{{ asset('img/icons/' . $skill_icon) }}" width="100px;" class="img-fluid" />
+                                @endforeach
+                            </div>
+                        </div>
+                    </div>
                  </div>
                  <div class="col-lg-4 grid-item mb-4">
                      {{-- Start Project Box --}}
@@ -126,6 +123,7 @@
                          </div>
                      </div>
                  </div>
+                 
                  <div class="col-lg-4 grid-item mb-4">
                      {{-- Start AboutDetail --}}
                      <div class="about-details aos-init" data-aos="zoom-in">
@@ -141,6 +139,20 @@
                          </div>
                      </div>
                  </div>
+                 <div class="col-lg-4 grid-item mb-4">
+                    {{-- Start Featured Box --}}
+                    <div class="about-credentials-wrap">
+                        <div data-aos="zoom-in" class="aos-init">
+                            <div class="banner shadow-box">
+                                <div class="marquee">
+                                    <div style="animation: marquee 50s linear infinite;">
+                                        <span>{{ $bio['long_bio'] }}</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
              </div>
          </div>
      </section>

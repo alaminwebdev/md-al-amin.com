@@ -1,5 +1,5 @@
 <!-- Footer -->
-<footer class="footer-area py-5">
+<footer class="footer-area pb-5 pt-3">
     <div class="container">
         <div class="footer-content text-center">
             <a href="#" class="logo">
