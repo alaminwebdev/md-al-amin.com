@@ -25,14 +25,14 @@ class FrontController extends Controller
         $skills         = AboutMe::SKILL;
         $skill_icons    = AboutMe::SKILL_ICON;
 
-        // Check if file already exists, if so, delete it
+        // Check if file already exists, if so, enter page
         if (File::exists($filePath . '/' . $fileName)) {
             return view('frontend.resume', compact('fileName','skills','skill_icons'));
         }
         return redirect()->back()->with('warning', 'Resume not Found!');
 
     }
-    public function works()
+    public function projects()
     {
         $data['educations']     = AboutMe::EDUCATION;
         $data['experiences']    = AboutMe::EXPERIENCE;
@@ -40,7 +40,7 @@ class FrontController extends Controller
         $data['socials']        = AboutMe::SOCIAL;
         $data['skills']         = AboutMe::SKILL;
         $data['skill_icons']    = AboutMe::SKILL_ICON;
-        return view('frontend.dashboard', $data);
+        return view('frontend.projects', $data);
     }
     public function contact()
     {

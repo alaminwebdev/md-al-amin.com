@@ -11,7 +11,7 @@
                     <a title="Home" href="{{ route('dashboard') }}">Home</a>
                 </li>
                 <li id="" class=""><a title="Resume" href="{{ route('resume') }}">Resume</a></li>
-                <li id="" class=""><a title="Works" href="{{ route('works') }}">Works</a></li>
+                <li id="" class=""><a title="Projects" href="{{ route('projects') }}">Projects</a></li>
                 <li id="" class=""><a title="Contact" href="{{ route('contact') }}">Contact</a></li>
             </ul>
             <p class="copyright">

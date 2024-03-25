@@ -1,8 +1,3 @@
-{{-- <header class="header-area">
-    <div class="container">
-        
-    </div>
-</header> --}}
 <nav class="navbar navbar-expand-lg sticky-top">
     <div class="container">
         <a class="navbar-brand" href="#">
@@ -20,7 +15,7 @@
                     <a class="nav-link {{ Route::currentRouteName() == 'resume' ? 'active' : '' }} text-secondary" href="{{ route('resume') }}">Resume</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link {{ Route::currentRouteName() == 'works' ? 'active' : '' }} text-secondary" href="{{ route('works') }}">Works</a>
+                    <a class="nav-link {{ Route::currentRouteName() == 'projects' ? 'active' : '' }} text-secondary" href="{{ route('projects') }}">Projects</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link {{ Route::currentRouteName() == 'contact' ? 'active' : '' }} text-secondary" href="{{ route('contact') }}">Contact</a>
