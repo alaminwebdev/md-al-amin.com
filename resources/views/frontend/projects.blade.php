@@ -1,50 +1,26 @@
-{{-- @extends('app') --}}
-{{-- @section('content') --}}
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js"></script>
+@extends('app')
 
-<script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.3/gsap.min.js"></script>
+@php
+    $excludePreloader = true;
+    $excludeStatusMessage = true;
+@endphp
+
+@section('content')
+    <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.3/gsap.min.js"></script>
     <style>
-
         :root {
-            --card-width: 200px;
+            --card-width: 400px;
             --card-height: 300px;
             --card-transition-duration: 800ms;
             --card-transition-easing: ease;
         }
 
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
-        body {
-            width: 100%;
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background: rgba(0, 0, 0, 0.787);
-            overflow: hidden;
-        }
-
-        button {
-            border: none;
-            background: none;
-            cursor: pointer;
-        }
-
-        button:focus {
-            outline: none;
-            border: none;
-        }
 
         .app {
             position: relative;
             width: 100%;
-            height: 100%;
+            height: 700px;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -68,7 +44,7 @@
             top: 0;
             width: 100%;
             height: 100%;
-            background: #000;
+            background: #0f172a;
             z-index: 1;
             opacity: 0.8;
         }
@@ -115,9 +91,6 @@
         }
 
         .cardList__btn {
-            --btn-size: 35px;
-            width: var(--btn-size);
-            height: var(--btn-size);
             position: absolute;
             top: 50%;
             transform: translateY(-50%);
@@ -132,14 +105,8 @@
             right: -5%;
         }
 
-        .cardList__btn .icon {
-            width: 100%;
-            height: 100%;
-        }
-
-        .cardList__btn .icon svg {
-            width: 100%;
-            height: 100%;
+        .cardList__btn i {
+            font-size: 45px;
         }
 
         .cardList .cards__wrapper {
@@ -241,7 +208,6 @@
 
         .info .text {
             position: relative;
-            font-family: "Montserrat";
             font-size: calc(var(--card-width) * var(--text-size-offset, 0.2));
             white-space: nowrap;
             color: #fff;
@@ -313,15 +279,9 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            background: #000;
+            background: rgb(15 23 42 / 60%);
+            backdrop-filter: blur(6.6px);
             z-index: 200;
-        }
-
-        .loading__wrapper .loader--text {
-            color: #fff;
-            font-family: "Montserrat";
-            font-weight: 500;
-            margin-bottom: 1.4rem;
         }
 
         .loading__wrapper .loader {
@@ -340,13 +300,6 @@
             background: red;
             transform: scaleX(0);
             transform-origin: left;
-        }
-
-        @media only screen and (min-width: 800px) {
-            :root {
-                --card-width: 250px;
-                --card-height: 400px;
-            }
         }
 
         .support {
@@ -369,99 +322,85 @@
             transform: scale(1.1);
         }
     </style>
-    <section class="project-area pt-5">
-        <div class="">
-            <div class="app">
+    <section class="project-area pb-5">
+        <div class="app">
+            <div class="cardList">
+                <button class="cardList__btn btn btn--left">
+                    <i class="iconoir-fast-arrow-left text-white"></i>
+                </button>
 
-                <div class="cardList">
-                    <button class="cardList__btn btn btn--left">
-                        <div class="icon">
-                            <svg>
-                                <use xlink:href="#arrow-left"></use>
-                            </svg>
-                        </div>
-                    </button>
-
-                    <div class="cards__wrapper">
-                        <div class="card current--card">
-                            <div class="card__image">
-                                <img src="https://source.unsplash.com/Z8dtTatMVMw" alt="" />
-                            </div>
-                        </div>
-
-                        <div class="card next--card">
-                            <div class="card__image">
-                                <img src="https://source.unsplash.com/9dmycbFE7mQ" alt="" />
-                            </div>
-                        </div>
-
-                        <div class="card previous--card">
-                            <div class="card__image">
-                                <img src="https://source.unsplash.com/m7K4KzL5aQ8" alt="" />
-                            </div>
+                <div class="cards__wrapper container">
+                    <div class="card current--card">
+                        <div class="card__image">
+                            <img src="https://source.unsplash.com/Z8dtTatMVMw" alt="" />
                         </div>
                     </div>
 
-                    <button class="cardList__btn btn btn--right">
-                        <div class="icon">
-                            <svg>
-                                <use xlink:href="#arrow-right"></use>
-                            </svg>
+                    <div class="card next--card">
+                        <div class="card__image">
+                            <img src="https://source.unsplash.com/9dmycbFE7mQ" alt="" />
                         </div>
-                    </button>
-                </div>
+                    </div>
 
-                <div class="infoList">
-                    <div class="info__wrapper">
-                        <div class="info current--info">
-                            <h1 class="text name">Highlands</h1>
-                            <h4 class="text location">Scotland</h4>
-                            <p class="text description">The mountains are calling</p>
-                        </div>
-
-                        <div class="info next--info">
-                            <h1 class="text name">Machu Pichu</h1>
-                            <h4 class="text location">Peru</h4>
-                            <p class="text description">Adventure is never far away</p>
-                        </div>
-
-                        <div class="info previous--info">
-                            <h1 class="text name">Chamonix</h1>
-                            <h4 class="text location">France</h4>
-                            <p class="text description">Let your dreams come true</p>
+                    <div class="card previous--card">
+                        <div class="card__image">
+                            <img src="https://source.unsplash.com/m7K4KzL5aQ8" alt="" />
                         </div>
                     </div>
                 </div>
 
-                <div class="app__bg">
-                    <div class="app__bg__image current--image">
-                        <img src="https://source.unsplash.com/Z8dtTatMVMw" alt="" />
+                <button class="cardList__btn btn btn--right">
+                    <i class="iconoir-fast-arrow-right text-white"></i>
+                </button>
+            </div>
+
+            <div class="infoList">
+                <div class="info__wrapper">
+                    <div class="info current--info">
+                        <h2 class="text name">Highlands</h2>
+                        <h4 class="text location">Scotland</h4>
+                        <p class="text description">The mountains are calling</p>
                     </div>
-                    <div class="app__bg__image next--image">
-                        <img src="https://source.unsplash.com/9dmycbFE7mQ" alt="" />
+
+                    <div class="info next--info">
+                        <h2 class="text name">Machu Pichu</h2>
+                        <h4 class="text location">Peru</h4>
+                        <p class="text description">Adventure is never far away</p>
                     </div>
-                    <div class="app__bg__image previous--image">
-                        <img src="https://source.unsplash.com/m7K4KzL5aQ8" alt="" />
+
+                    <div class="info previous--info">
+                        <h2 class="text name">Chamonix</h2>
+                        <h4 class="text location">France</h4>
+                        <p class="text description">Let your dreams come true</p>
                     </div>
                 </div>
             </div>
 
-            <div class="loading__wrapper">
-                <div class="loader--text">Loading...</div>
-                <div class="loader">
-                    <span></span>
+            <div class="app__bg">
+                <div class="app__bg__image current--image">
+                    <img src="https://source.unsplash.com/Z8dtTatMVMw" alt="" />
+                </div>
+                <div class="app__bg__image next--image">
+                    <img src="https://source.unsplash.com/9dmycbFE7mQ" alt="" />
+                </div>
+                <div class="app__bg__image previous--image">
+                    <img src="https://source.unsplash.com/m7K4KzL5aQ8" alt="" />
                 </div>
             </div>
+        </div>
 
-            <svg class="icons" style="display: none;">
-                <symbol id="arrow-left" xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'>
-                    <polyline points='328 112 184 256 328 400' style='fill:none;stroke:#fff;stroke-linecap:round;stroke-linejoin:round;stroke-width:48px' />
-                </symbol>
-                <symbol id="arrow-right" xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'>
-                    <polyline points='184 112 328 256 184 400' style='fill:none;stroke:#fff;stroke-linecap:round;stroke-linejoin:round;stroke-width:48px' />
-                </symbol>
-            </svg>
-
+        <div class="loading__wrapper">
+            <div class="loader--text">
+                <div class="wholesquare">
+                    <div class="square first"></div>
+                    <div class="square second"></div>
+                    <div class="square third"></div>
+                    <div class="square fourth"></div>
+                </div>
+            </div>
+            <div class="loader mt-3">
+                <span></span>
+            </div>
         </div>
     </section>
 
@@ -731,4 +670,4 @@
 
         waitForImages();
     </script>
-{{-- @endsection --}}
+@endsection

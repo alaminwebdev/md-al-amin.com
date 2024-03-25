@@ -42,8 +42,15 @@
 </head>
 
 <body class="home" data-aos-easing="ease" data-aos-duration="1500" data-aos-delay="0">
-    @include('frontend.layouts.preloader')
-    @include('frontend.layouts.status-message')
+    
+    @if (!isset($excludePreloader))
+        @include('frontend.layouts.preloader')
+    @endif
+
+    @if (!isset($excludeStatusMessage))
+        @include('frontend.layouts.status-message')
+    @endif
+
     <main class="main-homepage">
         @include('frontend.layouts.header')
         @yield('content')
