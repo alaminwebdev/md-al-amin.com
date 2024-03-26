@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\FrontController;
+use App\Http\Controllers\ProjectController;
 use App\Http\Controllers\ResumeController;
 use Illuminate\Support\Facades\Route;
 
@@ -28,4 +29,9 @@ Route::get('resume-download', [ResumeController::class, 'download'])->name('resu
 Route::match(['get', 'post'], 'resume-upload', [ResumeController::class, 'upload'])->name('resume.upload');
 
 Route::post('contact-store', [ContactController::class, 'store'])->name('contact.store');
+
+// All Projects
+Route::resource('project-list', ProjectController::class);
+
+
 
