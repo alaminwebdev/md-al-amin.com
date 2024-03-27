@@ -17,7 +17,7 @@ class ProjectController extends Controller
     {
         $data['skills']         = AboutMe::SKILL;
         $data['skill_icons']    = AboutMe::SKILL_ICON;
-
+        $data['projects']       = Project::latest()->get();
         return view('backend.projects.list', $data);
     }
 
@@ -63,8 +63,8 @@ class ProjectController extends Controller
         if ($request->hasFile('images')) {
             foreach ($request->file('images') as $image) {
                 $imageName = time() . '_' . $image->getClientOriginalName();
-                $image->move(public_path('projects'), $imageName);
-                $project->images()->create(['image_path' => 'projects/' . $imageName]);
+                $image->move(public_path('img/projects'), $imageName);
+                $project->images()->create(['image_path' => 'img/projects/' . $imageName]);
             }
         }
 
@@ -85,8 +85,10 @@ class ProjectController extends Controller
      */
     public function edit($id)
     {
-        $editData = Project::find($id);
-        return view('backend.projects.edit', compact('editData'));
+        $data['project']        = Project::find($id);
+        $data['skills']         = AboutMe::SKILL;
+        $data['skill_icons']    = AboutMe::SKILL_ICON;
+        return view('backend.projects.edit', $data);
     }
 
     /**
@@ -94,13 +96,46 @@ class ProjectController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $ho_activity_event           =   Project::find($id);
-        $ho_activity_event->name     =   $request->name;
-        $ho_activity_event->status   =   (int)$request->status;
-        $ho_activity_event->save();
+        // Validate incoming request data
+        $validatedData = $request->validate([
+            'project_name' => 'required|string|max:255',
+            'short_description' => 'required|string',
+            'long_description' => 'required|string',
+            'skill_tags' => 'required|string',
+            'images.*' => 'image|mimes:jpeg,png,jpg,gif|max:2048'
+        ]);
 
-        Session::flash('success', 'Head Office Actitvity Event Updated');
-        return redirect()->route('projects.index');
+        // Find the project by its ID
+        $project = Project::findOrFail($id);
+
+        // Update project details
+        $project->project_name = $validatedData['project_name'];
+        $project->short_description = $validatedData['short_description'];
+        $project->long_description = $validatedData['long_description'];
+
+        // Update project images
+        if ($request->hasFile('images')) {
+            // Handle uploaded images
+            foreach ($request->file('images') as $image) {
+                $imageName = time() . '_' . $image->getClientOriginalName();
+                $image->move(public_path('img/projects'), $imageName);
+                $project->images()->create(['image_path' => 'img/projects/' . $imageName]);
+            }
+        }
+
+        // Update project tags
+        $skillTags = explode(',', $validatedData['skill_tags']);
+        $project->tags()->detach(); // Remove existing tags
+        foreach ($skillTags as $tagName) {
+            $tag = Tag::firstOrCreate(['name' => $tagName]);
+            $project->tags()->attach($tag->id);
+        }
+
+        // Save the updated project
+        $project->save();
+
+        Session::flash('success', 'Project Updated Successfully !');
+        return redirect()->route('project-list.index');
     }
 
     /**
@@ -109,5 +144,24 @@ class ProjectController extends Controller
     public function destroy(Project $project)
     {
         //
+    }
+
+    public function deleteImage($projectId, $imageId)
+    {
+        // Find the project
+        $project = Project::findOrFail($projectId);
+
+        // Find the image by ID
+        $image = $project->images()->findOrFail($imageId);
+
+        // Delete the image from the filesystem
+        if (file_exists(public_path($image->image_path))) {
+            unlink(public_path($image->image_path));
+        }
+
+        // Delete the image record from the database
+        $image->delete();
+
+        return back()->with('success', 'Image deleted successfully');
     }
 }

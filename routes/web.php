@@ -32,6 +32,8 @@ Route::post('contact-store', [ContactController::class, 'store'])->name('contact
 
 // All Projects
 Route::resource('project-list', ProjectController::class);
+Route::delete('/project/{projectId}/image/{imageId}', 'ProjectController@deleteImage')->name('project.delete.image');
+
 
 
 

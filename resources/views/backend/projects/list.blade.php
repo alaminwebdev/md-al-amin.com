@@ -12,20 +12,33 @@
                                     <tr>
                                         <th>Sl.</th>
                                         <th>Project Name</th>
+                                        <th>Image</th>
                                         <th>Action</th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    {{-- @foreach ($ho_activity_events as $key => $item)
-                                        <tr class="{{ $item->id }} tr-row">
-                                            <td>{{ $key + 1 }}</td>
-                                            <td>{{ $item->name }}</td>
+                                    @foreach ($projects as $key => $project)
+                                        <tr>
+                                            <td>{{ $loop->iteration }}</td>
+                                            <td>{{ $project->project_name }}</td>
                                             <td>
-                                                <a class="btn btn-sm btn-success" title="Edit" href="{{ route('ho-activity-events.edit', $item->id) }}"><i class="fa fa-edit"></i></a>
-                                                <a class="btn btn-sm btn-danger" title="Edit" href="#" onclick="remove({{ $item->id }}, event, $(this))"><i class="fa fa-trash"></i></a>
+                                                @foreach ($project->images as $image)
+                                                    <div>
+                                                        <img src="{{ asset($image->image_path) }}" alt="Image">
+                                                        <form method="POST" action="{{ route('project.delete.image', ['id' => $project->id, 'image_id' => $image->id]) }}">
+                                                            @csrf
+                                                            @method('DELETE')
+                                                            <button type="submit">Delete</button>
+                                                        </form>
+                                                    </div>
+                                                @endforeach
+                                            </td>
+                                            <td>
+                                                <a class="btn btn-sm btn-success" title="Edit" href="{{ route('project-list.edit', $project->id) }}"><i class="iconoir-edit"></i></a>
+                                                {{-- <a class="btn btn-sm btn-danger" title="Edit" href="#" onclick="remove({{ $item->id }}, event, $(this))"><i class="fa fa-trash"></i></a> --}}
                                             </td>
                                         </tr>
-                                    @endforeach --}}
+                                    @endforeach
                                 </tbody>
                             </table>
 
