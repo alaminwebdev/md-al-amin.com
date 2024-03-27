@@ -22,16 +22,18 @@
                                             <td>{{ $loop->iteration }}</td>
                                             <td>{{ $project->project_name }}</td>
                                             <td>
-                                                @foreach ($project->images as $image)
-                                                    <div>
-                                                        <img src="{{ asset($image->image_path) }}" alt="Image">
-                                                        <form method="POST" action="{{ route('project.delete.image', ['id' => $project->id, 'image_id' => $image->id]) }}">
-                                                            @csrf
-                                                            @method('DELETE')
-                                                            <button type="submit">Delete</button>
-                                                        </form>
-                                                    </div>
-                                                @endforeach
+                                                <div class="d-flex">
+                                                    @foreach ($project->images as $image)
+                                                        <div class="m-2 border rounded p-2">
+                                                            <img src="{{ asset($image->image_path) }}" class="img-fluid pb-2" alt="Image" style="width: 100px;">
+                                                            <form method="POST" action="{{ route('project.delete.image', ['projectId' => $project->id, 'imageId' => $image->id]) }}">
+                                                                @csrf
+                                                                @method('DELETE')
+                                                                <button type="submit" class="btn btn-sm btn-danger">Delete</button>
+                                                            </form>
+                                                        </div>
+                                                    @endforeach
+                                                </div>
                                             </td>
                                             <td>
                                                 <a class="btn btn-sm btn-success" title="Edit" href="{{ route('project-list.edit', $project->id) }}"><i class="iconoir-edit"></i></a>

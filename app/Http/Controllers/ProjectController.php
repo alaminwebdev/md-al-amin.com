@@ -38,18 +38,18 @@ class ProjectController extends Controller
     {
         // Validate the request data
         $validatedData = $request->validate([
-            'project_name' => 'required|string',
+            'project_name'      => 'required|string',
             'short_description' => 'required|string',
-            'long_description' => 'required|string',
-            'skill_tags' => 'required|string',
-            'images.*' => 'image|mimes:jpeg,png,jpg,gif|max:2048' // Allow only image files with max size of 2MB
+            'long_description'  => 'required|string',
+            'skill_tags'        => 'required|string',
+            'images.*'          => 'image|mimes:jpeg,png,jpg,gif|max:2048'
         ]);
 
         // Save project details
         $project = Project::create([
-            'project_name' => $validatedData['project_name'],
+            'project_name'      => $validatedData['project_name'],
             'short_description' => $validatedData['short_description'],
-            'long_description' => $validatedData['long_description'],
+            'long_description'  => $validatedData['long_description'],
         ]);
 
         // Save skill tags
@@ -98,24 +98,24 @@ class ProjectController extends Controller
     {
         // Validate incoming request data
         $validatedData = $request->validate([
-            'project_name' => 'required|string|max:255',
+            'project_name'      => 'required|string|max:255',
             'short_description' => 'required|string',
-            'long_description' => 'required|string',
-            'skill_tags' => 'required|string',
-            'images.*' => 'image|mimes:jpeg,png,jpg,gif|max:2048'
+            'long_description'  => 'required|string',
+            'skill_tags'        => 'required|string',
+            'images.*'          => 'image|mimes:jpeg,png,jpg,gif|max:2048'
         ]);
 
         // Find the project by its ID
         $project = Project::findOrFail($id);
 
         // Update project details
-        $project->project_name = $validatedData['project_name'];
+        $project->project_name      = $validatedData['project_name'];
         $project->short_description = $validatedData['short_description'];
-        $project->long_description = $validatedData['long_description'];
+        $project->long_description  = $validatedData['long_description'];
 
         // Update project images
         if ($request->hasFile('images')) {
-            // Handle uploaded images
+
             foreach ($request->file('images') as $image) {
                 $imageName = time() . '_' . $image->getClientOriginalName();
                 $image->move(public_path('img/projects'), $imageName);
