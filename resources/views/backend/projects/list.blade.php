@@ -4,9 +4,12 @@
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-md-12">
-                    <div class="card border-0 rounded p-4" style="background: #1c3150;">
+                    <div class="card border-0 rounded" style="background: #1c315047;">
+                        <div class="card-header d-flex justify-content-between align-items-center">
+                            <h5 class="card-title">Project List</h5>
+                            <a href="{{ route('project-list.create') }}" class="btn btn-sm btn-info">Add Project</a>
+                        </div>
                         <div class="card-body">
-                            <h5 class="card-title mb-3">Project List</h5>
                             <table class="table-sm table-bordered table-striped" style="width: 100%">
                                 <thead>
                                     <tr>

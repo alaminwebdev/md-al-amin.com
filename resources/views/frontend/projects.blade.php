@@ -20,7 +20,7 @@
         .app {
             position: relative;
             width: 100%;
-            height: 700px;
+            height: 550px;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -305,21 +305,20 @@
 
         .button-container{
             position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            right: 15px;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: 0;
             display: flex;
-            flex-direction: column;
-            z-index: 9999;
+            z-index: 199;
         }
         .button-container i{
-            font-size: 24px;
+            font-size: 20px;
         }
     </style>
     <section class="project-area pb-5">
         <div class="app">
             <div class="button-container">
-                <button class="btn mb-2" type="button" data-bs-toggle="tooltip" data-bs-placement="left" title="Previous" onclick="showPreviousSet()">
+                <button class="btn" type="button" data-bs-toggle="tooltip" data-bs-placement="left" title="Previous" onclick="showPreviousSet()">
                     <i class="iconoir-fast-arrow-up text-white"></i>
                 </button>
                 <button class="btn" type="button" data-bs-toggle="tooltip" data-bs-placement="left" title="Next" onclick="showNextSet()">

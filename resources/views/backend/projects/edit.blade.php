@@ -4,9 +4,12 @@
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-md-12">
-                    <div class="card border-0 rounded p-4" style="background: #1c3150;">
+                    <div class="card border-0 rounded" style="background: #1c315047;">
+                        <div class="card-header d-flex justify-content-between align-items-center">
+                            <h5 class="card-title">Edit Your Project</h5>
+                            <a href="{{ route('project-list.index') }}" class="btn btn-sm btn-info">Project List</a>
+                        </div>
                         <div class="card-body">
-                            <h5 class="card-title mb-3">Edit Your Project</h5>
                             <form method="POST" action="{{ route('project-list.update', $project->id) }}" enctype="multipart/form-data">
                                 @csrf
                                 @method('PUT')
@@ -19,6 +22,37 @@
                                         </div>
                                     @enderror
                                 </div>
+
+                                <div class="mb-3">
+                                    <label for="live_url" class="form-label">Live URL</label>
+                                    <input type="text" class="form-control @error('live_url') is-invalid @enderror" id="live_url" name="live_url" value="{{ $project->live_url }}" required>
+                                    @error('live_url')
+                                        <div class="invalid-feedback">
+                                            {{ $message }}
+                                        </div>
+                                    @enderror
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="test_url" class="form-label">Test URL</label>
+                                    <input type="text" class="form-control @error('test_url') is-invalid @enderror" id="test_url" name="test_url" value="{{ $project->test_url }}" required>
+                                    @error('test_url')
+                                        <div class="invalid-feedback">
+                                            {{ $message }}
+                                        </div>
+                                    @enderror
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="host_link" class="form-label">Host Link</label>
+                                    <input type="text" class="form-control @error('host_link') is-invalid @enderror" id="host_link" name="host_link" value="{{ $project->host_link }}" required>
+                                    @error('host_link')
+                                        <div class="invalid-feedback">
+                                            {{ $message }}
+                                        </div>
+                                    @enderror
+                                </div>
+
 
                                 <div class="mb-3">
                                     <label for="short_description" class="form-label">Short Description</label>

@@ -48,6 +48,9 @@ class ProjectController extends Controller
         // Save project details
         $project = Project::create([
             'project_name'      => $validatedData['project_name'],
+            'live_url'          => $request['live_url'],
+            'test_url'          => $request['test_url'],
+            'host_link'         => $request['host_link'],
             'short_description' => $validatedData['short_description'],
             'long_description'  => $validatedData['long_description'],
         ]);
@@ -110,6 +113,9 @@ class ProjectController extends Controller
 
         // Update project details
         $project->project_name      = $validatedData['project_name'];
+        $project->live_url          = $request['live_url'];
+        $project->test_url          = $request['test_url'];
+        $project->host_link         = $request['host_link'];
         $project->short_description = $validatedData['short_description'];
         $project->long_description  = $validatedData['long_description'];
 

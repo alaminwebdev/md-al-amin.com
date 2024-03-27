@@ -4,15 +4,48 @@
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-md-12">
-                    <div class="card border-0 rounded p-4" style="background: #1c3150;">
+                    <div class="card border-0 rounded" style="background: #1c315047;">
+                        <div class="card-header d-flex justify-content-between align-items-center">
+                            <h5 class="card-title">Add Your Project</h5>
+                            <a href="{{ route('project-list.index') }}" class="btn btn-sm btn-info">Project List</a>
+                        </div>
                         <div class="card-body">
-                            <h5 class="card-title mb-3">Upload Your Project</h5>
                             <form method="POST" action="{{ route('project-list.store') }}" enctype="multipart/form-data">
                                 @csrf
                                 <div class="mb-3">
                                     <label for="project_name" class="form-label">Project Name</label>
                                     <input type="text" class="form-control @error('project_name') is-invalid @enderror" id="project_name" name="project_name" value="{{ old('project_name') }}" required>
                                     @error('project_name')
+                                        <div class="invalid-feedback">
+                                            {{ $message }}
+                                        </div>
+                                    @enderror
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="live_url" class="form-label">Live URL</label>
+                                    <input type="text" class="form-control @error('live_url') is-invalid @enderror" id="live_url" name="live_url" value="{{ old('live_url') }}" required>
+                                    @error('live_url')
+                                        <div class="invalid-feedback">
+                                            {{ $message }}
+                                        </div>
+                                    @enderror
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="test_url" class="form-label">Test URL</label>
+                                    <input type="text" class="form-control @error('test_url') is-invalid @enderror" id="test_url" name="test_url" value="{{ old('test_url') }}" required>
+                                    @error('test_url')
+                                        <div class="invalid-feedback">
+                                            {{ $message }}
+                                        </div>
+                                    @enderror
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="host_link" class="form-label">Host Link</label>
+                                    <input type="text" class="form-control @error('host_link') is-invalid @enderror" id="host_link" name="host_link" value="{{ old('host_link') }}" required>
+                                    @error('host_link')
                                         <div class="invalid-feedback">
                                             {{ $message }}
                                         </div>
@@ -31,7 +64,7 @@
 
                                 <div class="mb-3">
                                     <label for="long_description" class="form-label">Long Description</label>
-                                    <textarea class="form-control @error('long_description') is-invalid @enderror" id="long_description" name="long_description" rows="5" required>{{ old('long_description') }}</textarea>
+                                    <textarea class="form-control @error('long_description') is-invalid @enderror" id="long_description" name="long_description" rows="10" required>{{ old('long_description') }}</textarea>
                                     @error('long_description')
                                         <div class="invalid-feedback">
                                             {{ $message }}
@@ -41,7 +74,7 @@
 
                                 <div class="mb-3">
                                     <label for="images" class="form-label">Multiple Images</label>
-                                    <input type="file" class="form-control @error('images.*') is-invalid @enderror" id="images" name="images[]" multiple required>
+                                    <input type="file" class="form-control @error('images.*') is-invalid @enderror" id="images" name="images[]" multiple>
                                     <div id="image-preview" class="mt-3"></div>
                                     @error('images.*')
                                         <div class="invalid-feedback">
@@ -103,4 +136,5 @@
             });
         });
     </script>
+    
 @endsection
