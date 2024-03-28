@@ -10,7 +10,6 @@
     * # Project
     * # Project Details
     * # Credentials
-    * # Service
     * # Blog
     * # Contact
     * # Footer
@@ -338,7 +337,6 @@ ol {
 .section-heading img {
     display: block;
 }
-
 
 /* # InfoBox */
 .info-box {
@@ -1005,36 +1003,4 @@ ol {
     
     from { transform: translateX(0); }
     to { transform: translateX(-100.3%); }
-}
-
-@keyframes loader_running {
-    0% {
-        transform: scaleX(0);
-        transform-origin: left
-    }
-
-    49% {
-        transform: scaleX(1);
-        transform-origin: left
-    }
-
-    50% {
-        transform: scaleX(1);
-        transform-origin: right
-    }
-
-    100% {
-        transform-origin: right;
-        transform: scaleX(0)
-    }
-}
-
-@keyframes preloader_slide {
-    from {
-        transform: scaleY(0)
-    }
-
-    to {
-        transform: scaleY(1)
-    }
 }

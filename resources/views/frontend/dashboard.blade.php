@@ -26,7 +26,7 @@
                      {{-- Start Project Box --}}
                      <div data-aos="zoom-in" class="about-project-box aos-init">
                          <div class="info-box shadow-box text-center">
-                             <a class="overlay-link" href="https://wpriverthemes.com/gridx/work/"></a>
+                             <a class="overlay-link" href="{{ route('projects') }}"></a>
                              <img decoding="async" src="{{ asset('img/bg1.png') }}" alt="BG" class="bg-img">
                              <img decoding="async" src="{{ asset('img/my-works.png') }}" alt="">
                              <div class="d-flex align-items-center justify-content-between">
@@ -34,7 +34,7 @@
                                      <h5>SHOWCASE</h5>
                                      <h2>Projects</h2>
                                  </div>
-                                 <a href="https://wpriverthemes.com/gridx/work/" class="about-btn">
+                                 <a href="{{ route('projects') }}" class="about-btn">
                                      <img decoding="async" src="{{ asset('img/icon.svg') }}" alt="Star">
                                  </a>
                              </div>
@@ -59,7 +59,7 @@
                                          <h5>STAY WITH ME</h5>
                                          <h2>Profiles</h2>
                                      </div>
-                                     <a href="#" class="about-btn">
+                                     <a href="{{ route('contact') }}" class="about-btn">
                                          <img decoding="async" src="{{ asset('img/icon.svg') }}" alt="Star">
                                      </a>
                                  </div>

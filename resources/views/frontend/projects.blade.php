@@ -11,7 +11,7 @@
     <style>
         :root {
             --card-width: 400px;
-            --card-height: 300px;
+            --card-height: 280px;
             --card-transition-duration: 800ms;
             --card-transition-easing: ease;
         }
@@ -155,7 +155,8 @@
             top: 0;
             width: 100%;
             height: 100%;
-            object-fit: cover;
+            object-fit: contain;
+            opacity: .8;
         }
 
         .card.current--card {
@@ -201,7 +202,6 @@
         }
 
         .info {
-            margin-bottom: calc(var(--card-height) / 8);
             margin-left: calc(var(--card-width) / 1.5);
             transform: translateZ(2rem);
             transition: transform var(--card-transition-duration) var(--card-transition-easing);
@@ -209,32 +209,30 @@
 
         .info .text {
             position: relative;
-            font-size: calc(var(--card-width) * var(--text-size-offset, 0.2));
-            white-space: nowrap;
             color: #fff;
-            width: fit-content;
         }
 
-        .info .name,
-        .info .location {
+        .info .name{
             text-transform: uppercase;
-        }
-
-        .info .location {
             font-weight: 800;
+            font-size: 56px;
+            background: linear-gradient(45deg, #00f7ff, #9c00e9);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
 
-        .info .location {
+        .info .description {
             --mg-left: 40px;
             --text-size-offset: 0.12;
             font-weight: 600;
+            font-size: 28px;
             margin-left: var(--mg-left);
             margin-bottom: calc(var(--mg-left) / 2);
             padding-bottom: 0.8rem;
         }
 
-        .info .location::before,
-        .info .location::after {
+        .info .description::before,
+        .info .description::after {
             content: "";
             position: absolute;
             background: #fff;
@@ -242,19 +240,19 @@
             transform: translate(calc(-1 * var(--mg-left)), -50%);
         }
 
-        .info .location::before {
+        .info .description::before {
             top: 50%;
             width: 20px;
             height: 5px;
         }
 
-        .info .location::after {
+        .info .description::after {
             bottom: 0;
             width: 60px;
             height: 2px;
         }
 
-        .info .description {
+        .info .tag {
             --text-size-offset: 0.065;
             font-weight: 500;
         }
@@ -331,14 +329,7 @@
                 </button>
 
                 <div class="cards__wrapper">
-                    <!-- Blade template for initial rendering -->
-                    @foreach ($projects->take(3) as $key => $project)
-                        <div class="card {{ $key === 0 ? 'current--card' : ($key === 1 ? 'next--card' : 'previous--card') }}">
-                            <div class="card__image">
-                                <img src="{{ $project['url'] }}" alt="" />
-                            </div>
-                        </div>
-                    @endforeach
+
                 </div>
 
                 <button class="cardList__btn btn btn--right">
@@ -348,23 +339,13 @@
 
             <div class="infoList">
                 <div class="info__wrapper">
-                    <!-- Blade template for initial rendering -->
-                    @foreach ($projects->take(3) as $key => $project)
-                        <div class="info {{ $key === 0 ? 'current--info' : ($key === 1 ? 'next--info' : 'previous--info') }}">
-                            <h2 class="text name">{{ $project['name'] }}</h2>
-                            <h4 class="text location">{{ $project['location'] }}</h4>
-                            <p class="text description">{{ $project['description'] }}</p>
-                        </div>
-                    @endforeach
+
                 </div>
             </div>
 
             <div class="app__bg">
-                <!-- Blade template for initial rendering -->
                 <div class="app__bg__imageSet">
-                    @foreach ($projects->take(3) as $key => $project)
-                        <div class="app__bg__image {{ $key === 0 ? 'current--image' : ($key === 1 ? 'next--image' : 'previous--image') }}" style="background-image: url('{{ $project['url'] }}');"></div>
-                    @endforeach
+
                 </div>
             </div>
         </div>
@@ -385,6 +366,131 @@
     </section>
 
 
+    
+    <script>
+        // Function to ensure the array length is a multiple of 3
+        function adjustArrayLength(projects) {
+            const remainder = projects.length % 3;
+            if (remainder !== 0) {
+                const extraItemsNeeded = 3 - remainder;
+                for (let i = 0; i < extraItemsNeeded; i++) {
+                    projects.push(projects[i]); // Add items from the beginning of the array to fill the gap
+                }
+            }
+            return projects;
+        }
+    
+        const projects = @json($projects);
+        const adjustedProjects = adjustArrayLength(projects);
+    
+        let currentSetIndex = 0; // Track the index of the current set of images
+    
+        // Function to show the next set of images
+        function showNextSet() {
+            const totalSets = Math.ceil(adjustedProjects.length / 3);
+            currentSetIndex = (currentSetIndex + 1) % totalSets;
+            updateSet();
+        }
+    
+        // Function to show the previous set of images
+        function showPreviousSet() {
+            const totalSets = Math.ceil(adjustedProjects.length / 3);
+            currentSetIndex = (currentSetIndex - 1 + totalSets) % totalSets;
+            updateSet();
+        }
+    
+        // Function to update the images and associated classes for the current set
+        function updateSet() {
+            const cardWrapper = document.querySelector('.cards__wrapper');
+            const infoWrapper = document.querySelector('.info__wrapper');
+            const bgImageSet = document.querySelector('.app__bg__imageSet');
+    
+            // Clear existing content
+            cardWrapper.innerHTML = '';
+            infoWrapper.innerHTML = '';
+            bgImageSet.innerHTML = '';
+    
+            // Calculate the starting and ending index for the current set
+            const startIndex = currentSetIndex * 3;
+            let endIndex = startIndex + 3;
+    
+            // If endIndex exceeds the length of the projects array, adjust it
+            if (endIndex > adjustedProjects.length) {
+                endIndex = adjustedProjects.length;
+            }
+    
+            // Get the current set of projects
+            const currentSet = adjustedProjects.slice(startIndex, endIndex);
+    
+            // Populate the containers with new content
+            currentSet.forEach((project, index) => {
+                const firstImage = project.images.length > 0 ? project.images[0].image_path : '';
+                const card = document.createElement('div');
+                card.classList.add('card', index === 0 ? 'current--card' : (index === 1 ? 'next--card' : 'previous--card'));
+                card.innerHTML = `
+                    <div class="card__image">
+                        <img src="${firstImage}" alt="" />
+                    </div>
+                `;
+                cardWrapper.appendChild(card);
+    
+                const info = document.createElement('div');
+                info.classList.add('info', index === 0 ? 'current--info' : (index === 1 ? 'next--info' : 'previous--info'));
+                info.innerHTML = `
+                    <h2 class="text name">${project.project_name}</h2>
+                    <h4 class="text description">${project.short_description}</h4>
+                    <p class="text tag">${project.description}</p>
+                `;
+                infoWrapper.appendChild(info);
+    
+                const bgImage = document.createElement('div');
+
+                bgImage.classList.add('app__bg__image', index === 0 ? 'current--image' : (index === 1 ? 'next--image' : 'previous--image'));
+                bgImage.style.backgroundImage = `url('${firstImage}')`;
+                bgImageSet.appendChild(bgImage);
+            });
+    
+            // Update GSAP animations
+            gsap.set(cardWrapper.children, {
+                "--card-translateY-offset": "100vh"
+            });
+            gsap.set(infoWrapper.querySelector(".current--info").querySelectorAll(".text"), {
+                translateY: "40px",
+                opacity: 0
+            });
+            gsap.set([buttons.prev, buttons.next], {
+                pointerEvents: "none",
+                opacity: "0"
+            });
+            gsap.timeline()
+                .to(cardWrapper.children, {
+                    delay: 0.15,
+                    duration: 0.5,
+                    stagger: {
+                        ease: "power4.inOut",
+                        from: "right",
+                        amount: 0.1
+                    },
+                    "--card-translateY-offset": "0%"
+                })
+                .to(infoWrapper.querySelector(".current--info").querySelectorAll(".text"), {
+                    delay: 0.5,
+                    duration: 0.4,
+                    stagger: 0.1,
+                    opacity: 1,
+                    translateY: 0
+                })
+                .to([buttons.prev, buttons.next], {
+                    duration: 0.4,
+                    opacity: 1,
+                    pointerEvents: "all"
+                });
+        }
+    
+        // Call the function to show the initial set of images when the page loads
+        showNextSet();
+    </script>
+    
     <script>
         console.clear();
 
@@ -649,126 +755,6 @@
         };
 
         waitForImages();
-    </script>
-
-    <script>
-        // Function to ensure the array length is a multiple of 3
-        function adjustArrayLength(projects) {
-            const remainder = projects.length % 3;
-            if (remainder !== 0) {
-                const extraItemsNeeded = 3 - remainder;
-                for (let i = 0; i < extraItemsNeeded; i++) {
-                    projects.push(projects[i]); // Add items from the beginning of the array to fill the gap
-                }
-            }
-            return projects;
-        }
-
-        const projects = @json($projects);
-        const adjustedProjects = adjustArrayLength(projects);
-
-        let currentSetIndex = 0; // Track the index of the current set of images
-
-        // Function to show the next set of images
-        function showNextSet() {
-            const totalSets = Math.ceil(projects.length / 3);
-            currentSetIndex = (currentSetIndex + 1) % totalSets;
-            updateSet();
-        }
-
-        // Function to show the previous set of images
-        function showPreviousSet() {
-            const totalSets = Math.ceil(projects.length / 3);
-            currentSetIndex = (currentSetIndex - 1 + totalSets) % totalSets;
-            updateSet();
-        }
-
-        // Function to update the images and associated classes for the current set
-        function updateSet() {
-            const cardWrapper = document.querySelector('.cards__wrapper');
-            const infoWrapper = document.querySelector('.info__wrapper');
-            const bgImageSet = document.querySelector('.app__bg__imageSet');
-
-            // Clear existing content
-            cardWrapper.innerHTML = '';
-            infoWrapper.innerHTML = '';
-            bgImageSet.innerHTML = '';
-
-            // Calculate the starting and ending index for the current set
-            const startIndex = currentSetIndex * 3;
-            let endIndex = startIndex + 3;
-
-            // If endIndex exceeds the length of the projects array, adjust it
-            if (endIndex > projects.length) {
-                endIndex = projects.length;
-            }
-
-            // Get the current set of projects
-            const currentSet = projects.slice(startIndex, endIndex);
-
-            // Populate the containers with new content
-            currentSet.forEach((project, index) => {
-                const card = document.createElement('div');
-                card.classList.add('card', index === 0 ? 'current--card' : (index === 1 ? 'next--card' : 'previous--card'));
-                card.innerHTML = `
-                    <div class="card__image">
-                        <img src="${project.url}" alt="" />
-                    </div>
-                `;
-                cardWrapper.appendChild(card);
-
-                const info = document.createElement('div');
-                info.classList.add('info', index === 0 ? 'current--info' : (index === 1 ? 'next--info' : 'previous--info'));
-                info.innerHTML = `
-                    <h2 class="text name">${project.name}</h2>
-                    <h4 class="text location">${project.location}</h4>
-                    <p class="text description">${project.description}</p>
-                `;
-                infoWrapper.appendChild(info);
-
-                const bgImage = document.createElement('div');
-                bgImage.classList.add('app__bg__image', index === 0 ? 'current--image' : (index === 1 ? 'next--image' : 'previous--image'));
-                bgImage.style.backgroundImage = `url('${project.url}')`;
-                bgImageSet.appendChild(bgImage);
-            });
-
-            // Update GSAP animations
-            gsap.set(cardWrapper.children, {
-                "--card-translateY-offset": "100vh"
-            });
-            gsap.set(infoWrapper.querySelector(".current--info").querySelectorAll(".text"), {
-                translateY: "40px",
-                opacity: 0
-            });
-            gsap.set([buttons.prev, buttons.next], {
-                pointerEvents: "none",
-                opacity: "0"
-            });
-            gsap.timeline()
-                .to(cardWrapper.children, {
-                    delay: 0.15,
-                    duration: 0.5,
-                    stagger: {
-                        ease: "power4.inOut",
-                        from: "right",
-                        amount: 0.1
-                    },
-                    "--card-translateY-offset": "0%"
-                })
-                .to(infoWrapper.querySelector(".current--info").querySelectorAll(".text"), {
-                    delay: 0.5,
-                    duration: 0.4,
-                    stagger: 0.1,
-                    opacity: 1,
-                    translateY: 0
-                })
-                .to([buttons.prev, buttons.next], {
-                    duration: 0.4,
-                    opacity: 1,
-                    pointerEvents: "all"
-                });
-        }
-
     </script>
 
 @endsection

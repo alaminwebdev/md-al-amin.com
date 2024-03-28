@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\AboutMe;
+use App\Models\Project;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Collection;
 
@@ -88,7 +89,9 @@ class FrontController extends Controller
         ];
 
         // Convert the array into a collection
-        $data['projects'] = collect($projects);
+        // $data['projects'] = collect($projects);
+        $data['projects'] = Project::with('images')->latest()->get();
+        //dd($data['projects']);
 
         return view('frontend.projects', $data);
     }
