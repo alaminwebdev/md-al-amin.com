@@ -141,6 +141,7 @@
             z-index: 1;
             transition: opacity var(--card-transition-duration) var(--card-transition-easing);
             opacity: calc(1 - var(--opacity));
+            pointer-events: none;
         }
 
         .card__image {
@@ -428,9 +429,11 @@
                 const card = document.createElement('div');
                 card.classList.add('card', index === 0 ? 'current--card' : (index === 1 ? 'next--card' : 'previous--card'));
                 card.innerHTML = `
-                    <div class="card__image">
-                        <img src="${firstImage}" alt="" />
-                    </div>
+                    <a href="{{ route('project.details', ['id' => ':projectId'] ) }}" onclick="replaceRoute(this)" data-project-id="${project.id}" target="_blank">
+                        <div class="card__image">
+                            <img src="${firstImage}" alt="" />
+                        </div>
+                    </a>
                 `;
                 cardWrapper.appendChild(card);
     
@@ -489,6 +492,13 @@
     
         // Call the function to show the initial set of images when the page loads
         showNextSet();
+
+        function replaceRoute(element) {
+            const projectId = element.dataset.projectId;
+            const route = element.getAttribute('href').replace(':projectId', projectId);
+            element.setAttribute('href', route);
+            return true;
+        }
     </script>
     
     <script>

@@ -20,6 +20,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [FrontController::class, 'index'])->name('dashboard');
 Route::get('resume-view', [FrontController::class, 'resume'])->name('resume');
 Route::get('projects', [FrontController::class, 'projects'])->name('projects');
+Route::get('project-details/{id}', [FrontController::class, 'projectDetails'])->name('project.details');
 Route::get('contact', [FrontController::class, 'contact'])->name('contact');
 
 
