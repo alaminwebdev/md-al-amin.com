@@ -97,11 +97,11 @@ class FrontController extends Controller
 
     public function projectDetails($slug)
     {
-        dd($slug);
+        $data['projectData'] = Project::where('slug', $slug)->firstOrFail();
         $data['skills']         = AboutMe::SKILL;
         $data['skill_icons']    = AboutMe::SKILL_ICON;
 
-        return view('frontend.projects', $data);
+        return view('frontend.projects-details', $data);
     }
     public function contact()
     {

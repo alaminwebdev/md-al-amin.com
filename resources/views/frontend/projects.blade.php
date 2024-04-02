@@ -120,14 +120,16 @@
             --card-translateY-offset: 100vh;
             position: absolute;
             left: 50%;
-            top: 50%;
-            transform: translate(-50%, -50%) translateX(var(--card-translateX-offset)) translateY(var(--card-translateY-offset)) rotateY(var(--card-rotation-offset)) scale(var(--card-scale-offset));
+            top: 60%;
+            transform: translate(-50%, -60%) translateX(var(--card-translateX-offset)) translateY(var(--card-translateY-offset)) rotateY(var(--card-rotation-offset)) scale(var(--card-scale-offset));
             display: inline-block;
             width: var(--card-width);
             height: var(--card-height);
             transition: transform var(--card-transition-duration) var(--card-transition-easing);
             user-select: none;
             background-color: transparent;
+            border-radius: 25px;
+            overflow: hidden;
         }
 
         .card::before {
@@ -197,7 +199,7 @@
             height: 100%;
             display: flex;
             justify-content: flex-start;
-            align-items: flex-end;
+            align-items: center;
             perspective: 1000px;
             transform-style: preserve-3d;
         }
@@ -217,7 +219,7 @@
             text-transform: uppercase;
             font-weight: 800;
             font-size: 56px;
-            background: linear-gradient(45deg, #00f7ff, #9c00e9);
+            background: linear-gradient(45deg, #00f7ff, #ffffffc9);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
