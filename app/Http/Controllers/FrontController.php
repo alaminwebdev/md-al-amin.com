@@ -91,7 +91,15 @@ class FrontController extends Controller
         // Convert the array into a collection
         // $data['projects'] = collect($projects);
         $data['projects'] = Project::with('images')->latest()->get();
-        //dd($data['projects']);
+
+        return view('frontend.projects', $data);
+    }
+
+    public function projectDetails($slug)
+    {
+        dd($slug);
+        $data['skills']         = AboutMe::SKILL;
+        $data['skill_icons']    = AboutMe::SKILL_ICON;
 
         return view('frontend.projects', $data);
     }

@@ -427,9 +427,11 @@
             currentSet.forEach((project, index) => {
                 const firstImage = project.images.length > 0 ? project.images[0].image_path : '';
                 const card = document.createElement('div');
+                const route = "{{ route('project.details', ['slug' => ':projectSlug'] ) }}".replace(':projectSlug', project.slug);
+
                 card.classList.add('card', index === 0 ? 'current--card' : (index === 1 ? 'next--card' : 'previous--card'));
                 card.innerHTML = `
-                    <a href="{{ route('project.details', ['id' => ':projectId'] ) }}" onclick="replaceRoute(this)" data-project-id="${project.id}" target="_blank">
+                    <a href="${route}"  data-project-slug="${project.slug}" target="_blank">
                         <div class="card__image">
                             <img src="${firstImage}" alt="" />
                         </div>
@@ -494,8 +496,8 @@
         showNextSet();
 
         function replaceRoute(element) {
-            const projectId = element.dataset.projectId;
-            const route = element.getAttribute('href').replace(':projectId', projectId);
+            const projectSlug = element.dataset.projectSlug;
+            const route = element.getAttribute('href').replace(':projectSlug', projectSlug);
             element.setAttribute('href', route);
             return true;
         }
