@@ -38,11 +38,13 @@
             background: linear-gradient(90deg, var(--primary_color) -15%, #C2EBFF 58%, var(--primary_color) 97%) !important;
         }
     </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.11.1/baguetteBox.min.css">
     <script src="{{ asset('js/jquery-3.7.1.min.js') }}" id="jquery-core-js"></script>
+
 </head>
 
 <body class="home" data-aos-easing="ease" data-aos-duration="1500" data-aos-delay="0">
-    
+
     @if (!isset($excludePreloader))
         @include('frontend.layouts.preloader')
     @endif
@@ -65,6 +67,7 @@
     <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
     <script src="{{ asset('js/sweetalert2.min.js') }}"></script>
     <script src="{{ asset('js/jquery.hover3d.min.js') }}"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.11.1/baguetteBox.min.js"></script>
 
     <script>
         $(document).ready(function() {
@@ -101,6 +104,16 @@
                     once: true
                 });
             }, 500);
+        });
+    </script>
+    <script>
+        baguetteBox.run('.carousel-inner', {
+            animation: 'fadeIn',
+            noScrollbars: true,
+            buttons: true,
+            // captions: function(element) {
+            //     return element.getElementsByTagName('img')[0].alt;
+            // }
         });
     </script>
 </body>

@@ -33,7 +33,7 @@
     <section class="py-5">
         <div class="container">
             <div class="row">
-                <div class="col-lg-7">
+                <div data-aos="zoom-in" class="col-lg-7">
                     <div id="carouselExampleIndicators" class="carousel slide carousel-fade" data-bs-ride="carousel">
                         <div class="carousel-indicators">
                             @foreach ($projectData->images as $index => $image)
@@ -43,7 +43,9 @@
                         <div class="carousel-inner">
                             @foreach ($projectData->images as $image)
                                 <div class="carousel-item {{ $loop->first ? 'active' : '' }}  w-100">
-                                    <img decoding="async" src="{{ asset($image->image_path) }}" class="d-block w-100 h-100" style="border-radius: 30px; object-fit:cover" alt="...">
+                                    <a href="{{ asset($image->image_path) }}" data-baguettebox="project-images" data-caption="{{$projectData->short_description}}">
+                                        <img decoding="async" src="{{ asset($image->image_path) }}" class="d-block w-100 h-100" style="border-radius: 30px; object-fit:cover" alt="{{$projectData->short_description}}">
+                                    </a>
                                 </div>
                             @endforeach
                         </div>
@@ -87,12 +89,12 @@
                         </div>
                         
                         <div>
-                            <h6 data-aos="fade-up" class="aos-init aos-animate pb-2">OVERVIEW</h6>
+                            <h6 data-aos="fade-up" class="aos-init aos-animate">TITLE</h6>
                             <p>{{$projectData->short_description}}</p>
                         </div>
 
                         <div>
-                            <h6 data-aos="fade-up" class="aos-init aos-animate pb-2">TAGS</h6>
+                            <h6 data-aos="fade-up" class="aos-init aos-animate">TAGS</h6>
                             <div>
                                 @foreach ($projectData->tags as $tag)
                                     <span class="badge rounded-pill text-bg-success">{{$tag->name}}</span>
@@ -102,8 +104,16 @@
                         </div>
                     </div>
                 </div>
-
             </div>
+            <div class="row mt-5">
+                <div class="col-md-12">
+                    <div>
+                        <h6 data-aos="fade-up" class="aos-init aos-animate">PROJECT OVERVIEW</h6>
+                        <div>{{$projectData->long_description}}</div>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </section>
 @endsection

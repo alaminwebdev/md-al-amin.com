@@ -1,5 +1,18 @@
 @extends('app')
 @section('content')
+    <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.js"></script>
+    <style>
+        ul,
+        ol {
+            list-style: inherit;
+            margin: inherit;
+            padding: inherit;
+        }
+        .note-editor {
+            background-color: #ffffff !important;
+        }
+    </style>
     <section class="py-5">
         <div class="container">
             <div class="row justify-content-center">
@@ -64,7 +77,7 @@
 
                                 <div class="mb-3">
                                     <label for="long_description" class="form-label">Long Description</label>
-                                    <textarea class="form-control @error('long_description') is-invalid @enderror" id="long_description" name="long_description" rows="10" required>{{ old('long_description') }}</textarea>
+                                    <textarea class="form-control bg-white @error('long_description') is-invalid @enderror" id="long_description" name="long_description"  required>{{ old('long_description') }}</textarea>
                                     @error('long_description')
                                         <div class="invalid-feedback">
                                             {{ $message }}
@@ -136,5 +149,21 @@
             });
         });
     </script>
-    
+
+    <script>
+        $('#long_description').summernote({
+            placeholder: 'Hello stand alone ui',
+            tabsize: 2,
+            height: 300,
+            toolbar: [
+                ['style', ['style']],
+                ['font', ['bold', 'underline', 'clear']],
+                ['color', ['color']],
+                ['para', ['ul', 'ol', 'paragraph']],
+                ['table', ['table']],
+                ['insert', ['link', 'picture', 'video']],
+                ['view', ['fullscreen', 'codeview', 'help']]
+            ]
+        });
+    </script>
 @endsection

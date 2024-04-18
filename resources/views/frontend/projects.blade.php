@@ -367,8 +367,6 @@
             </div>
         </div>
     </section>
-
-
     
     <script>
         // Function to ensure the array length is a multiple of 3

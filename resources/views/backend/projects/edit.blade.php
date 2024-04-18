@@ -1,5 +1,19 @@
 @extends('app')
 @section('content')
+    <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.js"></script>
+    <style>
+        ul,
+        ol {
+            list-style: inherit;
+            margin: inherit;
+            padding: inherit;
+        }
+
+        .note-editor {
+            background-color: #ffffff !important;
+        }
+    </style>
     <section class="py-5">
         <div class="container">
             <div class="row justify-content-center">
@@ -136,6 +150,22 @@
                 span.textContent = tag;
                 preview.appendChild(span);
             });
+        });
+    </script>
+    <script>
+        $('#long_description').summernote({
+            placeholder: 'Hello stand alone ui',
+            tabsize: 2,
+            height: 300,
+            toolbar: [
+                ['style', ['style']],
+                ['font', ['bold', 'underline', 'clear']],
+                ['color', ['color']],
+                ['para', ['ul', 'ol', 'paragraph']],
+                ['table', ['table']],
+                ['insert', ['link', 'picture', 'video']],
+                ['view', ['fullscreen', 'codeview', 'help']]
+            ]
         });
     </script>
 @endsection
