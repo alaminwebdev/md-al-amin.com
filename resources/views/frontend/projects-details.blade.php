@@ -17,9 +17,17 @@
         }
 
         .social-links li a {
-            width: 75px;
-            height: 75px;
-            line-height: 80px;
+            width: 60px;
+            height: 60px;
+            line-height: 65px;
+        }
+        .shadow-box {
+            height: 350px;
+        }
+        .carousel-item{
+            height: 350px;
+            border-radius: 30px;
+            background: #000;
         }
     </style>
     <section class="py-5">
@@ -34,8 +42,8 @@
                         </div>
                         <div class="carousel-inner">
                             @foreach ($projectData->images as $image)
-                                <div class="carousel-item {{ $loop->first ? 'active' : '' }}  w-100" style="background: #000; height:325px; border-radius: 30px;">
-                                    <img src="{{ asset($image->image_path) }}" class="d-block w-100 h-100 object-cover" style="border-radius: 30px;" alt="...">
+                                <div class="carousel-item {{ $loop->first ? 'active' : '' }}  w-100">
+                                    <img decoding="async" src="{{ asset($image->image_path) }}" class="d-block w-100 h-100" style="border-radius: 30px; object-fit:cover" alt="...">
                                 </div>
                             @endforeach
                         </div>
@@ -51,8 +59,9 @@
                 <div data-aos="zoom-in" class="contact-form col-lg-5">
                     <div class="shadow-box p-4">
                         <img decoding="async" src="{{ asset('img/icon2.png') }}" alt="Star" class="star-icon">
+                        
                         <div class="mb-3">
-                            <h5 class="mb-3" data-aos="fade-up" class="aos-init aos-animate">PROJECT <span>LINK !</h5>
+                            <h6 class="mb-3" data-aos="fade-up" class="aos-init aos-animate">PROJECT <span>LINK</h5>
                             <ul class="social-links d-flex align-center justify-content-center pt-2 aos-init aos-animate" data-aos="zoom-in">
                                 <li>
                                     <a href="https://www.facebook.com/mohammadalamin.dev" target="_blank" class="shadow-box">
@@ -76,8 +85,20 @@
                                 </li>
                             </ul>
                         </div>
+                        
                         <div>
-                            <h5 data-aos="fade-up" class="aos-init aos-animate pb-2">TAGS</h5>
+                            <h6 data-aos="fade-up" class="aos-init aos-animate pb-2">OVERVIEW</h6>
+                            <p>{{$projectData->short_description}}</p>
+                        </div>
+
+                        <div>
+                            <h6 data-aos="fade-up" class="aos-init aos-animate pb-2">TAGS</h6>
+                            <div>
+                                @foreach ($projectData->tags as $tag)
+                                    <span class="badge rounded-pill text-bg-success">{{$tag->name}}</span>
+                                @endforeach
+
+                            </div>
                         </div>
                     </div>
                 </div>

@@ -41,66 +41,17 @@ class FrontController extends Controller
         $data['socials']        = AboutMe::SOCIAL;
         $data['skills']         = AboutMe::SKILL;
         $data['skill_icons']    = AboutMe::SKILL_ICON;
-
-        // Your array of projects
-        $projects = [
-            [
-                'url' => 'https://picsum.photos/id/0/5000/3333',
-                'name' => 'Highlands',
-                'location' => 'Scotland',
-                'description' => 'The mountains are calling'
-            ],
-            [
-                'url' => 'https://picsum.photos/id/1/5000/3333',
-                'name' => 'Machu Pichu',
-                'location' => 'Peru',
-                'description' => 'Adventure is never far away'
-            ],
-            [
-                'url' => 'https://picsum.photos/id/5/5000/3334',
-                'name' => 'Chamonix',
-                'location' => 'France',
-                'description' => 'Let your dreams come true'
-            ],
-            [
-                'url' => 'https://picsum.photos/id/6/5000/3333',
-                'name' => 'Highlands',
-                'location' => 'Scotland',
-                'description' => 'The mountains are calling'
-            ],
-            [
-                'url' => 'https://picsum.photos/id/7/4728/3168',
-                'name' => 'Machu Pichu New',
-                'location' => 'Peru New',
-                'description' => 'Adventure is never far away'
-            ],
-            [
-                'url' => 'https://picsum.photos/id/10/2500/1667',
-                'name' => 'Machu Pichu New',
-                'location' => 'Peru New',
-                'description' => 'Adventure is never far away'
-            ],
-            [
-                'url' => 'https://picsum.photos/id/11/2500/1667',
-                'name' => 'Machu Pichu New',
-                'location' => 'Peru New',
-                'description' => 'Adventure is never far away'
-            ]
-        ];
-
-        // Convert the array into a collection
-        // $data['projects'] = collect($projects);
-        $data['projects'] = Project::with('images')->latest()->get();
+        $data['projects']       = Project::with('images')->latest()->get();
 
         return view('frontend.projects', $data);
     }
 
     public function projectDetails($slug)
     {
-        $data['projectData'] = Project::where('slug', $slug)->firstOrFail();
+        $data['projectData']    = Project::where('slug', $slug)->firstOrFail();
         $data['skills']         = AboutMe::SKILL;
         $data['skill_icons']    = AboutMe::SKILL_ICON;
-
+  
         return view('frontend.projects-details', $data);
     }
     public function contact()
