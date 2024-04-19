@@ -234,8 +234,7 @@
             padding-bottom: 0.8rem;
         }
 
-        .info .description::before,
-        .info .description::after {
+        .info .description::before {
             content: "";
             position: absolute;
             background: #fff;
@@ -247,17 +246,6 @@
             top: 50%;
             width: 20px;
             height: 5px;
-        }
-
-        .info .description::after {
-            bottom: 0;
-            width: 60px;
-            height: 2px;
-        }
-
-        .info .tag {
-            --text-size-offset: 0.065;
-            font-weight: 500;
         }
 
         .info.current--info {
@@ -444,7 +432,6 @@
                 info.innerHTML = `
                     <h2 class="text name">${project.project_name}</h2>
                     <h4 class="text description">${project.short_description}</h4>
-                    <p class="text tag">${project.description}</p>
                 `;
                 infoWrapper.appendChild(info);
     

@@ -264,9 +264,7 @@ a {
 
 ul,
 ol {
-    list-style: none;
     margin: 0;
-    padding: 0;
 }
 .flex-1 {
     flex: 1;
@@ -654,7 +652,7 @@ ol {
     margin-bottom: 23px;
 }
 .about-area .about-edc-exp ul {
-    padding: 0;
+    padding: 0 0 0 15px;
 }
 .about-area .about-edc-exp ul li + li {
     margin-top: 32px;

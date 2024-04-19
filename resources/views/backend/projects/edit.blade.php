@@ -3,13 +3,6 @@
     <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.js"></script>
     <style>
-        ul,
-        ol {
-            list-style: inherit;
-            margin: inherit;
-            padding: inherit;
-        }
-
         .note-editor {
             background-color: #ffffff !important;
         }
@@ -90,7 +83,7 @@
 
                                 <div class="mb-3">
                                     <label for="images" class="form-label">Multiple Images</label>
-                                    <input type="file" class="form-control @error('images.*') is-invalid @enderror" id="images" name="images[]" multiple required>
+                                    <input type="file" class="form-control @error('images.*') is-invalid @enderror" id="images" name="images[]" multiple>
                                     <div id="image-preview" class="mt-3"></div>
                                     @error('images.*')
                                         <div class="invalid-feedback">
@@ -154,7 +147,7 @@
     </script>
     <script>
         $('#long_description').summernote({
-            placeholder: 'Hello stand alone ui',
+            placeholder: 'Write your project description',
             tabsize: 2,
             height: 300,
             toolbar: [

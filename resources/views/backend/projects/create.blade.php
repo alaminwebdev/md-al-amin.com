@@ -152,7 +152,7 @@
 
     <script>
         $('#long_description').summernote({
-            placeholder: 'Hello stand alone ui',
+            placeholder: 'Write your project description',
             tabsize: 2,
             height: 300,
             toolbar: [

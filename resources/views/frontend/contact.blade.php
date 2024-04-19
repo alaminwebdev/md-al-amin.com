@@ -5,7 +5,7 @@
             <div class="row">
                 <div class="contact-infos col-lg-5">
                     <h4 data-aos="fade-up">Contact Info</h4>
-                    <ul class="contact-details">
+                    <ul class="contact-details p-0">
                         @foreach ($contacts as $contact)
                             <li class="d-flex align-items-center py-3" data-aos="zoom-in" style="{{ $loop->last ? '' : 'border-bottom: 1px solid #212529;' }}">
                                 <div class="icon-box shadow-box">
@@ -22,7 +22,7 @@
                     </ul>
 
                     <h4 data-aos="fade-up" class="pt-3">Social Info</h4>
-                    <ul class="social-links d-flex align-center pt-3" data-aos="zoom-in">
+                    <ul class="social-links d-flex align-center pt-3 list-unstyled" data-aos="zoom-in">
                         @foreach ($socials as $social)
                             <li>
                                 <a href="{{ $social['link'] }}" target="_blank" class="shadow-box">
