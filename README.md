@@ -35,7 +35,6 @@ php artisan migrate
 To run test project at [localhost:8000](http://localhost:8000)
 ```
 php artisan serve
-
 ```
 <h3 id="Module">Module</h3>
 
@@ -47,18 +46,15 @@ php artisan serve
 Project list
 ```
 /project-list/
-
 ```
 
 Project Create
 ```
 /project-list/create
-
 ```
 
 Resume Upload
 ```
 /resume-upload/
-
 ```
 
