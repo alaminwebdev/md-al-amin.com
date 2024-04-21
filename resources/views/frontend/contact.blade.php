@@ -131,22 +131,21 @@
                         },
                         success: function(response) {
                             console.log(response);
-                            var result = response.original;
-
+               
                             setTimeout(function() {
                                 preloader.style.display = "none";
                                 preloaderContainer.style.height = 0;
                             }, 1000);
 
                             setTimeout(function() {
-                                if (result.success && result.success.trim() !== "") {
-                                    console.log("Success message:", result.success);
-                                    showAlert('success', result.success);
-                                } else if (result.error) {
-                                    console.log("Error message:", result.error);
-                                    showAlert('error', result.error);
+                                if (response.success && response.success.trim() !== "") {
+                                    console.log("Success message:", response.success);
+                                    showAlert('success', response.success);
+                                } else if (response.error) {
+                                    console.log("Error message:", response.error);
+                                    showAlert('error', response.error);
                                 } else {
-                                    console.log("Unexpected response:", result);
+                                    console.log("Unexpected response:", response);
                                 }
                             }, 2500);
                         },

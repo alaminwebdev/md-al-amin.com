@@ -6,7 +6,7 @@
                 <img src="{{ asset('img/logo.png') }}" alt="Logo">
             </a>
 
-            <ul data-in="#" data-out="#" class="footer-menu" id="menu-footer-menu">
+            <ul data-in="#" data-out="#" class="footer-menu list-unstyled" id="menu-footer-menu">
                 <li id="menu-item-1856" class="active">
                     <a title="Home" href="{{ route('dashboard') }}">Home</a>
                 </li>

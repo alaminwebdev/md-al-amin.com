@@ -24,21 +24,16 @@
 
     <title>Md. Al Amin – Personal Portfolio Website</title>
 
+    <link rel="canonical" href="https://md-al-amin.com/">
+    <link rel="shortlink" href="https://md-al-amin.com/">
+
     <link rel="stylesheet" id="icon-css" href="{{ asset('css/iconoir.css') }}" media="all">
     <link rel="stylesheet" id="bootstrap-css" href="{{ asset('css/bootstrap.min.css') }}" media="all">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" id="" href="{{ asset('css/style.css') }}" media="all">
     <link rel="stylesheet" id="" href="{{ asset('css/responsive.css') }}" media="all">
-    <link rel="stylesheet" id="google-fonts-1-css" href="{{ asset('css/google-fonts.css') }}" media="all">
-    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
-    <link rel="canonical" href="">
-    <link rel="shortlink" href="">
-    <style>
-        .about-area .about-me-box .img-box {
-            background: linear-gradient(90deg, var(--primary_color) -15%, #C2EBFF 58%, var(--primary_color) 97%) !important;
-        }
-    </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.11.1/baguetteBox.min.css">
+
     <script src="{{ asset('js/jquery-3.7.1.min.js') }}" id="jquery-core-js"></script>
 
 </head>
@@ -89,6 +84,7 @@
 
         })
     </script>
+
     <script>
         window.addEventListener("load", function() {
             const preloaderContainer = document.getElementById("md-preloader");
@@ -106,6 +102,7 @@
             }, 500);
         });
     </script>
+
     <script>
         baguetteBox.run('.carousel-inner', {
             animation: 'fadeIn',
