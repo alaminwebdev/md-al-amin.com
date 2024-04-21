@@ -4,7 +4,11 @@
             <img src="{{ asset('img/logo.png') }}" alt="Mohammad Al Amin" width="200">
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
+            <span class="navbar-toggler-icon ">
+                <span class="first"></span>
+                <span class="second"></span>
+                <span class="third"></span>
+            </span>
         </button>
         <div class="collapse navbar-collapse" id="navbarText">
             <ul class="navbar-nav m-auto mb-2 mb-lg-0">
@@ -22,7 +26,7 @@
                 </li>
             </ul>
         </div>
-        <a href="{{ route('resume.download') }}" class="theme-btn btn btn-sm fs-7">Download Resume</a>
+        <a href="{{ route('resume.download') }}" class="theme-btn resume-btn btn btn-sm fs-7">Download Resume</a>
         </div>
     </div>
 </nav>

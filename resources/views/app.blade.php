@@ -66,10 +66,11 @@
 
     <script>
         $(document).ready(function() {
-            $(document).on('click', '.header-area .show-menu', function() {
-                $(this).toggleClass('active');
-                $(".header-area .navbar").toggleClass('active');
-            });
+
+            document.querySelector('.navbar-toggler').addEventListener('click', function() {
+                this.classList.toggle('active');
+            })
+
             // Masonary
             $('.grid').masonry({
                 // options

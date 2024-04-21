@@ -7,6 +7,7 @@ use App\Models\Project;
 use App\Models\Tag;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
+use Illuminate\Support\Str;
 
 class ProjectController extends Controller
 {
@@ -65,7 +66,14 @@ class ProjectController extends Controller
         // Save project images
         if ($request->hasFile('images')) {
             foreach ($request->file('images') as $image) {
-                $imageName = time() . '_' . $image->getClientOriginalName();
+
+                //$imageName = time() . '_' . $image->getClientOriginalName();
+
+                $timestamp      = now()->timestamp; // Current timestamp
+                $randomString   = Str::random(10); // Random string of length 10
+                $hash           = md5($timestamp . $randomString); // MD5 hash
+                $extension      = $image->getClientOriginalExtension(); // Get original file extension
+                $imageName      = $hash . '.' . $extension; // Combine hash with extension
                 $image->move(public_path('img/projects'), $imageName);
                 $project->images()->create(['image_path' => 'img/projects/' . $imageName]);
             }
@@ -123,7 +131,13 @@ class ProjectController extends Controller
         if ($request->hasFile('images')) {
 
             foreach ($request->file('images') as $image) {
-                $imageName = time() . '_' . $image->getClientOriginalName();
+                //$imageName    = time() . '_' . $image->getClientOriginalName();
+                
+                $timestamp      = now()->timestamp; // Current timestamp
+                $randomString   = Str::random(10); // Random string of length 10
+                $hash           = md5($timestamp . $randomString); // MD5 hash
+                $extension      = $image->getClientOriginalExtension(); // Get original file extension
+                $imageName      = $hash . '.' . $extension; // Combine hash with extension
                 $image->move(public_path('img/projects'), $imageName);
                 $project->images()->create(['image_path' => 'img/projects/' . $imageName]);
             }
