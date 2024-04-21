@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-lg sticky-top">
     <div class="container">
-        <a class="navbar-brand" href="#">
-            <img src="{{ asset('img/logo.png') }}" alt="Logo" width="200">
+        <a class="navbar-brand" href="{{ route('dashboard') }}">
+            <img src="{{ asset('img/logo.png') }}" alt="Mohammad Al Amin" width="200">
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
