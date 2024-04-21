@@ -16,9 +16,9 @@
 
     <meta property="og:site_name" content="Md. Al Amin">
     <meta property="og:url" content="md-al-amin.com">
-    <meta property="og:title" content="Md. Al Amin – A Full Stack Web Developer">
-    <meta property="og:description" content="Md. Al Amin – A Full Stack Web Developer">
-    <meta property="og:image" content="Md. Al Amin – A Full Stack Web Developer">
+    <meta property="og:title" content="Md. Al Amin – Full Stack Web Developer">
+    <meta property="og:description" content="Md. Al Amin – Full Stack Web Developer">
+    <meta property="og:image" content="Md. Al Amin – Full Stack Web Developer">
 
     <link rel="dns-prefetch" href="https://fonts.googleapis.com/">
 
