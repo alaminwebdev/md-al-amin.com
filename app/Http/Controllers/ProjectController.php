@@ -59,8 +59,11 @@ class ProjectController extends Controller
         // Save skill tags
         $skillTags = explode(',', $validatedData['skill_tags']);
         foreach ($skillTags as $tagName) {
-            $tag = Tag::firstOrCreate(['name' => $tagName]);
-            $project->tags()->attach($tag->id);
+            $trimmedTagName = trim($tagName); 
+            if (!empty($trimmedTagName)) {
+                $tag = Tag::firstOrCreate(['name' => $trimmedTagName]);
+                $project->tags()->attach($tag->id);
+            }
         }
 
         // Save project images
@@ -144,11 +147,16 @@ class ProjectController extends Controller
         }
 
         // Update project tags
+
         $skillTags = explode(',', $validatedData['skill_tags']);
         $project->tags()->detach(); // Remove existing tags
+
         foreach ($skillTags as $tagName) {
-            $tag = Tag::firstOrCreate(['name' => $tagName]);
-            $project->tags()->attach($tag->id);
+            $trimmedTagName = trim($tagName); 
+            if (!empty($trimmedTagName)) {
+                $tag = Tag::firstOrCreate(['name' => $trimmedTagName]);
+                $project->tags()->attach($tag->id);
+            }
         }
 
         // Save the updated project

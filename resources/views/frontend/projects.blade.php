@@ -228,7 +228,7 @@
             --mg-left: 40px;
             --text-size-offset: 0.12;
             font-weight: 600;
-            font-size: 28px;
+            font-size: 20px;
             margin-left: var(--mg-left);
             margin-bottom: calc(var(--mg-left) / 2);
             padding-bottom: 0.8rem;
@@ -414,6 +414,7 @@
             // Populate the containers with new content
             currentSet.forEach((project, index) => {
                 const firstImage = project.images.length > 0 ? project.images[0].image_path : '';
+                const truncatedDescription = truncateText(project.short_description, 70);
                 const card = document.createElement('div');
                 const route = "{{ route('project.details', ['slug' => ':projectSlug'] ) }}".replace(':projectSlug', project.slug);
 
@@ -431,7 +432,7 @@
                 info.classList.add('info', index === 0 ? 'current--info' : (index === 1 ? 'next--info' : 'previous--info'));
                 info.innerHTML = `
                     <h2 class="text name">${project.project_name}</h2>
-                    <h4 class="text description">${project.short_description}</h4>
+                    <h4 class="text description">${truncatedDescription}</h4>
                 `;
                 infoWrapper.appendChild(info);
     
@@ -487,6 +488,12 @@
             const route = element.getAttribute('href').replace(':projectSlug', projectSlug);
             element.setAttribute('href', route);
             return true;
+        }
+        function truncateText(text, maxLength) {
+            if (text.length > maxLength) {
+                return text.slice(0, maxLength) + "...";
+            }
+            return text;
         }
     </script>
     

@@ -94,7 +94,7 @@
 
                                 <div class="mb-3">
                                     <label for="skill_tags" class="form-label">Skill Tags</label>
-                                    <input type="text" class="form-control" id="skill_tags" name="skill_tags" value="{{ $project->tags->implode('name', ', ') }}" required>
+                                    <input type="text" class="form-control" id="skill_tags" name="skill_tags" value="{{ $project->tags->implode('name', ', ') }}">
                                     <div id="skill-tags-preview" class="mt-3"></div>
                                 </div>
 

@@ -99,17 +99,17 @@
                             <h6 class="mb-3" data-aos="fade-up" class="aos-init aos-animate">PROJECT <span>LINK</h6>
                             <ul class="social-links d-flex align-center justify-content-start pt-2 aos-init aos-animate list-unstyled" data-aos="zoom-in">
                                 <li>
-                                    <a href="https://www.linkedin.com/in/mdalamin1998/" target="_blank" class="shadow-box" title="Live Link">
+                                    <a href="{{ $projectData->live_url}}" target="_blank" class="shadow-box" title="Live Link">
                                         <i class="iconoir-internet"></i>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="https://www.facebook.com/mohammadalamin.dev" target="_blank" class="shadow-box" title="Host Link">
+                                    <a href="{{ $projectData->test_url}}" target="_blank" class="shadow-box" title="Host Link">
                                         <i class="iconoir-link"></i>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="https://github.com/alaminwebdev" target="_blank" class="shadow-box" title="Host Link">
+                                    <a href="{{ $projectData->host_link}}" target="_blank" class="shadow-box" title="Host Link">
                                         <i class="iconoir-github"></i>
                                     </a>
                                 </li>
@@ -147,7 +147,7 @@
                                 $firstImage = $other_project->images->first(); // Get the first image from the relation
                             @endphp
                             <a href="{{ route('project.details', ['slug' => $other_project->slug] ) }}" target="_blank">
-                                <div class="mb-4 text-white other-project rounded position-relative" style="background-image: url('{{ asset($firstImage->image_path) }}'); z-index:1;">
+                                <div class="mb-4 text-white other-project rounded position-relative" style="background-image: url('{{ asset($firstImage->image_path) }}'); z-index:1; background-size:cover;">
                                     <h4 class="fst-italic fw-bold m-o ">{{ $other_project->project_name }}</h4>
                                 </div>
                             </a>
