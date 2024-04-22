@@ -218,7 +218,7 @@
         .info .name{
             text-transform: uppercase;
             font-weight: 800;
-            font-size: 56px;
+            font-size: 40px;
             background: linear-gradient(45deg, #00f7ff, #ffffffc9);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;

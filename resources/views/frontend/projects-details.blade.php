@@ -62,6 +62,13 @@
             background-color: rgba(0, 0, 0, 0.20);
             border-radius: inherit;
         }
+        dl, ol, ul {
+            margin-top: 0;
+            margin-bottom: 1rem;
+        }
+        ul li {
+            margin-bottom: 1rem;
+        }
     </style>
     <section class="py-5">
         <div class="container">
