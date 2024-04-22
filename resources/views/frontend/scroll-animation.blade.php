@@ -66,7 +66,7 @@
                 <div class="scroller" data-speed="fast">
                     <ul class="tag-list scroller__inner pt-0">
                         @foreach ($skills as $skill)
-                            <li>{{ $skill }}</li>    
+                            <li class="mb-0">{{ $skill }}</li>    
                         @endforeach
                     </ul>
                 </div>

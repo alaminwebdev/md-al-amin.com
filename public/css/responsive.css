@@ -400,6 +400,79 @@
         font-size: 14px;
     }
 
+    .shadow-box {
+        height: auto !important;
+    }
+
+    .social-links li a {
+        width: 50px !important;
+        height: 50px !important;
+        line-height: 55px !important;
+        font-size: 28px;
+    }
+
+    .header-text{
+        font-size: 18px;
+    }
+
+    .scroller__inner {
+        padding-block: 10px !important;
+    }
+    .tag-list.scroller__inner{
+        padding-top: 0 !important;
+    }
+    .scroller__inner img {
+        width: 80px;;
+    }
+
+    :root {
+        --card-width: 100px !important;
+        --card-height: 100px !important;
+    }
+
+    .app {
+        height: 300px !important;
+    }
+    .infoList {
+        bottom: 10% !important;
+    }
+
+    .cards__wrapper .card {
+        transform: translate(-50%, -100%) translateX(var(--card-translateX-offset)) translateY(var(--card-translateY-offset)) rotateY(var(--card-rotation-offset)) scale(var(--card-scale-offset));
+    }
+
+    .info .name {
+        font-size: 20px !important;
+    }
+    .info .description {
+        --mg-left: 25px !important;
+        font-size: 12px !important;
+        padding-bottom: 0 !important;
+    }
+
+    .info .description::before {
+        width: 12px !important;
+        height: 3px !important;
+    }
+
+    .cardList__btn.btn--right {
+        right: 0% !important;
+    }
+    .cardList__btn.btn--left {
+        left: 0%;
+    }
+    .cardList__btn i {
+        font-size: 20px !important;
+    }
+    .cardList__btn {
+        top: -170% !important;
+        transform: translateY(-170%) !important;
+
+    }
+    .info {
+        margin-left: calc(var(--card-width) / 3.5) !important;
+    }
+
     .footer-area{
         padding-top: 0 !important;
         padding-bottom: 25px !important;

@@ -304,7 +304,7 @@
             font-size: 20px;
         }
     </style>
-    <section class="project-area pb-5">
+    <section class="project-area pb-4 pb-sm-5">
         <div class="app">
             <div class="button-container">
                 <button class="btn" type="button" data-bs-toggle="tooltip" data-bs-placement="left" title="Previous" onclick="showPreviousSet()">

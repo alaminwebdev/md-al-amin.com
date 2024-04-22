@@ -70,10 +70,10 @@
             margin-bottom: 1rem;
         }
     </style>
-    <section class="py-5">
+    <section class="py-4 py-sm-5">
         <div class="container">
             <div class="row">
-                <div data-aos="zoom-in" class="col-lg-8">
+                <div data-aos="zoom-in" class="col-lg-8 mb-4 mb-sm-0">
                     <div id="carouselExampleIndicators" class="carousel slide carousel-fade" data-bs-ride="carousel">
                         <div class="carousel-indicators">
                             @foreach ($projectData->images as $index => $image)
@@ -104,18 +104,18 @@
 
                         <div class="mb-3">
                             <h6 class="mb-3" data-aos="fade-up" class="aos-init aos-animate">PROJECT <span>LINK</h6>
-                            <ul class="social-links d-flex align-center justify-content-start pt-2 aos-init aos-animate list-unstyled" data-aos="zoom-in">
-                                <li>
+                            <ul class="social-links d-flex align-center justify-content-start pt-3 pt-sm-2 aos-init aos-animate list-unstyled" data-aos="zoom-in">
+                                <li class="mb-0">
                                     <a href="{{ $projectData->live_url}}" target="_blank" class="shadow-box" title="Live Link">
                                         <i class="iconoir-internet"></i>
                                     </a>
                                 </li>
-                                <li>
+                                <li class="mb-0">
                                     <a href="{{ $projectData->test_url}}" target="_blank" class="shadow-box" title="Host Link">
                                         <i class="iconoir-link"></i>
                                     </a>
                                 </li>
-                                <li>
+                                <li class="mb-0">
                                     <a href="{{ $projectData->host_link}}" target="_blank" class="shadow-box" title="Host Link">
                                         <i class="iconoir-github"></i>
                                     </a>
@@ -130,7 +130,7 @@
 
                         <div>
                             <h6 data-aos="fade-up" class="aos-init aos-animate">TAGS</h6>
-                            <div>
+                            <div class="d-flex gap-1 flex-wrap">
                                 @foreach ($projectData->tags as $tag)
                                     <span class="badge rounded-pill text-bg-success">{{ $tag->name }}</span>
                                 @endforeach
@@ -139,22 +139,22 @@
                     </div>
                 </div>
             </div>
-            <div class="row mt-5">
+            <div class="row mt-4 mt-sm-5">
                 <div class="col-md-8">
                     <div>
-                        <h5 data-aos="fade-up" class="aos-init aos-animate pb-3 mb-3" style="border-bottom: 1px solid #212529;">PROJECT OVERVIEW</h5>
+                        <h5 data-aos="fade-up" class="aos-init aos-animate pb-3 mb-3 header-text" style="border-bottom: 1px solid #212529;">PROJECT OVERVIEW</h5>
                         <div>{!! $projectData->long_description !!}</div>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div>
-                        <h5 data-aos="fade-up" class="aos-init aos-animate pb-3 mb-3" style="border-bottom: 1px solid #212529;">OTHER PROJECT</h5>
+                        <h5 data-aos="fade-up" class="aos-init aos-animate pb-3 mb-3 header-text" style="border-bottom: 1px solid #212529;">OTHER PROJECT</h5>
                         @foreach ($other_projects as $other_project)
                             @php
                                 $firstImage = $other_project->images->first(); // Get the first image from the relation
                             @endphp
                             <a href="{{ route('project.details', ['slug' => $other_project->slug] ) }}" target="_blank">
-                                <div class="mb-4 text-white other-project rounded position-relative" style="background-image: url('{{ asset($firstImage->image_path) }}'); z-index:1; background-size:cover;">
+                                <div class="mb-0 mb-sm-4 text-white other-project rounded position-relative" style="background-image: url('{{ asset($firstImage->image_path) }}'); z-index:1; background-size:cover;">
                                     <h4 class="fst-italic fw-bold m-o ">{{ $other_project->project_name }}</h4>
                                 </div>
                             </a>
