@@ -488,6 +488,17 @@
     .footer-area .footer-content .copyright {
         font-size: 10px;
     }
+    .carousel-item {
+        height: 300px !important;
+        background: linear-gradient(
+            120deg,
+            rgba(255, 255, 255, 0.3),
+            rgba(25, 135, 84, 0.3)
+        ) !important;
+    }
+    .project-image{
+        object-fit:contain !important;
+    }
 
 }
 @media (max-width: 425px) {
