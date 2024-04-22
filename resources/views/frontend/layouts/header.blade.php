@@ -12,16 +12,16 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarText">
             <ul class="navbar-nav m-auto mb-2 mb-lg-0">
-                <li class="nav-item">
+                <li class="nav-item m-0">
                     <a class="nav-link {{ Route::currentRouteName() == 'dashboard' ? 'active' : '' }} text-secondary" aria-current="page" href="{{ route('dashboard') }}">Home</a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item m-0">
                     <a class="nav-link {{ Route::currentRouteName() == 'resume' ? 'active' : '' }} text-secondary" href="{{ route('resume') }}">Resume</a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item m-0">
                     <a class="nav-link {{ Route::currentRouteName() == 'projects' ? 'active' : '' }} text-secondary" href="{{ route('projects') }}">Projects</a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item m-0">
                     <a class="nav-link {{ Route::currentRouteName() == 'contact' ? 'active' : '' }} text-secondary" href="{{ route('contact') }}">Contact</a>
                 </li>
             </ul>

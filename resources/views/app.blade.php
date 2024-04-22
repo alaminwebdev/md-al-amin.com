@@ -2,38 +2,51 @@
 <html lang="en-US">
 
 <head>
+    <meta charset="UTF-8">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-
-    <meta name="csrf-token" content="{{ csrf_token() }}">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="robots" content="max-image-preview:large">
-    <meta name="description" content="Md. Al Amin – A Full Stack Web Developer">
-    <meta name="keyword" content="Md. Al Amin – A Full Stack Web Developer">
+
+    <!-- CSRF Token -->
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+    
+    <!-- SEO Meta Tags -->  
+    <meta name="description" content="Md. Al Amin – Full Stack Web Developer">
+    <meta name="keyword" content="Md. Al Amin, Full Stack Web Developer">
     <meta name="author" content="Md. Al Amin">
+    <meta name="robots" content="max-image-preview:large">
 
-
+    <!-- Open Graph Tags -->
     <meta property="og:site_name" content="Md. Al Amin">
-    <meta property="og:url" content="md-al-amin.com">
+    <meta property="og:url" content="https://md-al-amin.com/"">
     <meta property="og:title" content="Md. Al Amin – Full Stack Web Developer">
     <meta property="og:description" content="Md. Al Amin – Full Stack Web Developer">
-    <meta property="og:image" content="Md. Al Amin – Full Stack Web Developer">
-
-    <link rel="dns-prefetch" href="https://fonts.googleapis.com/">
-
-    <title>Md. Al Amin – Personal Portfolio Website</title>
-
+    <meta property="og:image" content="https://md-al-amin.com/img/me.jpg">
+    
+    
+    <!-- Canonical and Shortlink Tags -->
     <link rel="canonical" href="https://md-al-amin.com/">
     <link rel="shortlink" href="https://md-al-amin.com/">
-
-    <link rel="stylesheet" id="icon-css" href="{{ asset('css/iconoir.css') }}" media="all">
-    <link rel="stylesheet" id="bootstrap-css" href="{{ asset('css/bootstrap.min.css') }}" media="all">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link rel="stylesheet" id="" href="{{ asset('css/style.css') }}" media="all">
-    <link rel="stylesheet" id="" href="{{ asset('css/responsive.css') }}" media="all">
+    
+    <!-- DNS Prefetch for Google Fonts -->
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com/">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="{{ asset('css/iconoir.css') }}" media="all">
+    <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}" media="all">
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}" media="all">
+    <link rel="stylesheet" href="{{ asset('css/responsive.css') }}" media="all">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.11.1/baguetteBox.min.css">
 
+    <title>Md. Al Amin – Full Stack Web Developer</title>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('favicon/apple-touch-icon.png')}}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('favicon/favicon-32x32.png')}}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('favicon/favicon-16x16.png')}}">
+    <link rel="manifest" href="{{ asset('favicon/site.webmanifest')}}">
+    
+    <!-- jquery -->
     <script src="{{ asset('js/jquery-3.7.1.min.js') }}" id="jquery-core-js"></script>
 
 </head>

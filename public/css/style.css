@@ -1032,10 +1032,10 @@ ol {
 }
 .footer-area .footer-content .logo img {
     display: block;
-    width: 300px;
+    width: 250px;
 }
 .footer-area .footer-content .footer-menu {
-    margin: 0px 0 30px 0;
+    margin: 0px 0 20px 0;
     padding: 0;
     display: flex;
     align-items: center;

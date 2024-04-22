@@ -51,7 +51,7 @@ class FrontController extends Controller
         $data['projectData']    = Project::where('slug', $slug)->firstOrFail();
         $data['skills']         = AboutMe::SKILL;
         $data['skill_icons']    = AboutMe::SKILL_ICON;
-        $data['other_projects'] = Project::where('slug' != $slug)->orderBy('created_at', 'desc')
+        $data['other_projects'] = Project::where('slug', '!=', $slug)->orderBy('created_at', 'desc')
             ->get();
 
         return view('frontend.projects-details', $data);
