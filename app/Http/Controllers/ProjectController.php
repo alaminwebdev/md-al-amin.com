@@ -43,7 +43,9 @@ class ProjectController extends Controller
             'short_description' => 'required|string',
             'long_description'  => 'required|string',
             'skill_tags'        => 'required|string',
-            'images.*'          => 'image|mimes:jpeg,png,jpg,gif|max:2048'
+            'images.*'          => 'image|mimes:jpeg,png,jpg,gif|max:2048',
+            'sort'              => 'nullable|integer',
+            'status'            => 'required|boolean',
         ]);
 
         // Save project details
@@ -54,6 +56,8 @@ class ProjectController extends Controller
             'host_link'         => $request['host_link'],
             'short_description' => $validatedData['short_description'],
             'long_description'  => $validatedData['long_description'],
+            'sort'              => $validatedData['sort'],
+            'status'            => $validatedData['status'],
         ]);
 
         // Save skill tags
@@ -116,7 +120,9 @@ class ProjectController extends Controller
             'short_description' => 'required|string',
             'long_description'  => 'required|string',
             'skill_tags'        => 'required|string',
-            'images.*'          => 'image|mimes:jpeg,png,jpg,gif|max:2048'
+            'images.*'          => 'image|mimes:jpeg,png,jpg,gif|max:2048',
+            'sort'              => 'nullable|integer',
+            'status'            => 'required|boolean',
         ]);
 
         // Find the project by its ID
@@ -129,6 +135,8 @@ class ProjectController extends Controller
         $project->host_link         = $request['host_link'];
         $project->short_description = $validatedData['short_description'];
         $project->long_description  = $validatedData['long_description'];
+        $project->sort              = $validatedData['sort'];
+        $project->status            = $validatedData['status'];
 
         // Update project images
         if ($request->hasFile('images')) {

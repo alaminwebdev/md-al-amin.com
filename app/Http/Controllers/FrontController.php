@@ -41,7 +41,7 @@ class FrontController extends Controller
         $data['socials']        = AboutMe::SOCIAL;
         $data['skills']         = AboutMe::SKILL;
         $data['skill_icons']    = AboutMe::SKILL_ICON;
-        $data['projects']       = Project::with('images')->latest()->get();
+        $data['projects']       = Project::with('images')->where('status', 1)->orderBy('sort', 'asc')->get();
 
         return view('frontend.projects', $data);
     }
@@ -51,8 +51,7 @@ class FrontController extends Controller
         $data['projectData']    = Project::where('slug', $slug)->firstOrFail();
         $data['skills']         = AboutMe::SKILL;
         $data['skill_icons']    = AboutMe::SKILL_ICON;
-        $data['other_projects'] = Project::where('slug', '!=', $slug)->orderBy('created_at', 'desc')
-            ->get();
+        $data['other_projects'] = Project::where('slug', '!=', $slug)->where('status', 1)->orderBy('sort', 'asc')->get();
 
         return view('frontend.projects-details', $data);
     }

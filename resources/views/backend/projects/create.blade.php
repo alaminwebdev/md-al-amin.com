@@ -102,6 +102,19 @@
                                     <div id="skill-tags-preview" class="mt-3"></div>
                                 </div>
 
+                                <div class="mb-3">
+                                    <label for="sort" class="form-label">Sort</label>
+                                    <input type="number" class="form-control" id="sort" name="sort" value="{{ old('sort') }}" placeholder="Enter sort number">
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="status" class="form-label">Status</label>
+                                    <select name="status" id="status" class="form-control">
+                                        <option value="1">Active</option>
+                                        <option value="0">Inactive</option>
+                                    </select>
+                                </div>
+
                                 <button type="submit" class="btn btn-sm theme-btn">Upload Project</button>
                             </form>
 

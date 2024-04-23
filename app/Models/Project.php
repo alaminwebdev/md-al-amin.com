@@ -10,7 +10,7 @@ class Project extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['project_name', 'slug', 'live_url', 'test_url', 'host_link','short_description', 'long_description'];
+    protected $fillable = ['project_name', 'slug', 'live_url', 'test_url', 'host_link','short_description', 'long_description', 'sort', 'status'];
 
     protected static function boot()
     {

@@ -98,9 +98,21 @@
                                     <div id="skill-tags-preview" class="mt-3"></div>
                                 </div>
 
+                                <div class="mb-3">
+                                    <label for="sort" class="form-label">Sort</label>
+                                    <input type="number" class="form-control" id="sort" name="sort" value="{{ $project->sort }}" placeholder="Enter sort number">
+                                </div>
+                            
+                                <div class="mb-3">
+                                    <label for="status" class="form-label">Status</label>
+                                    <select name="status" id="status" class="form-control">
+                                        <option value="1" {{ $project->status == 1 ? 'selected' : '' }}>Active</option>
+                                        <option value="0" {{ $project->status == 0 ? 'selected' : '' }}>Inactive</option>
+                                    </select>
+                                </div>
+
                                 <button type="submit" class="btn btn-sm theme-btn">Upload Project</button>
                             </form>
-
                         </div>
                     </div>
                 </div>

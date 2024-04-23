@@ -24,6 +24,14 @@
                                         <tr>
                                             <td>{{ $loop->iteration }}</td>
                                             <td>{{ $project->project_name }}</td>
+                                            <td>{{ $project->sort ?? '-' }}</td>
+                                            <td>
+                                                @if ($project->status == 1)
+                                                    <span class="badge bg-success">Active</span>
+                                                @else
+                                                    <span class="badge bg-danger">Inactive</span>
+                                                @endif
+                                            </td>
                                             <td>
                                                 <div class="d-flex">
                                                     @foreach ($project->images as $image)
