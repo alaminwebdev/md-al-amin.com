@@ -1,10 +1,10 @@
 @extends('app')
 @section('content')
-    <section class="py-5">
+    <section class="py-4 py-sm-5">
         <div class="container">
             <div class="row">
                 <div class="contact-infos col-lg-5">
-                    <h4 data-aos="fade-up">Contact Info</h4>
+                    <h4 data-aos="fade-up" class="mb-0 mb-sm-1">Contact Info</h4>
                     <ul class="contact-details p-0">
                         @foreach ($contacts as $contact)
                             <li class="d-flex align-items-center py-3" data-aos="zoom-in" style="{{ $loop->last ? '' : 'border-bottom: 1px solid #212529;' }}">
@@ -14,14 +14,14 @@
                                 <div class="right">
                                     <span>{{ $contact['name'] }}</span>
                                     @foreach ($contact['infos'] as $info)
-                                        <h5>{{ $info }}</h5>
+                                        <h5 class="">{{ $info }}</h5>
                                     @endforeach
                                 </div>
                             </li>
                         @endforeach
                     </ul>
 
-                    <h4 data-aos="fade-up" class="pt-3">Social Info</h4>
+                    <h4 data-aos="fade-up" class="pt-1 mb-0 mb-sm-1">Social Info</h4>
                     <ul class="social-links d-flex align-center pt-3 list-unstyled" data-aos="zoom-in">
                         @foreach ($socials as $social)
                             <li>
@@ -33,8 +33,8 @@
                     </ul>
                 </div>
 
-                <div data-aos="zoom-in" class="contact-form col-lg-7">
-                    <div class="shadow-box py-5 px-4">
+                <div data-aos="zoom-in" class="contact-form col-lg-7 pt-sm-0 pt-4">
+                    <div class="shadow-box py-4 py-sm-5 px-4">
                         <img decoding="async" src="{{ asset('img/icon2.png') }}" alt="Star" class="star-icon">
                         <h4 class="mb-3">GET IN <span>TOUCH !</h4>
                         <div>
@@ -63,7 +63,6 @@
                         </div>
                     </div>
                 </div>
-
             </div>
         </div>
     </section>
@@ -131,7 +130,7 @@
                         },
                         success: function(response) {
                             console.log(response);
-               
+
                             setTimeout(function() {
                                 preloader.style.display = "none";
                                 preloaderContainer.style.height = 0;

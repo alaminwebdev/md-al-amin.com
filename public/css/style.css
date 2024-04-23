@@ -45,6 +45,12 @@ a {
 .h-full {
     height: 100%;
 }
+.gradient-text {
+    background: linear-gradient(45deg, #00f7ff, #fff) no-repeat;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
 
 /* # Preloader */
 .md-preloader {
@@ -602,9 +608,6 @@ ol {
 }
 .nav-item .active {
     color: #fff !important;
-}
-.navbar-brand {
-    padding-bottom: 0;
 }
 
 /* # About */

@@ -285,6 +285,9 @@
 }
 @media (max-width: 576px) {
 
+    .navbar-brand h1 {
+        font-size: 16px !important;
+    }
     .navbar-brand {
         margin-right: 0;
     }
@@ -498,6 +501,35 @@
     }
     .project-image{
         object-fit:contain !important;
+    }
+    .contact-infos .contact-details li {
+        gap: 15px;
+    }
+    .contact-infos .contact-details li .icon-box {
+        width: 45px;
+        height: 45px;
+        line-height: 45px;
+        font-size: 20px;
+    }
+    .contact-infos .contact-details li .right span {
+        font-size: 10px;
+        margin-bottom: 5px;
+    }
+    .contact-infos .contact-details li .right h5 {
+        margin-bottom: 5px;
+    }
+    .contact-form img {
+        right: 25px;
+        width: 25px;
+    }
+    .contact-form h4 {
+        font-size: 20px;
+    }
+    .form-floating label{
+        font-size: 12px;;
+    }
+    .contact-form form .input-group button {
+        padding: 8px 15px;
     }
 
 }
