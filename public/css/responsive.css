@@ -432,12 +432,24 @@
         --card-width: 100px !important;
         --card-height: 100px !important;
     }
+    .card.current--card {
+        --card-scale-offset: 1.6 !important;
+    }
+    .card.previous--card, .card.next--card {
+        --card-scale-offset: 0.5 !important;
+    }
 
+    .card.previous--card {
+        --card-rotation-offset: 30deg !important;
+    }
+    .card.next--card {
+        --card-rotation-offset: -30deg !important;
+    }
     .app {
         height: 300px !important;
     }
     .infoList {
-        bottom: 10% !important;
+        bottom: 8% !important;
     }
 
     .cards__wrapper .card {
@@ -462,7 +474,7 @@
         right: 0% !important;
     }
     .cardList__btn.btn--left {
-        left: 0%;
+        left: 0% !important;
     }
     .cardList__btn i {
         font-size: 20px !important;
