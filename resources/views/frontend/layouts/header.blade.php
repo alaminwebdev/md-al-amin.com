@@ -1,5 +1,5 @@
 <nav class="navbar navbar-expand-lg sticky-top">
-    <div class="container">
+    <div class="container py-0 py-sm-2">
         <a class="navbar-brand" href="{{ route('dashboard') }}">
             <h1 class="fs-5 mb-0 fw-bolder font-monospace gradient-text">
                 <span>&lt;/</span>Mohammad Al Amin<span>&gt;</span>

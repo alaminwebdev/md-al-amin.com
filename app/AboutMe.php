@@ -81,7 +81,7 @@ class AboutMe
         [
             'name'  => 'location',
             'icon'  => 'iconoir-pin-alt',
-            'infos' => ['22 Baker Street, Texas', 'United States', 'W1U 3BW']
+            'infos' => ['Dhaka, Bangladesh']
         ]
     ];
 
