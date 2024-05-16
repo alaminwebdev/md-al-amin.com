@@ -41,7 +41,7 @@ class AboutMe
 
     const BIO = [
         'short_bio' => "Hello, I'm Md. Al Amin, a full-stack web developer with 2 year+ of experience.",
-        'long_bio'  => "Hello, I'm Md. Al Amin, a full-stack web developer with 2 year+ of experience. I have a strong passion for crafting seamless web experiences that users love. My toolkit comprises Laravel for robust back-end development, JavaScript for dynamic front-end interfaces with React, and modern tools like Inertia.js and Vite. With expertise in MySQL for optimizing databases, Git for version control, and CSS for elegant styling. From mastering AJAX for dynamic web interactions to ensuring smooth user experiences, I'm dedicated to delivering applications that shine.",
+        'long_bio'  => "I'm Md. Al Amin, a full-stack developer with over a year of experience. I excel in crafting seamless web experiences using Laravel for robust back-end development and JavaScript for dynamic front-end interfaces. Proficient in MySQL, Git, and CSS. Skilled in AJAX for dynamic web interactions, dedicated to delivering polished applications with smooth user experiences.",
     ];
 
     const SOCIAL = [

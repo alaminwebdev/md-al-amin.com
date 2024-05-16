@@ -10,8 +10,8 @@
 
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    
-    <!-- SEO Meta Tags -->  
+
+    <!-- SEO Meta Tags -->
     <meta name="description" content="Md. Al Amin – Full Stack Web Developer">
     <meta name="keyword" content="Md. Al Amin, Full Stack Web Developer">
     <meta name="author" content="Md. Al Amin">
@@ -23,15 +23,15 @@
     <meta property="og:title" content="Md. Al Amin – Full Stack Web Developer">
     <meta property="og:description" content="Md. Al Amin – Full Stack Web Developer">
     <meta property="og:image" content="https://md-al-amin.com/img/me.jpg">
-    
-    
+
+
     <!-- Canonical and Shortlink Tags -->
     <link rel="canonical" href="https://md-al-amin.com/">
     <link rel="shortlink" href="https://md-al-amin.com/">
-    
+
     <!-- DNS Prefetch for Google Fonts -->
     <link rel="dns-prefetch" href="https://fonts.googleapis.com/">
-    
+
     <!-- Stylesheets -->
     <link rel="stylesheet" href="{{ asset('css/iconoir.css') }}" media="all">
     <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}" media="all">
@@ -42,11 +42,13 @@
 
     <title>Md. Al Amin – Full Stack Web Developer</title>
 
-    <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('favicon/apple-touch-icon.png')}}">
-    <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('favicon/favicon-32x32.png')}}">
-    <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('favicon/favicon-16x16.png')}}">
-    <link rel="manifest" href="{{ asset('favicon/site.webmanifest')}}">
-    
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('favicon/apple-touch-icon.png') }}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('favicon/favicon-32x32.png') }}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('favicon/favicon-16x16.png') }}">
+    <link rel="manifest" href="{{ asset('favicon/site.webmanifest') }}">
+
+    <meta name="theme-color" content="#0f172a">
+
     <!-- jquery -->
     <script src="{{ asset('js/jquery-3.7.1.min.js') }}" id="jquery-core-js"></script>
 
@@ -85,17 +87,15 @@
                 this.classList.toggle('active');
             })
 
-            // Masonary
-            $('.grid').masonry({
-                // options
-                itemSelector: '.grid-item',
-                //columnWidth: 200
-            });
-
             $(".about-pic-container").hover3d({
                 selector: ".about-image",
                 shine: true,
             });
+
+            // Apply 3D effect on load for mobile devices
+            if (/Mobi|Android/i.test(navigator.userAgent)) {
+                $(".about-pic-container").addClass("initial3d");
+            }
 
         })
     </script>
@@ -107,6 +107,13 @@
 
             preloader.style.display = "none";
             preloaderContainer.style.height = 0;
+
+            // Masonary
+            $('.grid').masonry({
+                // options
+                itemSelector: '.grid-item',
+                //columnWidth: 200
+            });
 
             setTimeout(function() {
                 AOS.init({

@@ -63,7 +63,7 @@
     <div class="container">
         <div class="row">
             <div class="col-sm-12">
-                <div class="scroller" data-speed="fast">
+                <div class="scroller" data-speed="slow">
                     <ul class="tag-list scroller__inner pt-0">
                         @foreach ($skills as $skill)
                             <li class="mb-0">{{ $skill }}</li>    
