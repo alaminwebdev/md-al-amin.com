@@ -6,7 +6,7 @@
             overflow-x: hidden;
         }
 
-        section {
+        #project-container {
             position: relative;
             width: 100%;
             height: 550px;
@@ -23,8 +23,26 @@
             background-position: center;
             background-size: cover;
             border-radius: 20px;
-            box-shadow: 0 20px 30px rgba(255, 255, 255, 0.3) inset;
             transition: transform 0.1s, left 0.75s, top 0.75s, width 0.75s, height 0.75s;
+            overflow: hidden;
+        }
+
+        .item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(15, 23, 42, 0.7);
+            backdrop-filter: blur(2px);
+            z-index: 1;
+            opacity: 0;
+            transition: opacity 0.75s;
+        }
+
+        .full-background::before {
+            opacity: 1;
         }
 
         .content {
@@ -33,31 +51,24 @@
             top: 50%;
             left: 3rem;
             transform: translateY(-50%);
-            font: 400 0.85rem helvetica, sans-serif;
             color: white;
             text-shadow: 0 3px 8px rgba(0, 0, 0, 0.5);
             opacity: 0;
             display: none;
+            z-index: 2;
+            border-radius: 0.5rem;
 
             & .title {
-                font-family: "arial-black";
-                text-transform: uppercase;
+                font-weight:800;
+                font-size: 2.5rem;
+                letter-spacing: 0.3rem;
+                position: relative;
             }
 
             & .description {
                 line-height: 1.7;
                 margin: 1rem 0 1.5rem;
                 font-size: 0.8rem;
-            }
-
-            & button {
-                width: fit-content;
-                background-color: rgba(0, 0, 0, 0.1);
-                color: white;
-                border: 2px solid white;
-                border-radius: 0.25rem;
-                padding: 0.75rem;
-                cursor: pointer;
             }
         }
 
@@ -88,8 +99,7 @@
 
             & .btn {
                 background-color: rgba(255, 255, 255, 0.5);
-                color: rgba(0, 0, 0, 0.7);
-                border: 2px solid rgba(0, 0, 0, 0.6);
+                color: #fff;
                 margin: 0 0.25rem;
                 padding: 0.75rem;
                 border-radius: 50%;
@@ -177,62 +187,17 @@
             }
         }
     </style>
-    <section class="mb-4 mb-sm-5">
+    <section class="mb-3 mb-sm-0" id="project-container">
         <ul class='slider'>
-            <li class='item' style="background-image: url('https://cdn.mos.cms.futurecdn.net/dP3N4qnEZ4tCTCLq59iysd.jpg')">
-                <div class='content'>
-                    <h2 class='title'>"Lossless Youths"</h2>
-                    <p class='description'> Lorem ipsum, dolor sit amet consectetur
-                        adipisicing elit. Tempore fuga voluptatum, iure corporis inventore
-                        praesentium nisi. Id laboriosam ipsam enim. </p>
-                    <button>Read More</button>
-                </div>
-            </li>
-            <li class='item' style="background-image: url('https://i.redd.it/tc0aqpv92pn21.jpg')">
-                <div class='content'>
-                    <h2 class='title'>"Estrange Bond"</h2>
-                    <p class='description'> Lorem ipsum, dolor sit amet consectetur
-                        adipisicing elit. Tempore fuga voluptatum, iure corporis inventore
-                        praesentium nisi. Id laboriosam ipsam enim. </p>
-                    <button>Read More</button>
-                </div>
-            </li>
-            <li class='item' style="background-image: url('https://wharferj.files.wordpress.com/2015/11/bio_north.jpg')">
-                <div class='content'>
-                    <h2 class='title'>"The Gate Keeper"</h2>
-                    <p class='description'> Lorem ipsum, dolor sit amet consectetur
-                        adipisicing elit. Tempore fuga voluptatum, iure corporis inventore
-                        praesentium nisi. Id laboriosam ipsam enim. </p>
-                    <button>Read More</button>
-                </div>
-            </li>
-            <li class='item' style="background-image: url('https://images7.alphacoders.com/878/878663.jpg')">
-                <div class='content'>
-                    <h2 class='title'>"Last Trace Of Us"</h2>
-                    <p class='description'>
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore fuga voluptatum, iure corporis inventore praesentium nisi. Id laboriosam ipsam enim.
-                    </p>
-                    <button>Read More</button>
-                </div>
-            </li>
-            <li class='item' style="background-image: url('https://theawesomer.com/photos/2017/07/simon_stalenhag_the_electric_state_6.jpg')">
-                <div class='content'>
-                    <h2 class='title'>"Urban Decay"</h2>
-                    <p class='description'>
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore fuga voluptatum, iure corporis inventore praesentium nisi. Id laboriosam ipsam enim.
-                    </p>
-                    <button>Read More</button>
-                </div>
-            </li>
-            <li class='item' style="background-image: url('https://da.se/app/uploads/2015/09/simon-december1994.jpg')">
-                <div class='content'>
-                    <h2 class='title'>"The Migration"</h2>
-                    <p class='description'> Lorem ipsum, dolor sit amet consectetur
-                        adipisicing elit. Tempore fuga voluptatum, iure corporis inventore
-                        praesentium nisi. Id laboriosam ipsam enim. </p>
-                    <button>Read More</button>
-                </div>
-            </li>
+            @foreach ($projects as $project)
+                <li class='item' style="background-image: url('{{ count($project->images) > 0 ? $project->images[0]->image_path : '' }}')">
+                    <div class='content p-3'>
+                        <h2 class='title font-monospace'>{{ $project->project_name }}</h2>
+                        <p class='description'>{{ $project->short_description }}</p>
+                        <a href="{{ route('project.details', ['slug' => $project->slug]) }}" class="btn btn-sm btn-outline-light">Read More</a>
+                    </div>
+                </li>
+            @endforeach
         </ul>
         <div class='slider-button'>
             <i class="btn prev iconoir-arrow-left"></i>
@@ -241,21 +206,14 @@
     </section>
 
     <script>
-        // const slider = document.querySelector(".slider");
-
-        // function activate(e) {
-        //     const items = document.querySelectorAll(".item");
-        //     e.target.matches(".next") && slider.append(items[0]);
-        //     e.target.matches(".prev") && slider.prepend(items[items.length - 1]);
-        // }
-
-        // document.addEventListener("click", activate, false);
-
         const slider = document.querySelector(".slider");
 
         function updatePositions() {
             const items = document.querySelectorAll(".item");
             items.forEach((item, index) => {
+
+                item.classList.remove('full-background');
+
                 item.style.left = `calc(50% + ${(index - 2) * 220}px)`;
                 item.style.top = '50%';
                 item.style.transform = 'translateY(-50%)';
@@ -263,9 +221,8 @@
                 // Reset all styles first
                 item.style.width = '200px';
                 item.style.height = '300px';
-                item.style.transform = 'translateY(-50%)';
                 item.style.borderRadius = '20px';
-                item.style.boxShadow = '0 20px 30px rgba(255, 255, 255, 0.3) inset';
+                item.style.boxShadow = '0 10px 20px rgba(0, 0, 0, 0.5)';
                 item.style.opacity = '1';
                 item.style.zIndex = '1';
 
@@ -277,6 +234,7 @@
                     item.style.transform = 'none';
                     item.style.borderRadius = '0';
                     item.style.boxShadow = 'none';
+                    item.classList.add('full-background');
                 }
             });
         }
