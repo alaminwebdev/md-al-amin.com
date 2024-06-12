@@ -1,5 +1,6 @@
  @extends('app')
  @section('content')
+    @include('frontend.layouts.banner')
      <section class="about-area pt-5">
          <div class="container">
              <div class="row grid">

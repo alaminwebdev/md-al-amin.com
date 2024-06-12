@@ -68,6 +68,7 @@
         @include('frontend.layouts.header')
         @yield('content')
         @include('frontend.scroll-animation')
+        {{-- @include('frontend.layouts.experience') --}}
         @include('frontend.layouts.footer')
     </main>
 
