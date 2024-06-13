@@ -42,7 +42,6 @@
                              <div data-aos="zoom-in" class="about-project-box aos-init">
                                  <div class="info-box shadow-box text-center">
                                      <a class="overlay-link" href="{{ route('projects') }}"></a>
-                                     <img decoding="async" src="{{ asset('img/bg1.png') }}" alt="BG" class="bg-img">
                                      <img decoding="async" src="{{ asset('img/my-works.png') }}" alt="">
                                      <div class="d-flex align-items-center justify-content-between">
                                          <div class="infos">
@@ -56,11 +55,10 @@
                                  </div>
                              </div>
                          </div>
-                         <div class="col-lg-12">
+                         <div class="col-lg-12 mt-3">
                              <div class="blog-service-profile-wrap">
                                  <div data-aos="zoom-in" class="about-profile-box-wrap aos-init">
                                      <div class="about-profile-box info-box shadow-box h-full">
-                                         <img decoding="async" src="{{ asset('img/bg1.png') }}" alt="BG" class="bg-img">
                                          <div class="inner-profile-icons shadow-box">
                                              @foreach ($socials as $social)
                                                  <a href="{{ $social['link'] }}">
@@ -81,11 +79,10 @@
                                  </div>
                              </div>
                          </div>
-                         <div class="col-lg-12">
+                         <div class="col-lg-12 mt-3">
                              <div data-aos="zoom-in" class="about-crenditials-box aos-init">
                                  <div class="info-box shadow-box h-full">
                                      <a class="overlay-link" href="{{ route('resume') }}"></a>
-                                     <img decoding="async" src="{{ asset('img/bg1.png') }}" alt="BG" class="bg-img">
                                      <img decoding="async" src="{{ asset('img/logo.png') }}" alt="">
                                      <div class="d-flex align-items-center justify-content-between">
                                          <div class="infos">
@@ -100,7 +97,7 @@
                                  </div>
                              </div>
                          </div>
-                         <div class="col-lg-12">
+                         <div class="col-lg-12 mt-3">
                              <div class="about-details aos-init" data-aos="zoom-in">
                                  <h3 class="section-heading aos-init" data-aos="">
                                      <img decoding="async" src="{{ asset('img/star-2.png') }}" alt="Star">
