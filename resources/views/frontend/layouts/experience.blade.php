@@ -1,48 +1,17 @@
 <style>
+    .education-experience h4 {
+        font-size: 34px;
+        line-height: 1;
+        text-align: left;
+        font-weight: bold;
+        text-transform: capitalize;
+        color: #021123;
+        letter-spacing: -2px;
 
-    .education-experience {
-        background-color: var(--bg);
-        transition: background-color var(--trans-dur), color var(--trans-dur);
     }
-
-    h1 {
-        font-size: 2em;
-        margin: 0 0 3rem;
-        padding-top: 1.5rem;
-        text-align: center;
-    }
-
-    .btn {
-        background-color: var(--fg);
-        border-radius: 0.25em;
-        color: var(--bg);
-        cursor: pointer;
-        padding: 0.375em 0.75em;
-        transition: background-color calc(var(--trans-dur) / 2) linear,
-            color var(--trans-dur);
-        -webkit-tap-highlight-color: transparent;
-    }
-
-    .btn:hover {
-        background-color: hsl(var(--hue), 10%, 50%);
-    }
-
-    .btn-group {
-        display: flex;
-        gap: 0.375em;
-        margin-bottom: 1.5em;
-    }
-
-    .timeline {
-        margin: auto;
-        padding: 0 1.5em;
-        width: 100%;
-        max-width: 36em;
-    }
-
     .timeline__arrow {
         background-color: transparent;
-        border-radius: 0.25em;
+        border-radius: 50%;
         cursor: pointer;
         flex-shrink: 0;
         margin-inline-end: 0.25em;
@@ -54,6 +23,8 @@
         -webkit-appearance: none;
         appearance: none;
         -webkit-tap-highlight-color: transparent;
+        border-width: 2px;
+        border-color: #6c757d;
     }
 
     .timeline__arrow:focus-visible,
@@ -170,14 +141,17 @@
 </style>
 <svg display="none">
     <symbol id="arrow">
-        <polyline points="7 10,12 15,17 10" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+        <polyline points="7 10,12 15,17 10" fill="none"  stroke="#6c757d" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
     </symbol>
 </svg>
-<h1>A Brief History of Unix Time</h1>
+
 <div id="timeline" class="timeline education-experience">
-    <div class="btn-group">
-        <button class="btn" type="button" data-action="expand">Expand All</button>
-        <button class="btn" type="button" data-action="collapse">Collapse All</button>
+    <div class="heading mb-3 d-flex justify-content-between align-items-center">
+        <h4 class="">A Brief History of Unix Time</h4>
+        <div class="btn-group btn-group-sm" role="group" aria-label="Basic outlined example">
+            <button  type="button" class="btn btn-outline-secondary" data-action="expand">Expand All</button>
+            <button  type="button" class="btn btn-outline-secondary" data-action="collapse">Collapse All</button>
+        </div>
     </div>
     <div class="timeline__item">
         <div class="timeline__item-header">
@@ -294,6 +268,7 @@
         </div>
     </div>
 </div>
+
 
 <script>
     window.addEventListener("DOMContentLoaded", () => {

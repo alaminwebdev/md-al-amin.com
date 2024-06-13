@@ -30,9 +30,92 @@
          }
      </style>
      @include('frontend.layouts.banner')
-     <section class="about-area pt-5">
+     <section class="about-area pt-5 pb-4">
          <div class="container">
-             <div class="row grid">
+             <div class="row">
+                 <div class="col-lg-8">
+                     @include('frontend.layouts.experience')
+                 </div>
+                 <div class="col-lg-4">
+                     <div class="row">
+                         <div class="col-lg-12">
+                             <div data-aos="zoom-in" class="about-project-box aos-init">
+                                 <div class="info-box shadow-box text-center">
+                                     <a class="overlay-link" href="{{ route('projects') }}"></a>
+                                     <img decoding="async" src="{{ asset('img/bg1.png') }}" alt="BG" class="bg-img">
+                                     <img decoding="async" src="{{ asset('img/my-works.png') }}" alt="">
+                                     <div class="d-flex align-items-center justify-content-between">
+                                         <div class="infos">
+                                             <h5>SHOWCASE</h5>
+                                             <h2>Projects</h2>
+                                         </div>
+                                         <a href="{{ route('projects') }}" class="about-btn">
+                                             <img decoding="async" src="{{ asset('img/icon.svg') }}" alt="Star">
+                                         </a>
+                                     </div>
+                                 </div>
+                             </div>
+                         </div>
+                         <div class="col-lg-12">
+                             <div class="blog-service-profile-wrap">
+                                 <div data-aos="zoom-in" class="about-profile-box-wrap aos-init">
+                                     <div class="about-profile-box info-box shadow-box h-full">
+                                         <img decoding="async" src="{{ asset('img/bg1.png') }}" alt="BG" class="bg-img">
+                                         <div class="inner-profile-icons shadow-box">
+                                             @foreach ($socials as $social)
+                                                 <a href="{{ $social['link'] }}">
+                                                     <i class="{{ $social['icon'] }}"></i>
+                                                 </a>
+                                             @endforeach
+                                         </div>
+                                         <div class="d-flex align-items-center justify-content-between">
+                                             <div class="infos">
+                                                 <h5>STAY WITH ME</h5>
+                                                 <h2>Profiles</h2>
+                                             </div>
+                                             <a href="{{ route('contact') }}" class="about-btn">
+                                                 <img decoding="async" src="{{ asset('img/icon.svg') }}" alt="Star">
+                                             </a>
+                                         </div>
+                                     </div>
+                                 </div>
+                             </div>
+                         </div>
+                         <div class="col-lg-12">
+                             <div data-aos="zoom-in" class="about-crenditials-box aos-init">
+                                 <div class="info-box shadow-box h-full">
+                                     <a class="overlay-link" href="{{ route('resume') }}"></a>
+                                     <img decoding="async" src="{{ asset('img/bg1.png') }}" alt="BG" class="bg-img">
+                                     <img decoding="async" src="{{ asset('img/logo.png') }}" alt="">
+                                     <div class="d-flex align-items-center justify-content-between">
+                                         <div class="infos">
+                                             <h5>MORE ABOUT ME</h5>
+                                             <h2>Credentials</h2>
+                                         </div>
+
+                                         <a href="#" class="about-btn">
+                                             <img decoding="async" src="{{ asset('img/icon.svg') }}" alt="Star">
+                                         </a>
+                                     </div>
+                                 </div>
+                             </div>
+                         </div>
+                         <div class="col-lg-12">
+                             <div class="about-details aos-init" data-aos="zoom-in">
+                                 <h3 class="section-heading aos-init" data-aos="">
+                                     <img decoding="async" src="{{ asset('img/star-2.png') }}" alt="Star">
+                                     Self-summary
+                                     <img decoding="async" src="{{ asset('img/star-2.png') }}" alt="Star">
+                                 </h3>
+                                 <div class="about-details-inner shadow-box">
+                                     <img decoding="async" src="{{ asset('img/icon2.png') }}" alt="Star" class="star-icon">
+                                     <h4>Mohammad Al Amin</h4>
+                                     <p>{{ $bio['long_bio'] }}</p>
+                                 </div>
+                             </div>
+                         </div>
+                     </div>
+                 </div>
                  {{-- <div class="col-lg-4 grid-item mb-4">
                      <div data-aos="zoom-in" class=" aos-init">
                          <div class="about-pic-container">
@@ -51,8 +134,8 @@
                          </div>
                      </div>
                  </div> --}}
-                 <div class="col-lg-4 grid-item mb-4">
-                     {{-- Start Project Box --}}
+
+                 {{-- <div class="col-lg-4 grid-item mb-4">
                      <div data-aos="zoom-in" class="about-project-box aos-init">
                          <div class="info-box shadow-box text-center">
                              <a class="overlay-link" href="{{ route('projects') }}"></a>
@@ -69,9 +152,8 @@
                              </div>
                          </div>
                      </div>
-                 </div>
-                 <div class="col-lg-4 grid-item mb-4">
-                     {{-- Start Profiles Box --}}
+                 </div> --}}
+                 {{-- <div class="col-lg-4 grid-item mb-4">
                      <div class="blog-service-profile-wrap">
                          <div data-aos="zoom-in" class="about-profile-box-wrap aos-init">
                              <div class="about-profile-box info-box shadow-box h-full">
@@ -95,9 +177,8 @@
                              </div>
                          </div>
                      </div>
-                 </div>
-                 <div class="col-lg-4 grid-item mb-4">
-                     {{-- Start Credentials Box --}}
+                 </div> --}}
+                 {{-- <div class="col-lg-4 grid-item mb-4">
                      <div data-aos="zoom-in" class="about-crenditials-box aos-init">
                          <div class="info-box shadow-box h-full">
                              <a class="overlay-link" href="{{ route('resume') }}"></a>
@@ -115,7 +196,7 @@
                              </div>
                          </div>
                      </div>
-                 </div>
+                 </div> --}}
 
                  {{-- <div class="col-lg-4 grid-item mb-4">
                      <div data-aos="zoom-in" class="aos-init">
@@ -153,8 +234,7 @@
                      </div>
                  </div> --}}
 
-                 <div class="col-lg-4 grid-item mb-4">
-                     {{-- Start AboutDetail --}}
+                 {{-- <div class="col-lg-4 grid-item mb-4">
                      <div class="about-details aos-init" data-aos="zoom-in">
                          <h3 class="section-heading aos-init" data-aos="">
                              <img decoding="async" src="{{ asset('img/star-2.png') }}" alt="Star">
@@ -167,10 +247,10 @@
                              <p>{{ $bio['long_bio'] }}</p>
                          </div>
                      </div>
-                 </div>
+                 </div> --}}
              </div>
          </div>
      </section>
      {{-- @include('frontend.scroll-animation') --}}
-     @include('frontend.layouts.experience')
+     {{-- @include('frontend.layouts.experience') --}}
  @endsection
