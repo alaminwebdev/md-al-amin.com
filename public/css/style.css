@@ -21,6 +21,15 @@
     box-sizing: border-box;
 }
 
+:root {
+    --hue: 223;
+    --bg: hsl(var(--hue), 10%, 90%);
+    --fg: hsl(var(--hue), 10%, 10%);
+    --primary: hsl(var(--hue), 90%, 50%);
+    --trans-dur: 0.3s;
+    --trans-timing: cubic-bezier(0.65, 0, 0.35, 1);
+}
+
 body {
     scroll-behavior: smooth;
     margin: 0;

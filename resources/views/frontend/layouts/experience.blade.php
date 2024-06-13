@@ -1,35 +1,7 @@
 <style>
-    * {
-        border: 0;
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;
-    }
 
-    :root {
-        --hue: 223;
-        --bg: hsl(var(--hue), 10%, 90%);
-        --fg: hsl(var(--hue), 10%, 10%);
-        --primary: hsl(var(--hue), 90%, 50%);
-        --trans-dur: 0.3s;
-        --trans-timing: cubic-bezier(0.65, 0, 0.35, 1);
-        font-size: calc(16px + (24 - 16) * (100vw - 320px) / (2560 - 320));
-    }
-
-    a {
-        color: var(--primary);
-        transition: color var(--trans-dur);
-    }
-
-    body,
-    button {
-        color: var(--fg);
-        font: 1em/1.5 "IBM Plex Sans", sans-serif;
-    }
-
-    body {
+    .education-experience {
         background-color: var(--bg);
-        height: 100vh;
         transition: background-color var(--trans-dur), color var(--trans-dur);
     }
 
@@ -202,7 +174,7 @@
     </symbol>
 </svg>
 <h1>A Brief History of Unix Time</h1>
-<div id="timeline" class="timeline">
+<div id="timeline" class="timeline education-experience">
     <div class="btn-group">
         <button class="btn" type="button" data-action="expand">Expand All</button>
         <button class="btn" type="button" data-action="collapse">Collapse All</button>

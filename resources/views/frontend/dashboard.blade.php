@@ -1,18 +1,46 @@
  @extends('app')
  @section('content')
-    @include('frontend.layouts.banner')
+     <style>
+         .about-area {
+             position: relative;
+         }
+
+         .about-area:before {
+             position: absolute;
+             content: '';
+             width: 100%;
+             height: 100%;
+             top: 0;
+             left: 0;
+             opacity: .3;
+             z-index: -1;
+             background-image: url({{ asset('img/pattern.svg') }});
+         }
+
+         .about-area:after {
+             position: absolute;
+             content: '';
+             width: 100%;
+             height: 100%;
+             top: 0;
+             left: 0;
+             z-index: -2;
+             background: linear-gradient(180deg, #f8fafc, rgba(242, 202, 252, .11) 34.69%, rgba(250, 198, 252, .11) 44.06%, rgba(175, 183, 255, .11) 54.48%, rgba(142, 220, 200, .07) 64.9%, #f8fafc 97.95%);
+
+         }
+     </style>
+     @include('frontend.layouts.banner')
      <section class="about-area pt-5">
          <div class="container">
              <div class="row grid">
-                 <div class="col-lg-4 grid-item mb-4">
-                     {{-- Star AboutImage --}}
+                 {{-- <div class="col-lg-4 grid-item mb-4">
                      <div data-aos="zoom-in" class=" aos-init">
                          <div class="about-pic-container">
                              <img class="about-image" src="{{ asset('img/me.jpg') }}" alt="">
                          </div>
                      </div>
-                 </div>
-                 <div class="col-lg-4 grid-item mb-4">
+                 </div> --}}
+                 {{-- <div class="col-lg-4 grid-item mb-4">
                      <div data-aos="zoom-in" class="aos-init">
                          <div class="scroller" data-direction="right" data-speed="medium">
                              <div class="scroller__inner pb-0">
@@ -22,7 +50,7 @@
                              </div>
                          </div>
                      </div>
-                 </div>
+                 </div> --}}
                  <div class="col-lg-4 grid-item mb-4">
                      {{-- Start Project Box --}}
                      <div data-aos="zoom-in" class="about-project-box aos-init">
@@ -88,8 +116,8 @@
                          </div>
                      </div>
                  </div>
-                 <div class="col-lg-4 grid-item mb-4">
-                     {{-- Start Education --}}
+
+                 {{-- <div class="col-lg-4 grid-item mb-4">
                      <div data-aos="zoom-in" class="aos-init">
                          <div class="about-edc-exp about-education shadow-box">
                              <img decoding="async" src="{{ asset('img/bg1.png') }}" alt="BG" class="bg-img">
@@ -105,9 +133,9 @@
                              </ul>
                          </div>
                      </div>
-                 </div>
-                 <div class="col-lg-4 grid-item mb-4">
-                     {{-- Start Experience --}}
+                 </div> --}}
+
+                 {{-- <div class="col-lg-4 grid-item mb-4">
                      <div data-aos="zoom-in" class="aos-init">
                          <div class="about-edc-exp about-experience shadow-box">
                              <img decoding="async" src="{{ asset('img/bg1.png') }}" alt="BG" class="bg-img">
@@ -123,7 +151,7 @@
                              </ul>
                          </div>
                      </div>
-                 </div>
+                 </div> --}}
 
                  <div class="col-lg-4 grid-item mb-4">
                      {{-- Start AboutDetail --}}
@@ -140,21 +168,9 @@
                          </div>
                      </div>
                  </div>
-
-                 {{-- <div class="col-lg-4 grid-item mb-4">
-                     <div class="about-credentials-wrap">
-                         <div data-aos="zoom-in" class="aos-init">
-                             <div class="banner shadow-box">
-                                 <div class="marquee">
-                                     <div style="animation: marquee 50s linear infinite;">
-                                         <span>{{ $bio['long_bio'] }}</span>
-                                     </div>
-                                 </div>
-                             </div>
-                         </div>
-                     </div>
-                 </div> --}}
              </div>
          </div>
      </section>
+     {{-- @include('frontend.scroll-animation') --}}
+     @include('frontend.layouts.experience')
  @endsection
