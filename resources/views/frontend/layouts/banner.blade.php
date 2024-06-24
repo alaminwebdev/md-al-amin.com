@@ -152,9 +152,9 @@
             <div class="bouncing-blob bouncing-blob--pink"></div>
         </div>
         <div class="hero container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <h2 class="">Crafting User-Centric Web Experiences, Welcome!</h2>
+            <div class="row align-items-center">
+                <div class="col-md-8">
+                    <h2 class="">{{ $bio['title'] }}</h2>
                     <p>{{ $bio['short_bio'] }}</p>
                     <div class="resume-link">
                         <a href="{{ route('resume.download') }}" rel="noopener noreferer">
@@ -167,6 +167,13 @@
                             </svg>
                             Download Resume
                         </a>
+                    </div>
+                </div>
+                <div class="col-md-4 d-md-block d-none">
+                    <div data-aos="zoom-in" class=" aos-init">
+                        <div class="about-pic-container">
+                            <img class="about-image" src="{{ asset('img/me.jpg') }}" alt="">
+                        </div>
                     </div>
                 </div>
             </div>

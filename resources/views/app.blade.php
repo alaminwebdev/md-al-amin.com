@@ -67,7 +67,6 @@
     <main class="main-homepage">
         @include('frontend.layouts.header')
         @yield('content')
-        {{-- @include('frontend.layouts.experience') --}}
         @include('frontend.layouts.footer')
     </main>
 
@@ -108,6 +107,7 @@
             preloader.style.display = "none";
             preloaderContainer.style.height = 0;
 
+           
             // Masonary
             $('.grid').masonry({
                 // options

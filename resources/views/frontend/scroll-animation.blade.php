@@ -1,6 +1,5 @@
 <style>
     .scroller__inner {
-        padding-block: 1rem;
         display: flex;
         flex-wrap: wrap;
         gap: 1rem;
@@ -37,6 +36,7 @@
     .scroller[data-speed="slow"] {
         --_animation-duration: 60s;
     }
+
     .scroller[data-speed="medium"] {
         --_animation-duration: 50s;
     }
@@ -54,27 +54,31 @@
     }
 
     .tag-list li {
-        padding: 1rem;
+        background: #8c8ff1;
+        padding: .5rem 1rem;
         border-radius: 0.5rem;
-        box-shadow: 0 0.5rem 1rem -0.25rem rgb(0 0 0 / 41%);
+        box-shadow: 0 0.5rem 1rem -0.25rem rgb(0 0 0 / 25%);
+        color: #fff;
+        font-weight: 800;
+        font-size: 12px;
     }
 </style>
-<section>
+<section class="py-5 skill-scroll">
     <div class="container">
         <div class="row">
             <div class="col-sm-12">
                 <div class="scroller" data-speed="slow">
-                    <ul class="tag-list scroller__inner pt-0">
+                    <ul class="tag-list scroller__inner pb-4">
                         @foreach ($skills as $skill)
-                            <li class="mb-0">{{ $skill }}</li>    
+                            <li class="mb-0">{{ $skill }}</li>
                         @endforeach
                     </ul>
                 </div>
-    
+
                 <div class="scroller" data-direction="right" data-speed="medium">
                     <div class="scroller__inner">
                         @foreach ($skill_icons as $skill_icon)
-                            <img src="{{ asset('img/icons/' . $skill_icon) }}" width="100px;" class="img-fluid" />
+                            <img src="{{ asset('img/icons/' . $skill_icon) }}" width="80px;" class="img-fluid" />
                         @endforeach
                     </div>
                 </div>

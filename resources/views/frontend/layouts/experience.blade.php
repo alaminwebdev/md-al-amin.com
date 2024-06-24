@@ -9,6 +9,7 @@
         letter-spacing: -2px;
 
     }
+
     .timeline__arrow {
         background-color: transparent;
         border-radius: 50%;
@@ -100,10 +101,22 @@
     .timeline__item-body-content {
         background-color: hsl(var(--hue), 10%, 50%, 0.2);
         opacity: 0;
-        padding: 0.5em 0.75em;
         visibility: hidden;
         transition: opacity var(--trans-dur) var(--trans-timing),
             visibility var(--trans-dur) steps(1, end);
+    }
+
+    .timeline__item-p ul {
+        list-style-type: none;
+        padding: 0;
+    }
+
+    .timeline__item-p ul li {
+        padding-top: 1rem;
+    }
+
+    .timeline__item-p ul li:last-child {
+        padding-bottom: 1rem;
     }
 
     .timeline__meta {
@@ -141,134 +154,87 @@
 </style>
 <svg display="none">
     <symbol id="arrow">
-        <polyline points="7 10,12 15,17 10" fill="none"  stroke="#6c757d" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+        <polyline points="7 10,12 15,17 10" fill="none" stroke="#6c757d" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
     </symbol>
 </svg>
 
 <div id="timeline" class="timeline education-experience">
     <div class="heading mb-3 d-flex justify-content-between align-items-center">
-        <h4 class="">A Brief History of Unix Time</h4>
+        <h4 class="">Education & Experience</h4>
         <div class="btn-group btn-group-sm" role="group" aria-label="Basic outlined example">
-            <button  type="button" class="btn btn-outline-secondary" data-action="expand">Expand All</button>
-            <button  type="button" class="btn btn-outline-secondary" data-action="collapse">Collapse All</button>
+            <button type="button" class="btn btn-outline-secondary" data-action="expand">Expand All</button>
+            <button type="button" class="btn btn-outline-secondary" data-action="collapse">Collapse All</button>
         </div>
     </div>
-    <div class="timeline__item">
-        <div class="timeline__item-header">
-            <button class="timeline__arrow" type="button" id="item1" aria-labelledby="item1-name" aria-expanded="false" aria-controls="item1-ctrld" aria-haspopup="true" data-item="1">
-                <svg class="timeline__arrow-icon" viewBox="0 0 24 24" width="24px" height="24px">
-                    <use href="#arrow" />
-                </svg>
-            </button>
-            <span class="timeline__dot"></span>
-            <span id="item1-name" class="timeline__meta">
-                <time class="timeline__date" datetime="1970-01-01">January 1, 1970</time><br>
-                <strong class="timeline__title">Unix Epoch</strong>
-            </span>
-        </div>
-        <div class="timeline__item-body" id="item1-ctrld" role="region" aria-labelledby="item1" aria-hidden="true">
-            <div class="timeline__item-body-content">
-                <p class="timeline__item-p">This is the day the Unix clock began (or <time datetime="1969-12-31">December 31, 1969</time> if you live behind UTC 😉).</p>
-            </div>
-        </div>
-    </div>
-    <div class="timeline__item">
-        <div class="timeline__item-header">
-            <button class="timeline__arrow" type="button" id="item2" aria-labelledby="item2-name" aria-expanded="false" aria-controls="item2-ctrld" aria-haspopup="true" data-item="2">
-                <svg class="timeline__arrow-icon" viewBox="0 0 24 24" width="24px" height="24px">
-                    <use href="#arrow" />
-                </svg>
-            </button>
-            <span class="timeline__dot"></span>
-            <span id="item2-name" class="timeline__meta">
-                <time class="timeline__date" datetime="1973-10-17">October 17, 1973</time><br>
-                <strong class="timeline__title">Digits Within ISO 8601 Format</strong>
-            </span>
-        </div>
-        <div class="timeline__item-body" id="item2-ctrld" role="region" aria-labelledby="item2" aria-hidden="true">
-            <div class="timeline__item-body-content">
-                <p class="timeline__item-p">At 6:36:57 PM UTC, the date in ISO 8601 format (1973-10-17) within the time digits (119731017) appeared for the first time.</p>
-            </div>
-        </div>
-    </div>
-    <div class="timeline__item">
-        <div class="timeline__item-header">
-            <button class="timeline__arrow" type="button" id="item3" aria-labelledby="item3-name" aria-expanded="false" aria-controls="item3-ctrld" aria-haspopup="true" data-item="3">
-                <svg class="timeline__arrow-icon" viewBox="0 0 24 24" width="24px" height="24px">
-                    <use href="#arrow" />
-                </svg>
-            </button>
-            <span class="timeline__dot"></span>
-            <span id="item3-name" class="timeline__meta">
-                <time class="timeline__date" datetime="2001-09-09">September 9, 2001</time><br>
-                <strong class="timeline__title">1 Billion Seconds</strong>
-            </span>
-        </div>
-        <div class="timeline__item-body" id="item3-ctrld" role="region" aria-labelledby="item3" aria-hidden="true">
-            <div class="timeline__item-body-content">
-                <p class="timeline__item-p">Unix time reached 1,000,000,000 seconds at 1:46:40 AM UTC. The Danish UNIX User Group celebrated this in Copenhagen, Denmark.</p>
-            </div>
-        </div>
-    </div>
-    <div class="timeline__item">
-        <div class="timeline__item-header">
-            <button class="timeline__arrow" type="button" id="item4" aria-labelledby="item4-name" aria-expanded="false" aria-controls="item4-ctrld" aria-haspopup="true" data-item="4">
-                <svg class="timeline__arrow-icon" viewBox="0 0 24 24" width="24px" height="24px">
-                    <use href="#arrow" />
-                </svg>
-            </button>
-            <span class="timeline__dot"></span>
-            <span id="item4-name" class="timeline__meta">
-                <time class="timeline__date" datetime="2009-02-13">February 13, 2009</time><br>
-                <strong class="timeline__title">1,234,567,890 Seconds</strong>
-            </span>
-        </div>
-        <div class="timeline__item-body" id="item4-ctrld" role="region" aria-labelledby="item4" aria-hidden="true">
-            <div class="timeline__item-body-content">
-                <p class="timeline__item-p">At 11:31:30 PM UTC, the digits of the time were 1234567890. This was celebrated worldwide, and even Google had a <a href="https://www.google.com/logos/unix1234567890.gif" target="_blank" rel="noopener">doodle</a> for it.</p>
-            </div>
-        </div>
-    </div>
-    <div class="timeline__item">
-        <div class="timeline__item-header">
-            <button class="timeline__arrow" type="button" id="item5" aria-labelledby="item5-name" aria-expanded="false" aria-controls="item5-ctrld" aria-haspopup="true" data-item="5">
-                <svg class="timeline__arrow-icon" viewBox="0 0 24 24" width="24px" height="24px">
-                    <use href="#arrow" />
-                </svg>
-            </button>
-            <span class="timeline__dot"></span>
-            <span id="item5-name" class="timeline__meta">
-                <time class="timeline__date" datetime="2033-05-18">May 18, 2033</time><br>
-                <strong class="timeline__title">2 Billion Seconds</strong>
-            </span>
-        </div>
-        <div class="timeline__item-body" id="item5-ctrld" role="region" aria-labelledby="item5" aria-hidden="true">
-            <div class="timeline__item-body-content">
-                <p class="timeline__item-p">Unix time will reach 2,000,000,000 seconds at 3:33:20 AM UTC.</p>
-            </div>
-        </div>
-    </div>
-    <div class="timeline__item">
-        <div class="timeline__item-header">
-            <button class="timeline__arrow" type="button" id="item6" aria-labelledby="item6-name" aria-expanded="false" aria-controls="item6-ctrld" aria-haspopup="true" data-item="6">
-                <svg class="timeline__arrow-icon" viewBox="0 0 24 24" width="24px" height="24px">
-                    <use href="#arrow" />
-                </svg>
-            </button>
-            <span class="timeline__dot"></span>
-            <span id="item6-name" class="timeline__meta">
-                <time class="timeline__date" datetime="2038-01-19">January 19, 2038</time><br>
-                <strong class="timeline__title">Unix Epochalypse</strong>
-            </span>
-        </div>
-        <div class="timeline__item-body" id="item6-ctrld" role="region" aria-labelledby="item6" aria-hidden="true">
-            <div class="timeline__item-body-content">
-                <p class="timeline__item-p">Also known as the year 2038 problem, clocks running on a 32-bit signed integer will flip from 3:14:08 AM UTC on this day to 8:45:52 PM UTC on December 13, 1901. Therefore, values only from -2,147,483,648 to 2,147,483,647 for the second are supported.</p>
-            </div>
-        </div>
-    </div>
-</div>
 
+    @php
+        $index = 0;
+    @endphp
+
+    @foreach ($experiences as $experience)
+        <div class="timeline__item">
+            <div class="timeline__item-header">
+                <button class="timeline__arrow" type="button" id="item{{ $index + 1 }}" aria-labelledby="item{{ $index + 1 }}-name" aria-expanded="{{ $index < 3 ? 'true' : 'false' }}" aria-controls="item{{ $index + 1 }}-ctrld" aria-haspopup="true" data-item="{{ $index + 1 }}">
+                    <svg class="timeline__arrow-icon" viewBox="0 0 24 24" width="24px" height="24px">
+                        <use href="#arrow" />
+                    </svg>
+                </button>
+                <span class="timeline__dot"></span>
+                <span id="item{{ $index + 1 }}-name" class="timeline__meta">
+                    <time class="timeline__date" datetime="1970-01-01">
+                        {{ $experience['start_date'] }} - {{ $experience['end_date'] == null ? 'Current' : $experience['end_date'] }}
+                        <span class="badge text-bg-info text-white" style="line-height: 1.3;">{{ $experience['company'] }}</span>
+                    </time>
+                    <br>
+                    <strong class="timeline__title">{{ $experience['designation'] }}</strong>
+                </span>
+            </div>
+            <div class="timeline__item-body {{ $index < 3 ? 'timeline__item-body--expanded' : '' }}" id="item{{ $index + 1 }}-ctrld" role="region" aria-labelledby="item{{ $index + 1 }}" aria-hidden="{{ $index < 3 ? 'false' : 'true' }}">
+                <div class="timeline__item-body-content px-3">
+                    <div class="timeline__item-p"> {!! $experience['responsibilites'] !!} </div>
+                </div>
+            </div>
+        </div>
+        @php
+            $index++;
+        @endphp
+    @endforeach
+
+    @foreach ($educations as $education)
+        <div class="timeline__item">
+            <div class="timeline__item-header">
+                <button class="timeline__arrow" type="button" id="item{{ $index + 1 }}" aria-labelledby="item{{ $index + 1 }}-name" aria-expanded="{{ $index < 3 ? 'true' : 'false' }}" aria-controls="item{{ $index + 1 }}-ctrld" aria-haspopup="true" data-item="{{ $index + 1 }}">
+                    <svg class="timeline__arrow-icon" viewBox="0 0 24 24" width="24px" height="24px">
+                        <use href="#arrow" />
+                    </svg>
+                </button>
+                <span class="timeline__dot"></span>
+                <span id="item{{ $index + 1 }}-name" class="timeline__meta">
+                    <time class="timeline__date" datetime="1970-01-01">
+                        {{ $education['session'] }}
+                        <span class="badge text-bg-info text-white" style="line-height: 1.3;">{{ $education['type'] }}</span>
+                    </time>
+                    <br>
+                    <strong class="timeline__title">{{ $education['degree'] }}</strong>
+                </span>
+            </div>
+            <div class="timeline__item-body {{ $index < 3 ? 'timeline__item-body--expanded' : '' }}" id="item{{ $index + 1 }}-ctrld" role="region" aria-labelledby="item{{ $index + 1 }}" aria-hidden="{{ $index < 3 ? 'false' : 'true' }}">
+                <div class="timeline__item-body-content px-3">
+                    <div class="timeline__item-p">
+                        <ul>
+                            <li>🎓 {{ $education['institute'] }}</li>
+                            <li>📅 {{ $education['session'] }}</li>
+                            <li>📝 {{ $education['description'] }}</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        @php
+            $index++;
+        @endphp
+    @endforeach
+</div>
 
 <script>
     window.addEventListener("DOMContentLoaded", () => {
@@ -278,11 +244,11 @@
     class CollapsibleTimeline {
         constructor(el) {
             this.el = document.querySelector(el);
-
             this.init();
         }
         init() {
             this.el?.addEventListener("click", this.itemAction.bind(this));
+            this.expandInitialItems();
         }
         animateItemAction(button, ctrld, contentHeight, shouldCollapse) {
             const expandedClass = "timeline__item-body--expanded";
@@ -356,6 +322,17 @@
 
                 this.animateItemAction(button, ctrld, contentHeight, wasExpanded);
             }
+        }
+
+        expandInitialItems() {
+            const buttons = Array.from(this.el?.querySelectorAll(".timeline__item-header button"));
+            buttons.slice(0, 3).forEach(button => {
+                const item = button.getAttribute("data-item");
+                const ctrld = this.el?.querySelector(`#item${item}-ctrld`);
+                const contentHeight = ctrld.firstElementChild?.offsetHeight;
+
+                this.animateItemAction(button, ctrld, contentHeight, false);
+            });
         }
     }
 </script>

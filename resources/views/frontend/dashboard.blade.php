@@ -248,6 +248,5 @@
              </div>
          </div>
      </section>
-     {{-- @include('frontend.scroll-animation') --}}
-     {{-- @include('frontend.layouts.experience') --}}
+     @include('frontend.scroll-animation')
  @endsection
