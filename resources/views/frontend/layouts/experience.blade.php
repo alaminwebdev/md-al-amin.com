@@ -113,6 +113,7 @@
 
     .timeline__item-p ul li {
         padding-top: 1rem;
+        font-size: 14px;
     }
 
     .timeline__item-p ul li:last-child {

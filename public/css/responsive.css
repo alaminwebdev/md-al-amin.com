@@ -34,11 +34,11 @@
         padding: 16px;
     }
     .info-box .inner-profile-icons a {
-        width: 62px;
-        height: 62px;
+        width: 35px;
+        height: 35px;
     }
     .info-box .inner-profile-icons a i {
-        font-size: 25px;
+        font-size: 20px;
     }
     .info-box.about-contact-box .star-icon {
         width: auto;

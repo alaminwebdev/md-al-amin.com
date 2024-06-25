@@ -54,12 +54,12 @@
     }
 
     .tag-list li {
-        background: #8c8ff1;
+        background: #4783c7;
         padding: .5rem 1rem;
         border-radius: 0.5rem;
         box-shadow: 0 0.5rem 1rem -0.25rem rgb(0 0 0 / 25%);
         color: #fff;
-        font-weight: 800;
+        font-weight: 600;
         font-size: 12px;
     }
 </style>

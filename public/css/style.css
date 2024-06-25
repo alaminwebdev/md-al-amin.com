@@ -305,13 +305,11 @@ ol {
 
 .shadow-box {
     position: relative;
-    border-radius: 30px;
     background: linear-gradient(
         45deg,
-        #8c8ff1,
+        #4783c7,
         #e289cd50
     );
-    border: 1px solid rgba(255, 255, 255, 0.2); 
     backdrop-filter: blur(10px); 
     -webkit-backdrop-filter: blur(10px); 
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
@@ -338,43 +336,12 @@ ol {
 .info-box {
     padding: 24px;
 }
-.credential-area .credential-sidebar .overlay-link,
-.contact-area .contact-form .overlay-link,
-.project-details-wrap .project-about-2 .overlay-link,
-.project-details-wrap .project-infos-wrap .overlay-link,
-.projects-area .project-item .overlay-link,
-.about-area .about-edc-exp .overlay-link,
-.about-area .about-image-box .overlay-link,
-.about-area .about-me-box .overlay-link,
-.info-box .overlay-link {
-    left: 0;
-    top: 0;
-    border-radius: 30px;
-    width: 100%;
-    height: 100%;
-    opacity: 0;
-    position: absolute;
-    z-index: 9;
-}
-.credential-area .credential-sidebar .bg-img,
-.about-area .about-edc-exp .bg-img,
-.about-area .about-image-box .bg-img,
-.about-area .about-me-box .bg-img,
-.info-box .bg-img {
-    opacity: 0.1;
-    position: absolute;
-    left: 0;
-    top: 0;
-    border-radius: 30px;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
+
 
 .info-box .infos h5 {
-    color: #bcbcbc;
+    color: #fff;
     font-size: 12px;
-    opacity: 0.5;
+    opacity: 0.8;
     margin-bottom: 12px;
     text-transform: uppercase;
 }
@@ -384,7 +351,7 @@ ol {
     font-weight: 500;
 }
 .info-box .about-btn {
-    opacity: 0.2;
+    opacity: 0.5;
     transition: 0.3s;
     display: inline-block;
 }
@@ -406,8 +373,8 @@ ol {
     opacity: 0.5;
 }
 .info-box .inner-profile-icons a {
-    width: 52px;
-    height: 52px;
+    width: 45px;
+    height: 45px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -439,7 +406,7 @@ ol {
     backdrop-filter: blur(40px);
 }
 .info-box .inner-profile-icons a i {
-    font-size: 32px;
+    font-size: 25px;
 }
 .info-box.about-services-box .icon-boxes {
     display: flex;
@@ -610,12 +577,12 @@ ol {
     flex: 1;
 }
 .about-area .about-details .about-details-inner {
-    padding: 90px 30px 30px 30px;
+    padding: 90px 25px 25px 25px;
     position: relative;
 }
 .about-area .about-details .about-details-inner img {
     position: absolute;
-    left: 30px;
+    left: 25px;
     top: 0;
 }
 .about-area .about-details .about-details-inner h2 {
@@ -625,10 +592,9 @@ ol {
 }
 .about-area .about-details .about-details-inner p {
     color: #ffffff;
-    opacity: 0.8;
     line-height: 25px;
     margin: 0;
-    font-size: 16px;
+    font-size: 14px;
 }
 .about-area .about-edc-exp {
     padding: 30px;

@@ -38,13 +38,13 @@
                  </div>
                  <div class="col-lg-4">
                      <div class="row">
-                         <div class="col-lg-12">
+                         <div class="col-lg-12 col-md-6 col-sm-12">
                              <div data-aos="zoom-in" class="about-project-box aos-init">
-                                 <div class="info-box shadow-box text-center">
+                                 <div class="info-box shadow-box text-center rounded">
                                      <a class="overlay-link" href="{{ route('projects') }}"></a>
                                      <img decoding="async" src="{{ asset('img/my-works.png') }}" alt="">
                                      <div class="d-flex align-items-center justify-content-between">
-                                         <div class="infos">
+                                         <div class="infos text-start">
                                              <h5>SHOWCASE</h5>
                                              <h2>Projects</h2>
                                          </div>
@@ -55,11 +55,11 @@
                                  </div>
                              </div>
                          </div>
-                         <div class="col-lg-12 mt-3">
+                         <div class="col-lg-12 col-md-6 col-sm-12 mt-3">
                              <div class="blog-service-profile-wrap">
                                  <div data-aos="zoom-in" class="about-profile-box-wrap aos-init">
-                                     <div class="about-profile-box info-box shadow-box h-full">
-                                         <div class="inner-profile-icons shadow-box">
+                                     <div class="about-profile-box info-box shadow-box rounded">
+                                         <div class="inner-profile-icons shadow-box rounded">
                                              @foreach ($socials as $social)
                                                  <a href="{{ $social['link'] }}">
                                                      <i class="{{ $social['icon'] }}"></i>
@@ -79,9 +79,9 @@
                                  </div>
                              </div>
                          </div>
-                         <div class="col-lg-12 mt-3">
+                         <div class="col-lg-12 col-md-6 col-sm-12 mt-3">
                              <div data-aos="zoom-in" class="about-crenditials-box aos-init">
-                                 <div class="info-box shadow-box h-full">
+                                 <div class="info-box shadow-box rounded">
                                      <a class="overlay-link" href="{{ route('resume') }}"></a>
                                      <img decoding="async" src="{{ asset('img/logo.png') }}" alt="">
                                      <div class="d-flex align-items-center justify-content-between">
@@ -97,17 +97,11 @@
                                  </div>
                              </div>
                          </div>
-                         <div class="col-lg-12 mt-3">
+                         <div class="col-lg-12 col-md-6 col-sm-12 mt-3">
                              <div class="about-details aos-init" data-aos="zoom-in">
-                                 <h3 class="section-heading aos-init" data-aos="">
-                                     <img decoding="async" src="{{ asset('img/star-2.png') }}" alt="Star">
-                                     Self-summary
-                                     <img decoding="async" src="{{ asset('img/star-2.png') }}" alt="Star">
-                                 </h3>
-                                 <div class="about-details-inner shadow-box">
+                                 <div class="about-details-inner shadow-box rounded">
                                      <img decoding="async" src="{{ asset('img/icon2.png') }}" alt="Star" class="star-icon">
-                                     <h4>Mohammad Al Amin</h4>
-                                     <p>{{ $bio['long_bio'] }}</p>
+                                     <p>🧑 {{ $bio['long_bio'] }}</p>
                                  </div>
                              </div>
                          </div>
