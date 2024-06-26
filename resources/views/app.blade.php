@@ -52,6 +52,12 @@
     <!-- jquery -->
     <script src="{{ asset('js/jquery-3.7.1.min.js') }}" id="jquery-core-js"></script>
 
+    <style>
+        .content-area:before {
+            background-image: url({{ asset('img/pattern.svg') }});
+        }
+    </style>
+
 </head>
 
 <body class="home" data-aos-easing="ease" data-aos-duration="1500" data-aos-delay="0">
@@ -107,7 +113,7 @@
             preloader.style.display = "none";
             preloaderContainer.style.height = 0;
 
-           
+
             // Masonary
             $('.grid').masonry({
                 // options

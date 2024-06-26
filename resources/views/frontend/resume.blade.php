@@ -1,6 +1,6 @@
 @extends('app')
 @section('content')
-    <section class="py-4 py-sm-5">
+    <section class="about-area py-4 py-sm-5">
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
