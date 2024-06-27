@@ -9,9 +9,9 @@
         #project-container {
             position: relative;
             width: 100%;
-            height: 550px;
+            height: 100vh;
             box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
-            top: -50px;
+            /* top: -50px; */
         }
 
         .item {
@@ -34,7 +34,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(15, 23, 42, 0.7);
+            background: rgba(71, 131, 199, 0.25);
             backdrop-filter: blur(2px);
             z-index: 1;
             opacity: 0;
@@ -51,7 +51,6 @@
             top: 50%;
             left: 3rem;
             transform: translateY(-50%);
-            color: white;
             text-shadow: 0 3px 8px rgba(0, 0, 0, 0.5);
             opacity: 0;
             display: none;
@@ -63,12 +62,14 @@
                 font-size: 2.5rem;
                 letter-spacing: 0.3rem;
                 position: relative;
+                color: #021123;
             }
 
             & .description {
                 line-height: 1.7;
                 margin: 1rem 0 1.5rem;
                 font-size: 0.8rem;
+                color: #021123;
             }
         }
 
