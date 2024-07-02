@@ -1,7 +1,7 @@
 @extends('app')
 @section('content')
     <section class="about-area py-4 py-sm-5">
-        <div class="container">
+        <div class="container mt-sm-3 mt-2 pt-sm-5 pt-4">
             <div class="row">
                 <div class="col-md-12">
                     <div class="pdf rounded" style="position: relative; padding-bottom: 80%; height: 0; overflow: hidden; max-width: 100%;">

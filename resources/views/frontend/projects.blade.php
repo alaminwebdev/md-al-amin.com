@@ -243,8 +243,7 @@
     <section class="mb-3 mb-sm-0" id="project-container">
         <div class="container">
             <div class="row">
-                <div class="col-lg-6"></div>
-                <div class="col-lg-6">
+                <div class="col-lg-12">
                     <div class='parent'>
                         <div class='slider'>
                             <button type="button" id='right' class='right' name="button">
