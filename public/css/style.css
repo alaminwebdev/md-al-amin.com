@@ -766,7 +766,7 @@ ol {
     right: 50px;
 }
 .contact-form h4 {
-    color: #fff;
+    color: #000;
 }
 .contact-form h4 span {
     color: var(--primary_color);
@@ -817,7 +817,8 @@ ol {
     text-align: center;
     line-height: 75px;
     font-size: 30px;
-    color: #ffffff;
+    color: #444;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 .contact-infos .contact-details li .icon-box::after,
 .contact-infos .contact-details li .icon-box::before {
@@ -833,7 +834,7 @@ ol {
     margin-bottom: 7px;
 }
 .contact-infos .contact-details li .right h5 {
-    color: #ffffff;
+    color: #444;
     font-size: 14px;
     opacity: 0.8;
     font-weight: 500;
@@ -851,10 +852,11 @@ ol {
     display: block;
     text-align: center;
     line-height: 92px;
-    color: #ffffff;
+    color: #444;
     border-radius: 50%;
     font-size: 32px;
     transition: 0.3s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 .social-links li a:hover {
     background: #ffffff;
