@@ -31,6 +31,8 @@
 
     .nav-link {
         font-weight: bolder;
+        text-transform: uppercase;
+        font-size: 12px;
     }
     .nav-link.active {
         color: #021123 !important;

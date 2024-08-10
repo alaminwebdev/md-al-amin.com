@@ -24,13 +24,23 @@
     <meta property="og:description" content="Md. Al Amin – Full Stack Web Developer">
     <meta property="og:image" content="https://md-al-amin.com/img/me.jpg">
 
+    <meta name="theme-color" content="#0f172a">
+
 
     <!-- Canonical and Shortlink Tags -->
     <link rel="canonical" href="https://md-al-amin.com/">
     <link rel="shortlink" href="https://md-al-amin.com/">
 
-    <!-- DNS Prefetch for Google Fonts -->
-    <link rel="dns-prefetch" href="https://fonts.googleapis.com/">
+
+    <link rel="preload" href="{{ asset('font/Mona-Sans.woff2') }}" as="font" type="font/woff2" crossorigin>
+
+    <title>Md. Al Amin – Full Stack Web Developer</title>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('favicon/apple-touch-icon.png') }}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('favicon/favicon-32x32.png') }}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('favicon/favicon-16x16.png') }}">
+    <link rel="manifest" href="{{ asset('favicon/site.webmanifest') }}">
+
 
     <!-- Stylesheets -->
     <link rel="stylesheet" href="{{ asset('css/iconoir.css') }}" media="all">
@@ -40,30 +50,33 @@
     <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.11.1/baguetteBox.min.css">
 
-    <title>Md. Al Amin – Full Stack Web Developer</title>
-
-    <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('favicon/apple-touch-icon.png') }}">
-    <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('favicon/favicon-32x32.png') }}">
-    <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('favicon/favicon-16x16.png') }}">
-    <link rel="manifest" href="{{ asset('favicon/site.webmanifest') }}">
-
-    <meta name="theme-color" content="#0f172a">
-
-    <!-- jquery -->
-    <script src="{{ asset('js/jquery-3.7.1.min.js') }}" id="jquery-core-js"></script>
-
     <style>
+        @font-face {
+            font-family: 'Mona Sans';
+            src: url('{{ asset('font/Mona-Sans.woff2') }}') format('woff2');
+            font-display: swap;
+        }
+
+        body {
+            font-family: 'Mona Sans', sans-serif;
+            font-weight: 600;
+            color: #1c3b5c;
+        }
+
         .content-area:before {
             background-image: url({{ asset('img/pattern.svg') }});
         }
     </style>
+
+    <!-- jquery -->
+    <script src="{{ asset('js/jquery-3.7.1.min.js') }}" id="jquery-core-js"></script>
 
 </head>
 
 <body class="home" data-aos-easing="ease" data-aos-duration="1500" data-aos-delay="0">
 
     @if (!isset($excludePreloader))
-        @include('frontend.layouts.preloader')
+        {{-- @include('frontend.layouts.preloader') --}}
     @endif
 
     @if (!isset($excludeStatusMessage))
