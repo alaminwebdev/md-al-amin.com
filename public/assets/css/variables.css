@@ -1,0 +1,547 @@
+/* Root CSS Start */
+:root {
+        /* Fonts Family */
+        --font-primary: "Lufga", Arial, sans-serif;
+        --font-secondary: "Monument Extended", Arial, sans-serif;
+
+        /* Color Code Start */
+        /* Hex */
+        --nft-white: #ffffff;
+        --nft-black: #000000;
+        --nft-dark: #01080a;
+        --nft-raven: #0c0a0b;
+        --nft-orange: #cd7b61;
+        --nft-lupine: #c49bbd;
+        --nft-psychic: #5d5b83;
+        --nft-wash-me: #fbf9fd;
+        --nft-se-green: #06c154;
+        --nft-se-purple: #6423e7;
+        --nft-eyeshadow: #D8D7EB;
+        --nft-night-fog: #2b1961;
+        --nft-soft-blue: #a0abd2;
+        --nft-blue-rose: #2e2970;
+        --nft-deep-well: #2d2b33;
+        --nft-meadowlark: #ecdc4e;
+        --nft-golden-key: #d9a110;
+        --nft-milestone: #7e828a;
+        --nft-tetsu-blue: #18154f;
+        --nft-spacescape: #242158;
+        --nft-blue-purple: #512bd2;
+        --nft-magic-scent: #ccc8d9;
+        --nft-purple-blue: #5620E8;
+        --nft-matt-purple: #9370e5;
+        --nft-lilac-geode: #b590ff;
+        --nft-kinky-pinky: #ed53d3;
+        --nft-khmer-curry: #eb5757;
+        --nft-violet-glow: #4D1EEA;
+        --nft-blue-violet: #902bdf;
+        --nft-matt-purple: #8a77d9;
+        --nft-cosmic-void: #0a0736;
+        --nft-wintergreen: #26ff82;
+        --nft-violet-blue: #4c1ee9;
+        --nft-super-silver: #eeeeee;
+        --nft-smoky-studio: #7e828f;
+        --nft-lilac-spring: #892BD3;
+        --nft-fully-purple: #4F4B7A;
+        --nft-shadowdancer: #191555;
+        --nft-light-purple: #9563FF;
+        --nft-almost-royal: #6d24e4;
+        --nft-wisteria-wise: #b0a7ca;
+        --nft-glacier-pearl: #d1d0dc;
+        --nft-fresh-lavender: #8a93b5;
+        --naft-purple-shine: #c8bad3;
+        --nft-sugar-crystal: #f7f5fc;
+        --nft-casa-del-mar: #cad0e5;
+        --nft-bloodmyst-isle: #f92828;
+        --nft-prophet-violet: #6f58a6;
+        --nft-pheromone-purple: #7c2abc;
+        --nft-middle-red-purple: #250a39;
+        --nft-aconite-purple: #7850d7;
+        --nft-billiards-cloth: #03ad4b;
+        --nft-altar-of-heaven: #4b4c7d;
+        --nft-himawari-yellow: #fbc800;
+        --nft-guang-moonlight: #5E57AB;
+        --nft-glistening-grey: #b2b4bc;
+        --nft-nauseous-blue: #423c87;
+        --nft-fresh-neon-pink: #fa0dff;
+        --nft-aladdins-feather: #5000fb;
+        --nft-akihabara-arcade: #6216ff;
+        --nft-connecticut-lilac: #CCBEED;
+        --nft-potentially-purple: #d4cde4;
+        --nft-brandywine-raspberry: #534ba4;
+        --nft-delicate-lilac-crystal: #d7d2e0;
+        /* RGB */
+        --nft-rgb-black: 0, 0, 0;
+        --nft-navy-blue: 31, 28, 102;
+        --nft-rgb-white: 255, 255, 255;
+        --nft-rgb-purple: 105, 23, 169;
+        --nft-rgb-lilac-spring: 137, 43, 211;
+        --nft-orochimaru: 217, 217, 217;
+        --nft-rgb-bnei-bay: 20, 98, 208;
+        --nft-rgb-spacescape: 36, 33, 88;
+        --nft-white-edgar: 237, 237, 237;
+        --nft-rgb-bologna-sausage: 255, 208, 220;
+        --nft-rgb-dark-blue: 62, 25, 188;
+        --nft-rgb-dark-purple: 98, 22, 255;
+        --nft-rgb-brandywine-raspberry: 87, 80, 164;
+        --nft-eyeshadow-rgb: 216, 215, 235;
+        --nft-rgb-violet-glow: 78, 31, 235;
+        --nft-rgb-galactic-highway: 60, 27, 191;
+        --nft-rgb-bright-indigo: 112, 0, 255;
+        --nft-rgb-prom: 217, 166, 166;
+        --nft-rgb-vast-of-night: 15, 3, 99;
+        --nft-rgb-lán-moonlight: 94, 87, 171;
+        --nft-rgb-smoke-screen: 175, 175, 175;
+        --nft-old-amethyst: 136, 133, 140;
+        --nft-bavarian-blue: 26, 47, 121;
+        --nft-rgb-purplex: 93, 33, 131;
+        --nft-rgb-purple-door: 43, 15, 70;
+        --nft-rgb-liliac: 194, 147, 255;
+        --nft-rgb-sè-purple: 102, 35, 229;
+        --nft-bright-blue-violet: 145, 42, 223;
+        --nft-cold-wind: 226, 227, 229;
+        --nft-lilac-scent-soft-blue: 160, 171, 210;
+        --nft-custom-input-bg-color: rgba(var(--nft-rgb-white), 0.1);
+        /* Gradient */
+        --header-active-before: linear-gradient(111deg,
+                        var(--nft-violet-glow) 15.21%,
+                        var(--nft-blue-violet) 69.27%);
+        --nft-btn-gradient-color: linear-gradient(139deg,
+                        var(--nft-violet-glow) -0.44%,
+                        var(--nft-blue-violet) 80.13%,
+                        var(--nft-blue-violet) 80.13%);
+        --nft-theme-gradient-bg: linear-gradient(122deg, var(--nft-violet-glow) -2.41%, var(--nft-blue-violet) 92.24%);
+        --nft-gradient-one: linear-gradient(199deg,
+                        rgba(var(--nft-rgb-white), 0) -43.17%,
+                        rgba(var(--nft-rgb-white), 0.1) 77.84%);
+        /* Color Code End */
+
+        /* Box Shadow and Drop Shadow CSS Start */
+        --nft-box-shadow: 0px 28px 44px 0px rgba(var(--nft-rgb-black) 0.09);
+        --nft-black-bottom-low-shadow: rgba(var(--nft-rgb-black), 0.35) 0px 5px 15px;
+        --nft-box-shadow-one: 0px 28px 68px 0px rgba(var(--nft-rgb-purple-door), 0.32);
+        --nft-box-shadow-two: 0px 20px 52px 0px rgba(var(--nft-rgb-black), 0.06);
+        /* Box Shadow and Drop Shadow CSS End */
+
+        /* Spacings */
+        --nft-section-big-spacing: 15rem;
+        --nft-section-spacing: 12rem;
+        --nft-header-section-spacing: 110px;
+
+        /* Width Container */
+        --nft-container: 1600px;
+
+        /* Header Height */
+        --nft-header-height: 100px;
+
+        /* Fonts Size */
+        --h1-big-size: 8.2rem;
+        --h1-size: 7rem;
+        --h2-size: 6.4rem;
+        --h3-size: 5rem;
+        --h4-size: 4.6rem;
+        --h5-size: 4rem;
+        --h5-md-size: 3.2rem;
+        --h5-sm-size: 28px;
+        --h6-size: 26px;
+        --p-xl-size: 24px;
+        --h6-small-size: 22px;
+        --p-lg-size: 20px;
+        --p-sm-size: 18px;
+        --p-xs-size: 16px;
+
+        /* Transition Common For All  */
+        --nft-body-transition: all .3s ease-in-out;
+}
+
+.dark {
+        --nft-body: var(--nft-tetsu-blue);
+        --nft-subtitle: var(--nft-soft-blue);
+        --nft-secondary-btn: var(--nft-white);
+        --nft-body-color: var(--nft-white);
+        --nft-vr-color: var(--nft-brandywine-raspberry);
+        --nft-create-link-border: var(--nft-guang-moonlight);
+        --nft-link-arrow: var(--nft-soft-blue);
+        --nft-purple-tint-1: var(--nft-guang-moonlight);
+        --nft-hero-cartoon-border: var(--nft-night-fog);
+        --nft-subscribe-details-text: var(--nft-soft-blue);
+        --nft-guide-card-heading: var(--nft-white);
+        --nft-guide-number-text-color: var(--nft-altar-of-heaven);
+        --nft-guide-card-description: var(--nft-soft-blue);
+        --nft-amazing-card-paragraph: var(--nft-soft-blue);
+        --nft-amazing-card-heading: var(--nft-white);
+        --nft-amazing-card-icon-color: var(--nft-white);
+        --amazing-art-features-wrapper-before-bg: var(--nft-blue-purple);
+        --nft-hero-banner-circle-text: var(--nft-white);
+        --nft-amazing-art-features-wrapper-before-bg: var(--nft-blue-purple);
+        --nft-explore-collation-tab-border: var(--nft-guang-moonlight);
+        --nft-explore-collation-tab-nav: var(--nft-soft-blue);
+        --nft-explore-collation-tab-nav-active: var(--nft-light-purple);
+        --nft-explore-collation-badge-border: transparent;
+        --nft-explore-collation-badge-color: var(--nft-soft-blue);
+        --nft-explore-collation-card-wrapper: var(--nft-spacescape);
+        --nft-explore-collation-card-border: var(--nft-akihabara-arcade);
+        --nft-nav-card-collection-bottom-avatar-details-title: var(--nft-white);
+        --nft-nav-card-collection-items-list-count: var(--nft-white);
+        --nft-nav-card-creators-details-wrapper-span: var(--nft-glacier-pearl);
+        --nft-modal-color: var(--nft-soft-blue);
+        --nft-checkbox-border-color: var(--nft-guang-moonlight);
+        --nft-label-color: var(--nft-white);
+        --nft-label-active: var(--nft-light-purple);
+        --nft-pagination-arrow-color: var(--nft-white);
+        --nft-filter-dropdown-link-color: var(--nft-glacier-pearl);
+        --nft-range-slider-text-color: var(--nft-white);
+        --nft-option-color: var(--nft-white);
+        --nft-range-slider-progress-bar-bg: var(--nft-blue-rose);
+        --nft-filter-dropdown-btn-border-color: var(--nft-guang-moonlight);
+        --nft-owner-img-border-color: var(--nft-psychic);
+        --nft-owner-name-color: var(--nft-white);
+        --nft-owned-by-color: var(--nft-glacier-pearl);
+        --nft-dropdown-icon-color: var(--nft-white);
+        --nft-creator-section-between-border: var(--nft-guang-moonlight);
+        --nft-creator-description-color: var(--nft-soft-blue);
+        --nft-tab-active-color: var(--nft-light-purple);
+        --nft-tab-link-color: var(--nft-soft-blue);
+        --nft-bid-tab-border-color: var(--nft-guang-moonlight);
+        --nft-breadcrumb-previous-page-color: var(--nft-white);
+        --nft-breadcrumb-current-page-link-color: var(--nft-glacier-pearl);
+        --nft-bid-heading-text-color: var(--nft-glacier-pearl);
+        --nft-bid-detail-info-color: var(--nft-white);
+        --nft-bid-info-green-color: var(--nft-wintergreen);
+        --nft-history-content-before-border: var(--nft-violet-blue);
+        --nft-modal-close-icon-color: var(--nft-soft-blue);
+        --link-hover-color: var(--nft-white);
+        --nft-modal-purple-text: var(--nft-light-purple);
+        --nft-collection-stats-table-color: var(--nft-white);
+        --nft-collection-stats-table-border-color: var(--nft-guang-moonlight);
+        --nft-time-filter-wrapper-border-color: var(--nft-guang-moonlight);
+        --nft-time-filter-wrapper-active-color: var(--nft-white);
+        --nft-time-filter-wrapper-color: var(--nft-guang-moonlight);
+
+
+        --nft-heading-bg: radial-gradient(3491.47% 193.42% at -27.36% -18.57%,
+                        var(--nft-prophet-violet) 1.57%,
+                        var(--nft-connecticut-lilac) 15.73%,
+                        var(--nft-white) 44.65%,
+                        var(--nft-lupine) 100%);
+        --nft-section-title-bg: -webkit-linear-gradient(45deg,
+                        var(--nft-prophet-violet) 3%,
+                        var(--nft-connecticut-lilac) 36%,
+                        var(--nft-white) 53%,
+                        var(--nft-lupine) 73%);
+        --nft-amazing-bg: linear-gradient(198deg, rgba(var(--nft-rgb-white), 0.00) -40.82%, rgba(var(--nft-rgb-white), 0.10) 73.6%);
+        --nft-theme-bg: var(--nft-theme-gradient-bg);
+        --nft-guide-card-bg: var(--nft-gradient-one);
+        --nft-subscribe-update-bg: var(--nft-gradient-one);
+        --nft-subscribe-input-bg: var(--nft-gradient-one);
+        --nft-subscribe-title-bg: -webkit-linear-gradient(45deg, var(--nft-prophet-violet) 3%, var(--nft-connecticut-lilac) 36%, var(--nft-white) 53%, var(--nft-lupine) 73%);
+        --nft-guide-card-after-bg: linear-gradient(180deg, rgba(var(--nft-rgb-violet-glow), .5) 0%, rgba(var(--nft-rgb-black), 0) 50%);
+        --nft-amazing-title-bg: -webkit-linear-gradient(45deg, var(--nft-prophet-violet) 3%, var(--nft-connecticut-lilac) 36%, var(--nft-white) 53%, var(--nft-lupine) 73%);
+        --nft-hero-gradient-right-top: linear-gradient(178deg, rgb(var(--nft-rgb-white), 0.10) 2%, rgba(var(--nft-rgb-white), 0.00) 134.56%);
+        --nft-explore-hero-title-bg: radial-gradient(3491.47% 193.42% at -27.36% -18.57%, var(--nft-prophet-violet) 1.57%, var(--nft-connecticut-lilac) 15.73%, var(--nft-white) 44.65%, var(--nft-lupine) 100%);
+        --nft-explore-bid-card-title-bg: -webkit-linear-gradient(45deg,
+                        var(--nft-prophet-violet) 3%,
+                        var(--nft-connecticut-lilac) 36%,
+                        var(--nft-white) 53%,
+                        var(--nft-lupine) 73%);
+        --nft-place-bid-modal-title-color: -webkit-linear-gradient(45deg, var(--nft-prophet-violet) 3%, var(--nft-connecticut-lilac) 36%, var(--nft-white) 53%, var(--nft-lupine) 73%);
+
+
+        --nft-section-big-heading: rgba(var(--nft-orochimaru), 0.02);
+        --nft-transparent-text-border: rgba(var(--nft-orochimaru), 0.2);
+        --nft-theme-border: rgba(var(--nft-rgb-white), 0.60);
+        --nft-amzing-after-bg: rgba(var(--nft-rgb-purple), 0.60);
+        --nft-link-arrow-bg: rgba(var(--nft-rgb-dark-blue), 0.80);
+        --nft-amazing-art-after-bg: rgba(var(--nft-rgb-purple), 0.60);
+        --nft-subscribe-wrapper-before-bg: rgba(var(--nft-rgb-purple), 0.55);
+        --nft-subscribe-wrapper-after-bg: rgba(var(--nft-rgb-dark-blue), 0.45);
+        --nft-right-circle-bg: rgba(var(--nft-rgb-dark-blue), 0.3);
+        --nft-amazing-art-content-bg: rgba(var(--nft-rgb-purple), 1);
+        --nft-hero-banner-circle-bg: rgba(var(--nft-rgb-white), 0.12);
+        --nft-hero-before: rgba(var(--nft-rgb-galactic-highway), 0.60);
+        --nft-nav-card-collection-details-subtitle: rgba(var(--nft-rgb-white), 0.30);
+        --nft-modal-bg: rgba(var(--nft-navy-blue), 0.70);
+        --nft-nav-card-collection-badge: rgb(var(--nft-rgb-spacescape));
+        --nft-header-after: rgb(var(--nft-rgb-bnei-bay));
+        --nft-subscribe-btn-border: rgba(var(--nft-white), 00);
+        --nft-hero-gradient-center-top: rgba(var(--nft-rgb-lilac-spring), 0.30);
+        --nft-pagination-border-color: rgba(var(--nft-white), 00);
+        --nft-filter-dropdown-bg: rgb(var(--nft-navy-blue));
+        --nft-filter-dropdown-hover-bg: rgba(var(--nft-rgb-black), 0.22);
+        --nft-toggle-menu-bg: rgb(var(--nft-navy-blue));
+        --nft-filter-dropdown-link-border-color: rgba(var(--nft-white), 00);
+        --nft-breadcrumb-hover: rgba(var(--nft-lilac-scent-soft-blue), 0.8);
+        --nft-place-bid-modal-bg-color: rgba(var(--nft-navy-blue), 0.70);
+        --nft-explore-items-dropdown-bg-color: rgb(var(--nft-navy-blue));
+        --nft-custom-input-text-color: var(--nft-white);
+        --nft-profile-user-social-media-bg: rgb(var(--nft-rgb-spacescape));
+        --nft-profile-user-social-media-border: rgba(var(--nft-rgb-white), 00);
+        --nft-collected-profile-bg: rgba(var(--nft-rgb-black), 0.40);
+
+        /* Header Color Code Start */
+        --nft-nav: rgba(var(--nft-lilac-scent-soft-blue), 0.8);
+        --nft-nav-active: var(--nft-white);
+        --nft-header-bg: var(--nft-rgb-bnei-bay);
+        /* Toggle Icons Start */
+        --nft-toggle-bg: rgb(var(--nft-rgb-white), 12%);
+        /* Dropdown Color & Blur & Shadow */
+        --nft-dropdown-bg: linear-gradient(168deg, rgba(var(--nft-rgb-liliac), 0.30) 6.64%, rgba(var(--nft-rgb-bright-indigo), 0.00) 185.19%);
+        --nft-dropdown-hover-bg: rgba(var(--nft-rgb-black), 0.19);
+        --nft-dropdown-drop-shadow: drop-shadow(0px 0px 100px rgba(var(--nft-rgb-black), 0.3));
+        --nft-dropdown-hover: var(--nft-white);
+        --nft-dropdown-filter-blur: blur(42px);
+        /* Header Color Code End */
+
+        /* Custom Tabing Color Code Start */
+        --nft-custom-tabing-bg: var(--nft-spacescape);
+        --nft-custom-tabing-tab-color: var(--nft-soft-blue);
+        --nft-custom-tabing-tab-active-color: var(--nft-white);
+        /* Custom Tabing Color Code End */
+
+        /* Box Shadow and Drop Shadow CSS Start */
+        --nft-box-shadow-btn-hover: rgb(var(--nft-rgb-prom), 35%) 0px 0px 20px;
+        --nft-subscribe-input-box-shadow: var(--nft-box-shadow-one);
+        --nft-guide-card-box-shadow: 0px 20px 52px 0px rgba(var(--nft-rgb-black), 0.15);
+        --nft-hero-banner-circle-drop-shadow: 0px 36px 44px rgb(var(--nft-rgb-vast-of-night));
+        --nft-bid-wrapper-box-shadow: var(--nft-box-shadow-one);
+        --nft-modal-input-box-shadow: var(--nft-box-shadow-one);
+        --nft-preview-item-wrapper-box-shadow: none;
+        /* Box Shadow and Drop Shadow CSS End */
+
+        --nft-bottom-left-diamond-z-index: -1;
+        --nft-amazing-before-opacity: 0.9;
+        --nft-bid-wrapper-bg: linear-gradient(180deg, rgba(var(--nft-rgb-white), 0.10) 0%, rgba(var(--nft-rgb-white), 0.00) 149%);
+        --nft-subscribe-btn-bg: var(--nft-theme-gradient-bg),
+                var(--nft-theme-gradient-bg);
+        --nft-guide-card-number-hover: var(--nft-white);
+        --nft-card-bg-color: rgba(var(--nft-rgb-brandywine-raspberry), 0.149);
+        --nft-explore-hero-bg: url(../images/nft/explore-hero-section-bg.png);
+        --nft-scrollbar-thumb-color: rgba(var(--nft-rgb-white), 0.10);
+
+        --nft-faq-question-color: var(--nft-white);
+        --nft-faq-active-bg-color: rgba(var(--nft-rgb-lán-moonlight), 0.10);
+        --nft-faq-button: var(--nft-nauseous-blue);
+        --nft-activity-icon-color: var(--nft-guang-moonlight);
+        --nft-activity-reaction-icon-color: var(--nft-nauseous-blue);
+        --nft-contact-card-bg-color: #d1d0dc36;
+        --nft-blog-date-time-text-color: var(--nft-light-purple);
+        --nft-blog-card-title-color: var(--nft-white);
+        --nft-blog-card-description-color: var(--nft-soft-blue);
+        --nft-blog-link-card-border-color: var(--nft-guang-moonlight);
+        --nft-recent-post-main-title: var(--nft-white);
+        --nft-post-card-title-hover: var(--nft-lilac-geode);
+        --nft-preview-item-wrapper-bg-color: var(--nft-spacescape);
+        --nft-file-input-icon-color: var(--nft-white);
+        --nft-create-nft-placeholder-color: var(--nft-soft-blue);
+        --nft-create-nft-input-color: var(--nft-white);
+        --nft-create-nft-dropdown-btn-color: var(--nft-soft-blue);
+        --nft-switch-color: var(--nft-guang-moonlight);
+        --copy-btn-border: transparent;
+        --copy-btn-hover-color: var(--nft-soft-blue);
+        --connect-modal-bg: var(--nft-tetsu-blue);
+        --profile-img-border: var(--nft-white);
+        --nft-remove-btn-color: var(--nft-white);
+        --nft-edit-input-placeholder-color: var(--nft-white);
+        --nft-select-bg-color: var(--nft-blue-violet);
+        --nft-subscribe-input-color: var(--nft-white);
+        --nft-secondary-input-color: var(var(--nft-white));
+        --nft-subscriber-input-placeholder: var(--nft-soft-blue);
+        --nft-fileinputlabel-color: var(--nft-white);
+}
+
+.light {
+        /* HEX Color Code Start */
+        --nft-body: var(--nft-white);
+        --nft-subtitle: var(--nft-smoky-studio);
+        --nft-secondary-btn: var(--nft-purple-blue);
+        --nft-body-color: var(--nft-night-fog);
+        --nft-vr-color: var(--nft-eyeshadow);
+        --nft-create-link-border: var(--nft-eyeshadow);
+        --nft-link-arrow: var(--nft-night-fog);
+        --nft-purple-tint-1: var(--nft-eyeshadow);
+        --nft-hero-cartoon-border: var(--nft-sugar-crystal);
+        --nft-subscribe-details-text: var(--naft-purple-shine);
+        --nft-guide-card-heading: var(--nft-night-fog);
+        --nft-guide-number-text-color: var(--nft-casa-del-mar);
+        --nft-guide-card-description: var(--nft-smoky-studio);
+        --nft-amazing-card-paragraph: var(--nft-smoky-studio);
+        --nft-amazing-card-heading: var(--nft-night-fog);
+        --nft-amazing-card-icon-color: var(--nft-purple-blue);
+        --amazing-art-features-wrapper-before-bg: var(--nft-white);
+        --nft-hero-banner-circle-text: var(--nft-deep-well);
+        --nft-amazing-art-features-wrapper-before-bg: var(--nft-white);
+        --nft-explore-collation-tab-border: var(--nft-eyeshadow);
+        --nft-explore-collation-tab-nav: var(--nft-smoky-studio);
+        --nft-explore-collation-tab-nav-active: var(--nft-purple-blue);
+        --nft-explore-collation-badge-border: var(--nft-eyeshadow);
+        --nft-explore-collation-badge-color: var(--nft-smoky-studio);
+        --nft-explore-collation-card-wrapper: var(--nft-white);
+        --nft-explore-collation-card-border: var(--nft-violet-glow);
+        --nft-nav-card-collection-bottom-avatar-details-title: var(--nft-night-fog);
+        --nft-nav-card-collection-items-list-count: var(--nft-purple-blue);
+        --nft-nav-card-creators-details-wrapper-span: var(--nft-milestone);
+        --nft-modal-color: var(--nft-smoky-studio);
+        --nft-checkbox-border-color: var(--nft-eyeshadow);
+        --nft-label-color: var(--nft-smoky-studio);
+        --nft-label-active: var(--nft-night-fog);
+        --nft-pagination-arrow-color: var(--nft-purple-blue);
+        --nft-filter-dropdown-link-color: var(--nft-smoky-studio);
+        --nft-range-slider-text-color: var(--nft-night-fog);
+        --nft-range-slider-progress-bar-bg: var(--nft-eyeshadow);
+        --nft-option-color: var(--nft-purple-blue);
+        --nft-filter-dropdown-btn-border-color: var(--nft-eyeshadow);
+        --nft-owner-img-border-color: var(--nft-delicate-lilac-crystal);
+        --nft-owner-name-color: var(--nft-night-fog);
+        --nft-owned-by-color: var(--nft-smoky-studio);
+        --nft-dropdown-icon-color: var(--nft-night-fog);
+        --nft-creator-section-between-border: var(--nft-eyeshadow);
+        --nft-creator-description-color: var(--nft-smoky-studio);
+        --nft-tab-active-color: var(--nft-purple-blue);
+        --nft-tab-link-color: var(--nft-smoky-studio);
+        --nft-bid-tab-border-color: var(--nft-eyeshadow);
+        --nft-breadcrumb-previous-page-color: var(--nft-night-fog);
+        --nft-breadcrumb-current-page-link-color: var(--nft-fresh-lavender);
+        --nft-bid-heading-text-color: var(--nft-smoky-studio);
+        --nft-bid-detail-info-color: var(--nft-night-fog);
+        --nft-bid-info-green-color: var(--nft-billiards-cloth);
+        --nft-history-content-before-border: var(--nft-eyeshadow);
+        --nft-modal-close-icon-color: var(--nft-smoky-studio);
+        --nft-subscribe-btn-hover-color: var(--nft-blue-violet);
+        --nft-subscribe-btn-hover-bg: var(--nft-white);
+        --link-hover-color: var(--nft-black);
+        --nft-modal-purple-text: var(--nft-purple-blue);
+        --nft-collection-stats-table-color: var(--nft-night-fog);
+        --nft-collection-stats-table-border-color: var(--nft-eyeshadow);
+        --nft-time-filter-wrapper-border-color: var(--nft-eyeshadow);
+        --nft-time-filter-wrapper-active-color: var(--nft-light-purple);
+        --nft-time-filter-wrapper-color: var(--nft-smoky-studio);
+
+        --nft-heading-bg: radial-gradient(3491.47% 193.42% at -27.36% -18.57%,
+                        var(--nft-matt-purple) 1.57%,
+                        var(--nft-aconite-purple) 15.73%,
+                        var(--nft-night-fog) 44.65%,
+                        var(--nft-kinky-pinky) 100%);
+        --nft-section-title-bg: -webkit-linear-gradient(45deg,
+                        var(--nft-matt-purple) 21%,
+                        var(--nft-aconite-purple) 28%,
+                        var(--nft-night-fog) 47%,
+                        var(--nft-kinky-pinky) 74%);
+        --nft-amazing-bg: linear-gradient(184deg, var(--nft-wash-me) 2.98%, var(--nft-wash-me) 97.02%);
+        --nft-theme-bg: linear-gradient(122deg, var(--nft-meadowlark) -2.41%, var(--nft-golden-key) 92.24%);
+        --nft-guide-card-bg: linear-gradient(199deg, rgba(var(--nft-rgb-white), 0.00) -43.17%, rgba(var(--nft-rgb-white), 0.10) 77.84%);
+        --nft-subscribe-update-bg: radial-gradient(73.58% 60.27% at 48.98% 62.14%,
+                        var(--nft-pheromone-purple) 0%,
+                        var(--nft-middle-red-purple) 100%);
+        --nft-subscribe-input-bg: linear-gradient(199deg,
+                        rgba(var(--nft-rgb-white) 0) -43.17%,
+                        rgba(var(--nft-rgb-white) 0.1) 77.84%);
+        --nft-subscribe-title-bg: radial-gradient(2904.78% 172.31% at 0% -16.79%, var(--nft-prophet-violet) 0%, var(--nft-connecticut-lilac) 15.73%, var(--nft-white) 44.65%, var(--nft-lupine) 100%);
+        --nft-guide-card-after-bg: linear-gradient(180deg, rgba(var(--nft-rgb-violet-glow), .1) 0%, rgba(var(--nft-rgb-black), 0) 50%);
+        --nft-amazing-title-bg: -webkit-linear-gradient(45deg, var(--nft-matt-purple) 0%, var(--nft-aconite-purple) 0%, var(--nft-night-fog) 62%, var(--nft-kinky-pinky) 89%);
+        --nft-hero-gradient-right-top: linear-gradient(180deg, rgba(var(--nft-rgb-sè-purple), 0.08) 0%, rgba(var(--nft-bright-blue-violet), 0.08) 100%);
+        --nft-explore-hero-title-bg: -webkit-linear-gradient(0deg, var(--nft-matt-purple) 5%, var(--nft-aconite-purple) 11%, var(--nft-night-fog) 74%, var(--nft-kinky-pinky) 100%);
+        --nft-explore-bid-card-title-bg: -webkit-linear-gradient(0deg, var(--nft-matt-purple) 5%, var(--nft-aconite-purple) 11%, var(--nft-night-fog) 74%, var(--nft-kinky-pinky) 100%);
+        --nft-place-bid-modal-title-color: -webkit-linear-gradient(0deg, var(--nft-matt-purple) 5%, var(--nft-aconite-purple) 11%, var(--nft-night-fog) 74%, var(--nft-kinky-pinky) 100%);
+
+        --nft-section-big-heading: rgba(var(--nft-cold-wind), 0.18);
+        --nft-transparent-text-border: rgba(var(--nft-cold-wind), 0.9);
+        --nft-theme-border: rgba(var(--nft-rgb-white), 0.60);
+        --nft-amzing-after-bg: rgba(var(--nft-rgb-purple), 0.10);
+        --nft-link-arrow-bg: rgba(var(--nft-rgb-dark-blue), 0.16);
+        --nft-amazing-art-after-bg: rgba(var(--nft-rgb-purple), 0.25);
+        --nft-subscribe-wrapper-before-bg: rgba(var(--nft-rgb-purple), 0.13);
+        --nft-subscribe-wrapper-after-bg: rgba(var(--nft-rgb-dark-blue), 0.09);
+        --nft-right-circle-bg: rgba(var(--nft-rgb-dark-blue), 0.05);
+        --nft-amazing-art-content-bg: rgba(var(--nft-rgb-purple), 0.10);
+        --nft-hero-banner-circle-bg: rgba(var(--nft-rgb-white), 0.7);
+        --nft-hero-before: rgba(var(--nft-rgb-galactic-highway), 0.20);
+        --nft-nav-card-collection-details-subtitle: var(--nft-eyeshadow);
+        --nft-modal-bg: rgb(var(--nft-rgb-white));
+        --nft-nav-card-collection-badge: rgba(var(--nft-rgb-white), 00);
+        --nft-header-after: rgba(var(--nft-rgb-white), 00);
+        --nft-subscribe-btn-border: var(--nft-white);
+        --nft-hero-gradient-center-top: rgba(var(--nft-rgb-white), 00);
+        --nft-pagination-border-color: var(--nft-eyeshadow);
+        --nft-filter-dropdown-bg: rgb(var(--nft-rgb-white));
+        --nft-filter-dropdown-hover-bg: var(--nft-eyeshadow);
+        --nft-toggle-menu-bg: rgb(var(--nft-rgb-white));
+        --nft-filter-dropdown-link-border-color: var(--nft-eyeshadow);
+        --nft-breadcrumb-hover: var(--nft-se-purple);
+        --nft-place-bid-modal-bg-color: rgb(var(--nft-rgb-white));
+        --nft-explore-items-dropdown-bg-color: rgb(var(--nft-rgb-white));
+        --nft-custom-input-text-color: rgb(var(--nft-bright-blue-violet));
+        --nft-profile-user-social-media-bg: rgba(var(--nft-rgb-white), 00);
+        --nft-profile-user-social-media-border: var(--nft-eyeshadow);
+        --nft-subscribe-input-color: var(--nft-white);
+
+        /* Header Color Code Start */
+        --nft-nav: rgba(var(--nft-old-amethyst), 0.80);
+        --nft-nav-active: var(--nft-night-fog);
+        --nft-header-bg: rgba(var(--nft-rgb-bnei-bay), 0.2);
+        /* Toggle Icons & Colors */
+        --nft-toggle-bg: rgb(var(--nft-rgb-white));
+        /* Dropdown Color & Blur & shadow */
+        --nft-dropdown-bg: rgba(var(--nft-rgb-white), 0.70);
+        --nft-dropdown-hover-bg: rgba(var(--nft-rgb-smoke-screen), 0.19);
+        --nft-dropdown-drop-shadow: drop-shadow(0px 12px 100px rgba(var(--nft-bavarian-blue), 0.14));
+        --nft-dropdown-hover: var(--nft-aladdins-feather);
+        --nft-dropdown-filter-blur: blur(22px);
+        /* Header Color Code End */
+
+        /* Custom Tabing Color Code Start */
+        --nft-custom-tabing-bg: var(--nft-white);
+        --nft-custom-tabing-tab-color: var(--nft-smoky-studio);
+        --nft-custom-tabing-tab-active-color: var(--nft-light-purple);
+        /* Custom Tabing Color Code End */
+
+        /* Box Shadow and Drop Shadow CSS Start */
+        --nft-box-shadow-btn-hover: rgba(var(--nft-rgb-purplex), 0.349) 0px 0px 20px;
+        --nft-subscribe-input-box-shadow: 0px 28px 68px 0px rgba(var(--nft-rgb-purple-door), 0.07);
+        --nft-guide-card-box-shadow: var(--nft-box-shadow-two);
+        --nft-hero-banner-circle-drop-shadow: 0px 36px 44px rgba(var(--nft-rgb-vast-of-night), 0.13);
+        --nft-bid-wrapper-box-shadow: var(--nft-box-shadow-two);
+        --nft-modal-input-box-shadow: 0px 20px 52px 12px rgba(var(--nft-rgb-black), 0.06);
+        --nft-preview-item-wrapper-box-shadow: var(--nft-box-shadow-two);
+        /* Box Shadow and Drop Shadow CSS End */
+
+        --nft-subscribe-btn-bg: rgba(var(--nft-rgb-white), 00);
+        --nft-guide-card-number-hover: var(--nft-theme-gradient-bg);
+        --nft-bottom-left-diamond-z-index: 1;
+        --nft-card-bg-color: linear-gradient(129deg, var(--nft-white) -47.79%, rgba(var(--nft-rgb-brandywine-raspberry), 0.15) 132%);
+        --nft-amazing-before-opacity: 0.3;
+        --nft-bid-wrapper-bg: var(--nft-white);
+        --nft-explore-hero-bg: linear-gradient(180deg, rgba(var(--nft-rgb-sè-purple), 0.08) 0%, rgba(var(--nft-bright-blue-violet), 0.08) 100%);
+        --nft-scrollbar-thumb-color: linear-gradient(122deg, rgba(var(--nft-rgb-violet-glow) 0.14) -2.41%, rgba(var(--nft-bright-blue-violet), 0.14) 92.24%);
+        --nft-faq-question-color: var(--nft-night-fog);
+        --nft-faq-active-bg-color: rgba(var(--nft-white-edgar), 0.4);
+        --nft-faq-button: var(--nft-night-fog);
+        --nft-activity-icon-color: var(--nft-wisteria-wise);
+        --nft-activity-reaction-icon-color: var(--nft-magic-scent);
+        --nft-contact-card-bg-color: var(--nft-glacier-pearl);
+        --nft-blog-date-time-text-color: var(--nft-purple-blue);
+        --nft-blog-card-title-color: var(--nft-night-fog);
+        --nft-blog-card-description-color: var(--nft-smoky-studio);
+        --nft-blog-link-card-border-color: var(--nft-eyeshadow);
+        --nft-recent-post-main-title: var(--nft-purple-blue);
+        --nft-post-card-title-hover: var(--nft-se-purple);
+        --nft-preview-item-wrapper-bg-color: var(--nft-white);
+        --nft-file-input-icon-color: var(--nft-almost-royal);
+        --nft-create-nft-input-color: var(--nft-smoky-studio);
+        --nft-create-nft-dropdown-btn-color: var(--nft-smoky-studio);
+        --nft-switch-color: var(--nft-glistening-grey);
+        --copy-btn-border: var(--nft-eyeshadow);
+        --copy-btn-hover-color: var(--nft-se-purple);
+        --connect-modal-bg: var(--nft-white);
+        --profile-img-border: var(--nft-se-purple);
+        --nft-remove-btn-color: var(--nft-purple-blue);
+        --nft-edit-input-placeholder-color: var(--nft-night-fog);
+        --nft-select-bg-color: var(--nft-white);
+        --nft-subscribe-input-color: var(--nft-magic-scent);
+        --nft-secondary-input-color: var(--nft-black);
+        --nft-subscriber-input-placeholder: var(--nft-soft-blue);
+        --nft-explore-product-results-card-color: var(--nft-white);
+        --nft-explore-collection-color: var(--nft-white);
+        --nft-fileinputlabel-color: var(--nft-black);
+}
+
+/* Root CSS End */
