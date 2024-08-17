@@ -2150,11 +2150,11 @@ body.show-menu::before {
 }
 
 .nft-swiper-wraaper .swiper-slide {
-  border-radius: 8px 8px 0 8px;
-  -webkit-border-radius: 8px 8px 0 8px;
-  -moz-border-radius: 8px 8px 0 8px;
-  -ms-border-radius: 8px 8px 0 8px;
-  -o-border-radius: 8px 8px 0 8px;
+  border-radius: 3px 3px 0 3px;
+  -webkit-border-radius: 3px 3px 0 3px;
+  -moz-border-radius: 3px 3px 0 3px;
+  -ms-border-radius: 3px 3px 0 3px;
+  -o-border-radius: 3px 3px 0 3px;
 }
 
 .top-artwork-card {
@@ -2175,6 +2175,10 @@ body.show-menu::before {
   border-image: linear-gradient(160deg,
       rgba(var(--nft-rgb-dark-purple), 0.6),
       rgba(var(--nft-rgb-white), 0) 70%) 27 / 5px;
+}
+
+.top-artwork-card::before {
+  background: radial-gradient(rgba(var(--nft-rgb-dark-purple), 0.6), transparent);
 }
 
 .top-artwork-text-card {
