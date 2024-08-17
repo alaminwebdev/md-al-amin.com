@@ -49,4 +49,8 @@
      <!-- Top Artwork/Project Start -->
      @include('frontend.projects')
      <!-- Top Artwork/Project End -->
+
+     <!-- About Start -->
+     @include('frontend.about')
+     <!-- About End -->
  @endsection

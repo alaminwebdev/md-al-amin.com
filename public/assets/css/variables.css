@@ -152,6 +152,10 @@
 
         /* Transition Common For All  */
         --nft-body-transition: all .3s ease-in-out;
+
+        --hue: 223;
+        --trans-dur: 0.3s;
+        --trans-timing: cubic-bezier(0.65, 0, 0.35, 1);
 }
 
 .dark {

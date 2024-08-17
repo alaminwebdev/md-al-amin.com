@@ -152,21 +152,28 @@
             --primary: hsl(var(--hue), 90%, 70%);
         }
     }
+
+    .small-title {
+        font-size: var(--h5-size);
+        background: var(--nft-amazing-title-bg);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
 </style>
 <svg display="none">
     <symbol id="arrow">
-        <polyline points="7 10,12 15,17 10" fill="none" stroke="#6c757d" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+        <polyline points="7 10,12 15,17 10" fill="none" stroke="#6c757d" stroke-linecap="round" stroke-linejoin="round"
+            stroke-width="2" />
     </symbol>
 </svg>
 
-<div id="timeline" class="timeline education-experience">
-    <div class="heading mb-3 d-flex justify-content-between align-items-center">
-        <h4 class="">Education & Experience</h4>
-        <div class="btn-group btn-group-sm" role="group" aria-label="Basic outlined example">
-            <button type="button" class="btn btn-outline-secondary" data-action="expand">Expand All</button>
-            <button type="button" class="btn btn-outline-secondary" data-action="collapse">Collapse All</button>
-        </div>
+<div id="timeline" class="timeline">
+
+    <div class="amazing-art-title" style="max-width: 100%;">
+        <h4 class="small-title lh-base  text-lg-start text-sm-center d-inline-block">Education & Experience</h4>
     </div>
+
 
     @php
         $index = 0;
@@ -174,8 +181,10 @@
 
     @foreach ($experiences as $experience)
         <div class="timeline__item">
-            <div class="timeline__item-header">
-                <button class="timeline__arrow" type="button" id="item{{ $index + 1 }}" aria-labelledby="item{{ $index + 1 }}-name" aria-expanded="{{ $index < 3 ? 'true' : 'false' }}" aria-controls="item{{ $index + 1 }}-ctrld" aria-haspopup="true" data-item="{{ $index + 1 }}">
+            <div class="timeline__item-header ">
+                <button class="timeline__arrow" type="button" id="item{{ $index + 1 }}"
+                    aria-labelledby="item{{ $index + 1 }}-name" aria-expanded="{{ $index < 3 ? 'true' : 'false' }}"
+                    aria-controls="item{{ $index + 1 }}-ctrld" aria-haspopup="true" data-item="{{ $index + 1 }}">
                     <svg class="timeline__arrow-icon" viewBox="0 0 24 24" width="24px" height="24px">
                         <use href="#arrow" />
                     </svg>
@@ -183,16 +192,20 @@
                 <span class="timeline__dot"></span>
                 <span id="item{{ $index + 1 }}-name" class="timeline__meta">
                     <time class="timeline__date" datetime="1970-01-01">
-                        {{ $experience['start_date'] }} - {{ $experience['end_date'] == null ? 'Current' : $experience['end_date'] }}
-                        <span class="badge text-bg-info text-white" style="line-height: 1.3;">{{ $experience['company'] }}</span>
+                        {{ $experience['start_date'] }} -
+                        {{ $experience['end_date'] == null ? 'Current' : $experience['end_date'] }}
+                        <span class="badge text-bg-info text-white"
+                            style="line-height: 1.3;">{{ $experience['company'] }}</span>
                     </time>
                     <br>
-                    <strong class="timeline__title">{{ $experience['designation'] }}</strong>
+                    <strong class="timeline__title p fw-semibold feature-name">{{ $experience['designation'] }}</strong>
                 </span>
             </div>
-            <div class="timeline__item-body {{ $index < 3 ? 'timeline__item-body--expanded' : '' }}" id="item{{ $index + 1 }}-ctrld" role="region" aria-labelledby="item{{ $index + 1 }}" aria-hidden="{{ $index < 3 ? 'false' : 'true' }}">
+            <div class="timeline__item-body {{ $index < 3 ? 'timeline__item-body--expanded' : '' }}"
+                id="item{{ $index + 1 }}-ctrld" role="region" aria-labelledby="item{{ $index + 1 }}"
+                aria-hidden="{{ $index < 3 ? 'false' : 'true' }}">
                 <div class="timeline__item-body-content px-3">
-                    <div class="timeline__item-p"> {!! $experience['responsibilites'] !!} </div>
+                    <div class="timeline__item-p p sm fw-normal mb-0 feature-info"> {!! $experience['responsibilites'] !!} </div>
                 </div>
             </div>
         </div>
@@ -204,7 +217,10 @@
     @foreach ($educations as $education)
         <div class="timeline__item">
             <div class="timeline__item-header">
-                <button class="timeline__arrow" type="button" id="item{{ $index + 1 }}" aria-labelledby="item{{ $index + 1 }}-name" aria-expanded="{{ $index < 3 ? 'true' : 'false' }}" aria-controls="item{{ $index + 1 }}-ctrld" aria-haspopup="true" data-item="{{ $index + 1 }}">
+                <button class="timeline__arrow" type="button" id="item{{ $index + 1 }}"
+                    aria-labelledby="item{{ $index + 1 }}-name" aria-expanded="{{ $index < 3 ? 'true' : 'false' }}"
+                    aria-controls="item{{ $index + 1 }}-ctrld" aria-haspopup="true"
+                    data-item="{{ $index + 1 }}">
                     <svg class="timeline__arrow-icon" viewBox="0 0 24 24" width="24px" height="24px">
                         <use href="#arrow" />
                     </svg>
@@ -213,13 +229,16 @@
                 <span id="item{{ $index + 1 }}-name" class="timeline__meta">
                     <time class="timeline__date" datetime="1970-01-01">
                         {{ $education['session'] }}
-                        <span class="badge text-bg-info text-white" style="line-height: 1.3;">{{ $education['type'] }}</span>
+                        <span class="badge text-bg-info text-white"
+                            style="line-height: 1.3;">{{ $education['type'] }}</span>
                     </time>
                     <br>
                     <strong class="timeline__title">{{ $education['degree'] }}</strong>
                 </span>
             </div>
-            <div class="timeline__item-body {{ $index < 3 ? 'timeline__item-body--expanded' : '' }}" id="item{{ $index + 1 }}-ctrld" role="region" aria-labelledby="item{{ $index + 1 }}" aria-hidden="{{ $index < 3 ? 'false' : 'true' }}">
+            <div class="timeline__item-body {{ $index < 3 ? 'timeline__item-body--expanded' : '' }}"
+                id="item{{ $index + 1 }}-ctrld" role="region" aria-labelledby="item{{ $index + 1 }}"
+                aria-hidden="{{ $index < 3 ? 'false' : 'true' }}">
                 <div class="timeline__item-body-content px-3">
                     <div class="timeline__item-p">
                         <ul>
