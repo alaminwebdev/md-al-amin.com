@@ -18,6 +18,7 @@ class FrontController extends Controller
         $data['socials']        = AboutMe::SOCIAL;
         $data['skills']         = AboutMe::SKILL;
         $data['skill_icons']    = AboutMe::SKILL_ICON;
+        $data['projects']       = Project::with('images')->where('status', 1)->orderBy('sort', 'asc')->get();
         return view('frontend.dashboard', $data);
     }
     public function resume()

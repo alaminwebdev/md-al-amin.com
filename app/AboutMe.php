@@ -66,8 +66,8 @@ class AboutMe
     ];
 
     const BIO = [
-        'title'     => "Hi There! Welcome to My Professional World",
-        'short_bio' => "I'm Md. Al Amin, a skilled full-stack web developer specializing in creating dynamic and user-friendly web applications.",
+        'title'     => "Explore the World of Md Alamin",
+        'short_bio' => "Dedicated software engineer based in Dhaka, creating dynamic and user-friendly applications that drive innovation.",
         'long_bio'  => "I'm Md. Al Amin, a full-stack developer with over a year of experience. I excel in crafting seamless web experiences using Laravel for robust back-end development and JavaScript for dynamic front-end interfaces. Proficient in MySQL, Git, and CSS. Skilled in AJAX for dynamic web interactions, dedicated to delivering polished applications with smooth user experiences.",
     ];
 

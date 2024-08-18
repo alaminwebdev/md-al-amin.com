@@ -1,0 +1,1377 @@
+/* Website Responsive CSS Start */
+/* Container CSS start */
+@media (min-width: 1280px) {
+  :root {
+    --nft-container: 1200px;
+  }
+}
+
+@media (min-width: 1366px) {
+  :root {
+    --nft-container: 1300px;
+  }
+}
+
+@media (min-width: 1600px) {
+  :root {
+    --nft-container: 1500px;
+  }
+}
+
+@media (min-width: 1800px) {
+  :root {
+    --nft-container: 1600px;
+  }
+}
+
+/* Container CSS End */
+
+@media (max-width: 1799px) {
+  :root {
+    --h5-sm-size: 25px;
+  }
+
+  html {
+    font-size: 9px;
+  }
+
+  .hero-explore-left-star-line {
+    left: 2%;
+  }
+}
+
+@media (max-width: 1599px) {
+  :root {
+    --h6-size: 24px;
+    --p-xl-size: 22px;
+    --h6-small-size: 20px;
+    --p-lg-size: 18px;
+    --p-sm-size: 17px;
+    --nft-header-height: 80px;
+  }
+
+  html {
+    font-size: 8px;
+  }
+
+  .top-seller-name {
+    font-size: 22px;
+  }
+
+  .live-auction-card-data {
+    padding: 3.8rem 21px 16px;
+  }
+
+  .live-auction-card-title {
+    font-size: 20px;
+  }
+
+  .live-auction-bid {
+    margin-top: 10px;
+  }
+
+  .top-artwork-swiper-btn-card {
+    margin-top: 20px;
+  }
+
+  .top-artwork-heading1 {
+    margin: 0 30px 24px 0;
+  }
+
+  .top-artwork-price {
+    padding: 13px 19px;
+  }
+
+  .explore-products-right-side-wrapper {
+    padding-left: 25px;
+  }
+
+  .nft-link-arrow {
+    width: 22px;
+    height: 14px;
+  }
+
+  .subscribe-title .small-title {
+    font-size: 4rem;
+  }
+
+  .hero-explore-left-star-line {
+    left: 1%;
+  }
+
+  .activity-left-wrapper {
+    padding-right: 25px;
+  }
+
+  .nav-list .nav-list-dropdown{
+    top:calc(var(--nft-header-height) - 1.4rem);
+  }
+}
+
+@media (max-width: 1439px) {
+  :root {
+    --h6-size: 22px;
+    --p-xl-size: 20px;
+    --h6-small-size: 18px;
+    --p-lg-size: 17px;
+    --p-sm-size: 14px;
+  }
+
+  .top-artwork-name {
+    margin-bottom: 12px;
+  }
+
+  .top-seller-name {
+    font-size: 21px;
+  }
+
+  .live-auction-card-title {
+    font-size: 20px;
+  }
+
+  .top-seller-name {
+    font-size: 20px;
+  }
+
+  .live-auction-card-title {
+    font-size: 19px;
+  }
+
+  .nav-card-collection-bottom-wrapper .verify-tick {
+    bottom: -3px;
+    right: -7px;
+  }
+
+  .hero-explore-left-star-line {
+    top: 10%;
+    left: 1%;
+  }
+
+  .explore-hero-banner-title {
+    font-size: 5.2rem;
+  }
+
+  .explore-products-search-icon {
+    width: 20px;
+    height: 20px;
+  }
+
+  .explore-products-product-wrapper {
+    gap: 25px;
+  }
+
+  .explore-product-image-card .live-auction-card-title {
+    font-size: 17px;
+  }
+}
+
+@media (max-width: 1365px) {
+  :root {
+    --h5-sm-size: 20px;
+    --p-xs-size: 15px;
+  }
+
+  html {
+    font-size: 7.5px;
+  }
+
+  .footer-wrapper {
+    gap: 8rem;
+  }
+
+  .top-seller-card {
+    padding: 16px 20px;
+    gap: 10px;
+  }
+
+  .live-auction-swiper-card::before {
+    right: 0;
+  }
+
+  .hero-wrapper-circle {
+    width: 90px;
+    height: 90px;
+  }
+
+  .explore-product-image-card .live-auction-card-title {
+    font-size: 16px;
+  }
+
+  .explore-product-image-card .live-auction-bid {
+    margin-top: 9px;
+  }
+
+  .explore-products-product-wrapper {
+    gap: 15px;
+  }
+
+  .live-auction-card-data {
+    background-image: radial-gradient(circle at 17.5% calc(0% - 25px),
+        transparent 42px,
+        rgba(var(--nft-rgb-black), 0.3) 0);
+  }
+
+  .live-auction-avatar-card {
+    left: 17.5%;
+  }
+}
+
+@media (max-width: 1279px) {
+
+  .feature-icon {
+    margin-bottom: 20px;
+  }
+
+  .amazing-art-features-wrapper {
+    padding-left: 4.8rem;
+  }
+
+  .top-right-diamond-img {
+    transform: translate(4px, -3.5rem);
+    -webkit-transform: translate(4px, -3.5rem);
+    -moz-transform: translate(4px, -3.5rem);
+    -ms-transform: translate(4px, -3.5rem);
+    -o-transform: translate(4px, -3.5rem);
+  }
+
+  .subscribe-content-wrapper {
+    --content-max-width: 72rem;
+  }
+
+  .subscribe-bottom-left-diamond-img {
+    bottom: 95%;
+    left: 0%;
+  }
+
+  .nft-guide-wrapper {
+    grid-gap: 8rem 2.3rem;
+  }
+
+  .nft-guide {
+    padding: 8.7rem 3rem 4rem 3rem;
+  }
+
+  .nft-link-arrow {
+    width: 16px;
+  }
+
+}
+
+@media (min-width: 1200px) {
+  .top-artwork-swiper-btn-card {
+    margin-top: 28px;
+  }
+
+  .author-profile-left-wrapper,
+  .profile-bottom-left-wrapper {
+    gap: 4rem;
+    margin-top: -30rem;
+    flex-direction: column;
+  }
+
+  .profile-bottom-wrapper {
+    margin-left: 6rem;
+  }
+
+  .author-profile-top-wrapper,
+  .profile-top-wrapper,
+  .profile-bottom-wrapper {
+    gap: 7.2rem;
+    grid-template-columns: 1fr 112.1rem;
+  }
+
+  .position-xl-sticky{
+    position: sticky;
+  }
+
+  .desktop-sticky-top-big{
+    top: calc(var(--nft-header-height) + 20px);
+  }
+}
+
+@media (max-width: 1199px) {
+  html {
+    font-size: 7px;
+  }
+
+  :root{
+    --nft-section-big-spacing: 10rem;
+    --nft-section-spacing: 8rem;
+  }
+
+  .connect-wallet-button {
+    border-radius: 50%;
+    min-width: unset;
+    min-height: unset;
+    width: 5rem;
+    height: 5rem;
+    min-width: 35px;
+    min-height: 35px;
+    padding: 2rem;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+  }
+
+  .connect-wallet-button i {
+    margin-left: 0;
+  }
+
+  .hero h1 {
+    font-size: 5.5rem;
+  }
+
+  .footer-logo-wrapper {
+    grid-column: 1/4;
+  }
+
+  .footer-wrapper {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .top-artwork-wrapper {
+    flex-direction: column;
+  }
+
+  .top-artwork-left-card {
+    max-width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding-right: 0;
+  }
+
+  .top-artwork-swiper-card {
+    width: 100%;
+  }
+
+  .top-seller-name {
+    font-size: 19px;
+  }
+
+  .live-auction-card-title {
+    font-size: 18px;
+  }
+
+  .top-seller-name {
+    font-size: 18px;
+  }
+
+  .live-auction-clock-card {
+    justify-content: center;
+  }
+
+  header {
+    backdrop-filter: unset;
+  }
+
+  .header-scrolled {
+    background-color: var(--nft-body);
+  }
+
+  .navbar {
+    width: 50%;
+    position: fixed;
+    flex-direction: column;
+    top: 0;
+    right: 0;
+    padding: 3rem;
+    align-items: center;
+    height: 100%;
+    background: var(--nft-body);
+    transform: translate(100%);
+    transition: all 0.3s ease-in-out;
+    -webkit-transform: translate(100%);
+    -moz-transform: translate(100%);
+    -ms-transform: translate(100%);
+    -o-transform: translate(100%);
+  }
+
+  .navbar-box-shadow {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(0 0 0 / 60%);
+    transition: all .15s linear;
+    -webkit-transition: all .15s linear;
+    -moz-transition: all .15s linear;
+    -ms-transition: all .15s linear;
+    -o-transition: all .15s linear;
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  .show-menu .navbar-box-shadow {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .nav-list .nav-list-dropdown {
+    min-width: 250px;
+  }
+
+  .live-auction-card:hover .live-auction-place-bid-card {
+    top: 40%;
+  }
+
+  .show-menu .navbar {
+    transform: translate(0);
+    transition: all 0.3s ease-in-out;
+    overflow-y: auto;
+    -webkit-transform: translate(0);
+    -moz-transform: translate(0);
+    -ms-transform: translate(0);
+    -o-transform: translate(0);
+  }
+
+  .nav-list-wrapper {
+    gap: 6rem;
+    margin: auto 0;
+    padding: 60px 0;
+  }
+
+  .nav-list .nav-links {
+    padding: 0 10px;
+    text-align: left;
+  }
+
+  .start-line-container {
+    display: none;
+  }
+
+  .nav-collection-wrapper {
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 3rem;
+  }
+
+  .nav-card-collection-bottom-wrapper {
+    grid-template-columns: 1fr;
+    grid-gap: 10px;
+  }
+
+  .nav-creators-card-wrapper {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+  }
+
+  .explore-products-left-side-wrapper {
+    position: fixed;
+    left: 0;
+    top: 0;
+    transform: translateX(-101%);
+    background-color: var(--nft-toggle-menu-bg);
+    padding: 11rem 20px 20px;
+    height: 100vh;
+    width: 40%;
+    overflow: auto;
+    z-index: 999;
+    -webkit-transform: translateX(-101%);
+    -moz-transform: translateX(-101%);
+    -ms-transform: translateX(-101%);
+    -o-transform: translateX(-101%);
+  }
+
+  .explore-product-filter-wrapper {
+    max-height: none;
+    height: 100%;
+    overflow: unset;
+  }
+
+  .explore-products-left-side-wrapper.menu-open {
+    transform: translateX(0%);
+    box-shadow: 0px 24px 44px 0px rgba(0, 0, 0, 0.5);
+    -webkit-transform: translateX(0%);
+    -moz-transform: translateX(0%);
+    -ms-transform: translateX(0%);
+    -o-transform: translateX(0%);
+  }
+
+  .explore-product-toggle-menu-open,
+  .explore-product-toggle-menu-close {
+    background: var(--nft-theme-gradient-bg);
+    border-radius: 50%;
+    padding: 10px;
+    width: 40px;
+    height: 40px;
+    border: 1px solid transparent;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+  }
+
+  .explore-products-left-side-wrapper .header-logo-wrapper {
+    top: 10px;
+  }
+
+  .explore-product-toggle-menu-close {
+    top: 20px;
+    right: 20px;
+  }
+
+  .range-display-box {
+    padding: 8px 12px;
+    gap: 10px
+  }
+
+  .explore-product-toggle-icon {
+    color: var(--nft-white);
+    width: 18px;
+    height: 18px;
+  }
+
+  .explore-product-result-text {
+    padding-left: 15px;
+  }
+
+  .explore-products-right-side-wrapper {
+    padding-left: 0px;
+  }
+
+  .explore-product-image-card .live-auction-price-card {
+    flex-direction: unset;
+  }
+
+  .custom-dropdown-card .btn {
+    padding: 10px 18px;
+  }
+
+  .amazing-art-content-wrapper {
+    flex-direction: column;
+  }
+
+  .amazing-art-title {
+    max-width: 100%;
+    padding-bottom: 5rem;
+  }
+
+  .amazing-art-features-wrapper {
+    max-width: 100%;
+    padding-left: 0;
+  }
+
+  .nft-guide-wrapper {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .create-star-effect-wrapper {
+    left: 12%;
+  }
+
+  .top-right-diamond-img {
+    transform: translate(-6px, -2.5rem);
+    -webkit-transform: translate(-6px, -2.5rem);
+    -moz-transform: translate(-6px, -2.5rem);
+    -ms-transform: translate(-6px, -2.5rem);
+    -o-transform: translate(-6px, -2.5rem);
+  }
+
+  .top-right-secondary-img {
+    transform: translate(-1.2rem, 9.4rem);
+    -webkit-transform: translate(-1.2rem, 9.4rem);
+    -moz-transform: translate(-1.2rem, 9.4rem);
+    -ms-transform: translate(-1.2rem, 9.4rem);
+    -o-transform: translate(-1.2rem, 9.4rem);
+  }
+
+  .subscribe-update-info {
+    padding-left: 0;
+  }
+
+  .subscribe-title,
+  .subscribe-update-info {
+    max-width: 100%;
+  }
+
+  .subscribe-title {
+    margin-bottom: 3rem;
+  }
+
+  .subscribe-title h3 {
+    font-size: 4rem;
+  }
+
+  .subscribe-update-info p {
+    font-size: 20px;
+  }
+
+  .top-right-diamond-img {
+    transform: translate(4px, -3.5rem);
+    -webkit-transform: translate(4px, -3.5rem);
+    -moz-transform: translate(4px, -3.5rem);
+    -ms-transform: translate(4px, -3.5rem);
+    -o-transform: translate(4px, -3.5rem);
+  }
+
+  .subscribe-title-info {
+    flex-direction: column;
+  }
+
+  .subscribe-content-wrapper {
+    padding-left: 8rem;
+  }
+
+  .subscribe-title-info {
+    margin-bottom: 4.5rem;
+  }
+
+  .profile-bottom-wrapper {
+    gap: 7.2rem;
+    grid-template-columns: minmax(32rem, 1fr);
+  }
+
+  .author-profile-bottom-left-img-wrapper,
+  .profile-bottom-left-img-wrapper {
+    max-width: 50rem;
+    margin-right: 5rem;
+  }
+
+  .author-profile-top-wrapper,
+  .profile-top-wrapper {
+    padding: 20px;
+  }
+
+  .activity-section .explore-products-left-side-wrapper {
+    right: 0;
+    left: unset;
+    bottom: 0;
+    transform: translateX(100%);
+    -webkit-transform: translateX(100%);
+    -moz-transform: translateX(100%);
+    -ms-transform: translateX(100%);
+    -o-transform: translateX(100%);
+  }
+
+  .activity-section .explore-products-left-side-wrapper.menu-open {
+    transform: translateX(0);
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    -o-transform: translateX(0);
+  }
+
+  .activity-left-wrapper {
+    padding-right: 0;
+  }
+
+  .all-activity-card {
+    gap: 15px;
+  }
+
+  .contact-details-card .all-activity-icon-card {
+    width: 30px;
+    height: 30px;
+  }
+
+  .recent-post-detail-info {
+    max-width: 100%;
+  }
+
+  .explore-recent-post {
+    flex-direction: column;
+  }
+
+  .recent-post-detail-info {
+    max-width: 100%;
+  }
+
+  .edit-profile-top-section {
+    display: none;
+  }
+
+  .secondary-input,
+  .custom-selection .nice-select {
+    border-radius: 10px;
+  }
+
+  .social-icons-link {
+    --social-icons-link-sizing: 40px;
+  }
+
+  .social-icons {
+    --icon-sizing: 20px;
+  }
+
+  .coming-soon-header .social-icons-list-wrapper {
+    grid-gap: 10px;
+  }
+
+  .explore-product-results-card{
+    background-color: var(--nft-body);
+    position: sticky;
+    top: calc(var(--nft-header-height) + 0px);
+    z-index: 99;
+    padding: 10px;
+  }
+
+  .light .explore-product-results-card{
+    background-color: var(--nft-explore-product-results-card-color);
+  }
+
+}
+
+@media (min-width: 991px) {
+  .create-item-card-wrapper {
+    padding-left: 4rem;
+    top: 10rem;
+    position: sticky;
+  }
+}
+
+@media (max-width: 991px) {
+  :root {
+    --h5-sm-size: 18px;
+    --nft-section-big-spacing: 7rem;
+    --nft-section-spacing: 5rem;
+  }
+
+  html {
+    font-size: 6px;
+  }
+
+  .hero-flex {
+    flex-direction: column;
+  }
+
+  .hero-about {
+    max-width: 60%;
+  }
+
+  .hero-left {
+    order: 2;
+    padding-top: 7rem;
+  }
+
+  .hero-right {
+    order: 1;
+    max-width: 100%;
+    min-height: auto;
+  }
+
+  .hero-col {
+    max-width: 60%;
+  }
+
+  .live-auction-swiper-card-wrapper::after {
+    left: 50%;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+  }
+
+  .hero-start-line-right {
+    left: 85%;
+  }
+
+  .hero-gradient-right-top {
+    width: 60%;
+  }
+
+  .hero-wrapper-circle {
+    left: 20%;
+  }
+
+  .nav-card-collection-bottom-avatar {
+    width: 40px;
+    height: 40px;
+  }
+
+  .verify-tick {
+    width: 15px;
+    height: 15px;
+  }
+
+  .explore-products-product-wrapper {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .explore-product-pagination-arrow {
+    width: 20px;
+    height: 20px;
+  }
+
+  .feature-icon {
+    width: 25px;
+    height: 25px;
+    margin-bottom: 14px;
+  }
+
+  .nft-guide-wrapper {
+    grid-gap: 10rem 4.3rem;
+  }
+
+  .create-star-effect-wrapper {
+    top: -5%;
+    left: 5%;
+  }
+
+  .subscribe-content-wrapper {
+    --content-max-width: 100%;
+  }
+
+  .subscribe-update-info {
+    max-width: 100%;
+    padding-left: 0;
+  }
+
+  .subscribe-title-info {
+    flex-direction: column;
+  }
+
+  .subscribe-update-wrapper {
+    flex-direction: column;
+  }
+
+  .subscribe-content-wrapper {
+    max-width: 100%;
+    padding-left: 0;
+    padding-top: 7rem;
+  }
+
+  .breadcrumb-link-text {
+    font-size: 18px;
+  }
+
+  .explore-hero-wrapper {
+    padding-bottom: 10rem;
+  }
+
+  .light .explore-hero-wrapper{
+    padding: 20rem 0 10rem;
+  }
+  
+  .light .explore-hero-section{
+    min-height: 40rem;
+  }
+
+  .all-activity-icon-card {
+    width: 35px;
+    height: 35px;
+  }
+
+  .activity-title-card {
+    margin-bottom: 15px;
+  }
+
+  .drop-up-message-title {
+    margin-bottom: 18px;
+  }
+
+  .drop-up-message-wrapper {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .drop-up-message-contact-wrapper {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .drop-up-input {
+    margin-bottom: 18px;
+  }
+
+  .explore-blog-search-wrapper {
+    padding-left: 0;
+    padding-top: 5.8rem;
+    --nft-post-img-width: 19.2rem;
+  }
+
+  .explore-recent-post {
+    flex-direction: row;
+  }
+
+  .create-item-card-wrapper {
+    padding-top: 8rem;
+    max-width: 50%;
+    margin-inline: auto;
+  }
+
+  .connect-wallet-modal-wrapper.modal {
+    --bs-modal-width: 530px;
+  }
+
+  .secondary-input,
+  .custom-input,
+  .custom-selection .nice-select {
+    min-height: 45px;
+  }
+}
+
+@media (max-width: 767px) {
+  :root {
+    --h6-size: 20px;
+    --p-xl-size: 18px;
+    --h6-small-size: 16px;
+    --p-lg-size: 15px;
+  }
+
+  .start-line-container {
+    display: none;
+  }
+
+  .top-artwork-arrow svg {
+    width: 12px;
+    height: 13px;
+  }
+
+  .live-auction-card-title {
+    font-size: 16px;
+  }
+
+  .swiper-custom-arrow-btn span {
+    width: 20px;
+    height: 20px;
+  }
+
+  .hero-col {
+    max-width: 75%;
+  }
+
+  .hero-wrapper-circle {
+    left: 15%;
+  }
+
+  .footer-logo-wrapper {
+    grid-column: 1/2;
+  }
+
+  .footer-wrapper {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .footer-contactus-wrapper {
+    grid-area: 2;
+  }
+
+  .hero-gradient-right-top {
+    width: 80%;
+  }
+
+  .hero-left p.h6.small {
+    font-size: var(--p-sm-size);
+  }
+
+  .navbar {
+    width: 80%;
+  }
+
+  .nav-creators-card-wrapper {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .place-bid-modal-wrapper .modal-content {
+    max-width: 95%;
+  }
+
+  .explore-products-left-side-wrapper {
+    width: 70%;
+  }
+
+  .explore-product-toggle-menu-open,
+  .explore-product-toggle-menu-close {
+    width: 35px;
+    height: 35px;
+  }
+
+  .explore-product-toggle-icon {
+    width: 15px;
+    height: 15px;
+  }
+
+  .explore-dropdown-btn-icon {
+    width: 12px;
+    height: 12px;
+  }
+
+  .pagination-wrapper .page-link {
+    width: 35px;
+    height: 35px;
+  }
+
+  .amazing-art-features-wrapper {
+    flex-direction: column;
+  }
+
+  .feature-icon {
+    margin-bottom: 8px;
+  }
+
+  .amazing-art-specification:not(:last-child) {
+    border-right: 0;
+    padding-right: 0;
+    border-bottom: 1px solid var(--nft-vr-color);
+    padding-bottom: var(--amazing-specification-spacing);
+  }
+
+  .amazing-art-specification:last-child {
+    padding-left: 0;
+    padding-top: var(--amazing-specification-spacing);
+  }
+
+  .nft-guide-wrapper {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .create-star-effect-wrapper {
+    top: -3%;
+    left: 0;
+  }
+
+  .input-subscribe-btn-wrapper {
+    flex-direction: column;
+  }
+
+  .custom-btn,
+  .subscribe-btn {
+    min-height: 51px;
+  }
+
+  .subscribe-btn {
+    width: 100%;
+  }
+
+  .subscribe-bottom-left-diamond-img {
+    display: none;
+  }
+
+  .place-bid-info {
+    padding-left: 0;
+    padding-top: 6.6rem;
+  }
+
+  .collection-ranking-tabing-title-tabContent .nav-tabs-button-wrapper {
+    flex-direction: column;
+    gap: 20px;
+    border-bottom: 0;
+  }
+
+  .author-profile-left-wrapper,
+  .profile-bottom-left-wrapper {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .profile-bottom-left-img-wrapper {
+    max-height: unset;
+    margin-right: 0;
+  }
+
+  .all-activity-edited-details {
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .explore-detail-info {
+    padding-left: 0;
+    padding-top: 4.2rem;
+  }
+
+  .create-nft-input-wrapper {
+    flex-direction: column;
+  }
+
+  .setting-info-wrapper {
+    padding-left: 0;
+    padding-top: 6.4rem;
+  }
+
+  .setting-img-wrapper .profile-bottom-left-img-wrapper {
+    margin-inline: auto;
+  }
+
+  .collected-wrapper {
+    position: static;
+    margin-top: 3rem;
+    transform: unset;
+    -webkit-transform: unset;
+    -moz-transform: unset;
+    -ms-transform: unset;
+    -o-transform: unset;
+  }
+
+  .edit-profile-bottom-section .profile-bottom-wrapper {
+    flex-direction: column;
+  }
+
+  .profile-info {
+    padding-left: 0;
+    padding-top: 6.4rem;
+  }
+
+  .edit-profile-bottom-section .profile-bottom-left-wrapper {
+    max-width: 50%;
+    margin-inline: auto;
+  }
+
+  .create-item-card-wrapper {
+    max-width: 70%;
+  }
+
+  .coming-soon-main-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 0;
+  }
+
+  .img-wrapper {
+    display: none;
+  }
+
+}
+
+@media (max-width: 575px) {
+  :root {
+    --h1-big-size: 5rem;
+    --h3-size: 4rem;
+    --h5-sm-size: 16px;
+  }
+
+  .hero-about {
+    margin: 0;
+  }
+
+  .hero-cartoon-flex {
+    width: 100%;
+    height: 100%;
+  }
+
+  .hero-about {
+    max-width: 100%;
+  }
+
+  .hero-col {
+    max-width: 90%;
+  }
+
+  .hero h1 {
+    font-size: 4rem;
+  }
+
+  .top-artwork-title {
+    font-size: 5rem;
+  }
+
+  .footer-wrapper {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 5rem;
+  }
+
+  .footer-contactus-wrapper {
+    grid-area: 4;
+  }
+
+  .nav-creators-card-wrapper {
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 3rem;
+  }
+
+  .explore-products-product-wrapper {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .explore-product-results-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .explore-hero-banner-title {
+    font-size: 4.8rem;
+  }
+
+  .nft-guide-wrapper {
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 11rem 4.3rem;
+  }
+
+  .top-left-diamond-img {
+    top: 5%;
+  }
+
+  .guide-description {
+    font-size: 15px !important;
+  }
+
+  .amazing-art-content-wrapper {
+    padding: 4rem;
+  }
+
+  .create-star-effect-wrapper {
+    top: -1%;
+  }
+
+  .subscribe-update-wrapper {
+    padding: 4rem;
+  }
+
+  .subscribe-update-info p {
+    font-size: 15px;
+  }
+
+  .feature-info {
+    margin-top: 2px;
+  }
+
+  .collection-stats .table thead tr th,
+  .collection-stats .table tbody tr td {
+    min-width: 120px;
+  }
+
+  .time-filter-wrapper {
+    gap: 2.5rem;
+    padding: 8px 10px;
+  }
+
+  .author-profile-top-wrapper,
+  .profile-top-wrapper {
+    border-radius: 10px;
+  }
+
+  .preview-item-wrapper {
+    padding: 2rem;
+  }
+
+  .drop-up-message-contact-wrapper {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .date-input-wrapper {
+    flex-direction: column;
+  }
+
+  .custom-dropdown-card {
+    margin-top: 10px;
+  }
+
+  .edit-input-group {
+    flex-direction: column;
+  }
+
+  .edit-profile-bottom-section .profile-bottom-left-wrapper {
+    max-width: 100%;
+    margin-inline: auto;
+  }
+
+  .upload-profile {
+    width: 100%;
+  }
+
+  .create-item-card-wrapper {
+    max-width: 100%;
+  }
+
+  .nav-collection-wrapper {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+}
+
+@media (max-width: 480px) {
+  .top-artwork-section::before {
+    display: none;
+  }
+
+  .top-artwork-swiper-card::before {
+    display: none;
+  }
+
+  .live-auction-swiper-card::after {
+    display: none;
+  }
+
+  .hero-col {
+    max-width: 100%;
+  }
+
+  .subscribe-title .small-title {
+    font-size: 3rem;
+  }
+
+  .bid-info-footer-wrapper {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .item-owner-info {
+    max-width: 100%;
+  }
+
+  .item-owner-info:not(:last-child) {
+    border-right: none;
+    border-bottom: 1px solid var(--nft-creator-section-between-border);
+    padding-bottom: 4rem;
+  }
+
+  .breadcrumb-list {
+    flex-direction: column;
+  }
+
+  .breadcrumb-wrapper {
+    margin-top: 9px;
+  }
+
+  .live-auction-card:hover .live-auction-place-bid-card {
+    top: 25%;
+  }
+
+  .explore-products-left-side-wrapper {
+    width: 100%;
+  }
+
+  .all-activity-card {
+    flex-direction: column;
+  }
+
+  .activity-section .header-logo-wrapper {
+    display: flex;
+  }
+
+  .wallet-grid-wrapper {
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+  }
+}
+
+@media (max-width: 399px) {
+  :root {
+    --p-sm-size: 14px;
+  }
+
+  .live-auction-card-title {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 349px) {
+  :root {
+    --h1-big-size: 4rem;
+    --h3-size: 3rem;
+  }
+
+  .top-artwork-title {
+    font-size: 4rem;
+  }
+
+  .navbar {
+    width: 100%;
+  }
+
+  .explore-recent-post {
+    flex-direction: column;
+  }
+  .author-profile-top-wrapper,
+  .profile-top-wrapper {
+    padding: 8px;
+  }
+
+  .nft-collected-profile{
+    gap: 8px;
+  }
+  .creator-avatar-wrapper{
+    min-width: 30px;
+    min-height: 30px;
+  }
+}
+
+/* Website Responsive CSS End */
