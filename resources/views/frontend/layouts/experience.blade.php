@@ -1,45 +1,10 @@
 <style>
-    .education-experience h4 {
-        font-size: 34px;
-        line-height: 1;
-        text-align: left;
-        font-weight: bold;
-        text-transform: capitalize;
-        color: #021123;
-        letter-spacing: -2px;
-
-    }
-
-    .timeline__arrow {
-        background-color: transparent;
-        border-radius: 50%;
-        cursor: pointer;
-        flex-shrink: 0;
-        margin-inline-end: 0.25em;
-        outline: transparent;
-        width: 2em;
-        height: 2em;
-        transition: background-color calc(var(--trans-dur) / 2) linear,
-            color var(--trans-dur);
-        -webkit-appearance: none;
-        appearance: none;
-        -webkit-tap-highlight-color: transparent;
-        border-width: 2px;
-        border-color: #6c757d;
-    }
-
-    .timeline__arrow:focus-visible,
-    .timeline__arrow:hover {
-        background-color: hsl(var(--hue), 10%, 50%, 0.4);
-    }
 
     .timeline__arrow-icon {
         display: block;
         pointer-events: none;
         transform: rotate(-90deg);
         transition: transform var(--trans-dur) var(--trans-timing);
-        width: 100%;
-        height: auto;
     }
 
     .timeline__date {
@@ -48,7 +13,7 @@
     }
 
     .timeline__dot {
-        background-color: currentColor;
+        background: linear-gradient(to right, var(--nft-violet-glow), var(--nft-blue-violet), var(--nft-blue-violet), var(--nft-violet-glow)) repeat;
         border-radius: 50%;
         display: inline-block;
         flex-shrink: 0;
@@ -64,16 +29,29 @@
         padding-bottom: 2.25em;
     }
 
+
     .timeline__item:not(:last-child):before {
-        background-color: currentColor;
+        background: linear-gradient(to right, var(--nft-violet-glow), var(--nft-blue-violet), var(--nft-blue-violet), var(--nft-violet-glow)) repeat;
         content: "";
         display: block;
         position: absolute;
         top: 1em;
-        left: 2.625em;
+        left: 7%;
         width: 0.125em;
         height: 100%;
         transform: translateX(-50%);
+    }
+    
+    .timeline__item:not(:last-child):after{
+        background: linear-gradient(to right, var(--nft-violet-glow), var(--nft-blue-violet), var(--nft-blue-violet), var(--nft-violet-glow)) repeat;
+        border-radius: 50%;
+        display: inline-block;
+        flex-shrink: 0;
+        margin: 0.625em 0;
+        margin-inline-end: 1em;
+        position: relative;
+        width: 0.75em;
+        height: 0.75em;
     }
 
     [dir="rtl"] .timeline__arrow-icon {
@@ -94,7 +72,7 @@
         border-radius: 0.375em;
         overflow: hidden;
         margin-top: 0.5em;
-        margin-inline-start: 4em;
+        margin-inline-start: 6em;
         height: 0;
     }
 
@@ -182,14 +160,25 @@
     @foreach ($experiences as $experience)
         <div class="timeline__item">
             <div class="timeline__item-header ">
-                <button class="timeline__arrow" type="button" id="item{{ $index + 1 }}"
-                    aria-labelledby="item{{ $index + 1 }}-name" aria-expanded="{{ $index < 3 ? 'true' : 'false' }}"
+                {{-- <button class="timeline__arrow swiper-custom-arrow-btn live-auction-next-button transparent-gradiant-hover-btn transition-03-linear z-1 position-relative bg-transparent d-flex justify-content-center align-items-center rounded-circle" tabindex="0"
+                    type="button" id="item{{ $index + 1 }}"  aria-labelledby="item{{ $index + 1 }}-name" aria-expanded="{{ $index < 3 ? 'true' : 'false' }}"
                     aria-controls="item{{ $index + 1 }}-ctrld" aria-haspopup="true" data-item="{{ $index + 1 }}">
-                    <svg class="timeline__arrow-icon" viewBox="0 0 24 24" width="24px" height="24px">
-                        <use href="#arrow" />
-                    </svg>
-                </button>
+                    <span class="timeline__arrow-icon d-flex justify-content-center align-items-center" data-icon="iconPrevArrow">
+                        <svg class="" width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M4.66669 13.25C4.25247 13.25 3.91669 13.5858 3.91669 14C3.91669 14.4142 4.25247 14.75 4.66669 14.75V13.25ZM4.66669 14.75H23.3334V13.25H4.66669V14.75Z" fill="currentColor"></path>
+                            <path d="M16.3333 7L23.3333 14L16.3333 21" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg>
+                    </span>
+                </button> --}}
+                <button
+                        class="timeline__arrow swiper-custom-arrow-btn top-artwork-next-button transparent-gradiant-hover-btn transition-03-linear  z-1 position-relative d-flex justify-content-center align-items-center rounded-circle bg-transparent" 
+                        type="button" id="item{{ $index + 1 }}"  aria-labelledby="item{{ $index + 1 }}-name" aria-expanded="{{ $index < 3 ? 'true' : 'false' }}"
+                    aria-controls="item{{ $index + 1 }}-ctrld" aria-haspopup="true" data-item="{{ $index + 1 }}">
+                        <span class="timeline__arrow-icon d-flex justify-content-center align-items-center" data-icon="iconPrevArrow">
+                        </span>
+                    </button>
                 <span class="timeline__dot"></span>
+
                 <span id="item{{ $index + 1 }}-name" class="timeline__meta">
                     <time class="timeline__date" datetime="1970-01-01">
                         {{ $experience['start_date'] }} -
@@ -200,11 +189,12 @@
                     <br>
                     <strong class="timeline__title p fw-semibold feature-name">{{ $experience['designation'] }}</strong>
                 </span>
+
             </div>
             <div class="timeline__item-body {{ $index < 3 ? 'timeline__item-body--expanded' : '' }}"
                 id="item{{ $index + 1 }}-ctrld" role="region" aria-labelledby="item{{ $index + 1 }}"
                 aria-hidden="{{ $index < 3 ? 'false' : 'true' }}">
-                <div class="timeline__item-body-content px-3">
+                <div class="rounded timeline__item-body-content px-3">
                     <div class="timeline__item-p p sm fw-normal mb-0 feature-info"> {!! $experience['responsibilites'] !!} </div>
                 </div>
             </div>
