@@ -11,18 +11,18 @@ class ContactController extends Controller
     {
         // Validate the incoming request data
         $validatedData = $request->validate([
-            'name'      => 'required|string|max:255',
+            // 'name'      => 'required|string|max:255',
             'email'     => 'required|email|max:255',
-            'subject'   => 'required|string',
+            // 'subject'   => 'required|string',
             'comments'  => 'required|string',
         ]);
 
         try {
             // Create a new Contact instance
             $contact            = new Contact();
-            $contact->name      = $validatedData['name'];
+            // $contact->name      = $validatedData['name'];
             $contact->email     = $validatedData['email'];
-            $contact->subject   = $validatedData['subject'];
+            // $contact->subject   = $validatedData['subject'];
             $contact->comments  = $validatedData['comments'];
             $contact->save();
 

@@ -77,56 +77,7 @@
 
 
     <!-- Subscribe/Contact Start -->
-    {{-- @include('frontend.contact') --}}
-    <section class="subscribe-and-get-update-section section-pt">
-        <div class="container">
-            <div class="subscribe-update-main-wrapper position-relative">
-                <div class="subscribe-update-wrapper d-flex align-items-center overflow-hidden position-relative">
-                    <div class="subscribe-update-img flex-center"><img
-                            src="{{ asset('assets/images/nft/subscribe-update-img.png') }}"
-                            alt="subscribe-section-img">
-                    </div>
-                    <div class="subscribe-content-wrapper">
-                        <div class="subscribe-title-info d-flex align-items-center">
-                            <div class="subscribe-title w-100">
-                                <h2 class="small-title text-center text-lg-start d-inline-block">Subscribe and get
-                                    updates
-                                    every week.</h2>
-                            </div>
-                            <div class="subscribe-update-info w-100">
-                                <p class="fw-normal subscribe-info-text text-center text-lg-start mb-0">We hae a blog
-                                    related to nft
-                                    so we
-                                    can share thoughts and routines on our blog which is updated weekly.</p>
-                            </div>
-                        </div>
-                        <form action="index.html">
-                            <div class="input-subscribe-btn-wrapper d-flex align-items-center">
-                                <input type="email" class="custom-input" placeholder="Enter your email address"
-                                    required="">
-                                <button class="button primary-btn subscribe-btn">Subscribe</button>
-                            </div>
-                        </form>
-                    </div>
-                    <div class="top-left-diamond-img position-absolute w-100 h-100"><img class="contain-img"
-                            src="{{ asset('assets/images/nft/top-left-diamond-img.png') }}"
-                            alt="subscribe-diamond-img"></div>
-                </div>
-                <div class="subscribe-bottom-left-diamond-img position-absolute bottom-left-img w-100 h-100"><img
-                        class="contain-img"
-                        src="{{ asset('assets/images/nft/bottom-left-diamond-img.png') }}"
-                        alt="subscribe-diamond-img"></div>
-                <div class="position-absolute top-right-diamond-img top-0 end-0 w-100 h-100"><img
-                        class="contain-img"
-                        src="{{ asset('assets/images/nft/top-right-diamond-img.png') }}"
-                        alt="subscribe-diamond-img"></div>
-                <div class="position-absolute top-right-secondary-img top-0 end-0 w-100 h-100"><img
-                        class="contain-img"
-                        src="{{ asset('assets/images/nft/top-right-corner-secondary.png') }}"
-                        alt="subscribe-diamond-img"></div>
-            </div>
-        </div>
-    </section>
+    @include('frontend.contact')
     <!-- Subscribe/Contact End -->
 
     <!-- Footer Start -->
@@ -145,16 +96,16 @@
                 <div class="footer-link-wrapper">
                     <h2 class="p lg text-capitalize font-secondary fw-normal">Pages</h2>
                     <ul class="footer-link-group">
-                        <li><a href="explore-products.html" class="footer-link"
-                                data-cursor="nft-magnifiers-cursor" data-cursor-text="Click me!">All
+                        <li><a href="explore-products.html" class="footer-link" data-cursor="nft-magnifiers-cursor"
+                                data-cursor-text="Click me!">All
                                 NFTs</a></li>
-                        <li><a href="#create-sell-nft-section" class="footer-link"
-                                data-cursor="nft-magnifiers-cursor" data-cursor-text="Click me!">How It Works</a>
+                        <li><a href="#create-sell-nft-section" class="footer-link" data-cursor="nft-magnifiers-cursor"
+                                data-cursor-text="Click me!">How It Works</a>
                         </li>
                         <li><a href="create-nft.html" class="footer-link" data-cursor="nft-magnifiers-cursor"
                                 data-cursor-text="Click me!">Create</a></li>
-                        <li><a href="explore-products.html" class="footer-link"
-                                data-cursor="nft-magnifiers-cursor" data-cursor-text="Click me!">Explore</a></li>
+                        <li><a href="explore-products.html" class="footer-link" data-cursor="nft-magnifiers-cursor"
+                                data-cursor-text="Click me!">Explore</a></li>
                         <li><a href="privacy-policy.html" class="footer-link" data-cursor="nft-magnifiers-cursor"
                                 data-cursor-text="Click me!">Privacy &amp; Terms</a></li>
                     </ul>
@@ -183,24 +134,14 @@
                     </a>
                     <div class="mt-sm-auto mt-5">
                         <ul class="d-grid social-icons-list-wrapper">
-                            <li class="social-icon-list">
-                                <a href="https://www.facebook.com/" target="_blank"
-                                    class="social-icons-link flex-center">
-                                    <i data-icon="facebookIcon" class="social-icons flex-center"></i>
-                                </a>
-                            </li>
-                            <li class="social-icon-list">
-                                <a href="https://www.instagram.com/" target="_blank"
-                                    class="social-icons-link flex-center">
-                                    <i data-icon="instagramIcon" class="social-icons flex-center"></i>
-                                </a>
-                            </li>
-                            <li class="social-icon-list">
-                                <a href="https://twitter.com/ " target="_blank"
-                                    class="social-icons-link flex-center">
-                                    <i data-icon="twitterIcon" class="social-icons flex-center"></i>
-                                </a>
-                            </li>
+                            @foreach ($socials as $social)
+                                <li class="social-icon-list">
+                                    <a href="{{ $social['link'] }}" target="_blank"
+                                        class="social-icons-link flex-center">
+                                        <i data-icon="{{ $social['icon'] }}" class="social-icons flex-center"></i>
+                                    </a>
+                                </li>
+                            @endforeach
                         </ul>
                     </div>
                 </div>
@@ -211,7 +152,7 @@
         </div>
     </footer>
     <!-- Footer End -->
-    
+
 
     <!-- JavaScripts -->
     <!-- Jquery Version 3.3.1 File -->
@@ -233,7 +174,75 @@
     <!-- Customized JavaScript File -->
     <script src="{{ asset('assets/js/svg.js') }}"></script>
     <script src="{{ asset('assets/js/custom.js') }}"></script>
-    
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const contactForm = document.getElementById('contactForm');
+            const loader = document.getElementById('bootstrap-loader');
+
+            contactForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+
+                // Serialize form data
+                const formData = new FormData(contactForm);
+
+                // Show the Bootstrap loader
+                loader.style.display = 'block';
+
+                // Perform AJAX form submission
+                $.ajax({
+                    type: 'POST',
+                    url: "{{ route('contact.store') }}",
+                    data: formData,
+                    processData: false,
+                    contentType: false,
+                    headers: {
+                        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                    },
+                    success: function(response) {
+                        console.log(response);
+
+                        // Display success or error message as an alert
+                        setTimeout(function() {
+                            if (response.success && response.success.trim() !== "") {
+                                alert(response.success);
+                            } else if (response.error) {
+                                alert(response.error);
+                            } else {
+                                console.log("Unexpected response:", response);
+                            }
+                        }, 1000);
+
+                        // Hide the Bootstrap loader
+                        loader.style.display = 'none';
+
+                        // Clear the input fields
+                        contactForm.reset();
+                    },
+                    error: function(error) {
+                        // Hide the preloader
+                        let errorResponse = JSON.parse(error.responseText);
+                        console.error("Error:", errorResponse);
+
+                        setTimeout(function() {
+                            if (errorResponse && errorResponse.errors) {
+                                const validationErrors = errorResponse.errors;
+                                const errorMessage = validationErrors.email?.[0] ||
+                                    validationErrors.comments?.[0];
+                                alert(errorMessage || 'An unexpected error occurred.');
+                            } else {
+                                alert('An unexpected error occurred.');
+                            }
+                        }, 1000);
+
+                        // Hide the Bootstrap loader
+                        loader.style.display = 'none';
+                    }
+                });
+            });
+        });
+    </script>
+
 </body>
 
 </html>

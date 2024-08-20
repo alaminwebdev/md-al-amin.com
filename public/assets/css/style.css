@@ -367,7 +367,8 @@ button:focus,
   -moz-transition: all 0.3s ease-in-out;
   -ms-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
-  border-radius: 3.2rem 0px;
+  /* border-radius: 3.2rem 0px; */
+  border-radius: 8px;
 }
 
 .button.primary-btn {
@@ -2882,7 +2883,6 @@ body.show-menu::before {
 }
 
 .subscribe-content-wrapper {
-  --content-max-width: 80rem;
   max-width: calc(100% - var(--subscribe-update-img-width));
   padding-left: 4.5rem;
 }
@@ -2895,10 +2895,6 @@ body.show-menu::before {
   margin-bottom: 6.6rem;
 }
 
-.subscribe-title {
-  max-width: var(--content-max-width);
-}
-
 .subscribe-title .small-title {
   background: var(--nft-subscribe-title-bg);
   background-clip: text;
@@ -2907,14 +2903,6 @@ body.show-menu::before {
   line-height: 1.4;
 }
 
-.subscribe-update-info {
-  max-width: calc(100% - var(--content-max-width));
-  padding-left: 4.5rem;
-}
-
-.subscribe-update-info p {
-  line-height: 1.5;
-}
 
 .subscribe-btn {
   text-transform: capitalize;
@@ -2935,7 +2923,7 @@ body.show-menu::before {
 }
 
 .input-subscribe-btn-wrapper {
-  gap: 4rem;
+  gap: 3rem;
 }
 
 .top-left-diamond-img {

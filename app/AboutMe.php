@@ -75,23 +75,23 @@ class AboutMe
         [
             'name' => 'facebook',
             'link' => 'https://www.facebook.com/mohammadalamin.dev',
-            'icon' => 'iconoir-facebook'
+            'icon' => 'facebookIcon'
         ],
         [
             'name' => 'linkedin',
             'link' => 'https://www.linkedin.com/in/mdalamin1998/',
-            'icon' => 'iconoir-linkedin'
+            'icon' => 'facebookIcon'
         ],
         [
             'name' => 'github',
             'link' => 'https://github.com/alaminwebdev',
-            'icon' => 'iconoir-github'
+            'icon' => 'facebookIcon'
         ],
-        [
-            'name' => 'gmail',
-            'link' => 'mohammadalamin.dev@gmail.com',
-            'icon' => 'iconoir-mail'
-        ]
+        // [
+        //     'name' => 'gmail',
+        //     'link' => 'mohammadalamin.dev@gmail.com',
+        //     'icon' => 'facebookIcon'
+        // ]
     ];
 
     const CONTACT = [
