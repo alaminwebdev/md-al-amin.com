@@ -112,7 +112,24 @@ class AboutMe
         ]
     ];
 
-    const SKILL = ['PHP Framework Laravel', 'Javascript', 'React', 'PHP', 'AJAX', 'jQuery', 'MySQL', 'CSS', 'Bootstrap', 'SQL', 'JSON', 'Version Control System (Git)', 'Postman', 'MS Word', 'MS Excel', 'MS  Power Point'];
+    const SKILL = [
+        'PHP Framework Laravel', 
+        'Javascript', 
+        'React', 
+        'PHP', 
+        'AJAX', 
+        'jQuery', 
+        'MySQL', 
+        'CSS', 
+        'Bootstrap', 
+        'SQL', 
+        'JSON', 
+        'Version Control System (Git)', 
+        'Postman', 
+        'MS Word', 
+        'MS Excel', 
+        'MS  Power Point'
+    ];
 
     const SKILL_ICON = [
         'Laravel-Dark.svg',
@@ -135,4 +152,72 @@ class AboutMe
         'Vite-Dark.svg',
         'VSCode-Dark.svg'
     ];
+
+    const SKILL_DATA = [
+        [
+            'name' => 'PHP Framework Laravel',
+            'icon' => 'Laravel-Dark.svg'
+        ],
+        [
+            'name' => 'Javascript',
+            'icon' => 'JavaScript.svg'
+        ],
+        [
+            'name' => 'React',
+            'icon' => 'React-Dark.svg'
+        ],
+        [
+            'name' => 'PHP',
+            'icon' => 'PHP-Dark.svg'
+        ],
+        [
+            'name' => 'AJAX',
+            'icon' => 'Htmx-Dark.svg' // Assuming AJAX icon corresponds to Htmx-Dark.svg
+        ],
+        [
+            'name' => 'jQuery',
+            'icon' => 'JQuery.svg'
+        ],
+        [
+            'name' => 'MySQL',
+            'icon' => 'MySQL-Dark.svg'
+        ],
+        [
+            'name' => 'CSS',
+            'icon' => 'CSS.svg'
+        ],
+        [
+            'name' => 'Bootstrap',
+            'icon' => 'Bootstrap.svg'
+        ],
+        [
+            'name' => 'SQL',
+            'icon' => 'MySQL-Dark.svg' // Assuming SQL icon corresponds to MySQL-Dark.svg
+        ],
+        [
+            'name' => 'JSON',
+            'icon' => 'Vite-Dark.svg' // Assuming JSON icon corresponds to Vite-Dark.svg
+        ],
+        [
+            'name' => 'Version Control System (Git)',
+            'icon' => 'Git.svg'
+        ],
+        [
+            'name' => 'Postman',
+            'icon' => 'Postman.svg'
+        ],
+        [
+            'name' => 'MS Word',
+            'icon' => 'VSCode-Dark.svg' // Assuming MS Word icon corresponds to VSCode-Dark.svg
+        ],
+        [
+            'name' => 'MS Excel',
+            'icon' => 'VSCode-Dark.svg' // Assuming MS Excel icon corresponds to VSCode-Dark.svg
+        ],
+        [
+            'name' => 'MS Power Point',
+            'icon' => 'VSCode-Dark.svg' // Assuming MS Power Point icon corresponds to VSCode-Dark.svg
+        ]
+    ];
+    
 }

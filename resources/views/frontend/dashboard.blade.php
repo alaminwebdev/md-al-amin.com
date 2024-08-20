@@ -53,4 +53,9 @@
      <!-- About Start -->
      @include('frontend.about')
      <!-- About End -->
+
+    <!-- Top Seller/Skills Start -->
+    @include('frontend.skills')
+    <!-- Top Seller/Skills End -->
+
  @endsection

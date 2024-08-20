@@ -2,7 +2,7 @@
     .scroller__inner {
         display: flex;
         flex-wrap: wrap;
-        gap: 1rem;
+        gap: 2rem;
     }
 
     .scroller[data-animated="true"] {
@@ -46,42 +46,39 @@
             transform: translate(calc(-50% - 0.5rem));
         }
     }
-
-    .tag-list {
-        margin: 0;
-        padding-inline: 0;
-        list-style: none;
-    }
-
-    .tag-list li {
-        background: #4783c7;
-        padding: .5rem 1rem;
-        border-radius: 0.5rem;
-        box-shadow: 0 0.5rem 1rem -0.25rem rgb(0 0 0 / 25%);
-        color: #fff;
-        font-weight: 600;
-        font-size: 12px;
-    }
 </style>
-<section class="py-5 skill-scroll">
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-12">
-                <div class="scroller" data-speed="slow">
-                    <ul class="tag-list scroller__inner pb-4">
-                        @foreach ($skills as $skill)
-                            <li class="mb-0">{{ $skill }}</li>
-                        @endforeach
-                    </ul>
-                </div>
 
-                <div class="scroller" data-direction="right" data-speed="medium">
-                    <div class="scroller__inner">
-                        @foreach ($skill_icons as $skill_icon)
-                            <img src="{{ asset('img/icons/' . $skill_icon) }}" width="80px;" class="img-fluid" />
-                        @endforeach
+<section class="section-mid-pt">
+    <div class="container">
+        <div class="text-wrapper d-flex flex-column justify-content-center align-items-center">
+            <h2 class="title bg-text d-inline-block bg-text-stroke">Skills</h2>
+            <h3 class="small-title d-inline-block bg-text">Top Skills</h3>
+        </div>
+    </div>
+    <div class="top-seller-bottom-section nft-swiper-wraaper position-relative">
+        <div class="scroller" data-speed="slow">
+            <div class="scroller__inner overflow-hidden pb-4">
+                @foreach ($skills as $skill)
+                <div class="top-seller-card d-flex align-items-center" data-cursor-text="{{ $skill['name'] }}" data-cursor="nft-click-me-cursor">
+                    <div class="top-seller-avatar-card position-relative">
+                        <div class="top-seller-avatar rounded-circle w-100 h-100 overflow-hidden">
+                            <img src="{{ asset('img/icons/' . $skill['icon']) }}" alt="nft-jenny-wilson" class="w-100 h-100 object-fit-contain">
+                        </div>
+                        <span class="verify-tick position-absolute d-flex justify-content-center align-items-center end-0 bottom-0" data-icon="iconVerifyTick">
+                        </span>
+                    </div>
+                    <div>
+                        <h6 class="top-seller-name text-capitalize fw-semibold text-ellipsis line-clamp-2">
+                            {{ $skill['name'] }}</h6>
+                        {{-- <div class="top-seller-rupees-card d-flex align-items-center">
+                            <span class="top-seller-rupee-icon d-flex justify-content-center align-items-center" data-icon="iconDiamondShape">
+                            </span>
+                            <span class="top-seller-rupee p sm d-inline-block fw-normal text-ellipsis line-clamp-1">82,100
+                                ETH</span>
+                        </div> --}}
                     </div>
                 </div>
+                @endforeach
             </div>
         </div>
     </div>
