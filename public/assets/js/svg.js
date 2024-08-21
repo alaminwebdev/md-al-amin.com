@@ -42,16 +42,56 @@
 </svg>`,
     facebookIcon: `
     <svg xmlns="http://ww.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-  <g clip-path="url(#clip0_1_216)">
-    <path d="M15.402 21V14.034H17.735L18.084 11.326H15.402V9.598C15.402 8.814 15.62 8.279 16.744 8.279H18.178V5.857C17.4838 5.78334 16.7861 5.74762 16.088 5.75C14.021 5.75 12.606 7.012 12.606 9.33V11.326H10.268V14.034H12.606V21H4C3.73478 21 3.48043 20.8946 3.29289 20.7071C3.10536 20.5196 3 20.2652 3 20V4C3 3.73478 3.10536 3.48043 3.29289 3.29289C3.48043 3.10536 3.73478 3 4 3H20C20.2652 3 20.5196 3.10536 20.7071 3.29289C20.8946 3.48043 21 3.73478 21 4V20C21 20.2652 20.8946 20.5196 20.7071 20.7071C20.5196 20.8946 20.2652 21 20 21H15.402Z" fill="currentColor"/>
-  </g>
-  <defs>
-    <clipPath id="clip0_1_216">
-      <rect width="24" height="24" fill="currentColor"/>
-    </clipPath>
-  </defs>
-</svg>
-`,
+    <g clip-path="url(#clip0_1_216)">
+      <path d="M15.402 21V14.034H17.735L18.084 11.326H15.402V9.598C15.402 8.814 15.62 8.279 16.744 8.279H18.178V5.857C17.4838 5.78334 16.7861 5.74762 16.088 5.75C14.021 5.75 12.606 7.012 12.606 9.33V11.326H10.268V14.034H12.606V21H4C3.73478 21 3.48043 20.8946 3.29289 20.7071C3.10536 20.5196 3 20.2652 3 20V4C3 3.73478 3.10536 3.48043 3.29289 3.29289C3.48043 3.10536 3.73478 3 4 3H20C20.2652 3 20.5196 3.10536 20.7071 3.29289C20.8946 3.48043 21 3.73478 21 4V20C21 20.2652 20.8946 20.5196 20.7071 20.7071C20.5196 20.8946 20.2652 21 20 21H15.402Z" fill="currentColor"/>
+    </g>
+    <defs>
+      <clipPath id="clip0_1_216">
+        <rect width="24" height="24" fill="currentColor"/>
+      </clipPath>
+    </defs>
+  </svg>
+    `,
+
+    linkedinIcon: `
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+      <g clip-path="url(#clip0)">
+        <path d="M0 0v24h24v-24h-24zm8 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.397-2.586 7-2.777 7 2.476v6.759z" fill="currentColor" transform="scale(0.9) translate(1.2, 1.2)"/>
+      </g>
+      <defs>
+        <clipPath id="clip0">
+          <rect width="24" height="24" fill="currentColor"/>
+        </clipPath>
+      </defs>
+    </svg>
+    `,
+  
+    githubIcon: `
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+      <g clip-path="url(#clip0)">
+        <path d="M12 2C6.48 2 2 6.48 2 12C2 16.84 5.37 20.88 9.91 22C10.48 22.08 10.7 21.75 10.7 21.46C10.7 21.2 10.69 20.5 10.69 19.54C7.32 20.16 6.81 18.18 6.81 18.18C6.33 16.92 5.64 16.63 5.64 16.63C4.63 16 5.72 16.01 5.72 16.01C6.82 16.09 7.37 17.15 7.37 17.15C8.34 18.78 9.91 18.34 10.51 18.09C10.6 17.39 10.88 16.9 11.19 16.63C8.92 16.36 6.59 15.37 6.59 11.43C6.59 10.35 6.97 9.49 7.61 8.81C7.51 8.54 7.18 7.23 7.69 5.6C7.69 5.6 8.5 5.32 10.69 6.75C11.48 6.52 12.32 6.42 13.15 6.42C13.98 6.42 14.82 6.52 15.61 6.75C17.8 5.32 18.61 5.6 18.61 5.6C19.12 7.23 18.79 8.54 18.69 8.81C19.33 9.49 19.71 10.35 19.71 11.43C19.71 15.38 17.38 16.35 15.1 16.62C15.49 16.93 15.82 17.56 15.82 18.49C15.82 19.72 15.81 20.89 15.81 21.44C15.81 21.75 16.03 22.09 16.61 21.99C21.16 20.87 24.53 16.83 24.53 12C24.53 6.48 20.02 2 14.53 2H12Z" fill="currentColor" transform="scale(0.9) translate(1.2, 1.2)"/>
+      </g>
+      <defs>
+        <clipPath id="clip0">
+          <rect width="24" height="24" fill="currentColor"/>
+        </clipPath>
+      </defs>
+    </svg>
+    `,
+
+    gmailIcon: `
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+      <g clip-path="url(#clip0)">
+        <path d="M20 4H4C3.47 4 3 4.47 3 5V19C3 19.53 3.47 20 4 20H20C20.53 20 21 19.53 21 19V5C21 4.47 20.53 4 20 4ZM19.5 5.5L12 11.25L4.5 5.5H19.5ZM4.5 18.5V7.25L11.25 12.5C11.53 12.7 11.77 12.79 12 12.79C12.23 12.79 12.47 12.7 12.75 12.5L19.5 7.25V18.5H4.5Z" fill="currentColor" transform="scale(0.9) translate(1.2, 1.2)"/>
+      </g>
+      <defs>
+        <clipPath id="clip0">
+          <rect width="24" height="24" fill="currentColor"/>
+        </clipPath>
+      </defs>
+    </svg>
+    `,
+
     instagramIcon: `
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
     <g clip-path="url(#clip0_1_222)">
@@ -315,7 +355,7 @@
     <path d="M6.55078 10.9477C6.55078 8.44868 6.55078 7.19917 7.32402 6.42283C8.09726 5.64648 9.34177 5.64648 11.8308 5.64648H14.4708C16.9598 5.64648 18.2043 5.64648 18.9775 6.42283C19.7508 7.19917 19.7508 8.44868 19.7508 10.9477V15.3654C19.7508 17.8644 19.7508 19.1139 18.9775 19.8902C18.2043 20.6666 16.9598 20.6666 14.4708 20.6666H11.8308C9.34176 20.6666 8.09726 20.6666 7.32402 19.8902C6.55078 19.1139 6.55078 17.8644 6.55078 15.3654V10.9477Z" fill="currentColor"/>
     </svg>
     `,
-    iconDownload:`<svg width="16" height="20" viewBox="0 0 16 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+    iconDownload: `<svg width="16" height="20" viewBox="0 0 16 20" fill="none" xmlns="http://www.w3.org/2000/svg">
     <path d="M8 0V12M8 12L4 8M8 12L12 8" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
     <rect x="2" y="14" width="12" height="2" fill="currentColor"/>
     </svg>

@@ -68,7 +68,7 @@ class AboutMe
     const BIO = [
         'title'     => "Explore the World of Md Alamin",
         'short_bio' => "Dedicated software engineer based in Dhaka, creating dynamic and user-friendly applications that drive innovation.",
-        'long_bio'  => "I'm Md. Al Amin, a full-stack developer with over a year of experience. I excel in crafting seamless web experiences using Laravel for robust back-end development and JavaScript for dynamic front-end interfaces. Proficient in MySQL, Git, and CSS. Skilled in AJAX for dynamic web interactions, dedicated to delivering polished applications with smooth user experiences.",
+        'long_bio'  => "I'm Md. Al Amin, a software engineer at Ambala IT. I specialize in Laravel, JavaScript, and MySQL, delivering efficient and user-focused web applications",
     ];
 
     const SOCIAL = [
@@ -80,18 +80,18 @@ class AboutMe
         [
             'name' => 'linkedin',
             'link' => 'https://www.linkedin.com/in/mdalamin1998/',
-            'icon' => 'facebookIcon'
+            'icon' => 'linkedinIcon'
         ],
         [
             'name' => 'github',
             'link' => 'https://github.com/alaminwebdev',
-            'icon' => 'facebookIcon'
+            'icon' => 'githubIcon'
         ],
-        // [
-        //     'name' => 'gmail',
-        //     'link' => 'mohammadalamin.dev@gmail.com',
-        //     'icon' => 'facebookIcon'
-        // ]
+        [
+            'name' => 'gmail',
+            'link' => 'mailto:mohammadalamin.dev@gmail.com',
+            'icon' => 'gmailIcon'
+        ]
     ];
 
     const CONTACT = [

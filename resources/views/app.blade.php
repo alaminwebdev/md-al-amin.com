@@ -86,53 +86,36 @@
             <div class="d-grid footer-wrapper">
                 <div class="footer-logo-wrapper">
                     <a href="index.html" class="logo-wrapper d-block">
-                        <img src="../../staging.whiteorangesoftware.com/theme-nft/assets/images/logo/logo.svg"
+                        <img src="{{ asset('assets/images/logo/logo.svg') }}"
                             class="img-fluid" alt="logo">
                     </a>
                     <p class="footer-about-wrapper fw-normal mb-0 lg">
-                        Discover a rare abstract item around the world discover, create &amp; sell artworks.
+                        {{ $bio['long_bio'] }}
                     </p>
                 </div>
                 <div class="footer-link-wrapper">
                     <h2 class="p lg text-capitalize font-secondary fw-normal">Pages</h2>
                     <ul class="footer-link-group">
                         <li><a href="explore-products.html" class="footer-link" data-cursor="nft-magnifiers-cursor"
-                                data-cursor-text="Click me!">All
-                                NFTs</a></li>
+                                data-cursor-text="Click me!">Projects</a></li>
                         <li><a href="#create-sell-nft-section" class="footer-link" data-cursor="nft-magnifiers-cursor"
-                                data-cursor-text="Click me!">How It Works</a>
+                                data-cursor-text="Click me!">Resume</a>
                         </li>
                         <li><a href="create-nft.html" class="footer-link" data-cursor="nft-magnifiers-cursor"
-                                data-cursor-text="Click me!">Create</a></li>
+                                data-cursor-text="Click me!">Contact</a></li>
                         <li><a href="explore-products.html" class="footer-link" data-cursor="nft-magnifiers-cursor"
-                                data-cursor-text="Click me!">Explore</a></li>
+                                data-cursor-text="Click me!">About</a></li>
                         <li><a href="privacy-policy.html" class="footer-link" data-cursor="nft-magnifiers-cursor"
-                                data-cursor-text="Click me!">Privacy &amp; Terms</a></li>
-                    </ul>
-                </div>
-                <div class="footer-link-wrapper">
-                    <h2 class="p lg text-capitalize font-secondary fw-normal">Community</h2>
-                    <ul class="footer-link-group">
-                        <li><a href="contactus.html" class="footer-link" data-cursor="nft-magnifiers-cursor"
-                                data-cursor-text="Click me!">Help Center</a></li>
-                        <li><a href="coming-soon.html" class="footer-link" data-cursor="nft-magnifiers-cursor"
-                                data-cursor-text="Click me!">Partners</a></li>
-                        <li><a href="coming-soon.html" class="footer-link" data-cursor="nft-magnifiers-cursor"
-                                data-cursor-text="Click me!">Suggestions</a></li>
-                        <li><a href="blogs.html" class="footer-link" data-cursor="nft-magnifiers-cursor"
-                                data-cursor-text="Click me!">Blog</a></li>
-                        <li><a href="blogs.html" class="footer-link" data-cursor="nft-magnifiers-cursor"
-                                data-cursor-text="Click me!">Newsletter</a></li>
+                                data-cursor-text="Click me!">Home</a></li>
                     </ul>
                 </div>
                 <div class="footer-contactus-wrapper d-flex flex-column">
                     <h2 class="p lg text-capitalize font-secondary fw-normal">Contact us</h2>
-                    <a href="https://maps.app.goo.gl/F4qWgVwCpqjSgi6SA" target="_blank"
+                    <a href="https://maps.app.goo.gl/zLfZRHPKWFAM3PMA9" target="_blank"
                         class="fw-normal footer-contactus-link p lg fw-normal">
-                        4001, 4th Floor APMC, Krushi Bazaar, Sahara Darwaja, Begampura, Surat, Gujarat 395002
-                        Massachusetts
+                        ASA Neer, 159/3/D, Road-02 W Agargaon, Dhaka 1207
                     </a>
-                    <div class="mt-sm-auto mt-5">
+                    <div class="mt-sm-5 mt-3">
                         <ul class="d-grid social-icons-list-wrapper">
                             @foreach ($socials as $social)
                                 <li class="social-icon-list">
@@ -147,7 +130,7 @@
                 </div>
             </div>
             <div class="footer-copyright">
-                <label class="m-0 text-center d-block">Copyright <b>©</b> 2024. All Rights Reserved.</label>
+                <label class="m-0 text-center d-block">Copyright <b>©</b> {{ date('Y') }}. All Rights Reserved. </label>
             </div>
         </div>
     </footer>

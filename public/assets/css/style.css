@@ -1441,7 +1441,8 @@ body.show-menu::before {
 
 .footer-wrapper {
   padding: 6.3rem 0 5.3rem 0;
-  grid-template-columns: 2fr 1fr 1fr 2fr;
+  /* grid-template-columns: 2fr 1fr 1fr 2fr; */
+  grid-template-columns: 2fr 1fr 2fr;
   gap: 13rem;
 }
 
@@ -1479,7 +1480,7 @@ body.show-menu::before {
 }
 
 .social-icons-list-wrapper {
-  grid-template-columns: repeat(3, 50px);
+  grid-template-columns: repeat(4, 50px);
   gap: 20px;
 }
 
