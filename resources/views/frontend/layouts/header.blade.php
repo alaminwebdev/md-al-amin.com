@@ -3,7 +3,7 @@
         <div class="d-grid header-wrapper align-items-center">
             <div class="header-left-wrapper d-flex">
                 <!-- Logo Start -->
-                <a href="index.html" class="header-logo-wrapper d-flex">
+                <a href="{{ route('dashboard') }}" class="header-logo-wrapper d-flex">
                     <img src="{{ asset('assets/images/logo/logo.svg') }}" class="img-fluid" alt="logo">
                 </a>
                 <!-- Logo End -->
@@ -14,19 +14,19 @@
                     <ul
                         class="d-flex justify-content-center justify-content-xl-start flex-xl-row flex-column align-items-xl-center nav-list-wrapper">
                         <li class="nav-list">
-                            <a href="index.html" class="nav-links fw-normal active"
+                            <a href="#banner" class="nav-links fw-normal active"
                                 data-cursor="nft-magnifiers-cursor nft-light-mode-magnifiers-cursor"
                                 data-cursor-text="Click me!">
                                  Home
                             </a>
                         </li>
                         <li class="nav-list">
-                            <a href="#" class="nav-links fw-normal"
+                            <a href="#about-me" class="nav-links fw-normal"
                                 data-cursor="nft-magnifiers-cursor nft-light-mode-magnifiers-cursor"
                                 data-cursor-text="Click me!">About</a>
                         </li>
                         <li class="nav-list">
-                            <a href="#" class="nav-links fw-normal"
+                            <a href="#project" class="nav-links fw-normal"
                                 data-cursor="nft-magnifiers-cursor nft-light-mode-magnifiers-cursor"
                                 data-cursor-text="Click me!">Projects</a>
                         </li>
@@ -36,7 +36,7 @@
                                 data-cursor-text="Click me!">Resume</a>
                         </li>
                         <li class="nav-list">
-                            <a href="#" class="nav-links"
+                            <a href="#contact" class="nav-links"
                                 data-cursor="nft-magnifiers-cursor nft-light-mode-magnifiers-cursor"
                                 data-cursor-text="Click me!">Contact</a>
                         </li>
@@ -67,42 +67,3 @@
         </div>
     </div>
 </header>
-
-{{-- <nav class="navbar navbar-expand-md shadow-sm">
-    <div class="container-fluid py-0 py-sm-2">
-        <a class="navbar-brand" href="{{ route('dashboard') }}">
-            <h4 class="fs-5 mb-0 fw-bolder font-monospace">
-                <span>&lt;/</span>Mohammad Al Amin<span>&gt;</span>
-            </h4>
-        </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
-            aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon ">
-                <span class="first"></span>
-                <span class="second"></span>
-                <span class="third"></span>
-            </span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarText">
-            <ul class="navbar-nav ms-auto mb-lg-0">
-                <li class="nav-item m-0">
-                    <a class="nav-link {{ Route::currentRouteName() == 'dashboard' ? 'active' : '' }} "
-                        aria-current="page" href="{{ route('dashboard') }}">Home</a>
-                </li>
-                <li class="nav-item m-0">
-                    <a class="nav-link {{ Route::currentRouteName() == 'resume' ? 'active' : '' }} "
-                        href="{{ route('resume') }}">Resume</a>
-                </li>
-                <li class="nav-item m-0">
-                    <a class="nav-link {{ Route::currentRouteName() == 'projects' ? 'active' : '' }} "
-                        href="{{ route('projects') }}">Projects</a>
-                </li>
-                <li class="nav-item m-0">
-                    <a class="nav-link {{ Route::currentRouteName() == 'contact' ? 'active' : '' }} "
-                        href="{{ route('contact') }}">Contact</a>
-                </li>
-            </ul>
-        </div>
-    </div>
-    </div>
-</nav> --}}

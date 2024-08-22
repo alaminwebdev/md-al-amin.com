@@ -1,4 +1,4 @@
-<section class="top-artwork-section section-pt position-relative">
+<section class="top-artwork-section section-pt position-relative" id="project">
     <div class="container">
         <div class="top-artwork-wrapper d-flex">
             <div class="top-artwork-left-card position-relative">

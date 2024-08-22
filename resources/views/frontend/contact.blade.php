@@ -1,4 +1,4 @@
-<section class="subscribe-and-get-update-section section-pt">
+<section class="subscribe-and-get-update-section section-pt" id="contact">
     <div class="container">
         <div class="subscribe-update-main-wrapper position-relative">
             <div class="subscribe-update-wrapper d-flex align-items-center overflow-hidden position-relative">
@@ -41,31 +41,3 @@
         </div>
     </div>
 </section>
-
-{{-- <section class="py-4 py-sm-5">
-    <div class="container">
-        <div class="row">
-            <div class="contact-infos col-lg-5">
-                <h4 data-aos="fade-up" class="mb-0 mb-sm-1">Contact Info</h4>
-                <ul class="contact-details p-0">
-                    @foreach ($contacts as $contact)
-                        <li class="d-flex align-items-center py-3" data-aos="zoom-in"
-                            style="{{ $loop->last ? '' : 'border-bottom: 1px solid rgba(0, 0, 0, 0.125);' }}">
-                            <div class="icon-box">
-                                <i class="{{ $contact['icon'] }}"></i>
-                            </div>
-                            <div class="right">
-                                <span>{{ $contact['name'] }}</span>
-                                @foreach ($contact['infos'] as $info)
-                                    <h5 class="">{{ $info }}</h5>
-                                @endforeach
-                            </div>
-                        </li>
-                    @endforeach
-                </ul>
-            </div>
-        </div>
-    </div>
-</section> --}}
-
-

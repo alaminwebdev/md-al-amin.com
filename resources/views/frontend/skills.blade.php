@@ -48,7 +48,7 @@
     }
 </style>
 
-<section class="section-mid-pt">
+<section class="section-mid-pt" id="skills">
     <div class="container">
         <div class="text-wrapper d-flex flex-column justify-content-center align-items-center">
             <h2 class="title bg-text d-inline-block bg-text-stroke">Skills</h2>

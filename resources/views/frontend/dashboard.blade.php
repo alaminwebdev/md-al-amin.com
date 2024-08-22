@@ -4,8 +4,6 @@
      @include('frontend.layouts.banner')
      <!-- Hero Banner End -->
 
-     {{-- @include('frontend.scroll-animation') --}}
-
      <!-- Amazing Art/Project Start -->
      <section class="amazing-art-wrapper overflow-hidden position-relative">
          <div class="container position-relative">

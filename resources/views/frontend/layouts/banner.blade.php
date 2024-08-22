@@ -1,4 +1,4 @@
-<section class="hero overflow-hidden h-100 atropos hero-atropos section-pb">
+<section class="hero overflow-hidden h-100 atropos hero-atropos section-pb" id="banner">
     <div class="container hero-container">
         <div class="hero-start-line-center position-absolute">
             <div class="start-line-container">

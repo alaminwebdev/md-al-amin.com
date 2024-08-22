@@ -1141,7 +1141,10 @@ a.breadcrumb-link:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: var(--nft-raven);
+  /* background-color: var(--nft-raven); */
+  /* background: var(--nft-amazing-bg); */
+  backdrop-filter: blur(8px);
+
   overflow: hidden;
   z-index: 9999;
 }
@@ -1153,7 +1156,7 @@ a.breadcrumb-link:hover {
 .preloader .svg-wrapper .preloader-svg-logo {
   width: 150px;
   height: 150px;
-  stroke: var(--nft-violet-glow);
+  stroke: var(--nft-body-color);
   fill-opacity: 0;
   stroke-width: 1px;
   stroke-dasharray: 150;

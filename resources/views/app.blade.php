@@ -46,18 +46,25 @@
 
     <!-- Bootstrap Version 5.3.2 Minified CSS -->
     <link type="text/css" rel="stylesheet" href="{{ asset('assets/css/bootstrap.min.css') }}">
+
     <!-- Swiper JS Version 10.3.1 Minified CSS -->
     <link type="text/css" rel="stylesheet" href="{{ asset('assets/css/swiper-bundle.min.css') }}">
+
     <!-- Atropos Version  2.0.2 Minified CSS -->
     <link type="text/css" rel="stylesheet" href="{{ asset('assets/css/atropos.min.css') }}">
+
     <!-- Mouse Follower Version 1.1.2 CSS -->
     <link rel="stylesheet" href="{{ asset('assets/css/mouse-follower.min.css') }}">
+
     <!-- Nice Select CSS Version 1.0 File -->
     <link type="text/css" rel="stylesheet" href="{{ asset('assets/css/nice-select.css') }}">
+
     <!-- Customized Style CSS -->
     <link type="text/css" rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
+
     <!-- Responsive CSS -->
     <link type="text/css" rel="stylesheet" href="{{ asset('assets/css/responsive.css') }}">
+
     <!-- ThemeChanger Javascript File -->
     <script src="{{ asset('assets/js/themechanger.js') }}"></script>
 
@@ -73,87 +80,45 @@
     @include('frontend.layouts.header')
     <!-- Header End -->
 
+    <!-- Content Start -->
     @yield('content')
-
+    <!-- Content Start -->
 
     <!-- Subscribe/Contact Start -->
     @include('frontend.contact')
     <!-- Subscribe/Contact End -->
 
     <!-- Footer Start -->
-    <footer class="footer section-mt">
-        <div class="container">
-            <div class="d-grid footer-wrapper">
-                <div class="footer-logo-wrapper">
-                    <a href="index.html" class="logo-wrapper d-block">
-                        <img src="{{ asset('assets/images/logo/logo.svg') }}"
-                            class="img-fluid" alt="logo">
-                    </a>
-                    <p class="footer-about-wrapper fw-normal mb-0 lg">
-                        {{ $bio['long_bio'] }}
-                    </p>
-                </div>
-                <div class="footer-link-wrapper">
-                    <h2 class="p lg text-capitalize font-secondary fw-normal">Pages</h2>
-                    <ul class="footer-link-group">
-                        <li><a href="explore-products.html" class="footer-link" data-cursor="nft-magnifiers-cursor"
-                                data-cursor-text="Click me!">Projects</a></li>
-                        <li><a href="#create-sell-nft-section" class="footer-link" data-cursor="nft-magnifiers-cursor"
-                                data-cursor-text="Click me!">Resume</a>
-                        </li>
-                        <li><a href="create-nft.html" class="footer-link" data-cursor="nft-magnifiers-cursor"
-                                data-cursor-text="Click me!">Contact</a></li>
-                        <li><a href="explore-products.html" class="footer-link" data-cursor="nft-magnifiers-cursor"
-                                data-cursor-text="Click me!">About</a></li>
-                        <li><a href="privacy-policy.html" class="footer-link" data-cursor="nft-magnifiers-cursor"
-                                data-cursor-text="Click me!">Home</a></li>
-                    </ul>
-                </div>
-                <div class="footer-contactus-wrapper d-flex flex-column">
-                    <h2 class="p lg text-capitalize font-secondary fw-normal">Contact us</h2>
-                    <a href="https://maps.app.goo.gl/zLfZRHPKWFAM3PMA9" target="_blank"
-                        class="fw-normal footer-contactus-link p lg fw-normal">
-                        ASA Neer, 159/3/D, Road-02 W Agargaon, Dhaka 1207
-                    </a>
-                    <div class="mt-sm-5 mt-3">
-                        <ul class="d-grid social-icons-list-wrapper">
-                            @foreach ($socials as $social)
-                                <li class="social-icon-list">
-                                    <a href="{{ $social['link'] }}" target="_blank"
-                                        class="social-icons-link flex-center">
-                                        <i data-icon="{{ $social['icon'] }}" class="social-icons flex-center"></i>
-                                    </a>
-                                </li>
-                            @endforeach
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="footer-copyright">
-                <label class="m-0 text-center d-block">Copyright <b>©</b> {{ date('Y') }}. All Rights Reserved. </label>
-            </div>
-        </div>
-    </footer>
+    @include('frontend.footer')
     <!-- Footer End -->
 
 
     <!-- JavaScripts -->
+
     <!-- Jquery Version 3.3.1 File -->
     <script src="{{ asset('assets/js/jquery.js') }}"></script>
+
     <!-- Bootstrap Bundle JavaScript Version 5.3.2 File -->
     <script src="{{ asset('assets/js/bootstrap.bundle.min.js') }}"></script>
+
     <!-- Swiper JS JavaScript Version 10.3.1 File -->
     <script src="{{ asset('assets/js/swiper-bundle.min.js') }}"></script>
+
     <!-- Atropos JavaScript Version 2.0.2 File -->
     <script src="{{ asset('assets/js/atropos.min.js') }}"></script>
+
     <!-- GSAP JavaScript Version 3.12.2 File -->
     <script src="{{ asset('assets/js/gsap.min.js') }}"></script>
+
     <!-- Mouse Follower Version 1.1.2 JavaScript File -->
     <script src=" {{ asset('assets/js/mouse-follower.min.js') }}"></script>
+
     <!-- Jquery Ui Version 1.12.1 File -->
     <script src="{{ asset('assets/js/jquery-ui.min.js') }}"></script>
+
     <!-- Nice Select Jquery Version 1.0 File -->
     <script src="{{ asset('assets/js/jquery.nice-select.min.js') }}"></script>
+
     <!-- Customized JavaScript File -->
     <script src="{{ asset('assets/js/svg.js') }}"></script>
     <script src="{{ asset('assets/js/custom.js') }}"></script>
@@ -224,6 +189,30 @@
                 });
             });
         });
+    </script>
+
+    <script>
+        document.addEventListener('scroll', function () {
+            const sections = document.querySelectorAll('section');
+            const navLinks = document.querySelectorAll('.nav-links');
+            
+            let currentSection = '';
+        
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                if (pageYOffset >= sectionTop - 50) {
+                    currentSection = section.getAttribute('id');
+                }
+            });
+        
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href').includes(currentSection)) {
+                    link.classList.add('active');
+                }
+            });
+        });
+    
     </script>
 
 </body>
