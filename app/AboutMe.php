@@ -183,6 +183,10 @@ class AboutMe
             'icon' => 'MySQL-Dark.svg'
         ],
         [
+            'name' => 'HTML',
+            'icon' => 'HTML.svg'
+        ],
+        [
             'name' => 'CSS',
             'icon' => 'CSS.svg'
         ],
@@ -196,7 +200,7 @@ class AboutMe
         ],
         [
             'name' => 'JSON',
-            'icon' => 'Vite-Dark.svg' // Assuming JSON icon corresponds to Vite-Dark.svg
+            'icon' => 'json.svg' // Assuming JSON icon corresponds to Vite-Dark.svg
         ],
         [
             'name' => 'Version Control System (Git)',
@@ -208,15 +212,23 @@ class AboutMe
         ],
         [
             'name' => 'MS Word',
-            'icon' => 'VSCode-Dark.svg' // Assuming MS Word icon corresponds to VSCode-Dark.svg
+            'icon' => 'Htmx-Dark.svg' // Assuming MS Word icon corresponds to VSCode-Dark.svg
+        ],
+        [
+            'name' => 'Vite',
+            'icon' =>'Vite-Dark.svg'
         ],
         [
             'name' => 'MS Excel',
-            'icon' => 'VSCode-Dark.svg' // Assuming MS Excel icon corresponds to VSCode-Dark.svg
+            'icon' => 'Htmx-Dark.svg' // Assuming MS Excel icon corresponds to VSCode-Dark.svg
+        ],
+        [
+            'name' => 'Tailwind CSS',
+            'icon' =>'TailwindCSS-Dark.svg'
         ],
         [
             'name' => 'MS Power Point',
-            'icon' => 'VSCode-Dark.svg' // Assuming MS Power Point icon corresponds to VSCode-Dark.svg
+            'icon' => 'Htmx-Dark.svg' // Assuming MS Power Point icon corresponds to VSCode-Dark.svg
         ]
     ];
     

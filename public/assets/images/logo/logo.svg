@@ -1,13 +1,21 @@
-
-<svg width="100" height="50" viewBox="0 0 100 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <text x="10" y="40" font-family="Arial, sans-serif" font-size="40" font-weight="bold" fill="url(#gradient)">
-    &lt;/A&gt;
-  </text>
+<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256">
   <defs>
-    <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#B97AFA; stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#4A34A7; stop-opacity:1" />
+    <linearGradient id="gradient" gradientTransform="rotate(90)">
+      <stop offset="0%" stop-color="#4D1EEA">
+        <animate attributeName="stop-color" values="#4D1EEA; #902bdf; #4D1EEA" dur="5s" repeatCount="indefinite" />
+      </stop>
+      <stop offset="25%" stop-color="#902bdf">
+        <animate attributeName="stop-color" values="#902bdf; #4D1EEA; #902bdf" dur="5s" repeatCount="indefinite" />
+      </stop>
+      <stop offset="75%" stop-color="#902bdf">
+        <animate attributeName="stop-color" values="#902bdf; #4D1EEA; #902bdf" dur="5s" repeatCount="indefinite" />
+      </stop>
+      <stop offset="100%" stop-color="#4D1EEA">
+        <animate attributeName="stop-color" values="#4D1EEA; #902bdf; #4D1EEA" dur="5s" repeatCount="indefinite" />
+      </stop>
     </linearGradient>
   </defs>
+  <path d="M128 32L64 224h32l16-48h64l16 48h32L128 32zM140 144h-24l12-36 12 36z" fill="url(#gradient)" />
 </svg>
+
 
