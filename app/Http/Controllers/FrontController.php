@@ -50,10 +50,10 @@ class FrontController extends Controller
     public function projectDetails($slug)
     {
         $data['projectData']    = Project::where('slug', $slug)->firstOrFail();
-        $data['skills']         = AboutMe::SKILL;
-        $data['skill_icons']    = AboutMe::SKILL_ICON;
+        $data['skills']         = AboutMe::SKILL_DATA;
+        $data['bio']            = AboutMe::BIO;
+        $data['socials']        = AboutMe::SOCIAL;
         $data['other_projects'] = Project::where('slug', '!=', $slug)->where('status', 1)->orderBy('sort', 'asc')->get();
-
         return view('frontend.projects-details', $data);
     }
     public function contact()
@@ -63,8 +63,7 @@ class FrontController extends Controller
         $data['bio']            = AboutMe::BIO;
         $data['socials']        = AboutMe::SOCIAL;
         $data['contacts']       = AboutMe::CONTACT;
-        $data['skills']         = AboutMe::SKILL;
-        $data['skill_icons']    = AboutMe::SKILL_ICON;
+        $data['skills']         = AboutMe::SKILL_DATA;
         return view('frontend.contact', $data);
     }
 }

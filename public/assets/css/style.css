@@ -1882,7 +1882,8 @@ body.show-menu::before {
 /* Hero Banner End */
 
 /* Amazing Art Start */
-.amazing-art-wrapper .container .small-title {
+.amazing-art-wrapper .container .small-title,
+.project-details .small-title {
   font-size: var(--h5-size);
   background: var(--nft-amazing-title-bg);
   background-clip: text;

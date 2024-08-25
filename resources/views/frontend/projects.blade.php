@@ -61,7 +61,7 @@
                                             </div>
                                         </div>
                                         <div class="top-artwork-redirect-arrow-box position-absolute">
-                                            <a href="explore-collection.html" class="w-100 h-100 d-flex">
+                                            <a href="{{ route('project.details', $project->slug) }}" class="w-100 h-100 d-flex">
                                                 <span
                                                     class="top-artwork-redirect-card position-relative d-inline-flex justify-content-center align-items-center text-decoration-none cursor-pointer w-100 h-100">
                                                     <span

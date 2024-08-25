@@ -11,28 +11,29 @@
             border-radius: 6px !important;
         }
 
-        .contact-form img {
-            right: 30px;
-            width: 32px;
-        }
-
-        .social-links li a {
-            width: 60px;
-            height: 60px;
-            line-height: 65px;
-        }
-
         .shadow-box {
             height: 400px;
         }
 
         .carousel-item {
             height: 400px;
-            border-radius: 30px;
+            -webkit-border-radius: 14px;
+            -moz-border-radius: 14px;
+            -ms-border-radius: 14px;
+            -o-border-radius: 14px;
             background: #000;
         }
-        .other-project{
-            padding:100px 25px 25px 25px; 
+
+        .other-project {
+            padding: 100px 25px 25px 25px;
+        }
+
+        .project-image,
+        .other-project {
+            -webkit-border-radius: 14px;
+            -moz-border-radius: 14px;
+            -ms-border-radius: 14px;
+            -o-border-radius: 14px;
         }
 
         .other-project::before {
@@ -43,7 +44,7 @@
             top: 0;
             left: 0;
             z-index: -1;
-            background: #007777;
+            background: linear-gradient(to right, var(--nft-violet-glow), var(--nft-blue-violet), var(--nft-blue-violet), var(--nft-violet-glow)) repeat;
             border-radius: inherit;
             mask-image: linear-gradient(transparent, #fff);
             -webkit-mask-image: linear-gradient(transparent, #fff);
@@ -62,100 +63,126 @@
             background-color: rgba(0, 0, 0, 0.20);
             border-radius: inherit;
         }
-        dl, ol, ul {
+
+        .project-description dl,
+        ol,
+        ul {
             margin-top: 0;
             margin-bottom: 1rem;
         }
-        ul li {
+
+        .project-description ul li {
             margin-bottom: 1rem;
         }
+
+        .project-info {
+            padding: 15px !important;
+        }
+        .project-tags{
+            margin-top: 12px;
+        }
+
+        .project-tags .badge {
+            background: linear-gradient(to right, var(--nft-violet-glow), var(--nft-blue-violet), var(--nft-blue-violet), var(--nft-violet-glow)) repeat;
+            color: var(--nft-white);
+        }
+        .project-link-wrapper{
+            gap: 10px !important;
+            margin-top: 12px;
+        }
     </style>
-    <section class="py-4 py-sm-5">
+
+    <section class="section-pt">
         <div class="container">
             <div class="row">
-                <div data-aos="zoom-in" class="col-lg-8 mb-4 mb-sm-0">
+                <div class="col-lg-8 mb-4 mb-sm-0">
                     <div id="carouselExampleIndicators" class="carousel slide carousel-fade" data-bs-ride="carousel">
                         <div class="carousel-indicators">
                             @foreach ($projectData->images as $index => $image)
-                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="{{ $index }}" class="{{ $loop->first ? 'active' : '' }}" aria-label="Slide {{ $index + 1 }}"></button>
+                                <button type="button" data-bs-target="#carouselExampleIndicators"
+                                    data-bs-slide-to="{{ $index }}" class="{{ $loop->first ? 'active' : '' }}"
+                                    aria-label="Slide {{ $index + 1 }}"></button>
                             @endforeach
                         </div>
                         <div class="carousel-inner">
                             @foreach ($projectData->images as $image)
                                 <div class="carousel-item {{ $loop->first ? 'active' : '' }}  w-100">
-                                    <a href="{{ asset($image->image_path) }}" data-baguettebox="project-images" data-caption="{{ $projectData->short_description }}">
-                                        <img decoding="async" src="{{ asset($image->image_path) }}" class="d-block w-100 h-100 project-image" style="border-radius: 30px; object-fit:cover" alt="{{ $projectData->short_description }}">
+                                    <a href="{{ asset($image->image_path) }}" data-baguettebox="project-images"
+                                        data-caption="{{ $projectData->short_description }}">
+                                        <img decoding="async" src="{{ asset($image->image_path) }}"
+                                            class="d-block w-100 h-100 project-image" style="object-fit:cover"
+                                            alt="{{ $projectData->short_description }}">
                                     </a>
                                 </div>
                             @endforeach
                         </div>
-                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                            data-bs-slide="prev">
                             <i class="iconoir-fast-arrow-left fs-2" style="color: #00d4ff"></i>
                         </button>
-                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                            data-bs-slide="next">
                             <i class="iconoir-fast-arrow-right fs-2" style="color: #00d4ff"></i>
                         </button>
                     </div>
                 </div>
 
-                <div data-aos="zoom-in" class="contact-form col-lg-4">
-                    <div class="shadow-box p-4">
-                        <img decoding="async" src="{{ asset('img/icon2.png') }}" alt="Star" class="star-icon">
-
+                <div class="col-lg-4">
+                    <div class="amazing-art-content-wrapper position-relative overflow-hidden project-info h-100">
                         <div class="mb-3">
-                            <h6 class="mb-3" data-aos="fade-up" class="aos-init aos-animate">PROJECT <span>LINK</h6>
-                            <ul class="social-links d-flex align-center justify-content-start pt-3 pt-sm-2 aos-init aos-animate list-unstyled" data-aos="zoom-in">
-                                <li class="mb-0">
-                                    <a href="{{ $projectData->live_url}}" target="_blank" class="shadow-box" title="Live Link">
-                                        <i class="iconoir-internet"></i>
+                            <h3 class="p fw-semibold feature-name">Project Link</h3>
+                            <ul class="d-grid social-icons-list-wrapper project-link-wrapper">
+                                <li class="social-icon-list">
+                                    <a href="{{ $projectData->live_url }}" target="_blank"
+                                        class="social-icons-link flex-center">
+                                        <i data-icon="facebookIcon" class="social-icons flex-center"></i>
                                     </a>
                                 </li>
-                                <li class="mb-0">
-                                    <a href="{{ $projectData->test_url}}" target="_blank" class="shadow-box" title="Host Link">
-                                        <i class="iconoir-link"></i>
-                                    </a>
-                                </li>
-                                <li class="mb-0">
-                                    <a href="{{ $projectData->host_link}}" target="_blank" class="shadow-box" title="Host Link">
-                                        <i class="iconoir-github"></i>
+                                <li class="social-icon-list">
+                                    <a href="{{ $projectData->host_link }}" target="_blank"
+                                        class="social-icons-link flex-center">
+                                        <i data-icon="facebookIcon" class="social-icons flex-center"></i>
                                     </a>
                                 </li>
                             </ul>
                         </div>
 
                         <div>
-                            <h6 data-aos="fade-up" class="aos-init aos-animate">TITLE</h6>
-                            <p>{{ $projectData->short_description }}</p>
+                            <h3 class="p fw-semibold feature-name">Title</h3>
+                            <p class="p sm fw-normal mb-0 feature-info">{{ $projectData->short_description }}</p>
                         </div>
-
                         <div>
-                            <h6 data-aos="fade-up" class="aos-init aos-animate">TAGS</h6>
-                            <div class="d-flex gap-1 flex-wrap">
+                            <h3 class="p fw-semibold feature-name">Tags</h3>
+                            <div class="d-flex gap-2 flex-wrap project-tags">
                                 @foreach ($projectData->tags as $tag)
-                                    <span class="badge rounded-pill text-bg-success">{{ $tag->name }}</span>
+                                    <span class="badge" style="line-height: 1.3;">{{ $tag->name }}</span>
                                 @endforeach
                             </div>
+                        </div>
+                        <div class="amazing-diamond-img position-absolute bottom-0">
+                            <img src="{{ asset('assets/images/nft/amazing-art-bg-diamond.png') }}" alt="diamond-img">
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="row mt-4 mt-sm-5">
+            <div class="row mt-5">
                 <div class="col-md-8">
-                    <div>
-                        <h5 data-aos="fade-up" class="aos-init aos-animate pb-3 mb-3 header-text" style="border-bottom: 1px solid #212529;">PROJECT OVERVIEW</h5>
+                    <div class="project-description project-details">
+                        <h5 class="small-title bg-text text-start mb-5">Project Overview</h5>
                         <div>{!! $projectData->long_description !!}</div>
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div>
-                        <h5 data-aos="fade-up" class="aos-init aos-animate pb-3 mb-3 header-text" style="border-bottom: 1px solid #212529;">OTHER PROJECT</h5>
+                    <div class="project-details">
+                        <h5 class="small-title bg-text text-start mb-5">Other Project</h5>
                         @foreach ($other_projects as $other_project)
                             @php
                                 $firstImage = $other_project->images->first(); // Get the first image from the relation
                             @endphp
-                            <a href="{{ route('project.details', ['slug' => $other_project->slug] ) }}" target="_blank">
-                                <div class="mb-3 mb-sm-4 text-white other-project rounded position-relative" style="background-image: url('{{ asset($firstImage->image_path) }}'); z-index:1; background-size:cover;">
-                                    <h4 class="fst-italic fw-bold m-o ">{{ $other_project->project_name }}</h4>
+                            <a href="{{ route('project.details', ['slug' => $other_project->slug]) }}" target="_blank">
+                                <div class="{{ $loop->last ? '' : 'mb-5' }} text-white other-project position-relative"
+                                    style="background-image: url('{{ asset($firstImage->image_path) }}'); z-index:1; background-size:cover;">
+                                    <h6 class="fst-italic fw-bold m-o ">{{ $other_project->project_name }}</h6>
                                 </div>
                             </a>
                         @endforeach
