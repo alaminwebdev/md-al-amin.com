@@ -16,9 +16,10 @@ class ProjectController extends Controller
      */
     public function index()
     {
-        $data['skills']         = AboutMe::SKILL;
-        $data['skill_icons']    = AboutMe::SKILL_ICON;
+        $data['skills']         = AboutMe::SKILL_DATA;
         $data['projects']       = Project::latest()->get();
+        $data['bio']            = AboutMe::BIO;
+        $data['socials']        = AboutMe::SOCIAL;
         return view('backend.projects.list', $data);
     }
 
@@ -27,8 +28,9 @@ class ProjectController extends Controller
      */
     public function create()
     {
-        $data['skills']         = AboutMe::SKILL;
-        $data['skill_icons']    = AboutMe::SKILL_ICON;
+        $data['skills']         = AboutMe::SKILL_DATA;
+        $data['bio']            = AboutMe::BIO;
+        $data['socials']        = AboutMe::SOCIAL;
         return view('backend.projects.create', $data);
     }
 

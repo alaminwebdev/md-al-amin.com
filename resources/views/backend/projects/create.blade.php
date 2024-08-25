@@ -13,21 +13,21 @@
             background-color: #ffffff !important;
         }
     </style>
-    <section class="py-5">
+    <section class="section-pt">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-md-12">
-                    <div class="card border-0 rounded" style="background: #1c315047;">
+                    <div class="card border-0 rounded text-white p-3" style="background: rgba(76, 69, 154, 1);">
                         <div class="card-header d-flex justify-content-between align-items-center">
-                            <h5 class="card-title">Add Your Project</h5>
-                            <a href="{{ route('project-list.index') }}" class="btn btn-sm btn-info">Project List</a>
+                            <h6 class="card-title">Add Your Project</h6>
+                            <a href="{{ route('project-list.index') }}" class="btn btn-info">Project List</a>
                         </div>
                         <div class="card-body">
                             <form method="POST" action="{{ route('project-list.store') }}" enctype="multipart/form-data">
                                 @csrf
                                 <div class="mb-3">
                                     <label for="project_name" class="form-label">Project Name</label>
-                                    <input type="text" class="form-control @error('project_name') is-invalid @enderror" id="project_name" name="project_name" value="{{ old('project_name') }}" required>
+                                    <input type="text" class="custom-input @error('project_name') is-invalid @enderror" id="project_name" name="project_name" value="{{ old('project_name') }}" required>
                                     @error('project_name')
                                         <div class="invalid-feedback">
                                             {{ $message }}
@@ -37,7 +37,7 @@
 
                                 <div class="mb-3">
                                     <label for="live_url" class="form-label">Live URL</label>
-                                    <input type="text" class="form-control @error('live_url') is-invalid @enderror" id="live_url" name="live_url" value="{{ old('live_url') }}" required>
+                                    <input type="text" class="custom-input @error('live_url') is-invalid @enderror" id="live_url" name="live_url" value="{{ old('live_url') }}" required>
                                     @error('live_url')
                                         <div class="invalid-feedback">
                                             {{ $message }}
@@ -47,7 +47,7 @@
 
                                 <div class="mb-3">
                                     <label for="test_url" class="form-label">Test URL</label>
-                                    <input type="text" class="form-control @error('test_url') is-invalid @enderror" id="test_url" name="test_url" value="{{ old('test_url') }}" required>
+                                    <input type="text" class="custom-input @error('test_url') is-invalid @enderror" id="test_url" name="test_url" value="{{ old('test_url') }}" required>
                                     @error('test_url')
                                         <div class="invalid-feedback">
                                             {{ $message }}
@@ -57,7 +57,7 @@
 
                                 <div class="mb-3">
                                     <label for="host_link" class="form-label">Host Link</label>
-                                    <input type="text" class="form-control @error('host_link') is-invalid @enderror" id="host_link" name="host_link" value="{{ old('host_link') }}" required>
+                                    <input type="text" class="custom-input @error('host_link') is-invalid @enderror" id="host_link" name="host_link" value="{{ old('host_link') }}" required>
                                     @error('host_link')
                                         <div class="invalid-feedback">
                                             {{ $message }}
@@ -67,7 +67,7 @@
 
                                 <div class="mb-3">
                                     <label for="short_description" class="form-label">Short Description</label>
-                                    <textarea class="form-control @error('short_description') is-invalid @enderror" id="short_description" name="short_description" rows="3" required>{{ old('short_description') }}</textarea>
+                                    <textarea class="custom-input @error('short_description') is-invalid @enderror" id="short_description" name="short_description" rows="3" required>{{ old('short_description') }}</textarea>
                                     @error('short_description')
                                         <div class="invalid-feedback">
                                             {{ $message }}
@@ -77,7 +77,7 @@
 
                                 <div class="mb-3">
                                     <label for="long_description" class="form-label">Long Description</label>
-                                    <textarea class="form-control bg-white @error('long_description') is-invalid @enderror" id="long_description" name="long_description"  required>{{ old('long_description') }}</textarea>
+                                    <textarea class="@error('long_description') is-invalid @enderror" id="long_description" name="long_description"  required>{{ old('long_description') }}</textarea>
                                     @error('long_description')
                                         <div class="invalid-feedback">
                                             {{ $message }}
@@ -87,7 +87,7 @@
 
                                 <div class="mb-3">
                                     <label for="images" class="form-label">Multiple Images</label>
-                                    <input type="file" class="form-control @error('images.*') is-invalid @enderror" id="images" name="images[]" multiple>
+                                    <input type="file" class="custom-input @error('images.*') is-invalid @enderror" id="images" name="images[]" multiple>
                                     <div id="image-preview" class="mt-3"></div>
                                     @error('images.*')
                                         <div class="invalid-feedback">
@@ -98,24 +98,24 @@
 
                                 <div class="mb-3">
                                     <label for="skill_tags" class="form-label">Skill Tags</label>
-                                    <input type="text" class="form-control" id="skill_tags" name="skill_tags" required>
+                                    <input type="text" class="custom-input" id="skill_tags" name="skill_tags" required>
                                     <div id="skill-tags-preview" class="mt-3"></div>
                                 </div>
 
                                 <div class="mb-3">
                                     <label for="sort" class="form-label">Sort</label>
-                                    <input type="number" class="form-control" id="sort" name="sort" value="{{ old('sort') }}" placeholder="Enter sort number">
+                                    <input type="number" class="custom-input" id="sort" name="sort" value="{{ old('sort') }}" placeholder="Enter sort number">
                                 </div>
 
                                 <div class="mb-3">
                                     <label for="status" class="form-label">Status</label>
-                                    <select name="status" id="status" class="form-control">
+                                    <select name="status" id="status" class="custom-input">
                                         <option value="1">Active</option>
                                         <option value="0">Inactive</option>
                                     </select>
                                 </div>
 
-                                <button type="submit" class="btn btn-sm theme-btn">Upload Project</button>
+                                <button type="submit" class="button primary-btn mt-3">Upload Project</button>
                             </form>
 
                         </div>

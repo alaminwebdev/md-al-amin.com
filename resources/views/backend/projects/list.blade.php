@@ -1,13 +1,13 @@
 @extends('app')
 @section('content')
-    <section class="py-5">
+    <section class="section-pt">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-md-12">
-                    <div class="card border-0 rounded" style="background: #1c315047;">
+                    <div class="card border-0 rounded p-3 text-white" style="background: rgba(76, 69, 154, 1);">
                         <div class="card-header d-flex justify-content-between align-items-center">
-                            <h5 class="card-title">Project List</h5>
-                            <a href="{{ route('project-list.create') }}" class="btn btn-sm btn-info">Add Project</a>
+                            <h6 class="card-title">Project List</h6>
+                            <a href="{{ route('project-list.create') }}" class="btn btn-info">Add Project</a>
                         </div>
                         <div class="card-body">
                             <table class="table-sm table-bordered table-striped" style="width: 100%">
