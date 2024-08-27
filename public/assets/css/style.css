@@ -549,7 +549,7 @@ a:hover {
 
 .small-title {
   font-family: var(--font-secondary);
-  font-size: var(--h3-size);
+  font-size: var(--h5-size);
   font-weight: 400;
   text-align: center;
   line-height: normal;

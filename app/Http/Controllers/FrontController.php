@@ -25,12 +25,11 @@ class FrontController extends Controller
     {
         $fileName       = 'resume_of_md_al_amin.pdf';
         $filePath       = public_path('resume');
-        $skills         = AboutMe::SKILL;
-        $skill_icons    = AboutMe::SKILL_ICON;
-
+        $bio            = AboutMe::BIO;
+        $socials        = AboutMe::SOCIAL;
         // Check if file already exists, if so, enter page
         if (File::exists($filePath . '/' . $fileName)) {
-            return view('frontend.resume', compact('fileName', 'skills', 'skill_icons'));
+            return view('frontend.resume', compact('fileName', 'bio', 'socials'));
         }
         return redirect()->back()->with('warning', 'Resume not Found!');
     }

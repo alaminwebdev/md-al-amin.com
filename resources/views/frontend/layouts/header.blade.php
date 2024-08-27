@@ -14,24 +14,24 @@
                     <ul
                         class="d-flex justify-content-center justify-content-xl-start flex-xl-row flex-column align-items-xl-center nav-list-wrapper">
                         <li class="nav-list">
-                            <a href="#banner" class="nav-links fw-normal active"
+                            <a href="{{ Request::routeIs('dashboard') ? '#banner' : route('dashboard') }}" class="nav-links fw-normal {{ Request::routeIs('dashboard') ? 'active' : '' }}"
                                 data-cursor="nft-magnifiers-cursor nft-light-mode-magnifiers-cursor"
                                 data-cursor-text="Click me!">
                                  Home
                             </a>
                         </li>
                         <li class="nav-list">
-                            <a href="#about-me" class="nav-links fw-normal"
+                            <a href="{{ Request::routeIs('dashboard') ? '#about-me' : route('dashboard').'#about-me' }}" class="nav-links fw-normal"
                                 data-cursor="nft-magnifiers-cursor nft-light-mode-magnifiers-cursor"
                                 data-cursor-text="Click me!">About</a>
                         </li>
                         <li class="nav-list">
-                            <a href="#project" class="nav-links fw-normal"
+                            <a href="{{ Request::routeIs('dashboard') ? '#project' : route('dashboard').'#project' }}" class="nav-links fw-normal"
                                 data-cursor="nft-magnifiers-cursor nft-light-mode-magnifiers-cursor"
                                 data-cursor-text="Click me!">Projects</a>
                         </li>
                         <li class="nav-list">
-                            <a href="{{ route('resume') }}" class="nav-links fw-normal"
+                            <a href="{{ Request::routeIs('resume') ? '#resume' : route('resume') }}"  class="nav-links fw-normal {{ Request::routeIs('resume') ? 'active' : '' }}"
                                 data-cursor="nft-magnifiers-cursor nft-light-mode-magnifiers-cursor"
                                 data-cursor-text="Click me!">Resume</a>
                         </li>
@@ -47,14 +47,15 @@
                 <div class="toggle-wrapper">
                     <div class="toggle"></div>
                 </div>
-                <!-- Connect Wallet Modal Start -->
+
+                <!-- Connect Wallet Modal / Resume Download Start -->
                 <a href="{{ route('resume.download') }}" class="button primary-btn connect-wallet-button"
                      id="connectwalletModalLabel">
                     <span class="d-none d-xl-block text-capitalize">Download Resume</span>
                     <i data-icon="iconDownload" class=""></i>
                 </a>
-
-                <!-- Connect Wallet Modal End -->
+                <!-- Connect Wallet Modal / Resume Download End -->
+                
                 <div class="d-block ms-5 d-xl-none">
                     <div class="hamburger" id="hamburger">
                         <span class="line"></span>
