@@ -6,38 +6,33 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="google-site-verification" content="xhQ-OBkMbThmXIiJTRCrucGKBP6x12YtTqS1Fsm43Ys" />
-
 
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <!-- SEO Meta Tags -->
-    <meta name="description" content="Md. Al Amin – Full Stack Web Developer">
-    <meta name="keyword" content="Md. Al Amin, Full Stack Web Developer">
+    <meta name="keywords" content="Md. Al Amin, Software Engineer">
+    <meta name="description" content="Passionate Software Engineer delivering tailored web applications and innovative solution">
     <meta name="author" content="Md. Al Amin">
     <meta name="robots" content="max-image-preview:large">
     <meta name="keywords" content="Alamin, Md. Alamin, Mohammad Alamin, Software Enginner, Web Developer, CSE">
 
     <!-- Open Graph Tags -->
     <meta property="og:site_name" content="Md. Al Amin">
-    <meta property="og:url" content="https://md-al-amin.com/"">
-    <meta property="og:title" content="Md. Al Amin – Full Stack Web Developer">
-    <meta property="og:description" content="Md. Al Amin – Full Stack Web Developer">
+    <meta property="og:url" content="https://md-al-amin.com/">
+    <meta property="og:title" content="Md. Al Amin – Software Enginner">
+    <meta property="og:description" content="Passionate Software Engineer delivering tailored web applications and innovative solution">
     <meta property="og:image" content="https://md-al-amin.com/img/me.jpg">
 
-    <meta name="theme-color" content="#0f172a">
+    <meta name="theme-color" content="#4D1EEA">
 
 
     <!-- Canonical and Shortlink Tags -->
     <link rel="canonical" href="https://md-al-amin.com/">
     <link rel="shortlink" href="https://md-al-amin.com/">
 
-
-    <link rel="preload" href="{{ asset('font/Mona-Sans.woff2') }}" as="font" type="font/woff2" crossorigin>
-
-    <title>Md. Al Amin – Full Stack Web Developer</title>
+    <title>Md. Al Amin – Software Enginner</title>
 
     <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('favicon/apple-touch-icon.png') }}">
     <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('favicon/favicon-32x32.png') }}">

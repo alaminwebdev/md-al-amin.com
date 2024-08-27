@@ -4,7 +4,13 @@
       <loc>https://md-al-amin.com/</loc>
    </url>
    <url>
-      <loc>https://md-al-amin.com/contact</loc>
+      <loc>https://md-al-amin.com/#about-me</loc>
+   </url>
+   <url>
+      <loc>https://md-al-amin.com/#project</loc>
+   </url>
+   <url>
+      <loc>https://md-al-amin.com/resume-view</loc>
    </url>
    <!-- Add more URL entries here -->
 </urlset>
