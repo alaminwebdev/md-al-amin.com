@@ -29,7 +29,7 @@
                         </div>
                     </div>
                 </div>
-                <h1 class="font-secondary bg-text d-inline-block h1 text-start mt-5 mt-md-0">{{ $bio['title'] }}</h1>
+                <h1 class="font-secondary bg-text d-inline-block h1 text-start mt-4 mt-md-0">{{ $bio['title'] }}</h1>
                 <div class="d-sm-flex align-items-center">
                     <div class="position-relative hero-cartoon-main-wrapper">
                         <img src="{{ asset('assets/images/hero/arrow-wave-dark.svg') }}"alt="arrow-wave" class="hero-arrow-wave dark">

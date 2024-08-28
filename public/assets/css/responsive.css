@@ -370,7 +370,11 @@
   .header-scrolled {
     background-color: var(--nft-body);
   }
-
+  
+  .header-logo-wrapper {
+    width: 45px;
+    height: 45px;
+  }
   .navbar {
     width: 50%;
     position: fixed;
@@ -1129,6 +1133,15 @@
     --h5-sm-size: 16px;
   }
 
+  .hero {
+    padding-top: calc(var(--nft-header-height));
+  }
+  .hero-left {
+    padding-top: 5rem;
+  }
+  .hero-flex h1 {
+    margin-bottom: 14px;
+  }
   .hero-about {
     margin: 0;
   }
