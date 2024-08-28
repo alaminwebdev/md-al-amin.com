@@ -60,6 +60,9 @@
     <!-- Responsive CSS -->
     <link type="text/css" rel="stylesheet" href="{{ asset('assets/css/responsive.css') }}">
 
+    <!-- baguetteBox -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.11.1/baguetteBox.min.css">
+
     <!-- ThemeChanger Javascript File -->
     <script src="{{ asset('assets/js/themechanger.js') }}"></script>
 
@@ -118,6 +121,7 @@
     <script src="{{ asset('assets/js/svg.js') }}"></script>
     <script src="{{ asset('assets/js/custom.js') }}"></script>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.11.1/baguetteBox.min.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             const contactForm = document.getElementById('contactForm');
@@ -208,6 +212,17 @@
             });
         });
     
+    </script>
+
+    <script>
+        baguetteBox.run('.carousel-inner', {
+            animation: 'fadeIn',
+            noScrollbars: true,
+            buttons: true,
+            // captions: function(element) {
+            //     return element.getElementsByTagName('img')[0].alt;
+            // }
+        });
     </script>
 
 </body>

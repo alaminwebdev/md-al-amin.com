@@ -26,7 +26,7 @@
                                 data-cursor-text="Click me!">About</a>
                         </li>
                         <li class="nav-list">
-                            <a href="{{ Request::routeIs('dashboard') ? '#project' : route('dashboard').'#project' }}" class="nav-links fw-normal"
+                            <a href="{{ Request::routeIs('dashboard') ? '#project' : route('dashboard').'#project' }}" class="nav-links fw-normal {{ Request::routeIs('project.details') ? 'active' : '' }}"
                                 data-cursor="nft-magnifiers-cursor nft-light-mode-magnifiers-cursor"
                                 data-cursor-text="Click me!">Projects</a>
                         </li>

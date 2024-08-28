@@ -11,17 +11,15 @@
             border-radius: 6px !important;
         }
 
-        .shadow-box {
-            height: 400px;
-        }
 
         .carousel-item {
-            height: 400px;
+            height: 450px;
             -webkit-border-radius: 14px;
             -moz-border-radius: 14px;
             -ms-border-radius: 14px;
             -o-border-radius: 14px;
-            background: #000;
+            /* background: #000; */
+            background: linear-gradient(to right, var(--nft-violet-glow), var(--nft-blue-violet), var(--nft-blue-violet), var(--nft-violet-glow)) repeat;
         }
 
         .other-project {
@@ -73,6 +71,8 @@
 
         .project-description ul li {
             margin-bottom: 1rem;
+            line-height: 1.8;
+            color: var(--nft-amazing-card-paragraph);
         }
 
         .project-info {
@@ -92,7 +92,7 @@
         }
     </style>
 
-    <section class="section-pt">
+    <section class="section-pt" id="project">
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 mb-4 mb-sm-0">
@@ -117,12 +117,12 @@
                             @endforeach
                         </div>
                         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
-                            data-bs-slide="prev">
-                            <i class="iconoir-fast-arrow-left fs-2" style="color: #00d4ff"></i>
+                            data-bs-slide="prev" data-cursor-text="Previous" data-cursor="nft-click-me-cursor">
+                                <i data-icon="iconLeftArrow" style="color: #00d4ff; font-size:16px;" ></i>
                         </button>
                         <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
-                            data-bs-slide="next">
-                            <i class="iconoir-fast-arrow-right fs-2" style="color: #00d4ff"></i>
+                            data-bs-slide="next" data-cursor-text="Next" data-cursor="nft-click-me-cursor">
+                            <i data-icon="iconRightArrow" style="color: #00d4ff; font-size:16px;"></i>
                         </button>
                     </div>
                 </div>
@@ -135,13 +135,13 @@
                                 <li class="social-icon-list">
                                     <a href="{{ $projectData->live_url }}" target="_blank"
                                         class="social-icons-link flex-center">
-                                        <i data-icon="facebookIcon" class="social-icons flex-center"></i>
+                                        <i data-icon="websiteIcon" class="social-icons flex-center"></i>
                                     </a>
                                 </li>
                                 <li class="social-icon-list">
                                     <a href="{{ $projectData->host_link }}" target="_blank"
                                         class="social-icons-link flex-center">
-                                        <i data-icon="facebookIcon" class="social-icons flex-center"></i>
+                                        <i data-icon="githubIcon" class="social-icons flex-center"></i>
                                     </a>
                                 </li>
                             </ul>

@@ -28,9 +28,9 @@
             </div>
             <div class="footer-contactus-wrapper d-flex flex-column">
                 <h2 class="p lg text-capitalize font-secondary fw-normal">Contact us</h2>
-                <a href="https://maps.app.goo.gl/zLfZRHPKWFAM3PMA9" target="_blank"
+                <a href="https://maps.app.goo.gl/3oPRLGnNbuQSK2T5A" target="_blank"
                     class="fw-normal footer-contactus-link p lg fw-normal">
-                    ASA Neer, 159/3/D, Road-02 W Agargaon, Dhaka 1207
+                    Shyamoli, Dhaka 1207
                 </a>
                 <div class="mt-sm-5 mt-3">
                     <ul class="d-grid social-icons-list-wrapper">
