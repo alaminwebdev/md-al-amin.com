@@ -55,7 +55,8 @@
     <link type="text/css" rel="stylesheet" href="{{ asset('assets/css/nice-select.css') }}">
 
     <!-- Customized Style CSS -->
-    <link type="text/css" rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
+    {{-- <link type="text/css" rel="stylesheet" href="{{ asset('assets/css/style.css') }}"> --}}
+    <link type="text/css" rel="stylesheet" href="{{ asset('assets/css/style.min.css') }}">
 
     <!-- Responsive CSS -->
     <link type="text/css" rel="stylesheet" href="{{ asset('assets/css/responsive.css') }}">
