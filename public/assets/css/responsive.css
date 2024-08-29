@@ -547,7 +547,7 @@
 
   .amazing-art-title {
     max-width: 100%;
-    padding-bottom: 5rem;
+    /* padding-bottom: 5rem; */
   }
 
   .amazing-art-features-wrapper {
@@ -1133,6 +1133,10 @@
     --h5-sm-size: 16px;
   }
 
+  .hero-banner-button-wrapper {
+    margin-top: 3rem;
+  }
+
   .hero {
     padding-top: calc(var(--nft-header-height));
   }
@@ -1165,6 +1169,37 @@
 
   .top-artwork-title {
     font-size: 5rem;
+  }
+  .small-title {
+    text-align: left;
+  }
+  .about-item {
+    padding-bottom: 1.25em;
+  }
+  .about-header,
+  .about-body {
+    margin-inline-start: 4em !important;
+  }
+  .about-item:not(:last-child):before,
+  .about-item:after {
+    left: 3em !important;
+  }
+  .about-btn .swiper-custom-arrow-btn {
+    width: 5rem !important;
+    height: 5rem !important;
+  }
+  .swiper-custom-arrow-btn span {
+    width: 16px;
+    height: 16px;
+  }
+  .about-date {
+    font-size: 0.75em !important;
+  }
+  .about-title {
+    font-size: 1.2em !important;
+  }
+  .about-item-p ul li {
+    font-size: 12px !important;
   }
 
   .footer-wrapper {
@@ -1221,6 +1256,9 @@
 
   .subscribe-update-info p {
     font-size: 15px;
+  }
+  .subscribe-title-info {
+    margin-bottom: 4rem;
   }
 
   .feature-info {
