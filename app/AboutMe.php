@@ -32,9 +32,25 @@ class AboutMe
     ];
     const EXPERIENCE = [
         [
+            'designation'       => 'Software Engineer',
+            'start_date'        => '01-07-2024',
+            'end_date'          => null,
+            'company'           => 'Ambala IT',
+            'responsibilites'   => 
+                '
+                    <ul>
+                        <li>🛠️ Enhanced microfinance software by adding new features and fixing bugs to improve loan processing, client management, and financial reporting.</li>
+                        <li>📈 Developed and automated microfinance reports, including income statements and balance sheets, ensuring accurate data analysis and compliance.</li>
+                        <li>🔧 Customized microfinance tools to meet specific needs, optimizing performance and user experience.</li>
+                        <li>🚀 Optimized ERP workflows by streamlining processes, resulting in improved system performance and user satisfaction.</li>
+                    </ul>
+                '
+
+        ],
+        [
             'designation'       => 'Full-Stack Web Developer',
             'start_date'        => '01-03-2023',
-            'end_date'          => null,
+            'end_date'          => '30-06-2024',
             'company'           => 'Nano Information Technology (Nanosoft)',
             'responsibilites'   => 
                 '
@@ -112,47 +128,6 @@ class AboutMe
         ]
     ];
 
-    const SKILL = [
-        'PHP Framework Laravel', 
-        'Javascript', 
-        'React', 
-        'PHP', 
-        'AJAX', 
-        'jQuery', 
-        'MySQL', 
-        'CSS', 
-        'Bootstrap', 
-        'SQL', 
-        'JSON', 
-        'Version Control System (Git)', 
-        'Postman', 
-        'MS Word', 
-        'MS Excel', 
-        'MS  Power Point'
-    ];
-
-    const SKILL_ICON = [
-        'Laravel-Dark.svg',
-        'PHP-Dark.svg',
-        'JavaScript.svg',
-        'React-Dark.svg',
-        'JQuery.svg',
-        'MySQL-Dark.svg',
-        'Bootstrap.svg',
-        'CSS.svg',
-        'HTML.svg',
-        'Htmx-Dark.svg',
-        'Photoshop.svg',
-        'Git.svg',
-        'Github-Dark.svg',
-        'GitLab-Dark.svg',
-        'BitBucket-Light.svg',
-        'Postman.svg',
-        'TailwindCSS-Dark.svg',
-        'Vite-Dark.svg',
-        'VSCode-Dark.svg'
-    ];
-
     const SKILL_DATA = [
         [
             'name' => 'PHP Framework Laravel',
@@ -172,7 +147,7 @@ class AboutMe
         ],
         [
             'name' => 'AJAX',
-            'icon' => 'Htmx-Dark.svg' // Assuming AJAX icon corresponds to Htmx-Dark.svg
+            'icon' => 'Htmx-Dark.svg'
         ],
         [
             'name' => 'jQuery',
@@ -196,11 +171,11 @@ class AboutMe
         ],
         [
             'name' => 'SQL',
-            'icon' => 'MySQL-Dark.svg' // Assuming SQL icon corresponds to MySQL-Dark.svg
+            'icon' => 'MySQL-Dark.svg'
         ],
         [
             'name' => 'JSON',
-            'icon' => 'json.svg' // Assuming JSON icon corresponds to Vite-Dark.svg
+            'icon' => 'json.svg' 
         ],
         [
             'name' => 'Version Control System (Git)',
@@ -212,7 +187,7 @@ class AboutMe
         ],
         [
             'name' => 'MS Word',
-            'icon' => 'Htmx-Dark.svg' // Assuming MS Word icon corresponds to VSCode-Dark.svg
+            'icon' => 'Htmx-Dark.svg' 
         ],
         [
             'name' => 'Vite',
@@ -220,7 +195,7 @@ class AboutMe
         ],
         [
             'name' => 'MS Excel',
-            'icon' => 'Htmx-Dark.svg' // Assuming MS Excel icon corresponds to VSCode-Dark.svg
+            'icon' => 'Htmx-Dark.svg' 
         ],
         [
             'name' => 'Tailwind CSS',
@@ -228,7 +203,7 @@ class AboutMe
         ],
         [
             'name' => 'MS Power Point',
-            'icon' => 'Htmx-Dark.svg' // Assuming MS Power Point icon corresponds to VSCode-Dark.svg
+            'icon' => 'Htmx-Dark.svg'
         ]
     ];
     

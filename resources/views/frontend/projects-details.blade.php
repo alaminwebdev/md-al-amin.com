@@ -18,8 +18,7 @@
             -moz-border-radius: 14px;
             -ms-border-radius: 14px;
             -o-border-radius: 14px;
-            /* background: #000; */
-            background: linear-gradient(to right, var(--nft-violet-glow), var(--nft-blue-violet), var(--nft-blue-violet), var(--nft-violet-glow)) repeat;
+            background: var(--nft-amazing-bg)
         }
 
         .other-project {
@@ -110,7 +109,7 @@
                                     <a href="{{ asset($image->image_path) }}" data-baguettebox="project-images"
                                         data-caption="{{ $projectData->short_description }}">
                                         <img decoding="async" src="{{ asset($image->image_path) }}"
-                                            class="d-block w-100 h-100 project-image" style="object-fit:cover"
+                                            class="d-block w-100 h-100 project-image" style="object-fit:contain"
                                             alt="{{ $projectData->short_description }}">
                                     </a>
                                 </div>
