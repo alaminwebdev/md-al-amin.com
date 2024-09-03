@@ -49,8 +49,8 @@
                     <p class="fw-normal sm hero-about mt-5 mt-sm-0">{{ $bio['short_bio'] }}</p>
                 </div>
                 <div class="hero-banner-button-wrapper d-flex">
-                    <a href="#" class="button primary-btn">Explore More</a>
-                    <a href="#" class="button secondary-btn">Projects</a>
+                    <a href="#about-me" class="button primary-btn">Explore More</a>
+                    <a href="#project" class="button secondary-btn">Projects</a>
                 </div>
             </div>
             <div class="hero-right text-center position-relative">
@@ -61,11 +61,13 @@
                     <div class="hero-text-circle">
                         <svg viewBox="0 0 100 100" width="100" height="100">
                             <defs>
-                                <path id="circle" fill="currentColor" fill-opacity=" 0.12" d="
-                  M 50, 50
-                  m -37.5, 0
-                  a 37.5,37.5 110 1,1 75,0
-                  a 37.5,37.5 110 1,1 -75,0"></path>
+                                <path id="circle" fill="currentColor" fill-opacity=" 0.12" 
+                                    d="
+                                    M 50, 50
+                                    m -37.5, 0
+                                    a 37.5,37.5 110 1,1 75,0
+                                    a 37.5,37.5 110 1,1 -75,0">
+                                </path>
                             </defs>
                             <text font-size="12" textLength="230">
                                 <textPath xlink:href="#circle">

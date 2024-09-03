@@ -161,6 +161,14 @@
                         <div class="amazing-diamond-img position-absolute bottom-0">
                             <img src="{{ asset('assets/images/nft/amazing-art-bg-diamond.png') }}" alt="diamond-img">
                         </div>
+
+                        <div class="hero-start-line-right-indside position-absolute">
+                            <div class="start-line-container down-star">
+                                <div class="star-line">
+                                    <i data-icon="starIcon" class="anim-star d-flex justify-content-center star-line-icon"></i>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -188,7 +196,6 @@
                     </div>
                 </div>
             </div>
-
         </div>
     </section>
 @endsection
