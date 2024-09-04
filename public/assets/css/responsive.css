@@ -1316,6 +1316,13 @@
   .nav-collection-wrapper {
     grid-template-columns: repeat(1, 1fr);
   }
+  .swiper-custom-arrow-btn:not(:last-child) {
+    margin-right: 5px;
+  }
+
+  .social-icons-list-wrapper {
+    gap: 0px;
+  }
 
 }
 
