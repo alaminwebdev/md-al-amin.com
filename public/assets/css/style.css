@@ -1443,8 +1443,7 @@ body.show-menu::before {
 }
 
 .footer-wrapper {
-  padding: 6.3rem 0 5.3rem 0;
-  /* grid-template-columns: 2fr 1fr 1fr 2fr; */
+  padding: 5.3rem 0 5.3rem 0;
   grid-template-columns: 2fr 1fr 2fr;
   gap: 13rem;
 }

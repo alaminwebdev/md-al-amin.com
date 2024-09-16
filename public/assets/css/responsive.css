@@ -1206,6 +1206,9 @@
     grid-template-columns: repeat(1, 1fr);
     gap: 5rem;
   }
+  .footer-wrapper > div:nth-child(3) {
+    margin-top: -5rem;
+  }
 
   .footer-contactus-wrapper {
     grid-area: 4;
@@ -1250,72 +1253,10 @@
     top: -1%;
   }
 
-  .subscribe-update-wrapper {
-    padding: 4rem;
-  }
-
-  .subscribe-update-info p {
-    font-size: 15px;
-  }
-  .subscribe-title-info {
-    margin-bottom: 4rem;
-  }
-
   .feature-info {
     margin-top: 2px;
   }
 
-  .collection-stats .table thead tr th,
-  .collection-stats .table tbody tr td {
-    min-width: 120px;
-  }
-
-  .time-filter-wrapper {
-    gap: 2.5rem;
-    padding: 8px 10px;
-  }
-
-  .author-profile-top-wrapper,
-  .profile-top-wrapper {
-    border-radius: 10px;
-  }
-
-  .preview-item-wrapper {
-    padding: 2rem;
-  }
-
-  .drop-up-message-contact-wrapper {
-    grid-template-columns: repeat(1, 1fr);
-  }
-
-  .date-input-wrapper {
-    flex-direction: column;
-  }
-
-  .custom-dropdown-card {
-    margin-top: 10px;
-  }
-
-  .edit-input-group {
-    flex-direction: column;
-  }
-
-  .edit-profile-bottom-section .profile-bottom-left-wrapper {
-    max-width: 100%;
-    margin-inline: auto;
-  }
-
-  .upload-profile {
-    width: 100%;
-  }
-
-  .create-item-card-wrapper {
-    max-width: 100%;
-  }
-
-  .nav-collection-wrapper {
-    grid-template-columns: repeat(1, 1fr);
-  }
   .swiper-custom-arrow-btn:not(:last-child) {
     margin-right: 5px;
   }
